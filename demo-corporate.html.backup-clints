@@ -3,16 +3,16 @@
 <html class="no-js" lang="en">
 
     <head>
-        <title>KOL Telecom - IT & Telecom Solutions Provider</title>
+        <title>Crafto - The Multipurpose HTML5 Template</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <meta name="description" content="KOL Telecom - IT & Telecom Solutions Provider and Cloud Communications Platform. Quality cPaaS, wholesale voice, SMS, RCS, DID, and instant messaging services since 2006.">
+        <meta name="description" content="Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 52+ ready demos.">
         <!-- favicon icon -->
-        <link rel="shortcut icon" href="images/kolimg/kol-logo.png">
-        <link rel="apple-touch-icon" href="images/kolimg/kol-logo.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="images/kolimg/kol-logo.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="images/kolimg/kol-logo.png">
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
         <!-- google fonts preconnect -->
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,326 +25,10 @@
         <link rel="stylesheet" href="css/icon.min.css" />
         <link rel="stylesheet" href="css/style.min.css"/>
         <link rel="stylesheet" href="css/responsive.min.css"/>
-        <link rel="stylesheet" href="css/font-size-fix.css"/>
         <link rel="stylesheet" href="demos/corporate/corporate.css" />
         <!-- Chatbot CSS -->
     <link rel="stylesheet" href="css/chatbot.css"/>
     <link rel="stylesheet" href="css/whatsapp-button.css"/>
-    <style>
-        html, body { overflow-x: clip; }
-        .tp-bannertimer, .tp-loader { display: none !important; visibility: hidden !important; }
-        /* Hero sticky + content overlap */
-        #slider {
-            position: sticky;
-            top: 0;
-            z-index: 0;
-            will-change: opacity, transform;
-            min-height: 100vh;
-        }
-        .page-content-wrapper {
-            position: relative;
-            z-index: 2;
-            background: #fff;
-            border-radius: 32px 32px 0 0;
-            margin-top: -50px;
-            box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.12);
-        }
-        .page-content-wrapper::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-        }
-        /* Stack card overlap enhancement */
-        .stack-box .stack-item-01 {
-            border-radius: 0;
-        }
-        .stack-box .stack-item-02,
-        .stack-box .stack-item-03 {
-            border-radius: 28px 28px 0 0;
-            box-shadow: 0 -15px 60px rgba(0, 0, 0, 0.12), 0 -2px 10px rgba(0, 0, 0, 0.04);
-        }
-        .stack-box .stack-item .stack-item-wrapper {
-            z-index: 1;
-        }
-        .stack-box .stack-item.active .stack-item-wrapper {
-            opacity: 0.3;
-            transform: scale(0.96) translateY(10px);
-            filter: blur(3px);
-            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        .stack-box .stack-item .stack-item-wrapper .container {
-            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
-        }
-        .stack-box .stack-item-02::before,
-        .stack-box .stack-item-03::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            border-radius: 4px;
-            background: rgba(0, 0, 0, 0.1);
-            z-index: 10;
-            margin-top: 12px;
-        }
-        /* Partners grid */
-        .partners-section {
-            padding: 80px 0 80px;
-            background: #fafafa;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
-        }
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 22px;
-        }
-        .partners-grid-item {
-            height: 90px;
-            background: #fff;
-            border: 1.5px solid #eee;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px 24px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-            animation: partner-float 3s ease-in-out infinite;
-        }
-        .partners-grid-item:nth-child(2) { animation-delay: 0.3s; }
-        .partners-grid-item:nth-child(3) { animation-delay: 0.6s; }
-        .partners-grid-item:nth-child(4) { animation-delay: 0.9s; }
-        .partners-grid-item:nth-child(5) { animation-delay: 1.2s; }
-        .partners-grid-item:nth-child(6) { animation-delay: 1.5s; }
-        .partners-grid-item:nth-child(7) { animation-delay: 1.8s; }
-        .partners-grid-item:nth-child(8) { animation-delay: 2.1s; }
-        .partners-grid-item:nth-child(9) { animation-delay: 2.4s; }
-        .partners-grid-item:nth-child(10) { animation-delay: 2.7s; }
-        @keyframes partner-float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
-        .partners-grid-item:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-            border-color: #f97233;
-            animation-play-state: paused;
-        }
-        .partners-grid-item img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-        @media (max-width: 991px) {
-            .partners-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        @media (max-width: 575px) {
-            .partners-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        /* Quote & Testimonials */
-        #quote-testimonials {
-            padding: 80px 0;
-            background: #fff;
-        }
-        .quote-form-card {
-            background: #fff;
-            border: 1.5px solid #eee;
-            border-radius: 20px;
-            padding: 45px 40px;
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
-        }
-        .quote-form-input {
-            background: #f8f9fa !important;
-            border: 1.5px solid #eee !important;
-            border-radius: 10px !important;
-            padding: 14px 18px !important;
-            font-size: 15px !important;
-            color: #333 !important;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        .quote-form-input:focus {
-            border-color: #f97233 !important;
-            box-shadow: 0 0 0 3px rgba(249, 114, 51, 0.1) !important;
-            background: #fff !important;
-        }
-        select.quote-form-input {
-            appearance: auto;
-            -webkit-appearance: auto;
-            cursor: pointer;
-            color: #999 !important;
-        }
-        select.quote-form-input:valid:not([value=""]) {
-            color: #333 !important;
-        }
-        .captcha-box {
-            background: #f8f9fa;
-            border: 1.5px solid #eee;
-            border-radius: 10px;
-            padding: 12px 18px;
-        }
-        .captcha-num {
-            background: #fff;
-            border: 1.5px solid #ddd;
-            border-radius: 8px;
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 18px;
-            color: #333;
-        }
-        .captcha-op {
-            font-weight: 700;
-            font-size: 18px;
-            color: #999;
-        }
-        .captcha-box .quote-form-input {
-            margin: 0 !important;
-        }
-        .testimonial-card {
-            padding: 30px;
-            background: #f8f9fa;
-            border-radius: 16px;
-            border: 1.5px solid #eee;
-        }
-        .testimonial-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            background: #f97233;
-            color: #fff;
-            font-weight: 700;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .review-swiper .swiper-button-prev,
-        .review-swiper .swiper-button-next {
-            display: none;
-        }
-        .review-nav-btn {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 14px;
-        }
-        .review-prev-btn {
-            background: #fff;
-            border: 1.5px solid #eee;
-            color: #333;
-        }
-        .review-prev-btn:hover {
-            border-color: #f97233;
-            color: #f97233;
-        }
-        .review-next-btn {
-            background: #f97233;
-            border: none;
-            color: #fff;
-        }
-        .review-next-btn:hover {
-            background: #e0631e;
-        }
-        /* USP cards */
-        .usp-card {
-            background: #fff;
-            border: 1.5px solid #eee;
-            border-radius: 16px;
-            padding: 35px 25px;
-            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-        }
-        .usp-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-            border-color: #f97233;
-        }
-        .usp-icon {
-            width: 60px;
-            height: 60px;
-            border-radius: 14px;
-            background: rgba(249, 114, 51, 0.1);
-            color: #f97233;
-            font-size: 26px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 18px;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-        .usp-card:hover .usp-icon {
-            background: #f97233;
-            color: #fff;
-        }
-        /* Footer mascot 3D */
-        .footer-mascot-3d {
-            perspective: 800px;
-            display: inline-block;
-            animation: mascot-float 4s ease-in-out infinite;
-        }
-        .footer-mascot-3d img {
-            transition: transform 0.3s ease;
-            filter: drop-shadow(0 20px 40px rgba(249, 114, 51, 0.2));
-        }
-        @keyframes mascot-float {
-            0%, 100% { transform: translateY(0) rotateY(0deg); }
-            25% { transform: translateY(-12px) rotateY(5deg); }
-            50% { transform: translateY(-6px) rotateY(0deg); }
-            75% { transform: translateY(-12px) rotateY(-5deg); }
-        }
-        /* Products coverflow slider */
-        #features {
-            overflow: visible;
-        }
-        .products-services-slider {
-            padding: 30px 0 20px;
-            overflow: visible;
-            perspective: 1200px;
-        }
-        .products-services-slider .swiper-slide {
-            transition: transform 0.5s ease, opacity 0.5s ease;
-            opacity: 0.5;
-        }
-        .products-services-slider .swiper-slide-active {
-            opacity: 1;
-        }
-        .products-services-slider .swiper-slide-prev,
-        .products-services-slider .swiper-slide-next {
-            opacity: 0.7;
-        }
-        .products-services-slider .swiper-slide .feature-box {
-            min-height: 240px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .products-services-slider .swiper-slide-active .feature-box {
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
-        }
-    </style>
-
-    <!-- Google reCAPTCHA v3 -->
-    <!-- TODO: Replace PASTE_YOUR_SITE_KEY_HERE with your actual Site Key from Google reCAPTCHA -->
-    <script>
-        window.RECAPTCHA_SITE_KEY = 'PASTE_YOUR_SITE_KEY_HERE';
-    </script>
-    <script async defer src="https://www.google.com/recaptcha/api.js?render=PASTE_YOUR_SITE_KEY_HERE"></script>
 </head>
 
     <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
@@ -358,15 +42,15 @@
                             <a class="navbar-brand" href="index.html">
                                 <picture>
     <source srcset="images/kolimg/KOLLOGO.webp" type="image/webp">
-    <img src="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="default-logo" width="142" height="28">
+    <img src="images/kolimg/KOLLOGO.png" alt="" class="default-logo" width="142" height="28">
 </picture>
                                 <picture>
     <source srcset="images/kolimg/KOLLOGO.webp" type="image/webp">
-    <img src="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="alt-logo" width="0" height="0">
+    <img src="images/kolimg/KOLLOGO.png" alt="" class="alt-logo" width="0" height="0">
 </picture>
                                 <picture>
     <source srcset="images/kolimg/KOLLOGO.webp" type="image/webp">
-    <img src="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="mobile-logo" width="0" height="0">
+    <img src="images/kolimg/KOLLOGO.png" alt="" class="mobile-logo" width="0" height="0">
 </picture>
                             </a>
                         </div>
@@ -381,11 +65,11 @@
                                 <ul class="navbar-nav">
                                     <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
                                     <li class="nav-item dropdown submenu">
-                                        <a href="#" class="nav-link">Products</a>
+                                        <a href="demo-decor-store-shop.html" class="nav-link">Products</a>
                                         <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                         <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1"> 
                                             <div class="d-lg-flex mega-menu m-auto flex-column">
-                                                <div class="row row-cols-1 row-cols-lg-5">
+                                                <div class="row row-cols-1 row-cols-lg-5 mb-60px md-mb-30px sm-mb-20px">
                                                     <div class="col">
                                                         <ul>
                                                             <li class="sub-title">cPaaS</li>
@@ -424,11 +108,19 @@
                                                         </ul>
                                                     </div>
                                                 </div>
+                                                <div class="row row-cols-1 row-cols-md-2">
+                                                    <div class="col">
+                                                        <a href="demo-decor-store-shop.html"><img class="w-100" src="images/demo-decor-store-menu-banner-01.jpg" alt="" data-no-retina=""></a>
+                                                    </div>
+                                                    <div class="col">
+                                                        <a href="demo-decor-store-shop.html"><img class="w-100" src="images/demo-decor-store-menu-banner-02.jpg" alt="" data-no-retina=""></a>
+                                                    </div>
+                                                </div>
                                             </div> 
                                         </div>
                                     </li>
                                     <li class="nav-item dropdown dropdown-with-icon-style02">
-                                        <a href="#" class="nav-link">Services</a>
+                                        <a href="demo-corporate-services.html" class="nav-link">Services</a>
                                         <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <li><a href="services-mail-hosting.html"></i>Mail Hosting</a></li>
@@ -437,7 +129,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown dropdown-with-icon-style02">
-                                        <a href="#" class="nav-link">Solutions</a>
+                                        <a href="demo-corporate-services.html" class="nav-link">Solutions</a>
                                         <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <li><a href="solutions-echt.html"></i>ECHT</a></li>
@@ -446,7 +138,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown dropdown-with-icon-style02">
-                                        <a href="#" class="nav-link">Partners</a>
+                                        <a href="demo-corporate-services.html" class="nav-link">Partners</a>
                                         <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                            <li><a href="partners-key.html"></i>Our Key Partners</a></li>
@@ -454,7 +146,7 @@
                                         </ul>
                                     </li>
                                     <li class="nav-item dropdown dropdown-with-icon-style02">
-                                        <a href="#" class="nav-link">Connect With Us</a>
+                                        <a href="demo-corporate-services.html" class="nav-link">Connect With Us</a>
                                         <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <li><a href="about-us.html"></i>About Us</a></li>
@@ -504,15 +196,15 @@
             </header>
             <!-- end header -->
             <!-- start slider -->
-            <section id="slider" class="p-0 top-space-margin">
-                <div class="demo-corporate-slider_wrapper fullscreen-container" data-alias="portfolio-viewer" data-source="gallery" style="background-color:#0b1236;padding:0px;">
-                    <div id="demo-corporate-slider" class="rev_slider fullscreenbanner" style="background-color:#0b1236;" data-version="5.3.1.6">
+            <section id="slider" class="p-0 top-space-margin ">
+                <div class="demo-corporate-slider_wrapper fullscreen-container" data-alias="portfolio-viewer" data-source="gallery" style="background-color:transparent;padding:0px;">
+                    <div id="demo-corporate-slider" class="rev_slider bg-regal-blue fullscreenbanner" style="display:none;" data-version="5.3.1.6">
                         <!-- begin slides list -->
                         <ul>
                             <!-- minimum slide structure -->
-                            <li data-index="rs-01" data-transition="fade" data-slotamount="default"
-                                data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power2.easeInOut"
-                                data-easeout="Power2.easeInOut" data-masterspeed="1200" data-rotate="0" data-saveperformance="off"
+                            <li data-index="rs-01" data-transition="parallaxleft" data-slotamount="default"
+                                data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default"
+                                data-easeout="default" data-masterspeed="1500" data-rotate="0" data-saveperformance="off"
                                 data-title="Crossfit" data-param1="" data-param2="" data-param3="" data-param4=""
                                 data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
                                 data-description="">
@@ -537,7 +229,7 @@
                                      data-voffset="['0','0','0','0']" data-width="['900','700','700','600']"
                                      data-height="['900','700','700','600']" data-whitespace="nowrap" data-type="shape"
                                      data-responsive_offset="on"
-                                     data-frames='[{"delay":100,"speed":800,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:0.5;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:0.5;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                      data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                                      data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                                      data-paddingleft="[0,0,0,0]" style="z-index: 0;">
@@ -550,7 +242,7 @@
                                      data-voffset="['0','0','0','0']" data-width="['1200','1000','900','800']"
                                      data-height="['1200','1000','900','800']" data-whitespace="nowrap" data-type="shape"
                                      data-responsive_offset="on"
-                                     data-frames='[{"delay":200,"speed":800,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:0.3;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-frames='[{"delay":1300,"speed":1000,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:0.3;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                      data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                                      data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                                      data-paddingleft="[0,0,0,0]" style="z-index: 0;">
@@ -591,7 +283,7 @@
                                                  data-whitespace="normal" data-basealign="grid" data-type="text"
                                                  data-responsive_offset="off" data-verticalalign="middle"
                                                  data-responsive="off"
-                                                 data-frames='[{"delay":400,"speed":600,"frame":"0","from":"y:-30px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+                                                 data-frames='[{"delay":2500,"speed":800,"frame":"0","from":"y:-50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
                                                  data-textAlign="['center','center','center','center']"
                                                  data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
                                                  data-paddingbottom="[25,25,10,10]" data-paddingleft="[0,0,0,0]"
@@ -613,7 +305,7 @@
                                                  data-whitespace="normal" data-basealign="grid" data-type="text"
                                                  data-responsive_offset="off" data-verticalalign="middle"
                                                  data-responsive="on"
-                                                 data-frames='[{"delay":"200","split":"chars","splitdelay":0.02,"speed":600,"split_direction":"middletoedge","frame":"0","from":"x:30px;opacity:0;fb:5px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":100,"frame":"999","to":"opacity:0;fb:0;","ease":"Power4.easeOut"}]'
+                                                 data-frames='[{"delay":"1500","split":"chars","splitdelay":0.03,"speed":800,"split_direction":"middletoedge","frame":"0","from":"x:50px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":100,"frame":"999","to":"opacity:0;fb:0;","ease":"Power4.easeOut"}]'
                                                  data-textAlign="['center','center','center','center']"
                                                  data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
                                                  data-paddingbottom="[33,28,35,25]" data-paddingleft="[0,0,0,0]"
@@ -635,7 +327,7 @@
                                                  data-whitespace="normal" data-basealign="grid" data-type="text"
                                                  data-responsive_offset="off" data-verticalalign="middle"
                                                  data-responsive="on"
-                                                 data-frames='[{"delay":500,"speed":600,"frame":"0","from":"y:30px;opacity:0;fb:10px;","to":"o:100;fb:0;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+                                                 data-frames='[{"delay":2500,"speed":800,"frame":"0","from":"y:50px;opacity:0;fb:20px;","to":"o:100;fb:0;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
                                                  data-textAlign="['center','center','center','center']"
                                                  data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
                                                  data-paddingbottom="[36,36,60,40]" data-paddingleft="[0,0,0,0]">
@@ -651,7 +343,7 @@
                                                  data-whitespace="nowrap" data-fontsize="['18','16','16','16']"
                                                  data-lineheight="['70','55','55','55']" data-type="text"
                                                  data-responsive_offset="off" data-responsive="off"
-                                                 data-frames='[{"delay":700,"speed":800,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                                 data-frames='[{"delay":3000,"speed":1000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                                  data-textAlign="['inherit','inherit','inherit','inherit']"
                                                  data-paddingtop="[0,0,0,0]" data-paddingright="[75,70,65,60]"
                                                  data-paddingbottom="[0,0,0,0]" data-paddingleft="[45,35,30,30]">
@@ -675,7 +367,7 @@
                                      data-height="['122','122','120','120']" data-visibility="['on','on','off','off']"
                                      data-whitespace="nowrap" data-basealign="grid" data-type="shape"
                                      data-responsive_offset="on"
-                                     data-frames='[{"delay":900,"speed":800,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:1;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-frames='[{"delay":3500,"speed":1000,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:1;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                      data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
                                      data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                                      data-paddingleft="[0,0,0,0]" style="z-index: 0;">
@@ -692,7 +384,7 @@
                                      data-width="['100','100','100','100']" data-height="auto" data-whitespace="normal"
                                      data-basealign="grid" data-type="text" data-responsive_offset="on"
                                      data-verticalalign="middle" data-responsive="on"
-                                     data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:1;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-frames='[{"delay":3700,"speed":1000,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:1;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                      data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
                                      data-paddingright="[0,0,0,0]" data-paddingbottom="[33,0,0,0]"
                                      data-paddingleft="[0,0,0,0]" style="word-break: initial;">
@@ -701,9 +393,9 @@
                                 </div>
                                 <!-- end beige text layer -->
                             </li>
-                            <li data-index="rs-02" data-transition="fade" data-slotamount="default"
-                                data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power2.easeInOut"
-                                data-easeout="Power2.easeInOut" data-masterspeed="1200" data-rotate="0" data-saveperformance="off"
+                            <li data-index="rs-02" data-transition="parallaxleft" data-slotamount="default"
+                                data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default"
+                                data-easeout="default" data-masterspeed="1500" data-rotate="0" data-saveperformance="off"
                                 data-title="Crossfit" data-param1="" data-param2="" data-param3="" data-param4=""
                                 data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
                                 data-description="">
@@ -891,9 +583,9 @@
                                 </div>
                                 <!-- end beige text layer -->
                             </li>
-                            <li data-index="rs-03" data-transition="fade" data-slotamount="default"
-                                data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power2.easeInOut"
-                                data-easeout="Power2.easeInOut" data-masterspeed="1200" data-rotate="0" data-saveperformance="off"
+                            <li data-index="rs-03" data-transition="parallaxleft" data-slotamount="default"
+                                data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default"
+                                data-easeout="default" data-masterspeed="1500" data-rotate="0" data-saveperformance="off"
                                 data-title="Crossfit" data-param1="" data-param2="" data-param3="" data-param4=""
                                 data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
                                 data-description="">
@@ -1083,12 +775,12 @@
                                 <!-- end beige text layer -->
                             </li>
                         </ul>
-                        <div class="tp-bannertimer" style="display:none"></div>
+                        <div class="tp-bannertimer"
+                             style="height: 10px; background-color: #fe9d0e; z-index: 98"></div>
                     </div>
                 </div>
             </section>
             <!-- end slider -->
-            <div class="page-content-wrapper">
               <!-- start section -->
         <section class="overflow-hidden">
             <div class="container">
@@ -1199,7 +891,7 @@
         <!-- end section -->
             <!-- start section -->
             <!-- start section -->  
-        <section id="overview" class="position-relative">
+        <section id="overview" class="background-position-center-top position-relative" style="background-image: url('images/vertical-line-bg-medium-gray.svg')">
             <div id="particles-01" data-particle="true" data-particle-options='{"particles": {"number": {"value": 3,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#ff5b74", "#820f89"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.7,"random": false,"anim": {"enable": false,"speed": 2,"sync": false}},"size": {"value": 7,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}' class="position-absolute top-0px left-0px w-100 z-index-minus-1"></div>
             <div class="container">
                 <div class="row justify-content-center align-items-center mb-5">
@@ -1215,7 +907,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 ps-5 md-ps-15px" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 1000, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <img src="images/kolimg/promo.gif" alt="Custom Icon" class="custom-icon" style="max-width: 120px; height: auto; margin-bottom: 15px;" />
+                        <img src="images/kolimg/promo.gif" alt="Custom Icon" class="custom-icon" />
                         <h1 class="fw-800 ls-minus-3px text-black mb-30px fancy-text-style-4"> Power up your business with
                             <span data-fancy-text='{ "effect": "wave", "string": ["fast", "smart", "seamless"], "duration": 4000  }' style="color: #fe9d0e;">
                             </span> solutions.
@@ -1230,34 +922,59 @@
                         </a>
                     </div> 
                 </div> 
-                <div class="row row-cols-1 row-cols-lg-3 g-4 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuart" }'>
-                    <div class="col">
-                        <div class="usp-card text-center">
-                            <div class="usp-icon"><i class="bi bi-shield-check"></i></div>
-                            <h6 class="fw-700 text-black mb-5px">Unmatched Reliability</h6>
-                            <p class="fs-15 mb-0 text-medium-gray">99.9% uptime across 200+ countries</p>
-                        </div>
+                <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "rotateZ": [5, 0], "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                    <!-- start process step item -->
+                    <div class="col process-step-style-05 position-relative hover-box md-mb-30px">
+                        <div class="process-step-item d-flex align-items-center">
+                            <div class="process-step-icon-wrap position-relative">
+                                <div class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-90px w-90px bg-white fs-22 box-shadow-medium-bottom fw-600 position-relative">
+                                    <span class="number position-relative z-index-1 text-black">01</span>
+                                    <div class="box-overlay bg-black rounded-circle"></div>
+                                </div>  
+                            </div>
+                            <div class="process-content ps-25px">
+                                <span class="d-block fw-500 text-black fs-22 lh-30 ls-minus-05px w-60 xl-w-90"> Unmatched  <strong><span style="color: #fe9d0e;">Reliability.</strong></span> 
+                            </div>
+                        </div> 
                     </div>
-                    <div class="col">
-                        <div class="usp-card text-center">
-                            <div class="usp-icon"><i class="bi bi-cpu"></i></div>
-                            <h6 class="fw-700 text-black mb-5px">Advanced Technology</h6>
-                            <p class="fs-15 mb-0 text-medium-gray">AI-powered communication tools</p>
-                        </div>
+                    <!-- end process step item --> 
+                    <!-- start process step item -->
+                    <div class="col process-step-style-05 position-relative hover-box md-mb-30px">
+                        <div class="process-step-item d-flex align-items-center">
+                            <div class="process-step-icon-wrap position-relative">
+                                <div class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-90px w-90px bg-white fs-22 box-shadow-medium-bottom fw-600 position-relative">
+                                    <span class="number position-relative z-index-1 text-black">02</span>
+                                    <div class="box-overlay bg-black rounded-circle"></div>
+                                </div>  
+                            </div>
+                            <div class="process-content ps-25px last-paragraph-no-margin">
+                                <span class="d-block fw-500 text-black fs-22 lh-30 ls-minus-05px w-60 xl-w-90">Advanced  <strong><span style="color: #fe9d0e;">Technology.</strong></span> 
+                            </div>
+                        </div> 
                     </div>
-                    <div class="col">
-                        <div class="usp-card text-center">
-                            <div class="usp-icon"><i class="bi bi-headset"></i></div>
-                            <h6 class="fw-700 text-black mb-5px">24/7 Expert Support</h6>
-                            <p class="fs-15 mb-0 text-medium-gray">Dedicated team always available</p>
-                        </div>
+                    <!-- end process step item -->
+                    <!-- start process step item -->
+                    <div class="col process-step-style-05 position-relative hover-box">
+                        <div class="process-step-item d-flex align-items-center">
+                            <div class="process-step-icon-wrap position-relative">
+                                <div class="process-step-icon d-flex justify-content-center align-items-center mx-auto rounded-circle h-90px w-90px bg-white fs-22 box-shadow-medium-bottom fw-600 position-relative">
+                                    <span class="number position-relative z-index-1 text-black">03</span>
+                                    <div class="box-overlay bg-black rounded-circle"></div>
+                                </div>  
+                            </div>
+                            <div class="process-content ps-25px last-paragraph-no-margin">
+                                <span class="d-block fw-500 text-black fs-22 lh-30 ls-minus-05px w-60 xl-w-90">24/7 Expert <strong><span style="color: #fe9d0e;"> Support.</strong></span> 
+                            </div>
+                        </div> 
                     </div>
+                    <!-- end process step item -->
                 </div> 
             </div>
         </section>
         <!-- end section -->
         <!-- start section -->  
         <section id="features" class="bg-gradient-very-light-gray position-relative pb-2">
+            <div class="background-position-center-top position-absolute top-0 left-0px w-100 h-100" style="background-image: url('images/vertical-line-bg-medium-gray.svg')"></div>
             <div class="container position-relative"> 
                 <div class="row justify-content-center mb-2">
                     <div class="col-auto col-xxl-5 col-lg-7 col-sm-9 d-flex align-items-center justify-content-center">
@@ -1265,94 +982,97 @@
                         <h2 class="text-black fw-800 ls-minus-2px m-0">Our Products <span style="color: #f97233;">&</span> Services</h2>
                     </div>
                 </div>
-                <div class="swiper products-services-slider mb-4" data-slider-options='{ "slidesPerView": 1.2, "spaceBetween": 30, "centeredSlides": true, "loop": true, "speed": 600, "grabCursor": true, "autoplay": { "delay": 2000, "disableOnInteraction": false, "pauseOnMouseEnter": false, "waitForTransition": false }, "breakpoints": { "576": { "slidesPerView": 1.8 }, "768": { "slidesPerView": 2.5 }, "992": { "slidesPerView": 3 }, "1200": { "slidesPerView": 3.5 } }, "effect": "coverflow", "coverflowEffect": { "rotate": 0, "stretch": 0, "depth": 120, "modifier": 1.2, "slideShadows": false } }'>
-                    <div class="swiper-wrapper">
-                        <!-- slide 1 -->
-                        <div class="swiper-slide">
-                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
-                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
-                                    <img src="images/kolimg/file-transfer_16313608.gif" alt="cPaaS" class="w-100 h-100 rounded-circle">
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">cPaaS</span>
-                                    <p class="fs-15">mBlastr<br>VKOLU</p>
-                                </div>
-                            </div>
+                <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 justify-content-center mb-4" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>                  
+                    <!-- start features box item --> 
+<div class="col icon-with-text-style-10 md-mb-30px" data-bottom-top="transform: translateY(20px)" data-top-bottom="transform: translateY(-20px)">
+    <div class="feature-box bg-white h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover p-50px xl-p-30px border-radius-8px">
+        <div class="feature-box-icon feature-box-icon-rounded w-100px h-100px rounded-circle mb-20px">
+            <img src="images/kolimg/file-transfer_16313608.gif" alt="Icon" class="w-100 h-100 rounded-circle">
+        </div>
+        <div class="feature-box-content last-paragraph-no-margin">
+            <span class="d-inline-block fw-500 text-black mb-5px fs-18">cPaaS</span>
+            <p>mBlastr<br>VKOLU</p>
+        </div>
+    </div>
+</div>
+                <!-- end features box item -->
+                <!-- start features box item -->
+                <div class="col icon-with-text-style-10 md-mb-30px" data-bottom-top="transform: translateY(-20px)" data-top-bottom="transform: translateY(20px)">
+                    <div class="feature-box bg-white h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover p-50px xl-p-30px border-radius-8px">
+                        <div class="feature-box-icon feature-box-icon-rounded w-100px h-100px rounded-circle mb-20px">
+                            <img src="images/kolimg/microphone_11019432.gif" alt="Icon" class="w-100 h-100 rounded-circle">
                         </div>
-                        <!-- slide 2 -->
-                        <div class="swiper-slide">
-                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
-                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
-                                    <img src="images/kolimg/microphone_11019432.gif" alt="Wholesale" class="w-100 h-100 rounded-circle">
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">Wholesale Services</span>
-                                    <p class="fs-15">Voice<br>SMS (A2P)</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- slide 3 -->
-                        <div class="swiper-slide">
-                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
-                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
-                                    <img src="images/kolimg/chatbot_12205168.gif" alt="Retail" class="w-100 h-100 rounded-circle">
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">Retail Services</span>
-                                    <p class="fs-15">ChatBot<br>DID<br>RCS</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- slide 4 -->
-                        <div class="swiper-slide">
-                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
-                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
-                                    <img src="images/kolimg/phone-call_17569493.gif" alt="Messaging" class="w-100 h-100 rounded-circle">
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">Instant Messaging</span>
-                                    <p class="fs-15">Viber<br>Instagram<br>WhatsApp for Business</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- slide 5 -->
-                        <div class="swiper-slide">
-                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
-                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
-                                    <img src="images/kolimg/binary-code_17465893.gif" alt="Number Lookup" class="w-100 h-100 rounded-circle">
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">Number Lookup</span>
-                                    <p class="fs-15">HLR<br>MNP</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- slide 6 -->
-                        <div class="swiper-slide">
-                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
-                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
-                                    <img src="images/kolimg/search-engine_18559554.gif" alt="IT Services" class="w-100 h-100 rounded-circle">
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">IT Services</span>
-                                    <p class="fs-15">Mail Hosting<br>IP PBX<br>IT Managed Services</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- slide 7 -->
-                        <div class="swiper-slide">
-                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
-                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
-                                    <img src="images/kolimg/artificial-intelligence_11184192.gif" alt="Automation" class="w-100 h-100 rounded-circle">
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">Automation</span>
-                                    <p class="fs-15">ECHT<br>Textr<br>Cedar<br>AI Automation</p>
-                                </div>
-                            </div>
+                        <div class="feature-box-content last-paragraph-no-margin">
+                            <span class="d-inline-block fw-500 text-black mb-5px fs-18">Wholesale Services</span>
+                            <p>Voice <br>SMS (A2P)</p>
                         </div>
                     </div>
                 </div>
+                <!-- end features box item -->
+                <!-- start features box item -->
+                <div class="col icon-with-text-style-10 sm-mb-30px" data-bottom-top="transform: translateY(20px)" data-top-bottom="transform: translateY(-20px)">
+                    <div class="feature-box bg-white h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover p-50px xl-p-30px border-radius-8px">
+                        <div class="feature-box-icon feature-box-icon-rounded w-100px h-100px rounded-circle mb-20px">
+                            <img src="images/kolimg/chatbot_12205168.gif" alt="Icon" class="w-100 h-100 rounded-circle">
+                        </div>
+                        <div class="feature-box-content last-paragraph-no-margin">
+                            <span class="d-inline-block fw-500 text-black mb-5px fs-18">Retail Services</span>
+                            <p>ChatBot<br>Direct Inward Dialing (DID) <br>Rich Communication Services (RCS)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end features box item -->
+                <!-- start features box item -->
+                <div class="col icon-with-text-style-10" data-bottom-top="transform: translateY(-20px)" data-top-bottom="transform: translateY(20px)">
+                    <div class="feature-box bg-white h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover p-50px xl-p-30px border-radius-8px">
+                        <div class="feature-box-icon feature-box-icon-rounded w-100px h-100px rounded-circle mb-20px">
+                            <img src="images/kolimg/phone-call_17569493.gif" alt="Icon" class="w-100 h-100 rounded-circle">
+                        </div>
+                        <div class="feature-box-content last-paragraph-no-margin">
+                            <span class="d-inline-block fw-500 text-black mb-5px fs-18">Instant Messaging Solutions</span>
+                            <p>Viber<br>Instagram<br>WhatsApp for Business</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end features box item -->
+                 <!-- start features box item -->
+                <div class="col icon-with-text-style-10" data-bottom-top="transform: translateY(-20px)" data-top-bottom="transform: translateY(20px)">
+                    <div class="feature-box bg-white h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover p-50px xl-p-30px border-radius-8px">
+                        <div class="feature-box-icon feature-box-icon-rounded w-100px h-100px rounded-circle mb-20px">
+                            <img src="images/kolimg/binary-code_17465893.gif" alt="Icon" class="w-100 h-100 rounded-circle">
+                        </div>
+                        <div class="feature-box-content last-paragraph-no-margin">
+                            <span class="d-inline-block fw-500 text-black mb-5px fs-18">Number Lookup Services</span> 
+                            <p>Home Location Register (HLR)<br>Mobile Number Portability (MNP)</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end features box item --><!-- start features box item -->
+                <div class="col icon-with-text-style-10" data-bottom-top="transform: translateY(-20px)" data-top-bottom="transform: translateY(20px)">
+                    <div class="feature-box bg-white h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover p-50px xl-p-30px border-radius-8px">
+                        <div class="feature-box-icon feature-box-icon-rounded w-100px h-100px rounded-circle mb-20px">
+                            <img src="images/kolimg/search-engine_18559554.gif" alt="Icon" class="w-100 h-100 rounded-circle">
+                        </div>
+                        <div class="feature-box-content last-paragraph-no-margin">
+                            <span class="d-inline-block fw-500 text-black mb-5px fs-18">IT Services</span>
+                            <p>Mail Hosting<br>IP PBX<br>IT Managed Services</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end features box item -->
+                 <!-- start features box item -->
+                <div class="col icon-with-text-style-10" data-bottom-top="transform: translateY(-20px)" data-top-bottom="transform: translateY(20px)">
+                    <div class="feature-box bg-white h-100 justify-content-start box-shadow-quadruple-large box-shadow-quadruple-large-hover p-50px xl-p-30px border-radius-8px">
+                        <div class="feature-box-icon feature-box-icon-rounded w-100px h-100px rounded-circle mb-20px">
+                            <img src="images/kolimg/artificial-intelligence_11184192.gif" alt="Icon" class="w-100 h-100 rounded-circle">
+                        </div>
+                        <div class="feature-box-content last-paragraph-no-margin">
+                            <span class="d-inline-block fw-500 text-black mb-5px fs-18">Automation</span>
+                            <p>ECHT<br>Textr<br>Cedar<br>AI Automation Solution</p>
+                        </div>
+                    </div>
+                </div></div><div></div>
+                <!-- end features box item -->
                 <div class="row justify-content-center align-items-center" data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                     <div class="col-12 text-center">
                         <div class="d-inline-block align-middle fs-12 ls-05px fw-600 text-white text-uppercase bg-green border-radius-50px ps-20px pe-20px me-10px sm-m-5px">impressive</div> 
@@ -1362,19 +1082,19 @@
             </div>
         </section>
         <!-- end section -->
-         <!-- start section -->
-         <section class="stack-box py-0">
+         <!-- start section -->  
+         <section class="stack-box py-0"> 
             <div class="stack-box-contain">
                 <!-- start stack item -->
                 <div class="stack-item stack-item-01 bg-white lg-pt-8 lg-pb-8 xs-pt-50px xs-pb-50px">
                     <div class="stack-item-wrapper">
                         <div class="container">
                             <div class="row align-items-center justify-content-center">
-                                <div class="col-xl-4 col-lg-5 col-md-6 sm-mb-40px text-center text-md-start" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [-60, 0], "translateY": [30, 0], "staggervalue": 200, "duration": 800, "easing": "easeOutQuart" }'>
+                                <div class="col-xl-4 col-lg-5 col-md-6 sm-mb-40px text-center text-md-start" data-anime='{ "el": "childs", "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "staggervalue": 200, "duration": 900, "easing": "easeOutCirc" }'>  
                                     <h3 class="fw-700 text-black ls-minus-1px">AI-Powered Chatbot</h3>
-                                    <p class="lg-w-85 md-w-95 sm-w-100"><span style="color: #000000;">Supercharge your customer service with Kol Telecom's Chatbot solution. Powered by AI, our chatbots provide immediate, consistent, and accurate responses to customer inquiries, anytime, anywhere, ensuring your business stays connected even when your team isn't online.</span>
-                                    </p>
-                                    <a href="contact-us.html" class="btn btn-large btn-black btn-switch-text btn-box-shadow fw-400">
+                                    <p class="lg-w-85 md-w-95 sm-w-100"><span style="color: #000000;">Supercharge your customer service with Kol Telecom’s Chatbot solution. Powered by AI, our chatbots provide immediate, consistent, and accurate responses to customer inquiries, anytime, anywhere, ensuring your business stays connected even when your team isn’t online.</span>
+                                    </p>  
+                                    <a href="demo-branding-agency-single-project-slider.html" class="btn btn-large btn-black btn-switch-text btn-box-shadow fw-400">
                                         <span> 
                                             <span class="btn-double-text" data-text="Explore project">Explore project</span> 
                                             <span><i class="feather icon-feather-arrow-right"></i></span>
@@ -1402,11 +1122,11 @@
                 <div class="stack-item stack-item-02 bg-linen lg-pt-8 lg-pb-8 xs-pt-50px xs-pb-50px">
                     <div class="stack-item-wrapper">
                         <div class="container">
-                            <div class="row align-items-center justify-content-center">
-                                <div class="col-xl-4 col-lg-5 col-md-6 sm-mb-40px text-center text-md-start" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [-60, 0], "translateY": [30, 0], "staggervalue": 200, "duration": 800, "easing": "easeOutQuart" }'>
+                            <div class="row align-items-center justify-content-center"> 
+                                <div class="col-xl-4 col-lg-5 col-md-6 sm-mb-40px text-center text-md-start">  
                                     <h3 class="fw-700 text-black ls-minus-1px">AI Automation</h3>
-                                    <p class="lg-w-85 md-w-95 sm-w-100"><span style="color: #000000;">Experience the power of Artificial Intelligence with Kol Telecom's AI Automation solutions. Enhance operational efficiency, reduce response times, and deliver personalized experiences with cutting-edge AI tools designed for your business needs.</span></p>
-                                    <a href="contact-us.html" class="btn btn-large btn-black btn-switch-text btn-box-shadow fw-400">
+                                    <p class="lg-w-85 md-w-95 sm-w-100"><span style="color: #000000;">Experience the power of Artificial Intelligence with Kol Telecom's AI Automation solutions. Enhance operational efficiency, reduce response times, and deliver personalized experiences with cutting-edge AI tools designed for your business needs.</span></p>  
+                                    <a href="demo-branding-agency-single-project-slider.html" class="btn btn-large btn-black btn-switch-text btn-box-shadow fw-400">
                                         <span> 
                                             <span class="btn-double-text" data-text="Explore project">Explore project</span> 
                                             <span><i class="feather icon-feather-arrow-right"></i></span>
@@ -1437,11 +1157,11 @@
                 <div class="stack-item stack-item-03 bg-white lg-pt-8 xs-pt-50px xs-pb-20px">
                     <div class="stack-item-wrapper">
                         <div class="container">
-                            <div class="row align-items-center justify-content-center">
-                                <div class="col-xl-4 col-lg-5 col-md-6 sm-mb-40px text-center text-md-start" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [-60, 0], "translateY": [30, 0], "staggervalue": 200, "duration": 800, "easing": "easeOutQuart" }'>
+                            <div class="row align-items-center justify-content-center"> 
+                                <div class="col-xl-4 col-lg-5 col-md-6 sm-mb-40px text-center text-md-start">  
                                     <h3 class="fw-700 text-black ls-minus-1px">WhatsApp Business API</h3>
-                                    <p class="lg-w-85 md-w-95 sm-w-100"><span style="color: #000000;"> Enhance customer engagement and streamline your communication channels with Kol Telecom's WhatsApp Business API. Deliver fast, efficient, and personalized messaging directly through WhatsApp—one of the world's most widely used platforms.</span></p>
-                                    <a href="products-whatsapp.html" class="btn btn-large btn-black btn-switch-text btn-box-shadow fw-400">
+                                    <p class="lg-w-85 md-w-95 sm-w-100"><span style="color: #000000;"> Enhance customer engagement and streamline your communication channels with Kol Telecom’s WhatsApp Business API. Deliver fast, efficient, and personalized messaging directly through WhatsApp—one of the world’s most widely used platforms.</span></p>  
+                                    <a href="demo-branding-agency-single-project-slider.html" class="btn btn-large btn-black btn-switch-text btn-box-shadow fw-400">
                                         <span> 
                                             <span class="btn-double-text" data-text="Explore project">Explore project</span> 
                                             <span><i class="feather icon-feather-arrow-right"></i></span>
@@ -1467,206 +1187,192 @@
                 <!-- end stack item -->
             </div>
         </section>
-        <!-- start partners section -->
-        <section class="partners-section position-relative">
+        <!-- start section -->
+        <section class="pt-0">
             <div class="container">
-                <div class="text-center mb-40px" data-anime='{ "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                    <span class="fs-12 fw-700 text-uppercase ls-2px d-inline-block text-white border-radius-50px ps-20px pe-20px pt-5px pb-5px mb-15px" style="background: #f97233;">Trusted Worldwide</span>
-                    <h5 class="fw-800 text-black ls-minus-1px mb-0">Our Key Partners</h5>
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 text-center mb- xs-mb-" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <span class="text-black fw-600 fs-16 text-uppercase border-1 pb-5px border-bottom border-color-extra-medium-gray text-black">our key partners</span>
+                    </div>
                 </div>
-                <div class="partners-grid" data-anime='{ "el": "childs", "opacity": [0, 1], "translateY": [25, 0], "scale": [0.95, 1], "staggervalue": 80, "duration": 600, "easing": "easeOutQuart" }'>
-                    <div class="partners-grid-item"><picture>
+                <div class="row position-relative clients-style-08 mt-px" data-anime='{ "opacity": [0,1], "duration": 600, "delay":200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <div class="col swiper text-center feather-shadow" data-slider-options='{ "slidesPerView": 2, "spaceBetween":0, "speed": 3000, "loop": true, "pagination": { "el": ".slider-four-slide-pagination-2", "clickable": false }, "allowTouchMove": false, "autoplay": { "delay":0, "disableOnInteraction": false}, "navigation": { "nextEl": ".slider-four-slide-next-2", "prevEl": ".slider-four-slide-prev-2" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1200": { "slidesPerView": 5 }, "992": { "slidesPerView": 3 }, "576": { "slidesPerView": 2 } }, "effect": "slide" }'>
+                        <div class="swiper-wrapper marquee-slide">
+                            <!-- start client item -->
+                            <div class="swiper-slide">
+                                <a href="#"><picture>
     <source srcset="images/kolimg/clints/1.webp" type="image/webp">
-    <picture>
-    <source srcset="images/kolimg/clints/1.webp" type="image/webp">
-    <img src="images/kolimg/clints/1.png" alt="Partner">
-</picture>
-</picture></div>
-                    <div class="partners-grid-item"><picture>
+    <img src="images/kolimg/clints/1.png" alt="">
+</picture></a>
+                            </div>
+                            <!-- end client item -->
+                            <!-- start client item -->
+                            <div class="swiper-slide">
+                                <a href="#"><picture>
     <source srcset="images/kolimg/clints/2.webp" type="image/webp">
-    <picture>
-    <source srcset="images/kolimg/clints/2.webp" type="image/webp">
-    <img src="images/kolimg/clints/2.png" alt="Partner">
-</picture>
-</picture></div>
-                    <div class="partners-grid-item"><picture>
+    <img src="images/kolimg/clints/2.png" alt="">
+</picture></a>
+                            </div>
+                            <!-- end client item -->
+                            <!-- start client item -->
+                            <div class="swiper-slide">
+                                <a href="#"><picture>
     <source srcset="images/kolimg/clints/3.webp" type="image/webp">
-    <picture>
-    <source srcset="images/kolimg/clints/3.webp" type="image/webp">
-    <img src="images/kolimg/clints/3.png" alt="Partner">
-</picture>
-</picture></div>
-                    <div class="partners-grid-item"><picture>
+    <img src="images/kolimg/clints/3.png" alt="">
+</picture></a>
+                            </div>
+                            <!-- end client item -->
+                            <!-- start client item -->
+                            <div class="swiper-slide">
+                                <a href="#"><picture>
     <source srcset="images/kolimg/clints/4.webp" type="image/webp">
-    <picture>
-    <source srcset="images/kolimg/clints/4.webp" type="image/webp">
-    <img src="images/kolimg/clints/4.png" alt="Partner">
-</picture>
-</picture></div>
-                    <div class="partners-grid-item"><picture>
+    <img src="images/kolimg/clints/4.png" alt="">
+</picture></a>
+                            </div>
+                            <!-- end client item -->
+                            <!-- start client item -->
+                            <div class="swiper-slide">
+                                <a href="#"><picture>
     <source srcset="images/kolimg/clints/5.webp" type="image/webp">
-    <picture>
-    <source srcset="images/kolimg/clints/5.webp" type="image/webp">
-    <img src="images/kolimg/clints/5.png" alt="Partner">
-</picture>
-</picture></div>
-                    <div class="partners-grid-item"><picture>
+    <img src="images/kolimg/clints/5.png" alt="">
+</picture></a>
+                            </div>
+                            <!-- end client item -->
+                            <!-- start client item -->
+                            <div class="swiper-slide">
+                                <a href="#"><picture>
     <source srcset="images/kolimg/clints/6.webp" type="image/webp">
-    <picture>
-    <source srcset="images/kolimg/clints/6.webp" type="image/webp">
-    <img src="images/kolimg/clints/6.png" alt="Partner">
-</picture>
-</picture></div>
-                    <div class="partners-grid-item"><picture>
+    <img src="images/kolimg/clints/6.png" alt="">
+</picture></a>
+                            </div>
+                            <!-- end client item -->
+                            <!-- start client item -->
+                            <div class="swiper-slide">
+                                <a href="#"><picture>
     <source srcset="images/kolimg/clints/7.webp" type="image/webp">
-    <picture>
-    <source srcset="images/kolimg/clints/7.webp" type="image/webp">
-    <img src="images/kolimg/clints/7.png" alt="Partner">
-</picture>
-</picture></div>
-                    <div class="partners-grid-item"><picture>
+    <img src="images/kolimg/clints/7.png" alt="">
+</picture></a>
+                            </div>
+                            <!-- end client item -->
+                            <!-- start client item -->
+                            <div class="swiper-slide">
+                                <a href="#"><picture>
     <source srcset="images/kolimg/clints/8.webp" type="image/webp">
-    <picture>
-    <source srcset="images/kolimg/clints/8.webp" type="image/webp">
-    <img src="images/kolimg/clints/8.png" alt="Partner">
-</picture>
-</picture></div>
-                    <div class="partners-grid-item"><picture>
+    <img src="images/kolimg/clints/8.png" alt="">
+</picture></a>
+                            </div>
+                            <!-- end client item -->
+                            <!-- start client item -->
+                            <div class="swiper-slide">
+                                <a href="#"><picture>
     <source srcset="images/kolimg/clints/9.webp" type="image/webp">
-    <picture>
-    <source srcset="images/kolimg/clints/9.webp" type="image/webp">
-    <img src="images/kolimg/clints/9.png" alt="Partner">
-</picture>
-</picture></div>
-                    <div class="partners-grid-item"><picture>
+    <img src="images/kolimg/clints/9.png" alt="">
+</picture></a>
+                            </div>
+                            <!-- end client item -->
+                            <!-- start client item -->
+                            <div class="swiper-slide">
+                                <a href="#"><picture>
     <source srcset="images/kolimg/clints/10.webp" type="image/webp">
-    <picture>
-    <source srcset="images/kolimg/clints/10.webp" type="image/webp">
-    <img src="images/kolimg/clints/10.png" alt="Partner">
-</picture>
-</picture></div>
+    <img src="images/kolimg/clints/10.png" alt="">
+</picture></a>
+                            </div>
+                            <!-- end client item -->
+                        </div> 
+                    </div>  
                 </div>
             </div>
         </section>
-        <!-- end partners section -->
-           <!-- start quote & testimonials section -->
-        <section id="quote-testimonials" class="position-relative">
+        <!-- end section -->
+           <!-- start section -->
+        <section class="bg-very-light-gray background-position-right-top background-no-repeat" style="background-image: url('images/kolimg/demo-ebook-07.jpg')">
             <div class="container">
-                <div class="row align-items-stretch justify-content-center g-lg-5">
-                    <!-- Contact form -->
-                    <div class="col-lg-5 col-md-10 md-mb-50px sm-mb-30px" data-anime='{ "el": "childs", "translateX": [-40, 0], "opacity": [0,1], "duration": 700, "delay": 0, "staggervalue": 100, "easing": "easeOutQuart" }'>
-                        <div class="quote-form-card h-100">
-                            <span class="fs-12 fw-700 text-uppercase ls-2px d-inline-block border-radius-50px ps-20px pe-20px pt-5px pb-5px mb-20px" style="background: #f97233; color: #fff;">Get Started</span>
-                            <h3 class="fw-700 text-black mb-30px ls-minus-1px">Get a free quote</h3>
-                            <form action="email-templates/contact-form.php" method="post" id="quoteForm">
-                                <!-- CSRF Token -->
-                                <input type="hidden" name="csrf_token" value="">
-
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 col-md-10 contact-form-style-03 md-mb-50px sm-mb-30px" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <div class="p-14 lg-p-11 border-radius-6px bg-dark-gray h-100"> 
+                            <h3 class="fw-500 alt-font text-white mb-30px md-mb-15px ls-minus-1px">Get a free quote?</h3> 
+                            <!-- start contact form -->
+                            <form action="email-templates/contact-form.php" method="post">
                                 <div class="position-relative form-group mb-20px">
-                                    <input class="quote-form-input form-control" type="text" name="name" placeholder="Your name *" required>
+                                    <span class="form-icon"><i class="bi bi-person icon-extra-medium"></i></span>
+                                    <input class="ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required" type="text" name="name" placeholder="Enter your name*">
                                 </div>
                                 <div class="position-relative form-group mb-20px">
-                                    <input class="quote-form-input form-control" type="email" name="email" placeholder="Email address *" required>
+                                    <span class="form-icon"><i class="bi bi-envelope icon-extra-medium"></i></span>
+                                    <input class="ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control required" type="email" name="email" placeholder="Enter your email address*">
                                 </div>
-                                <div class="position-relative form-group mb-20px">
-                                    <select class="quote-form-input form-control" name="service" required>
-                                        <option value="" disabled selected>Select a service *</option>
-                                        <option value="cPaaS">cPaaS</option>
-                                        <option value="VOIP">VOIP</option>
-                                        <option value="Messaging">Messaging</option>
-                                        <option value="Instant Messaging">Instant Messaging</option>
-                                        <option value="Data Services">Data Services</option>
-                                        <option value="IT Services">IT Services</option>
-                                    </select>
+                                <div class="position-relative form-group form-textarea mt-15px mb-25px"> 
+                                    <textarea class="ps-0 border-radius-0px fs-17 bg-transparent border-color-transparent-white-light placeholder-medium-gray form-control" name="comment" placeholder="Enter your message" rows="3"></textarea>
+                                    <span class="form-icon"><i class="bi bi-chat-square-dots icon-extra-medium"></i></span>
+                                    <input type="hidden" name="redirect" value="">
+                                    <button class="btn btn-medium btn-base-color mt-30px submit w-100 btn-round-edge btn-box-shadow" type="submit">Submit now</button>
+                                    <div class="form-results mt-20px d-none"></div>
                                 </div>
-                                <div class="position-relative form-group mb-20px">
-                                    <input class="quote-form-input form-control" type="text" name="country" placeholder="Country">
-                                </div>
-                                <div class="position-relative form-group mb-25px">
-                                    <textarea class="quote-form-input form-control" name="message" placeholder="Your message" rows="3"></textarea>
-                                </div>
-                                <!-- Math captcha (optional - for display only) -->
-                                <div class="captcha-box mb-25px" style="display:none;">
-                                    <div class="d-flex align-items-center gap-3">
-                                        <span class="captcha-num" id="captchaNum1"></span>
-                                        <span class="captcha-op">+</span>
-                                        <span class="captcha-num" id="captchaNum2"></span>
-                                        <span class="captcha-op">=</span>
-                                        <input class="quote-form-input form-control" type="number" id="captchaAnswer" name="captcha" placeholder="?" style="width: 80px; text-align: center;">
-                                    </div>
-                                </div>
-                                <button class="btn btn-large w-100 fw-600 border-radius-10px submit" type="submit" style="background: #f97233; color: #fff; padding: 14px;" id="quoteSubmit">Submit</button>
-                                <div class="form-results mt-15px d-none"></div>
-                                <p class="fs-13 text-medium-gray mt-15px mb-0 lh-22">Your data is secure and will never be shared with third parties.</p>
+                                <span class="fs-15 lh-24 text-medium-gray opacity-8 d-block">I understand that my data will be hold securely in accordance with the privacy policy.</span>
                             </form>
+                            <!-- end contact form -->
                         </div>
                     </div>
-                    <!-- Testimonials -->
-                    <div class="col-lg-6 offset-lg-1 col-md-10 d-flex align-items-center" data-anime='{ "el": "childs", "translateX": [40, 0], "opacity": [0,1], "duration": 700, "delay": 100, "staggervalue": 100, "easing": "easeOutQuart" }'>
-                        <div class="w-100">
-                            <span class="fs-12 fw-700 text-uppercase ls-2px d-inline-block text-black border-radius-50px ps-20px pe-20px pt-5px pb-5px mb-15px" style="border: 1.5px solid #eee;">Client Reviews</span>
-                            <h3 class="fw-700 text-black ls-minus-1px mb-35px">What our clients have to say.</h3>
-                            <div class="swiper review-swiper position-relative" data-slider-options='{ "slidesPerView": 1, "autoHeight": true, "loop": true, "allowTouchMove": true, "speed": 2000, "autoplay": { "delay": 4000, "disableOnInteraction": false, "pauseOnMouseEnter": true }, "navigation": { "nextEl": ".review-next", "prevEl": ".review-prev" }, "effect": "fade", "fadeEffect": { "crossFade": true } }'>
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-card">
-                                            <div class="review-star-icon fs-16 mb-15px" style="color: #f97233;">
+                    <div class="col-lg-5 offset-lg-1 col-md-10 text-center text-lg-start" data-anime='{ "el": "childs", "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <span class="fs-20 fw-500 text-base-color d-block mb-20px">A few good reasons</span>
+                        <h2 class="fw-600 text-dark-gray ls-minus-2px mb-35px">Here is what our clients have to say.</h2>
+                        <div class="swiper position-relative magic-cursor" data-slider-options='{ "autoHeight": true, "loop": true, "allowTouchMove": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" }, "effect": "fade" }'>
+                            <div class="swiper-wrapper mb-50px lg-mb-35px">
+                                <!-- start text slider item -->
+                                <div class="swiper-slide review-style-08">
+                                    <p class="fs-18">This theme has a wide variety of options and a really good customer support. Some of the customizations are unlimited but even so the theme variety still gives lot of features while variety of options.</p>
+                                    <div class="mt-20px">
+                                        <img class="rounded-circle w-95px h-95px me-15px" src="https://via.placeholder.com/148x148" alt="">
+                                        <div class="d-inline-block align-middle text-start">
+                                            <div class="text-dark-gray fs-20 fw-600 ls-minus-05px">Alexander harvard</div>
+                                            <div class="review-star-icon fs-18">
                                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                            </div>
-                                            <p class="fs-17 lh-30 text-black mb-20px">"Their communication solutions transformed our business operations. The API integration was seamless and their support team was always responsive."</p>
-                                            <div class="d-flex align-items-center">
-                                                <div class="testimonial-avatar me-15px">AH</div>
-                                                <div>
-                                                    <div class="text-black fs-16 fw-700">Alexander Harvard</div>
-                                                    <div class="fs-14 text-medium-gray">Operations Director</div>
-                                                </div>
-                                            </div>
+                                            </div> 
                                         </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-card">
-                                            <div class="review-star-icon fs-16 mb-15px" style="color: #f97233;">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                            </div>
-                                            <p class="fs-17 lh-30 text-black mb-20px">"KOL Telecom's WhatsApp Business API helped us reach customers instantly. Our engagement rates increased significantly within the first month."</p>
-                                            <div class="d-flex align-items-center">
-                                                <div class="testimonial-avatar me-15px">SM</div>
-                                                <div>
-                                                    <div class="text-black fs-16 fw-700">Shoko Mugikura</div>
-                                                    <div class="fs-14 text-medium-gray">Marketing Lead</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="testimonial-card">
-                                            <div class="review-star-icon fs-16 mb-15px" style="color: #f97233;">
-                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                            </div>
-                                            <p class="fs-17 lh-30 text-black mb-20px">"The AI chatbot solution has been a game-changer for our customer support. Response times dropped dramatically and satisfaction scores soared."</p>
-                                            <div class="d-flex align-items-center">
-                                                <div class="testimonial-avatar me-15px">LM</div>
-                                                <div>
-                                                    <div class="text-black fs-16 fw-700">Leonel Mooney</div>
-                                                    <div class="fs-14 text-medium-gray">CTO, TechVentures</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div> 
                                 </div>
-                                <div class="review-prev swiper-button-prev"></div>
-                                <div class="review-next swiper-button-next"></div>
-                            </div>
-                            <div class="d-flex justify-content-start gap-3 mt-30px">
-                                <div class="review-nav-btn review-prev-btn"><i class="fa-solid fa-arrow-left"></i></div>
-                                <div class="review-nav-btn review-next-btn"><i class="fa-solid fa-arrow-right"></i></div>
-                            </div>
+                                <!-- end text slider item -->
+                                <!-- start text slider item -->
+                                <div class="swiper-slide review-style-08">
+                                    <p class="fs-18">I've purchased several themes over the years and this theme, by far is absolutely amazing. It's built extremely well the back end was well thought out the design options are endless.</p>
+                                    <div class="mt-20px">
+                                        <img class="rounded-circle w-95px h-95px me-15px" src="https://via.placeholder.com/148x148" alt="">
+                                        <div class="d-inline-block align-middle text-start">
+                                            <div class="text-dark-gray fs-20 fw-600 ls-minus-05px">Shoko mugikura</div>
+                                            <div class="review-star-icon fs-18">
+                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                            </div> 
+                                        </div>
+                                    </div> 
+                                </div>
+                                <!-- end text slider item -->
+                                <!-- start text slider item -->
+                                <div class="swiper-slide review-style-08">
+                                    <p class="fs-18">The theme is very valid and offers many possibilities of customization to adapt it to your needs, but the thing I got the most out of it was the relationship with the support team.</p>
+                                    <div class="mt-20px">
+                                        <img class="rounded-circle w-95px h-95px me-15px" src="https://via.placeholder.com/200x200" alt="">
+                                        <div class="d-inline-block align-middle text-start">
+                                            <div class="text-dark-gray fs-20 fw-600 ls-minus-05px">Leonel mooney</div>
+                                            <div class="review-star-icon fs-18">
+                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                            </div> 
+                                        </div>
+                                    </div> 
+                                </div>
+                                <!-- end text slider item -->
+                            </div> 
+                        </div>
+                        <div class="d-flex justify-content-center justify-content-lg-start">
+                            <!-- start slider navigation -->
+                            <div class="slider-one-slide-prev-1 swiper-button-prev slider-navigation-style-04 bg-white text-dark-gray box-shadow-medium"><i class="fa-solid fa-arrow-left icon-small text-dark-gray"></i></div>
+                            <div class="slider-one-slide-next-1 swiper-button-next slider-navigation-style-04 bg-white text-dark-gray box-shadow-medium"><i class="fa-solid fa-arrow-right icon-small text-dark-gray"></i></div>
+                            <!-- end slider navigation --> 
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- end quote & testimonials section -->
+        <!-- end section -->
         <!-- start footer -->
         <footer class="half-footer pb-45px border-top border-color-light-gray background-repeat" style="background-image:url('images/kolimg/footer\ bg.png');">
             <div class="container">
@@ -1679,16 +1385,14 @@
                             United States of America.</p>
                     </div>
                     <div class="col-lg-6 col-md-4 col-sm-12 text-center z-index-1 mb-20px mb-md-0">
-                        <div class="footer-mascot-3d">
-                            <picture>
+                        <picture>
     <source srcset="images/kolimg/2.webp" type="image/webp">
     <img src="images/kolimg/2.png" alt="KOL Logo" style="max-width: 280px; width: 100%; height: auto;">
 </picture>
-                        </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin text-center text-sm-end z-index-1">
                         <span class="fs-20 fw-700 text-dark-gray d-block mb-5px">How can we help?</span>
-                        <a href="mailto:info@koltelecom.com" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">info@koltelecom.com</a>
+                        <a href="mailto:info@koltelecom.com" class="text-dark-gray fw-600 d-block mb-0" style="font-size: 16px;">info@koltelecom.com</a>
                         <a href="tel:+13022952746" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">+1 302 295 2746</a>
                     </div>
                 </div>
@@ -1710,19 +1414,19 @@
                 </div>
                 <div class="row align-items-center">
                     <div class="col-md-12 last-paragraph-no-margin text-center sm-mb-10px"> 
-                        <p>© 2026 <a href="index.html" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">KOL Telecom.</a> All rights reserved.</p>
+                        <p>© 2026 <a href="index.html" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">Crafto.</a> All rights reserved.</p>
                     </div>   
                 </div>
             </div>
         </footer>
         <!-- end footer -->
-            </div><!-- end page-content-wrapper -->
-            <!-- scroll progress hidden -->
-            <div class="scroll-progress d-none">
+            <!-- start scroll progress -->
+            <div class="scroll-progress d-none d-xxl-block">
                 <a href="#" class="scroll-top" aria-label="scroll">
                     <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
                 </a>
             </div>
+            <!-- end scroll progress -->
         <!-- javascript libraries -->
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/vendors.min.js"></script>
@@ -1757,8 +1461,6 @@
                         sliderLayout: 'fullscreen',
                         /* RESPECT ASPECT RATIO */
                         autoHeight: 'off',
-                        /* Always start on first slide */
-                        startWithSlide: 0,
                         /* options that disable autoplay */
                         stopLoop: "off",
                         stopAfterLoops: -1,
@@ -1832,7 +1534,7 @@
                         gridheight: [930, 850, 900, 850],
                         /* Lazy Load options are "all", "smart", "single" and "none" */
                         lazyType: "smart",
-                        spinner: "off",
+                        spinner: "spinner0",
                         parallax: {
                             type: "scroll",
                             origo: "slidercenter",
@@ -1856,7 +1558,6 @@
                             disableFocusListener: false,
                         }
                     });
-
                 }
             }); /*ready*/
         </script>
@@ -1865,127 +1566,6 @@
         <!-- Chatbot JS -->
     <script defer src="js/chatbot.js"></script>
     <script defer src="js/whatsapp-button.js"></script>
-    <!-- Form Handler JS -->
-    <script defer src="js/form-handler.js"></script>
-    <!-- Hero scroll fade -->
-    <script>
-    (function() {
-        var slider = document.getElementById('slider');
-        if (!slider) return;
-        var ticking = false;
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                window.requestAnimationFrame(function() {
-                    var scrollY = window.pageYOffset;
-                    var sliderH = slider.offsetHeight;
-                    var progress = Math.min(scrollY / (sliderH * 0.6), 1);
-                    slider.style.opacity = 1 - progress;
-                    slider.style.transform = 'scale(' + (1 + progress * 0.05) + ')';
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-    })();
-
-    // Math captcha
-    (function() {
-        var a = Math.floor(Math.random() * 9) + 1;
-        var b = Math.floor(Math.random() * 9) + 1;
-        var el1 = document.getElementById('captchaNum1');
-        var el2 = document.getElementById('captchaNum2');
-        if (el1 && el2) {
-            el1.textContent = a;
-            el2.textContent = b;
-        }
-        var form = document.getElementById('quoteForm');
-        if (form) {
-            form.addEventListener('submit', function(e) {
-                var answer = parseInt(document.getElementById('captchaAnswer').value, 10);
-                if (answer !== a + b) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    var input = document.getElementById('captchaAnswer');
-                    input.style.borderColor = '#e74c3c';
-                    input.style.boxShadow = '0 0 0 3px rgba(231,76,60,0.15)';
-                    input.setAttribute('placeholder', a + b);
-                    // Regenerate
-                    a = Math.floor(Math.random() * 9) + 1;
-                    b = Math.floor(Math.random() * 9) + 1;
-                    el1.textContent = a;
-                    el2.textContent = b;
-                    input.value = '';
-                    return false;
-                }
-            });
-        }
-    })();
-
-    // 3D mascot tilt on mouse move
-    (function() {
-        var mascot = document.querySelector('.footer-mascot-3d');
-        if (!mascot) return;
-        var img = mascot.querySelector('img');
-        mascot.addEventListener('mousemove', function(e) {
-            var rect = mascot.getBoundingClientRect();
-            var x = (e.clientX - rect.left) / rect.width - 0.5;
-            var y = (e.clientY - rect.top) / rect.height - 0.5;
-            img.style.transform = 'rotateY(' + (x * 25) + 'deg) rotateX(' + (-y * 25) + 'deg) scale(1.05)';
-            mascot.style.animationPlayState = 'paused';
-        });
-        mascot.addEventListener('mouseleave', function() {
-            img.style.transform = '';
-            mascot.style.animationPlayState = 'running';
-        });
-    })();
-
-    // Review nav buttons
-    (function() {
-        var prevBtn = document.querySelector('.review-prev-btn');
-        var nextBtn = document.querySelector('.review-next-btn');
-        var swiperEl = document.querySelector('.review-swiper');
-        if (prevBtn && nextBtn && swiperEl) {
-            var checkSwiper = setInterval(function() {
-                if (swiperEl.swiper) {
-                    clearInterval(checkSwiper);
-                    prevBtn.addEventListener('click', function() { swiperEl.swiper.slidePrev(); });
-                    nextBtn.addEventListener('click', function() { swiperEl.swiper.slideNext(); });
-                }
-            }, 200);
-        }
-    })();
-    </script>
-    <!-- Stack-box sticky fallback (JS-based) -->
-    <script>
-    (function() {
-        var stackBox = document.querySelector('.stack-box');
-        var contain = document.querySelector('.stack-box-contain');
-        if (!stackBox || !contain) return;
-        // Remove CSS sticky, use JS instead
-        contain.style.position = 'relative';
-        function onScroll() {
-            var rect = stackBox.getBoundingClientRect();
-            var boxH = stackBox.offsetHeight;
-            var cH = contain.offsetHeight;
-            if (rect.top <= 0 && rect.bottom > cH) {
-                contain.style.position = 'fixed';
-                contain.style.top = '0';
-                contain.style.width = stackBox.offsetWidth + 'px';
-            } else if (rect.bottom <= cH) {
-                contain.style.position = 'absolute';
-                contain.style.top = (boxH - cH) + 'px';
-                contain.style.width = '100%';
-            } else {
-                contain.style.position = 'relative';
-                contain.style.top = '0';
-                contain.style.width = '100%';
-            }
-        }
-        window.addEventListener('scroll', onScroll, { passive: true });
-        window.addEventListener('resize', function() { onScroll(); });
-        onScroll();
-    })();
-    </script>
 </body>
 
 </html>

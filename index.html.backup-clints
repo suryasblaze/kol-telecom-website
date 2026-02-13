@@ -1477,73 +1477,43 @@
                 <div class="partners-grid" data-anime='{ "el": "childs", "opacity": [0, 1], "translateY": [25, 0], "scale": [0.95, 1], "staggervalue": 80, "duration": 600, "easing": "easeOutQuart" }'>
                     <div class="partners-grid-item"><picture>
     <source srcset="images/kolimg/clints/1.webp" type="image/webp">
-    <picture>
-    <source srcset="images/kolimg/clints/1.webp" type="image/webp">
     <img src="images/kolimg/clints/1.png" alt="Partner">
-</picture>
 </picture></div>
                     <div class="partners-grid-item"><picture>
-    <source srcset="images/kolimg/clints/2.webp" type="image/webp">
-    <picture>
     <source srcset="images/kolimg/clints/2.webp" type="image/webp">
     <img src="images/kolimg/clints/2.png" alt="Partner">
-</picture>
 </picture></div>
                     <div class="partners-grid-item"><picture>
-    <source srcset="images/kolimg/clints/3.webp" type="image/webp">
-    <picture>
     <source srcset="images/kolimg/clints/3.webp" type="image/webp">
     <img src="images/kolimg/clints/3.png" alt="Partner">
-</picture>
 </picture></div>
                     <div class="partners-grid-item"><picture>
-    <source srcset="images/kolimg/clints/4.webp" type="image/webp">
-    <picture>
     <source srcset="images/kolimg/clints/4.webp" type="image/webp">
     <img src="images/kolimg/clints/4.png" alt="Partner">
-</picture>
 </picture></div>
                     <div class="partners-grid-item"><picture>
-    <source srcset="images/kolimg/clints/5.webp" type="image/webp">
-    <picture>
     <source srcset="images/kolimg/clints/5.webp" type="image/webp">
     <img src="images/kolimg/clints/5.png" alt="Partner">
-</picture>
 </picture></div>
                     <div class="partners-grid-item"><picture>
-    <source srcset="images/kolimg/clints/6.webp" type="image/webp">
-    <picture>
     <source srcset="images/kolimg/clints/6.webp" type="image/webp">
     <img src="images/kolimg/clints/6.png" alt="Partner">
-</picture>
 </picture></div>
                     <div class="partners-grid-item"><picture>
-    <source srcset="images/kolimg/clints/7.webp" type="image/webp">
-    <picture>
     <source srcset="images/kolimg/clints/7.webp" type="image/webp">
     <img src="images/kolimg/clints/7.png" alt="Partner">
-</picture>
 </picture></div>
                     <div class="partners-grid-item"><picture>
-    <source srcset="images/kolimg/clints/8.webp" type="image/webp">
-    <picture>
     <source srcset="images/kolimg/clints/8.webp" type="image/webp">
     <img src="images/kolimg/clints/8.png" alt="Partner">
-</picture>
 </picture></div>
                     <div class="partners-grid-item"><picture>
-    <source srcset="images/kolimg/clints/9.webp" type="image/webp">
-    <picture>
     <source srcset="images/kolimg/clints/9.webp" type="image/webp">
     <img src="images/kolimg/clints/9.png" alt="Partner">
-</picture>
 </picture></div>
                     <div class="partners-grid-item"><picture>
     <source srcset="images/kolimg/clints/10.webp" type="image/webp">
-    <picture>
-    <source srcset="images/kolimg/clints/10.webp" type="image/webp">
     <img src="images/kolimg/clints/10.png" alt="Partner">
-</picture>
 </picture></div>
                 </div>
             </div>
