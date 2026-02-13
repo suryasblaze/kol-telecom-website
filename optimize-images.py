@@ -163,7 +163,7 @@ if __name__ == '__main__':
     optimize_images(
         directory='images/kolimg',
         quality=85,  # 85 = good quality, smaller file size
-        min_size_mb=0.5  # Only convert files > 500KB
+        min_size_mb=0  # Convert ALL images (including small ones)
     )
 
     print("\nImage optimization complete!")
