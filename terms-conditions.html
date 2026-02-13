@@ -1,0 +1,1139 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Terms and Conditions - Service Agreement | KOL Telecom</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="KOL Telecom">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="KOL Telecom Terms of Service and Usage Policies - Service agreement for products, applications and platform usage.">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="css/vendors.min.css"/>
+        <link rel="stylesheet" href="css/icon.min.css"/>
+        <link rel="stylesheet" href="css/style.min.css"/>
+        <link rel="stylesheet" href="css/responsive.min.css"/>
+        <link rel="stylesheet" href="css/font-size-fix.css"/>
+        <link rel="stylesheet" href="demos/corporate/corporate.css" />
+        <!-- Chatbot CSS -->
+        <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+    <style>
+        /* ===== Hero (Dark) ===== */
+        .trm-hero {
+            background: linear-gradient(160deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .trm-hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .trm-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(247, 147, 30, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .trm-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 107, 53, 0.15);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            color: #FF6B35;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+        }
+        .trm-hero h1 {
+            color: #fff;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+        .trm-hero h1 span {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .trm-hero-desc {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 540px;
+        }
+        .trm-hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.35);
+        }
+        .trm-hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.5);
+            color: #fff;
+        }
+        .trm-hero-visual {
+            width: 260px;
+            height: 260px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.2) 0%, rgba(247, 147, 30, 0.1) 100%);
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 107, 53, 0.15);
+        }
+        .trm-hero-stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .trm-stat {
+            background: rgba(30, 30, 60, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px 24px;
+            text-align: center;
+            min-width: 130px;
+        }
+        @supports (backdrop-filter: blur(10px)) {
+            .trm-stat { backdrop-filter: blur(10px); background: rgba(30, 30, 60, 0.6); }
+        }
+        .trm-stat-num {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+        .trm-stat-label {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 4px;
+        }
+
+        /* ===== Light Sections ===== */
+        .trm-section {
+            padding: 80px 0;
+        }
+        .trm-section-light {
+            background: linear-gradient(180deg, #f8f9fc 0%, #ffffff 100%);
+        }
+        .trm-section-white {
+            background: #fff;
+        }
+        .trm-section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1a1a2e;
+            letter-spacing: -1.5px;
+            margin-bottom: 16px;
+        }
+        .trm-section-title span {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .trm-section-sub {
+            font-size: 17px;
+            color: #6b7b8d;
+            line-height: 1.7;
+            max-width: 650px;
+            margin: 0 auto 50px;
+        }
+
+        /* ===== Overview Card ===== */
+        .trm-overview-card {
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+        }
+        .trm-overview-card p {
+            color: #5a6a7a;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        .trm-overview-card a {
+            color: #FF6B35;
+            font-weight: 600;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .trm-overview-card a:hover { color: #e55a2b; }
+
+        /* ===== Quick Nav Cards ===== */
+        .trm-nav-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .trm-nav-card {
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 16px;
+            padding: 24px 20px;
+            text-align: center;
+            transition: all 0.35s ease;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+        .trm-nav-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .trm-nav-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(255, 107, 53, 0.12);
+            border-color: rgba(255, 107, 53, 0.15);
+        }
+        .trm-nav-card:hover::before { opacity: 1; }
+        .trm-nav-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(247, 147, 30, 0.1) 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 14px;
+            transition: all 0.35s ease;
+        }
+        .trm-nav-icon i { font-size: 20px; color: #FF6B35; transition: color 0.35s ease; }
+        .trm-nav-card:hover .trm-nav-icon {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+        }
+        .trm-nav-card:hover .trm-nav-icon i { color: #fff; }
+        .trm-nav-card span {
+            font-weight: 700;
+            font-size: 13px;
+            color: #1a1a2e;
+            display: block;
+        }
+
+        /* ===== Accordion ===== */
+        .trm-accordion-item {
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 16px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+        .trm-accordion-item:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+        .trm-accordion-header {
+            padding: 0;
+            border: none;
+            background: none;
+        }
+        .trm-accordion-header a {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 24px 28px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .trm-accordion-header a[aria-expanded="true"] {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+        .trm-acc-num {
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(247, 147, 30, 0.1) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            color: #FF6B35;
+            transition: all 0.3s ease;
+        }
+        .trm-accordion-header a[aria-expanded="true"] .trm-acc-num {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            color: #fff;
+        }
+        .trm-acc-title {
+            font-weight: 700;
+            font-size: 17px;
+            color: #1a1a2e;
+            flex: 1;
+        }
+        .trm-acc-chevron {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #f8f9fc;
+            transition: all 0.3s ease;
+        }
+        .trm-acc-chevron i {
+            font-size: 14px;
+            color: #6b7b8d;
+            transition: transform 0.3s ease;
+        }
+        .trm-accordion-header a[aria-expanded="true"] .trm-acc-chevron {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(247, 147, 30, 0.1) 100%);
+        }
+        .trm-accordion-header a[aria-expanded="true"] .trm-acc-chevron i {
+            transform: rotate(180deg);
+            color: #FF6B35;
+        }
+        .trm-accordion-body {
+            padding: 28px;
+        }
+        .trm-accordion-body p {
+            color: #5a6a7a;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        /* ===== Inner highlight box ===== */
+        .trm-inner-box {
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DC 100%);
+            border: 1px solid rgba(255, 107, 53, 0.12);
+            border-radius: 16px;
+            padding: 24px 28px;
+        }
+        .trm-inner-box h6 {
+            color: #FF6B35;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .trm-inner-box p {
+            color: #5a6a7a;
+            line-height: 1.8;
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+
+        /* ===== Info box (neutral) ===== */
+        .trm-info-box {
+            background: #f8f9fc;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 14px;
+            padding: 22px 26px;
+        }
+        .trm-info-box p {
+            color: #5a6a7a;
+            line-height: 1.8;
+            font-size: 15px;
+            margin-bottom: 0;
+        }
+        .trm-info-box .trm-info-icon {
+            color: #FF6B35;
+            margin-right: 8px;
+        }
+
+        /* ===== Sub-section heading ===== */
+        .trm-sub-heading {
+            border-left: 4px solid #FF6B35;
+            padding-left: 20px;
+            margin-bottom: 24px;
+        }
+        .trm-sub-heading h6 {
+            color: #FF6B35;
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+        .trm-sub-heading p {
+            color: #5a6a7a;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        /* ===== Data cards ===== */
+        .trm-data-card {
+            background: #f8f9fc;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-radius: 16px;
+            padding: 28px;
+            height: 100%;
+        }
+        .trm-data-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(247, 147, 30, 0.1) 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        .trm-data-icon i { font-size: 20px; color: #FF6B35; }
+        .trm-data-card h6 { color: #1a1a2e; font-weight: 700; margin-bottom: 12px; }
+        .trm-data-card p { color: #5a6a7a; font-size: 14px; line-height: 1.7; margin-bottom: 0; }
+
+        /* ===== IP / Governing visual box ===== */
+        .trm-visual-box {
+            background: linear-gradient(135deg, #FFF5F0 0%, #FFE8DC 100%);
+            border: 1px solid rgba(255, 107, 53, 0.12);
+            border-radius: 20px;
+            padding: 44px;
+            text-align: center;
+        }
+        .trm-visual-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.3);
+        }
+        .trm-visual-icon i { font-size: 32px; color: #fff; }
+        .trm-visual-box h6 { color: #FF6B35; font-weight: 700; font-size: 16px; margin-bottom: 16px; }
+        .trm-visual-box p { color: #5a6a7a; line-height: 1.8; font-size: 15px; margin-bottom: 0; }
+
+        /* ===== CTA Banner ===== */
+        .trm-cta-banner {
+            background: linear-gradient(160deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+            border-radius: 24px;
+            padding: 56px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .trm-cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .trm-cta-banner h3 {
+            color: #fff;
+            font-weight: 800;
+            font-size: 28px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .trm-cta-banner p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            margin-bottom: 28px;
+            position: relative;
+        }
+        .trm-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.35);
+            position: relative;
+        }
+        .trm-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.5);
+            color: #fff;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 991px) {
+            .trm-hero h1 { font-size: 38px; }
+            .trm-hero-visual { width: 200px; height: 200px; }
+            .trm-nav-grid { grid-template-columns: repeat(2, 1fr); }
+            .trm-hero-stats { flex-wrap: wrap; }
+            .trm-section-title { font-size: 30px; }
+        }
+        @media (max-width: 767px) {
+            .trm-hero h1 { font-size: 32px; letter-spacing: -1px; }
+            .trm-hero-visual { width: 180px; height: 180px; }
+            .trm-nav-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .trm-section { padding: 60px 0; }
+            .trm-overview-card { padding: 28px; }
+            .trm-accordion-body { padding: 20px; }
+            .trm-cta-banner { padding: 40px 24px; }
+            .trm-visual-box { padding: 32px 24px; }
+        }
+        @media (max-width: 575px) {
+            .trm-nav-grid { grid-template-columns: 1fr 1fr; }
+            .trm-hero-stats { gap: 12px; }
+            .trm-stat { min-width: 100px; padding: 16px 14px; }
+        }
+
+        /* ===== Reduced motion ===== */
+        @media (prefers-reduced-motion: reduce) {
+            .trm-hero-cta,
+            .trm-cta-btn,
+            .trm-nav-card,
+            .trm-accordion-item,
+            .trm-acc-num,
+            .trm-acc-chevron i,
+            .trm-nav-icon,
+            .trm-nav-icon i {
+                transition: none;
+            }
+            .trm-nav-card:hover,
+            .trm-hero-cta:hover,
+            .trm-cta-btn:hover {
+                transform: none;
+            }
+        }
+
+        /* ===== no-js fallback ===== */
+        .no-js [data-anime] { opacity: 1 !important; transform: none !important; }
+    </style>
+</head>
+    <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+        <div class="box-layout">
+            <!-- start header -->
+            <header>
+                <!-- start navigation -->
+                <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                    <div class="container-fluid">
+                        <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom Logo" class="default-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom Logo" class="alt-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom Logo" class="mobile-logo" width="142" height="28">
+                            </a>
+                        </div>
+                        <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                            <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-item dropdown submenu">
+                                        <a href="#" class="nav-link">Products</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
+                                            <div class="d-lg-flex mega-menu m-auto flex-column">
+                                                <div class="row row-cols-1 row-cols-lg-5 mb-60px md-mb-30px sm-mb-20px">
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">cPaaS</li>
+                                                            <li><a href="products-mblastr.html">mBlastr</a></li>
+                                                            <li><a href="products-vkolu.html">VKOLU</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Whole Sale</li>
+                                                            <li><a href="products-voice.html">Voice</a></li>
+                                                            <li><a href="products-sms.html">SMS(A2P)</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Retail</li>
+                                                            <li><a href="products-rcs.html">RCS</a></li>
+                                                            <li><a href="products-did.html">DID</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Instant Messaging</li>
+                                                            <li><a href="products-whatsapp.html">Whatsapp for Business</a></li>
+                                                            <li><a href="products-instagram.html">Instagram</a></li>
+                                                            <li><a href="products-viber.html">Viber</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Number Lookup</li>
+                                                            <li><a href="products-number-lookup.html">Number Lookup</a></li>
+                                                            <li><a href="products-hlr.html">HLR</a></li>
+                                                            <li><a href="products-mnp.html">MNP</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Services</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a href="services-mail-hosting.html">Mail Hosting</a></li>
+                                            <li><a href="services-it-managed.html">IT Managed Services</a></li>
+                                            <li><a href="services-ip-pbx.html">IP PBX</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Solutions</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                            <li><a href="solutions-echt.html">ECHT</a></li>
+                                            <li><a href="solutions-textr.html">Textr</a></li>
+                                            <li><a href="solutions-cedar.html">Cedar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Partners</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                           <li><a href="partners-key.html">Our Key Partners</a></li>
+                                            <li><a href="partners-become.html">Become Our Partner</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Connect With Us</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                            <li><a href="ethics-conduct.html">Ethics and conduct</a></li>
+                                            <li><a href="terms-conditions.html">Terms and conditions</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="download.html">Download</a></li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">
+                            <div class="header-icon">
+                                <div class="header-search-icon icon">
+                                    <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>
+                                    <div class="search-form-wrapper">
+                                        <button title="Close" type="button" class="search-close">&times;</button>
+                                        <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                            <div class="search-form-box">
+                                                <h2 class="text-black text-center fw-600 mb-4 ls-minus-1px">What are you looking for?</h2>
+                                                <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="q" value="" type="text" autocomplete="off">
+                                                <button type="submit" class="search-button">
+                                                    <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="header-button ms-20px d-none d-xl-inline-block">
+                                    <a href="contact-us.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">
+                                        <span>
+                                            <span class="btn-double-text fw-600" data-text="Free consultation">Free consultation</span>
+                                            <span><i class="fa-regular fa-envelope"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- end navigation -->
+            </header>
+            <!-- end header -->
+
+            <main>
+            <!-- start hero section -->
+            <section class="trm-hero top-space-margin pb-0">
+                <div class="container position-relative" style="z-index: 2;">
+                    <div class="row align-items-center" style="padding: 80px 0 90px;">
+                        <div class="col-lg-7" data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="trm-badge">
+                                <i class="bi bi-file-earmark-text"></i> Terms & Conditions
+                            </div>
+                            <h1>Service Agreement &<br><span>Usage Policies</span></h1>
+                            <p class="trm-hero-desc">These terms set forth the legally binding agreement for your use of KOL TELECOM services, products, and applications. Please read them carefully before using our services.</p>
+                            <a href="#terms-content" class="trm-hero-cta">Read Full Terms <i class="feather icon-feather-arrow-down"></i></a>
+                            <div class="trm-hero-stats" data-anime='{ "el": "childs", "translateY": [20, 0], "opacity": [0,1], "duration": 500, "delay": 400, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                                <div class="trm-stat">
+                                    <div class="trm-stat-num">8</div>
+                                    <div class="trm-stat-label">Key Sections</div>
+                                </div>
+                                <div class="trm-stat">
+                                    <div class="trm-stat-num">US</div>
+                                    <div class="trm-stat-label">Jurisdiction</div>
+                                </div>
+                                <div class="trm-stat">
+                                    <div class="trm-stat-num">24/7</div>
+                                    <div class="trm-stat-label">Support</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 text-center d-none d-lg-block" data-anime='{ "scale": [0.8, 1], "opacity": [0,1], "duration": 600, "delay": 300, "easing": "easeOutQuad" }'>
+                            <div class="trm-hero-visual">
+                                <i class="bi bi-file-earmark-check" style="font-size: 90px; color: rgba(255, 107, 53, 0.8);"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end hero section -->
+
+            <!-- start quick nav section -->
+            <section class="trm-section trm-section-light" id="terms-content">
+                <div class="container">
+                    <div class="text-center mb-50px" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "easing": "easeOutQuad" }'>
+                        <h2 class="trm-section-title">Quick <span>Navigation</span></h2>
+                        <p class="trm-section-sub">Jump to any section of our terms and conditions</p>
+                    </div>
+                    <div class="trm-nav-grid" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 500, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <a href="#section-1" class="trm-nav-card">
+                            <div class="trm-nav-icon"><i class="bi bi-gear"></i></div>
+                            <span>Provision of Services</span>
+                        </a>
+                        <a href="#section-2" class="trm-nav-card">
+                            <div class="trm-nav-icon"><i class="bi bi-receipt"></i></div>
+                            <span>Taxes</span>
+                        </a>
+                        <a href="#section-3" class="trm-nav-card">
+                            <div class="trm-nav-icon"><i class="bi bi-exclamation-triangle"></i></div>
+                            <span>Obligations</span>
+                        </a>
+                        <a href="#section-4" class="trm-nav-card">
+                            <div class="trm-nav-icon"><i class="bi bi-shield-check"></i></div>
+                            <span>KOL Obligations</span>
+                        </a>
+                        <a href="#section-5" class="trm-nav-card">
+                            <div class="trm-nav-icon"><i class="bi bi-person-lock"></i></div>
+                            <span>Personal Data</span>
+                        </a>
+                        <a href="#section-6" class="trm-nav-card">
+                            <div class="trm-nav-icon"><i class="bi bi-lock"></i></div>
+                            <span>Confidentiality</span>
+                        </a>
+                        <a href="#section-7" class="trm-nav-card">
+                            <div class="trm-nav-icon"><i class="bi bi-c-circle"></i></div>
+                            <span>Intellectual Property</span>
+                        </a>
+                        <a href="#section-8" class="trm-nav-card">
+                            <div class="trm-nav-icon"><i class="bi bi-flag"></i></div>
+                            <span>Governing Law</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- end quick nav section -->
+
+            <!-- start overview section -->
+            <section class="trm-section trm-section-white">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "easing": "easeOutQuad" }'>
+                            <div class="text-center mb-40px">
+                                <h2 class="trm-section-title"><span>Overview</span></h2>
+                            </div>
+                            <div class="trm-overview-card">
+                                <p class="mb-0">KOL TELECOM SERVICES LLC., registered office at 251 Little Falls Drive, Wilmington, DE 19808, United States of America and its Affiliates (hereinafter referred to as "KOL TELECOM"; "us" or "our") Providing the best in value, technology, and service to its customers, KOL TELECOM delivers IP telephony services, IP PBX hosted and on premise, wholesale and retail messaging services, cPaaS solutions, Number Lookup services (MNP/HLR), social media messaging integration, Omni-channel Chatcentre, ChatBots etc., These terms (hereinafter referred to as "Terms") apply to the use of the Products, services and applications offered by KOL TELECOM as well as KOL TELECOM website <a href="https://www.koltelecom.com" target="_blank" rel="noopener noreferrer">www.koltelecom.com</a> (hereinafter referred to as the "Site"). Please read them fully and carefully before using the Services. Unless you work for a company that has negotiated a separate written agreement with us, these Terms set forth the legally binding agreement between you or your company and us for your use of the Services and the Site. If you are accepting these Terms on behalf of a company, you represent and warrant that you have the authority to do so.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end overview section -->
+
+            <!-- start terms accordion section -->
+            <section class="trm-section trm-section-light">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+
+                            <!-- Section 1: Provision of Services -->
+                            <div class="trm-accordion-item" id="section-1">
+                                <div class="trm-accordion-header">
+                                    <a href="#" data-bs-toggle="collapse" data-bs-target="#trm-acc-01" aria-expanded="true" data-bs-parent="#trm-accordion">
+                                        <div class="trm-acc-num">1</div>
+                                        <span class="trm-acc-title">Provision of Services</span>
+                                        <div class="trm-acc-chevron"><i class="bi bi-chevron-down"></i></div>
+                                    </a>
+                                </div>
+                                <div id="trm-acc-01" class="collapse show">
+                                    <div class="trm-accordion-body">
+                                        <div class="trm-sub-heading mb-30px">
+                                            <h6><i class="bi bi-person-gear me-8px"></i>1.1 Your Account</h6>
+                                            <p class="mb-20px">To use our Services of <strong>MBlastr</strong>, <strong>VKOLU</strong> and <strong>WhatsApp for Business (ECHT)</strong>, you will be required to create an account. For this purpose, you will need to click on the "Sign up" button on the respective sites. KOL TELECOM will then ask you to provide your company name, your services, mobile phone number and email address. KOL TELECOM will process to verify the provided phone number and email address. After successful checking, your account will be automatically created and you will then receive a first email including your account username and password to access to your dashboard.</p>
+
+                                            <div class="trm-info-box mb-20px">
+                                                <p><i class="bi bi-info-circle-fill trm-info-icon"></i>You are solely responsible for all use (whether or not authorized) of the Services under your customer account(s), including the quality and integrity of your Customer Data and each Customer Application.</p>
+                                            </div>
+
+                                            <p class="mb-0">You are also solely responsible for maintaining the security, confidentiality of your customer account credentials in order to prevent unauthorized access to or use of the Services. You shall inform KOL TELECOM immediately if there is any reason to believe that the Service is used in any unauthorized way. KOL TELECOM will not be liable for any loss or damage arising from unauthorized use of your customer account(s). You will be solely responsible, at your own expense, for acquiring, installing and maintaining all hardware, software and other equipment as may be necessary for you and each End User to connect to, access, and use the Services.</p>
+                                        </div>
+
+                                        <div class="trm-sub-heading">
+                                            <h6><i class="bi bi-key me-8px"></i>1.2 Access, Use and Restriction of the Services</h6>
+                                            <p class="mb-0">KOL TELECOM will make the Services available to you in accordance with these Terms and the Documentation. The Services are available worldwide. KOL TELECOM does not warrant that the Platform will be continuously available without any downtime.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 2: Taxes -->
+                            <div class="trm-accordion-item" id="section-2">
+                                <div class="trm-accordion-header">
+                                    <a href="#" data-bs-toggle="collapse" data-bs-target="#trm-acc-02" aria-expanded="false" data-bs-parent="#trm-accordion">
+                                        <div class="trm-acc-num">2</div>
+                                        <span class="trm-acc-title">Taxes</span>
+                                        <div class="trm-acc-chevron"><i class="bi bi-chevron-down"></i></div>
+                                    </a>
+                                </div>
+                                <div id="trm-acc-02" class="collapse">
+                                    <div class="trm-accordion-body">
+                                        <div class="trm-sub-heading mb-24px">
+                                            <p class="mb-0">The price for the Services is <strong>exclusive of any Taxes</strong> and transaction fees, including but not limited to the value added taxes, withholding taxes, bank transfer charges. You shall be responsible for and shall pay all Taxes imposed on or with respect to the Services.</p>
+                                        </div>
+
+                                        <div class="trm-inner-box">
+                                            <h6><i class="bi bi-receipt me-8px"></i>Tax Exemptions</h6>
+                                            <p>If you are exempt from any such Taxes for any reason, KOL TELECOM will exempt you from such Taxes once you provide us at <a href="mailto:accounts@koltelecom.com" style="color: #FF6B35; font-weight: 600; text-decoration: underline; text-underline-offset: 3px;">accounts@koltelecom.com</a> with a duly executed and dated valid exemption certificate that must be approved by us. If you are exempt from VAT (Value Added Tax) or GST (Goods and Services Tax), then it is your responsibility to provide your VAT or GST registration number to us.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 3: Obligations and Liabilities -->
+                            <div class="trm-accordion-item" id="section-3">
+                                <div class="trm-accordion-header">
+                                    <a href="#" data-bs-toggle="collapse" data-bs-target="#trm-acc-03" aria-expanded="false" data-bs-parent="#trm-accordion">
+                                        <div class="trm-acc-num">3</div>
+                                        <span class="trm-acc-title">Your Obligations and Liabilities</span>
+                                        <div class="trm-acc-chevron"><i class="bi bi-chevron-down"></i></div>
+                                    </a>
+                                </div>
+                                <div id="trm-acc-03" class="collapse">
+                                    <div class="trm-accordion-body">
+                                        <p class="mb-28px">You must comply with the technical specifications provided by KOL TELECOM and acknowledge that these specifications can be updated by KOL TELECOM from time to time as per provisions of section 10.3 "Change to These Terms".</p>
+
+                                        <div class="trm-inner-box mb-28px">
+                                            <h6><i class="bi bi-exclamation-triangle-fill me-8px"></i>Compliance Requirements for Hong Kong</h6>
+                                            <p class="mb-12px">All short messages to be sent to recipients located in Hong Kong shall comply with the following:</p>
+                                            <div style="padding-left: 16px;">
+                                                <p class="mb-8px"><strong>(a)</strong> Personal Data (Privacy) Ordinance (Cap. 486);</p>
+                                                <p class="mb-8px"><strong>(b)</strong> Unsolicited Electronic Messages Ordinance (Cap. 593) and Code of Practice on Sending Commercial Electronic Messages;</p>
+                                                <p class="mb-8px"><strong>(c)</strong> Telecommunications Ordinance (Cap. 106);</p>
+                                                <p class="mb-0"><strong>(d)</strong> Policies &amp; Regulations issued by the Office of the Communications Authority.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="trm-sub-heading mb-28px">
+                                            <h6><i class="bi bi-credit-card me-8px"></i>Chargeback Policy</h6>
+                                            <p class="mb-0">You agree not to file fraudulent chargeback claims by either fraudulently claiming that the charge was unauthorized or that the purchase did not live up to the Terms in some way. You acknowledge that KOL TELECOM may request additional information such as your passport and ID (for individuals) or copy of your business license (for enterprises) in order to prove your identity and avoid fraudulent use and payment.</p>
+                                        </div>
+
+                                        <div class="trm-sub-heading mb-28px">
+                                            <h6><i class="bi bi-pc-display me-8px"></i>Equipment</h6>
+                                            <p class="mb-0">You are responsible, at your own expense, for providing the suitable hardware, software and infrastructure to ensure its access to the Platform.</p>
+                                        </div>
+
+                                        <div class="trm-sub-heading">
+                                            <h6><i class="bi bi-mic me-8px"></i>Voice Recordings and Communications Monitoring</h6>
+                                            <div class="trm-info-box">
+                                                <p>You represent and warrant that if you record or monitor telephone calls, SMS messages, or other communications using the Services, you will comply with all applicable laws prior to doing so and will secure all required prior consents to record or monitor communications using the Services. You will defend and handle at your own expenses, fully indemnify and hold harmless KOL TELECOM and its affiliates, from and against any and all claims, demands, actions, damages, costs and expenses, or liability of whatever nature incurred or to be incurred arising out of or relating to <strong>(i)</strong> Your use of the Services other than as expressly authorized in these Terms <strong>(ii)</strong> infringement of any third party intellectual property rights in using the Services <strong>(iii)</strong> any breach of your obligations under these Terms <strong>(iv)</strong> any claims arising from the information, data, or messages you transmitted using the Services.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 4: KOL TELECOM Obligations -->
+                            <div class="trm-accordion-item" id="section-4">
+                                <div class="trm-accordion-header">
+                                    <a href="#" data-bs-toggle="collapse" data-bs-target="#trm-acc-04" aria-expanded="false" data-bs-parent="#trm-accordion">
+                                        <div class="trm-acc-num">4</div>
+                                        <span class="trm-acc-title">KOL TELECOM Obligations, Warranties and Liabilities</span>
+                                        <div class="trm-acc-chevron"><i class="bi bi-chevron-down"></i></div>
+                                    </a>
+                                </div>
+                                <div id="trm-acc-04" class="collapse">
+                                    <div class="trm-accordion-body">
+                                        <div class="trm-sub-heading mb-28px">
+                                            <h6><i class="bi bi-shield-x me-8px"></i>No Warranty</h6>
+                                            <p class="mb-20px">To the maximum extent permissible under applicable laws and except as expressly stated otherwise in writing, the Services are provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis, and neither KOL TELECOM nor any of its licensors make any representations or warranties, whether express, implied, or statutory, regarding the Services, API nor the Platform or any other software or services.</p>
+
+                                            <div class="trm-info-box">
+                                                <p class="mb-12px">This includes any representation, warranty or undertaking that:</p>
+                                                <div style="padding-left: 12px;">
+                                                    <p class="mb-8px"><strong>(i)</strong> The Platform nor the Services will be continuously available without any downtime;</p>
+                                                    <p class="mb-8px"><strong>(ii)</strong> The Services are virus-free or error-free;</p>
+                                                    <p class="mb-8px"><strong>(iii)</strong> All the Mobile Networks will be reachable at all times;</p>
+                                                    <p class="mb-8px"><strong>(iv)</strong> The data passing through the Platform will not be subject to loss or damage;</p>
+                                                    <p class="mb-0"><strong>(v)</strong> The Services, API and Platform will be compatible with your network or your End-Users' networks, systems, applications, hardware, or devices.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="trm-sub-heading">
+                                            <h6><i class="bi bi-exclamation-octagon me-8px"></i>No Liability</h6>
+                                            <p class="mb-20px">You acknowledge that KOL TELECOM does not examine, does not have any control over, and is not liable in any way for the contents and information which pass through the use of the Services. In case of suspension of the Services due to your non-payment of the fees, KOL TELECOM will have no liability for any damage, liabilities, losses (including any loss of data or profits) or any other consequences that you may incur in connection with any such suspension.</p>
+
+                                            <p class="mb-20px">KOL TELECOM is not responsible in any way for any mobile telecommunications systems or Mobile Networks, which it does not operate and in particular for the operators Mobile Networks. Therefore KOL TELECOM shall not be liable for the acts or omissions of other providers of telecommunication services (including suspension or termination of KOL TELECOM connections and/or contracts with any network operator) or for faults in or failures of their apparatus or Mobile Network, and in general for any other technical reason attributable to Mobile Network operator's or telecommunication service provider.</p>
+
+                                            <div class="trm-inner-box">
+                                                <p><i class="bi bi-info-circle-fill me-8px" style="color: #FF6B35;"></i>KOL TELECOM shall have no liability in respect of unauthorized access to your account data or the unauthorized use of a Service unless the unauthorized access or use results from KOL TELECOM's failure to meet its security obligations.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 5: Personal Data -->
+                            <div class="trm-accordion-item" id="section-5">
+                                <div class="trm-accordion-header">
+                                    <a href="#" data-bs-toggle="collapse" data-bs-target="#trm-acc-05" aria-expanded="false" data-bs-parent="#trm-accordion">
+                                        <div class="trm-acc-num">5</div>
+                                        <span class="trm-acc-title">Personal Data</span>
+                                        <div class="trm-acc-chevron"><i class="bi bi-chevron-down"></i></div>
+                                    </a>
+                                </div>
+                                <div id="trm-acc-05" class="collapse">
+                                    <div class="trm-accordion-body">
+                                        <div class="row g-4 mb-28px">
+                                            <div class="col-md-6">
+                                                <div class="trm-data-card">
+                                                    <div class="trm-data-icon">
+                                                        <i class="bi bi-shield-lock-fill"></i>
+                                                    </div>
+                                                    <h6>Protection Measures</h6>
+                                                    <p>Each Party shall take reasonable and appropriate measures to prevent the unauthorized use or disclosure of any personal information provided by the other Party.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="trm-data-card">
+                                                    <div class="trm-data-icon">
+                                                        <i class="bi bi-people-fill"></i>
+                                                    </div>
+                                                    <h6>No Third Party Sharing</h6>
+                                                    <p>Each Party will not share personal information of the other Party with any third party not involved in the provision of a Service without the consent of the other Party.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="trm-inner-box">
+                                            <h6><i class="bi bi-file-text me-8px"></i>Privacy Policy</h6>
+                                            <p>You shall read KOL TELECOM Privacy Policy that sets forth how KOL TELECOM will collect, store, use and disclose your End-Users Data and you customer account data including personal data. If you do not agree with our Privacy Policy, then you must stop using the Services immediately.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 6: Confidentiality -->
+                            <div class="trm-accordion-item" id="section-6">
+                                <div class="trm-accordion-header">
+                                    <a href="#" data-bs-toggle="collapse" data-bs-target="#trm-acc-06" aria-expanded="false" data-bs-parent="#trm-accordion">
+                                        <div class="trm-acc-num">6</div>
+                                        <span class="trm-acc-title">Confidentiality</span>
+                                        <div class="trm-acc-chevron"><i class="bi bi-chevron-down"></i></div>
+                                    </a>
+                                </div>
+                                <div id="trm-acc-06" class="collapse">
+                                    <div class="trm-accordion-body">
+                                        <div class="trm-sub-heading mb-28px">
+                                            <h6><i class="bi bi-lock-fill me-8px"></i>Definition of Confidential Information</h6>
+                                            <p class="mb-0">Confidential information under these Terms means any information disclosed by either Party, whether it is in tangible form or not, and that is marked or otherwise designated as confidential or proprietary or that should otherwise be reasonably understood to be confidential given the nature of the information and the circumstances surrounding disclosure. Confidential Information includes but is not limited to the business secrets (including financial secrets), technological secrets, operating know-how, or other unpublished information and documentation that are obtained or learned by the receiving Party <strong>("Information Receiver")</strong> from the owning Party <strong>("Information Discloser")</strong> or are mutually created by and become inseparable between both Parties during the fulfilment of these Terms.</p>
+                                        </div>
+
+                                        <div class="trm-inner-box mb-28px">
+                                            <h6><i class="bi bi-x-circle me-8px"></i>Confidential Information does not include:</h6>
+                                            <div style="padding-left: 12px;">
+                                                <p class="mb-12px"><strong>(a)</strong> Information which is publicly available through no fault of the Information Receiver;</p>
+                                                <p class="mb-12px"><strong>(b)</strong> Information that was properly known to the Information Receiver, without restriction, prior to disclosure by the Information Discloser;</p>
+                                                <p class="mb-12px"><strong>(c)</strong> Information that was properly disclosed to the Information Receiver, without restriction, by another person without violation of the Information Discloser's rights;</p>
+                                                <p class="mb-0"><strong>(d)</strong> Information that is independently developed by the Information Receiver without use of or reference to the Confidential Information of the Information Discloser.</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="trm-info-box">
+                                            <p><i class="bi bi-clock-history trm-info-icon"></i><strong>Duration:</strong> The information confidentiality obligations under these Terms will survive one (1) year after the termination of these Terms.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 7: Intellectual Property Rights -->
+                            <div class="trm-accordion-item" id="section-7">
+                                <div class="trm-accordion-header">
+                                    <a href="#" data-bs-toggle="collapse" data-bs-target="#trm-acc-07" aria-expanded="false" data-bs-parent="#trm-accordion">
+                                        <div class="trm-acc-num">7</div>
+                                        <span class="trm-acc-title">Intellectual Property Rights</span>
+                                        <div class="trm-acc-chevron"><i class="bi bi-chevron-down"></i></div>
+                                    </a>
+                                </div>
+                                <div id="trm-acc-07" class="collapse">
+                                    <div class="trm-accordion-body">
+                                        <div class="trm-visual-box">
+                                            <div class="trm-visual-icon">
+                                                <i class="bi bi-c-circle"></i>
+                                            </div>
+                                            <h6>Intellectual Property Protection</h6>
+                                            <p>Intellectual property rights in all software, information, technology or data whatsoever supplied by either Party under these Terms shall remain the <strong>property of that Party</strong> or its Affiliates or their licensors.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section 8: Governing Law -->
+                            <div class="trm-accordion-item" id="section-8">
+                                <div class="trm-accordion-header">
+                                    <a href="#" data-bs-toggle="collapse" data-bs-target="#trm-acc-08" aria-expanded="false" data-bs-parent="#trm-accordion">
+                                        <div class="trm-acc-num">8</div>
+                                        <span class="trm-acc-title">Governing Law</span>
+                                        <div class="trm-acc-chevron"><i class="bi bi-chevron-down"></i></div>
+                                    </a>
+                                </div>
+                                <div id="trm-acc-08" class="collapse">
+                                    <div class="trm-accordion-body">
+                                        <div class="trm-visual-box">
+                                            <div class="trm-visual-icon">
+                                                <i class="bi bi-flag-fill"></i>
+                                            </div>
+                                            <h6>United States Jurisdiction</h6>
+                                            <p>Both Parties agree that the Terms shall be governed by and construed in accordance with the <strong>laws of United States of America</strong>, and that each Party shall submit to the jurisdiction of the courts in USA.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end terms accordion section -->
+
+            <!-- start CTA section -->
+            <section class="trm-section trm-section-white">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "easing": "easeOutQuad" }'>
+                            <div class="trm-cta-banner">
+                                <h3>Questions About Our Terms?</h3>
+                                <p>If you have any questions about these Terms and Conditions, please don't hesitate to contact our support team.</p>
+                                <a href="contact-us.html" class="trm-cta-btn">Contact Us <i class="feather icon-feather-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end CTA section -->
+            </main>
+
+            <!-- start footer -->
+            <footer class="half-footer pb-45px border-top border-color-light-gray background-repeat" style="background-image:url('images/kolimg/footer\ bg.png');">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin z-index-1 text-center text-sm-start xs-mb-20px">
+                            <span class="fs-20 fw-500 text-dark-gray d-block mb-5px">location</span>
+                            <p class="w-100">KOL Telecom Services LLC, <br>251 Little Falls Drive<br>
+                                Wilmington, DE 19808<br>
+                                United States of America.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-4 col-sm-12 text-center z-index-1 mb-20px mb-md-0">
+                            <img src="images/kolimg/2.png" alt="KOL Telecom Logo" data-no-retina="" style="max-width: 280px; width: 100%; height: auto;" loading="lazy">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin text-center text-sm-end z-index-1">
+                            <span class="fs-20 fw-700 text-dark-gray d-block mb-5px">How can we help?</span>
+                            <a href="mailto:info@koltelecom.com" class="text-dark-gray fw-600 d-block mb-0" style="font-size: 16px;">info@koltelecom.com</a>
+                            <a href="tel:+13022952746" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">+1 302 295 2746</a>
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-center mt-20px mb-10px md-mb-20px">
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-7 text-center elements-social social-icon-style-04">
+                            <ul class="large-icon dark mb-0">
+                                <li><a class="facebook" href="https://www.facebook.com/koltelecomservices/" target="_blank" rel="noopener noreferrer" aria-label="Visit KOL Telecom on Facebook"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                                <li><a class="twitter" href="https://twitter.com/KOLTELECOM" target="_blank" rel="noopener noreferrer" aria-label="Visit KOL Telecom on X (Twitter)"><i class="fa-brands fa-x-twitter"></i><span></span></a></li>
+                                <li><a class="instagram" href="https://www.instagram.com/koltelecom/" target="_blank" rel="noopener noreferrer" aria-label="Visit KOL Telecom on Instagram"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                                <li><a class="linkedin" href="https://www.linkedin.com/company/kol-telecom-services-llc" target="_blank" rel="noopener noreferrer" aria-label="Visit KOL Telecom on LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-12 last-paragraph-no-margin text-center sm-mb-10px">
+                            <p>&copy; 2026 <a href="index.html" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">KOL Telecom.</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+        </div>
+        <!-- end box-layout -->
+        <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+            <a href="#" class="scroll-top" aria-label="Scroll to top">
+                <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- WhatsApp floating button -->
+        </div>
+
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/vendors.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!-- Chatbot JS -->
+        <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+</body>
+</html>

@@ -1,0 +1,486 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>Analytics Dashboard - KOL Telecom</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="images/kolimg/kol-logo.png">
+    <link rel="apple-touch-icon" href="images/kolimg/kol-logo.png">
+
+    <!-- style sheets and font icons -->
+    <link rel="stylesheet" href="css/vendors.min.css"/>
+    <link rel="stylesheet" href="css/icon.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="stylesheet" href="css/responsive.min.css"/>
+
+    <style>
+        .analytics-container {
+            max-width: 1400px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #fe9d0e;
+            margin-bottom: 5px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .stat-icon {
+            font-size: 40px;
+            color: #fe9d0e;
+            opacity: 0.3;
+            float: right;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+        .page-list {
+            list-style: none;
+            padding: 0;
+        }
+        .page-item {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .page-item:hover {
+            background: #f9f9f9;
+        }
+        .badge-custom {
+            padding: 5px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .progress-bar-custom {
+            height: 8px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #fe9d0e, #f97233);
+            transition: width 0.3s;
+        }
+        .refresh-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #fe9d0e;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(254, 157, 14, 0.3);
+            transition: all 0.3s;
+        }
+        .refresh-btn:hover {
+            background: #f97233;
+            transform: rotate(180deg);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        th {
+            background: #f9f9f9;
+            font-weight: 600;
+            color: #232323;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div style="background: linear-gradient(135deg, #ff7425 0%, #f97233 100%); padding: 20px 0; color: white;">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="mb-0">📊 Analytics Dashboard</h2>
+                </div>
+                <div class="col-md-6 text-end">
+                    <button onclick="exportData()" class="btn btn-light me-2">
+                        <i class="fa fa-download"></i> Export Data
+                    </button>
+                    <a href="blog-admin.html" class="btn btn-light">Blog Admin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="analytics-container">
+        <!-- Summary Stats -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-card">
+                    <i class="fa fa-eye stat-icon"></i>
+                    <div class="stat-value" id="totalViews">0</div>
+                    <div class="stat-label">Total Page Views</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-card">
+                    <i class="fa fa-users stat-icon"></i>
+                    <div class="stat-value" id="uniqueVisitors">0</div>
+                    <div class="stat-label">Unique Visitors</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-card">
+                    <i class="fa fa-clock stat-icon"></i>
+                    <div class="stat-value" id="avgReadTime">0</div>
+                    <div class="stat-label">Avg. Read Time (sec)</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-card">
+                    <i class="fa fa-share-alt stat-icon"></i>
+                    <div class="stat-value" id="totalShares">0</div>
+                    <div class="stat-label">Social Shares</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Pages -->
+        <div class="row mt-4">
+            <div class="col-lg-6">
+                <div class="chart-container">
+                    <h4 class="mb-4">📈 Top Pages by Views</h4>
+                    <ul class="page-list" id="topPages">
+                        <!-- Will be populated by JS -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="chart-container">
+                    <h4 class="mb-4">🌐 Traffic Sources</h4>
+                    <ul class="page-list" id="trafficSources">
+                        <!-- Will be populated by JS -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="chart-container">
+            <h4 class="mb-4">🕒 Recent Page Views</h4>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Page</th>
+                            <th>Time</th>
+                            <th>Referrer</th>
+                            <th>Device</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentActivity">
+                        <!-- Will be populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Social Shares Breakdown -->
+        <div class="chart-container">
+            <h4 class="mb-4">📱 Social Media Shares</h4>
+            <ul class="page-list" id="socialShares">
+                <!-- Will be populated by JS -->
+            </ul>
+        </div>
+
+        <!-- Blog Posts Performance -->
+        <div class="chart-container">
+            <h4 class="mb-4">📝 Blog Posts Performance</h4>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Blog Title</th>
+                            <th>Views</th>
+                            <th>Avg. Read Time</th>
+                            <th>Comments</th>
+                            <th>Shares</th>
+                        </tr>
+                    </thead>
+                    <tbody id="blogPerformance">
+                        <!-- Will be populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Refresh Button -->
+    <button class="refresh-btn" onclick="loadAnalytics()" title="Refresh Data">
+        <i class="fa fa-refresh"></i>
+    </button>
+
+    <!-- Analytics Script -->
+    <script>
+        // Load analytics on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAnalytics();
+            // Auto-refresh every 30 seconds
+            setInterval(loadAnalytics, 30000);
+        });
+
+        function loadAnalytics() {
+            // Get data from localStorage
+            const pageViews = JSON.parse(localStorage.getItem('page_views') || '[]');
+            const readingTime = JSON.parse(localStorage.getItem('reading_time') || '[]');
+            const scrollDepth = JSON.parse(localStorage.getItem('scroll_depth') || '[]');
+            const shares = JSON.parse(localStorage.getItem('blog_shares') || '[]');
+
+            // Calculate summary stats
+            updateSummaryStats(pageViews, readingTime, shares);
+
+            // Update charts and tables
+            updateTopPages(pageViews);
+            updateTrafficSources(pageViews);
+            updateRecentActivity(pageViews);
+            updateSocialShares(shares);
+            updateBlogPerformance(pageViews, readingTime, shares);
+        }
+
+        function updateSummaryStats(pageViews, readingTime, shares) {
+            // Total views
+            document.getElementById('totalViews').textContent = pageViews.length;
+
+            // Unique visitors (approximate based on user agent)
+            const uniqueVisitors = new Set(pageViews.map(v => v.userAgent)).size;
+            document.getElementById('uniqueVisitors').textContent = uniqueVisitors;
+
+            // Average read time
+            const avgReadTime = readingTime.length > 0
+                ? Math.round(readingTime.reduce((sum, r) => sum + r.duration, 0) / readingTime.length)
+                : 0;
+            document.getElementById('avgReadTime').textContent = avgReadTime;
+
+            // Total shares
+            document.getElementById('totalShares').textContent = shares.length;
+        }
+
+        function updateTopPages(pageViews) {
+            const pageCount = {};
+
+            pageViews.forEach(view => {
+                const page = view.path || view.title;
+                pageCount[page] = (pageCount[page] || 0) + 1;
+            });
+
+            const topPages = Object.entries(pageCount)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 10);
+
+            const maxViews = topPages[0]?.[1] || 1;
+
+            const html = topPages.map(([page, count]) => {
+                const percentage = (count / maxViews) * 100;
+                const pageName = page.split('/').pop() || 'Home';
+
+                return `
+                    <li class="page-item">
+                        <div style="flex: 1;">
+                            <strong>${pageName}</strong>
+                            <div class="progress-bar-custom">
+                                <div class="progress-fill" style="width: ${percentage}%"></div>
+                            </div>
+                        </div>
+                        <span class="badge-custom" style="background: #e3f2fd; color: #1976d2;">${count} views</span>
+                    </li>
+                `;
+            }).join('');
+
+            document.getElementById('topPages').innerHTML = html || '<li class="page-item text-muted">No data available</li>';
+        }
+
+        function updateTrafficSources(pageViews) {
+            const sources = {};
+
+            pageViews.forEach(view => {
+                let source = 'Direct';
+                if (view.referrer) {
+                    try {
+                        const url = new URL(view.referrer);
+                        source = url.hostname;
+                    } catch (e) {
+                        source = 'Other';
+                    }
+                }
+                sources[source] = (sources[source] || 0) + 1;
+            });
+
+            const topSources = Object.entries(sources)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 10);
+
+            const maxCount = topSources[0]?.[1] || 1;
+
+            const html = topSources.map(([source, count]) => {
+                const percentage = (count / maxCount) * 100;
+
+                return `
+                    <li class="page-item">
+                        <div style="flex: 1;">
+                            <strong>${source}</strong>
+                            <div class="progress-bar-custom">
+                                <div class="progress-fill" style="width: ${percentage}%"></div>
+                            </div>
+                        </div>
+                        <span class="badge-custom" style="background: #e8f5e9; color: #388e3c;">${count} visits</span>
+                    </li>
+                `;
+            }).join('');
+
+            document.getElementById('trafficSources').innerHTML = html || '<li class="page-item text-muted">No data available</li>';
+        }
+
+        function updateRecentActivity(pageViews) {
+            const recent = pageViews.slice(-20).reverse();
+
+            const html = recent.map(view => {
+                const date = new Date(view.timestamp);
+                const time = date.toLocaleString();
+                const device = view.userAgent?.includes('Mobile') ? '📱 Mobile' : '💻 Desktop';
+                const referrer = view.referrer ? new URL(view.referrer).hostname : 'Direct';
+                const page = view.path?.split('/').pop() || view.title;
+
+                return `
+                    <tr>
+                        <td><strong>${page}</strong></td>
+                        <td>${time}</td>
+                        <td>${referrer}</td>
+                        <td>${device}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            document.getElementById('recentActivity').innerHTML = html || '<tr><td colspan="4" class="text-muted">No recent activity</td></tr>';
+        }
+
+        function updateSocialShares(shares) {
+            const platforms = {};
+
+            shares.forEach(share => {
+                platforms[share.platform] = (platforms[share.platform] || 0) + 1;
+            });
+
+            const icons = {
+                facebook: '👥',
+                twitter: '🐦',
+                linkedin: '💼',
+                whatsapp: '💬',
+                telegram: '✈️',
+                email: '📧'
+            };
+
+            const html = Object.entries(platforms)
+                .sort((a, b) => b[1] - a[1])
+                .map(([platform, count]) => {
+                    return `
+                        <li class="page-item">
+                            <strong>${icons[platform] || '📱'} ${platform.charAt(0).toUpperCase() + platform.slice(1)}</strong>
+                            <span class="badge-custom" style="background: #fff3e0; color: #e65100;">${count} shares</span>
+                        </li>
+                    `;
+                }).join('');
+
+            document.getElementById('socialShares').innerHTML = html || '<li class="page-item text-muted">No shares yet</li>';
+        }
+
+        function updateBlogPerformance(pageViews, readingTime, shares) {
+            const blogs = JSON.parse(localStorage.getItem('blog_posts') || '[]');
+
+            const html = blogs.map(blog => {
+                // Count views for this blog
+                const blogViews = pageViews.filter(v => v.path?.includes(blog.id) || v.title?.includes(blog.title)).length;
+
+                // Avg read time for this blog
+                const blogReadTime = readingTime.filter(r => r.path?.includes(blog.id) || r.title?.includes(blog.title));
+                const avgTime = blogReadTime.length > 0
+                    ? Math.round(blogReadTime.reduce((sum, r) => sum + r.duration, 0) / blogReadTime.length)
+                    : 0;
+
+                // Count shares
+                const blogShares = shares.filter(s => s.article?.includes(blog.title)).length;
+
+                // Count comments
+                const commentCount = blog.comments?.length || 0;
+
+                return `
+                    <tr>
+                        <td><strong>${blog.title}</strong></td>
+                        <td>${blogViews}</td>
+                        <td>${avgTime}s</td>
+                        <td>${commentCount}</td>
+                        <td>${blogShares}</td>
+                    </tr>
+                `;
+            }).join('');
+
+            document.getElementById('blogPerformance').innerHTML = html || '<tr><td colspan="5" class="text-muted">No blog posts available</td></tr>';
+        }
+
+        function exportData() {
+            const data = {
+                pageViews: JSON.parse(localStorage.getItem('page_views') || '[]'),
+                readingTime: JSON.parse(localStorage.getItem('reading_time') || '[]'),
+                scrollDepth: JSON.parse(localStorage.getItem('scroll_depth') || '[]'),
+                shares: JSON.parse(localStorage.getItem('blog_shares') || '[]'),
+                blogs: JSON.parse(localStorage.getItem('blog_posts') || '[]'),
+                exportedAt: new Date().toISOString()
+            };
+
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `analytics-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            alert('Analytics data exported successfully!');
+        }
+    </script>
+
+</body>
+</html>

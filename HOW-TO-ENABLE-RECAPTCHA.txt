@@ -1,0 +1,146 @@
+===============================================================================
+  HOW TO ENABLE reCAPTCHA - SUPER EASY!
+===============================================================================
+
+✅ GOOD NEWS: reCAPTCHA scripts are ALREADY in all your HTML files!
+✅ You just need to replace "PASTE_YOUR_SITE_KEY_HERE" with your real key!
+
+===============================================================================
+  STEP 1: Get Your reCAPTCHA Keys (2 minutes)
+===============================================================================
+
+1. Go to: https://www.google.com/recaptcha/admin/create
+
+2. Fill in the form:
+   Label: KOL Telecom
+   Type: reCAPTCHA v3
+   Domains:
+   - localhost
+   - koltelecom.com
+
+3. Click "Submit"
+
+4. COPY YOUR KEYS:
+   📋 Site Key (looks like: 6LcXXXXXXXXXXXXXXXXXX...)
+   📋 Secret Key (looks like: 6LcYYYYYYYYYYYYYYYYYY...)
+
+===============================================================================
+  STEP 2: Add Keys to Backend (30 seconds)
+===============================================================================
+
+Open file: email-templates/config.php
+
+Find lines 31-34:
+
+    define('RECAPTCHA_ENABLED', false);
+    define('RECAPTCHA_SITE_KEY', 'YOUR_RECAPTCHA_SITE_KEY');
+    define('RECAPTCHA_SECRET_KEY', 'YOUR_RECAPTCHA_SECRET_KEY');
+
+Change to:
+
+    define('RECAPTCHA_ENABLED', true);  ← Change to true
+    define('RECAPTCHA_SITE_KEY', '6LcXXXXXXXXXXXXXXXXXX...');  ← Paste Site Key
+    define('RECAPTCHA_SECRET_KEY', '6LcYYYYYYYYYYYYYYYYYY...');  ← Paste Secret Key
+
+SAVE the file!
+
+===============================================================================
+  STEP 3: Replace Placeholder in HTML Files (2 minutes)
+===============================================================================
+
+In each HTML file, find this line:
+
+    window.RECAPTCHA_SITE_KEY = 'PASTE_YOUR_SITE_KEY_HERE';
+
+Replace 'PASTE_YOUR_SITE_KEY_HERE' with your Site Key:
+
+    window.RECAPTCHA_SITE_KEY = '6LcXXXXXXXXXXXXXXXXXX...';
+
+ALSO find this line:
+
+    <script src="https://www.google.com/recaptcha/api.js?render=PASTE_YOUR_SITE_KEY_HERE"></script>
+
+Replace PASTE_YOUR_SITE_KEY_HERE:
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcXXXXXXXXXXXXXXXXXX..."></script>
+
+Do this for ALL 7 files:
+✓ index.html
+✓ contact-us.html
+✓ careers.html
+✓ partners-become.html
+✓ coming-soon.html
+✓ solutions-cedar.html
+✓ solutions-textr.html
+
+TIP: Use Find & Replace in your editor!
+      Find: PASTE_YOUR_SITE_KEY_HERE
+      Replace: 6LcXXXXXXXXXXXXXXXXXX... (your actual key)
+
+===============================================================================
+  STEP 4: Test It!
+===============================================================================
+
+1. Open: http://localhost/kol/contact-us.html
+2. Fill out form
+3. Submit
+4. Should work! ✅
+5. Check your email at info@koltelecom.com
+
+===============================================================================
+  WHERE ARE THE SCRIPTS LOCATED?
+===============================================================================
+
+Look for these lines in each HTML file (near the end of <head> section):
+
+    <!-- Google reCAPTCHA v3 -->
+    <!-- TODO: Replace PASTE_YOUR_SITE_KEY_HERE with your actual Site Key -->
+    <script>
+        window.RECAPTCHA_SITE_KEY = 'PASTE_YOUR_SITE_KEY_HERE'; ← Replace here
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?render=PASTE_YOUR_SITE_KEY_HERE"></script>
+                                                                 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+                                                                 And replace here
+
+===============================================================================
+  TROUBLESHOOTING
+===============================================================================
+
+❌ Forms not submitting?
+   → Check browser console (F12) for errors
+   → Make sure Site Key is correct in ALL HTML files
+   → Make sure RECAPTCHA_ENABLED is true in config.php
+
+❌ "Invalid site key" error?
+   → Double-check you copied the SITE KEY (not secret key) to HTML
+   → Make sure domain is added in reCAPTCHA admin (localhost for testing)
+
+❌ Want to disable temporarily?
+   → Set RECAPTCHA_ENABLED to false in config.php
+   → Forms will still work without reCAPTCHA
+
+===============================================================================
+  QUICK SUMMARY
+===============================================================================
+
+✅ Scripts already added to all HTML files
+✅ Backend already configured
+✅ JavaScript handler already updated
+⏳ Just need to replace "PASTE_YOUR_SITE_KEY_HERE" with real key
+⏳ Enable in config.php (change false to true)
+
+TOTAL TIME: 5 minutes max!
+
+===============================================================================
+  YOUR KEYS (Save them here for easy access)
+===============================================================================
+
+Site Key (Public): _______________________________________________
+
+Secret Key (Private): ___________________________________________
+
+Date Added: ______________________
+
+===============================================================================
+
+For detailed guide, see: RECAPTCHA-QUICK-START.md

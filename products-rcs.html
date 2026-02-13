@@ -1,0 +1,878 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>RCS - Rich Communication Services | KOL Telecom</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="KOL Telecom">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="RCS - Rich Communication Services for businesses">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="css/vendors.min.css"/>
+        <link rel="stylesheet" href="css/icon.min.css"/>
+        <link rel="stylesheet" href="css/style.min.css"/>
+        <link rel="stylesheet" href="css/responsive.min.css"/>
+        <link rel="stylesheet" href="css/font-size-fix.css"/>
+        <link rel="stylesheet" href="demos/corporate/corporate.css" />
+        <style>
+            .text-orange {
+                color: #FF6B35 !important;
+            }
+            .bg-orange {
+                background-color: #FF6B35 !important;
+            }
+            .bg-orange-gradient {
+                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            }
+            .btn-orange {
+                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+                color: white !important;
+                border: none;
+            }
+            .btn-orange:hover {
+                background: linear-gradient(135deg, #F7931E 0%, #FF6B35 100%);
+                transform: translateY(-3px);
+                box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+            }
+            .benefit-card {
+                background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+                border-radius: 10px;
+                padding: 30px;
+                border-left: 4px solid #FF6B35;
+                transition: all 0.3s ease;
+            }
+            .benefit-card:hover {
+                box-shadow: 0 10px 25px rgba(255, 107, 53, 0.15);
+                transform: translateX(5px);
+            }
+            /* Process step cards */
+            .rcs-process-card {
+                background: #fff;
+                border-radius: 16px;
+                padding: 36px 28px;
+                border: 1.5px solid #eee;
+                text-align: center;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+            }
+            .rcs-process-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+                border-color: #FF6B35;
+            }
+            .rcs-process-num {
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+                color: #fff;
+                font-size: 18px;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 18px;
+            }
+            .rcs-process-icon {
+                width: 60px;
+                height: 60px;
+                border-radius: 16px;
+                background: rgba(255,107,53,0.08);
+                color: #FF6B35;
+                font-size: 26px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 18px;
+                transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            }
+            .rcs-process-card:hover .rcs-process-icon {
+                background: #FF6B35;
+                color: #fff;
+                transform: scale(1.08);
+            }
+            .rcs-process-connector {
+                display: none;
+            }
+            @media (min-width: 768px) {
+                .rcs-process-connector {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 50%;
+                    right: -28px;
+                    transform: translateY(-50%);
+                    width: 40px;
+                    z-index: 2;
+                    color: #FF6B35;
+                    font-size: 20px;
+                    opacity: 0.5;
+                }
+            }
+            /* Comparison slider */
+            .rcs-compare-slider {
+                overflow: hidden;
+                padding: 0;
+            }
+            .rcs-compare-slider .swiper-wrapper {
+                padding: 15px 0 40px;
+                align-items: stretch;
+            }
+            .rcs-compare-slider .swiper-slide {
+                height: auto;
+            }
+            .rcs-compare-card {
+                background: #fff;
+                border-radius: 16px;
+                border: 1.5px solid #eee;
+                padding: 32px 24px;
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+                gap: 18px;
+                transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+            }
+            .rcs-compare-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+                border-color: #FF6B35;
+            }
+            .rcs-compare-icon {
+                width: 52px;
+                height: 52px;
+                min-width: 52px;
+                border-radius: 14px;
+                background: rgba(255,107,53,0.1);
+                color: #FF6B35;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.3s ease, color 0.3s ease;
+            }
+            .rcs-compare-card:hover .rcs-compare-icon {
+                background: #FF6B35;
+                color: #fff;
+            }
+            .rcs-compare-content span {
+                font-weight: 700;
+                color: #1a1a2e;
+                display: block;
+                margin-bottom: 6px;
+                font-size: 16px;
+            }
+            .rcs-compare-content p {
+                margin-bottom: 0;
+                font-size: 14px;
+                color: #6c757d;
+                line-height: 1.5;
+            }
+            .rcs-compare-slider .swiper-pagination {
+                position: relative;
+                margin-top: 10px;
+                bottom: auto;
+            }
+            .rcs-compare-slider .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                background: #ccc;
+                opacity: 1;
+                transition: background 0.3s ease, transform 0.3s ease;
+            }
+            .rcs-compare-slider .swiper-pagination-bullet-active {
+                background: #FF6B35;
+                transform: scale(1.2);
+            }
+
+            /* RCS Features Slider */
+            .rcs-features-slider {
+                overflow: hidden;
+                padding: 0;
+            }
+            .rcs-features-slider .swiper-wrapper {
+                padding: 15px 0 40px;
+                align-items: stretch;
+            }
+            .rcs-features-slider .swiper-slide {
+                height: auto;
+            }
+            .rcs-feature-card {
+                background: #fff;
+                border-radius: 16px;
+                border: 1.5px solid #eee;
+                padding: 40px 30px;
+                text-align: center;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+            }
+            .rcs-feature-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+                border-color: #FF6B35;
+            }
+            .rcs-feature-card-icon {
+                width: 72px;
+                height: 72px;
+                border-radius: 18px;
+                background: rgba(255,107,53,0.1);
+                color: #FF6B35;
+                font-size: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 22px;
+                transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            }
+            .rcs-feature-card:hover .rcs-feature-card-icon {
+                background: #FF6B35;
+                color: #fff;
+                transform: scale(1.1);
+            }
+            .rcs-feature-card h5 {
+                font-weight: 700;
+                color: #1a1a2e;
+                margin-bottom: 12px;
+            }
+            .rcs-feature-card p {
+                margin-bottom: 0;
+                font-size: 15px;
+                color: #6c757d;
+                line-height: 1.6;
+            }
+            .rcs-features-slider .swiper-pagination {
+                position: relative;
+                margin-top: 10px;
+                bottom: auto;
+            }
+            .rcs-features-slider .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                background: #ccc;
+                opacity: 1;
+                transition: background 0.3s ease, transform 0.3s ease;
+            }
+            .rcs-features-slider .swiper-pagination-bullet-active {
+                background: #FF6B35;
+                transform: scale(1.2);
+            }
+
+            .automation-item {
+                padding: 12px 20px;
+                border-left: 3px solid #FF6B35;
+                background: #f8f9fa;
+                margin-bottom: 10px;
+                border-radius: 4px;
+                transition: all 0.3s ease;
+            }
+            .automation-item:hover {
+                background: #fff;
+                box-shadow: 0 3px 10px rgba(255, 107, 53, 0.1);
+                transform: translateX(3px);
+            }
+        </style>
+        <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+</head>
+    <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+        <div class="box-layout">
+            <!-- start header -->
+            <header>
+                <!-- start navigation -->
+                <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                    <div class="container-fluid">
+                        <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="default-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="alt-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="mobile-logo" width="142" height="28">
+                            </a>
+                        </div>
+                        <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                            <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-item dropdown submenu">
+                                        <a href="#" class="nav-link">Products</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
+                                            <div class="d-lg-flex mega-menu m-auto flex-column">
+                                                <div class="row row-cols-1 row-cols-lg-5 mb-60px md-mb-30px sm-mb-20px">
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">cPaaS</li>
+                                                            <li><a href="products-mblastr.html">mBlastr</a></li>
+                                                            <li><a href="products-vkolu.html">VKOLU</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Whole Sale</li>
+                                                            <li><a href="products-voice.html">Voice</a></li>
+                                                            <li><a href="products-sms.html">SMS(A2P)</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Retail</li>
+                                                            <li><a href="products-rcs.html">RCS</a></li>
+                                                            <li><a href="products-did.html">DID</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Instant Messaging</li>
+                                                            <li><a href="products-whatsapp.html">Whatsapp for Business</a></li>
+                                                            <li><a href="products-instagram.html">Instagram</a></li>
+                                                            <li><a href="products-viber.html">Viber</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Number Lookup</li>
+                                                            <li><a href="products-number-lookup.html">Number Lookup</a></li>
+                                                            <li><a href="products-hlr.html">HLR</a></li>
+                                                            <li><a href="products-mnp.html">MNP</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Services</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a href="services-mail-hosting.html">Mail Hosting</a></li>
+                                            <li><a href="services-it-managed.html">IT Managed Services</a></li>
+                                            <li><a href="services-ip-pbx.html">IP PBX</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Solutions</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                            <li><a href="solutions-echt.html">ECHT</a></li>
+                                            <li><a href="solutions-textr.html">Textr</a></li>
+                                            <li><a href="solutions-cedar.html">Cedar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Partners</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                           <li><a href="partners-key.html">Our Key Partners</a></li>
+                                            <li><a href="partners-become.html">Become Our Partner</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Connect With Us</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                            <li><a href="ethics-conduct.html">Ethics and conduct</a></li>
+                                            <li><a href="terms-conditions.html">Terms and conditions</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="download.html">Download</a></li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">
+                            <div class="header-icon">
+                                <div class="header-search-icon icon">
+                                    <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>
+                                    <!-- start search input -->
+                                    <div class="search-form-wrapper">
+                                        <button title="Close" type="button" class="search-close">×</button>
+                                        <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                            <div class="search-form-box">
+                                                <h2 class="text-black text-center fw-600 mb-4 ls-minus-1px">What are you looking for?</h2>
+                                                <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="q" value="" type="text" autocomplete="off">
+                                                <button type="submit" class="search-button">
+                                                    <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- end search input -->
+                                </div>
+                                <div class="header-button ms-20px d-none d-xl-inline-block">
+                                    <a href="contact-us.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">
+                                        <span>
+                                            <span class="btn-double-text fw-600" data-text="Free consultation">Free consultation</span>
+                                            <span><i class="fa-regular fa-envelope"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- end navigation -->
+            </header>
+            <!-- end header -->
+
+            <!-- start hero section -->
+            <section class="top-space-margin bg-very-light-gray pt-100px pb-100px">
+                <div class="container">
+                    <div class="row justify-content-center text-center mb-50px">
+                        <div class="col-lg-8" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <div class="d-inline-block fw-700 text-white bg-orange ps-25px pe-25px lh-40 border-radius-30px mb-20px fs-14 text-uppercase ls-1px">Rich Communication Services</div>
+                            <h1 class="fw-700 text-dark-gray ls-minus-3px mb-30px">The Latest Standard in Messaging</h1>
+                            <p class="fs-19 mb-30px w-85 mx-auto">RCS enables businesses to send text, audio, video, emojis, clickable buttons and photo messages with interactive dialogues.</p>
+                            <img src="images/kolimg/rcs.png" class="border-radius-10px box-shadow-extra-large mb-40px" alt="RCS Platform">
+                            <div class="row row-cols-1 row-cols-md-2 justify-content-center align-items-center g-5">
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-md-end justify-content-center">
+                                        <h2 class="text-orange fw-700 mb-0 me-20px" style="font-size: 19px; line-height: 1;">80%</h2>
+                                        <div class="text-start">
+                                            <h6 class="fw-600 text-dark-gray mb-5px">Consumers</h6>
+                                            <p class="mb-0 fs-15">See RCS as a good channel</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex align-items-center justify-content-md-start justify-content-center">
+                                        <h2 class="text-orange fw-700 mb-0 me-20px" style="font-size: 19px; line-height: 1;">70%</h2>
+                                        <div class="text-start">
+                                            <h6 class="fw-600 text-dark-gray mb-5px">Engagement</h6>
+                                            <p class="mb-0 fs-15">More likely to communicate</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end hero section -->
+
+            <!-- start how to send RCS -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-7 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-orange fw-600 mb-15px text-uppercase d-block">Simple Process</span>
+                            <h2 class="fw-700 text-dark-gray ls-minus-2px">How to Send an RCS?</h2>
+                            <p class="mb-0">Create rich, engaging messages with multimedia content and send them to your customers on Android devices.</p>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center" data-anime='{ "el": "childs", "translateY": [40, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 250, "easing": "easeOutQuad" }'>
+                        <div class="col position-relative">
+                            <div class="rcs-process-card">
+                                <div class="rcs-process-num">1</div>
+                                <div class="rcs-process-icon"><i class="bi bi-file-earmark-richtext"></i></div>
+                                <h6 class="fw-700 text-dark-gray mb-10px">Create Rich Message</h6>
+                                <p class="mb-0 fs-15">Draft appealing messages with text, audio, pictures, videos and interactive buttons.</p>
+                            </div>
+                            <div class="rcs-process-connector"><i class="bi bi-chevron-right"></i></div>
+                        </div>
+                        <div class="col position-relative">
+                            <div class="rcs-process-card">
+                                <div class="rcs-process-num">2</div>
+                                <div class="rcs-process-icon"><i class="bi bi-send"></i></div>
+                                <h6 class="fw-700 text-dark-gray mb-10px">Send to Customers</h6>
+                                <p class="mb-0 fs-15">Deliver messages to all desired Android users on their native messaging app.</p>
+                            </div>
+                            <div class="rcs-process-connector"><i class="bi bi-chevron-right"></i></div>
+                        </div>
+                        <div class="col">
+                            <div class="rcs-process-card">
+                                <div class="rcs-process-num">3</div>
+                                <div class="rcs-process-icon"><i class="bi bi-shield-check"></i></div>
+                                <h6 class="fw-700 text-dark-gray mb-10px">Verified Delivery</h6>
+                                <p class="mb-0 fs-15">Recipients verify sender authenticity with location, contact details and branding.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end how to send RCS -->
+
+            <!-- start RCS vs SMS comparison -->
+            <section class="bg-very-light-gray">
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-7 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-orange fw-600 mb-15px text-uppercase d-block">Comparison</span>
+                            <h2 class="fw-700 text-dark-gray ls-minus-2px">How is RCS Smarter than SMS?</h2>
+                        </div>
+                    </div>
+                    <div class="swiper rcs-compare-slider" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 24, "loop": true, "speed": 700, "autoplay": { "delay": 3000, "disableOnInteraction": false, "pauseOnMouseEnter": true }, "pagination": { "el": ".swiper-pagination", "clickable": true }, "breakpoints": { "576": { "slidesPerView": 2 }, "992": { "slidesPerView": 3 } }, "effect": "slide" }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="rcs-compare-card">
+                                    <div class="rcs-compare-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+                                    <div class="rcs-compare-content">
+                                        <span>Smart Delivery</span>
+                                        <p>Device compatibility is monitored before sending. Auto-converts to SMS if not compatible.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rcs-compare-card">
+                                    <div class="rcs-compare-icon"><i class="bi bi-patch-check-fill"></i></div>
+                                    <div class="rcs-compare-content">
+                                        <span>Brand Verification</span>
+                                        <p>Google verification ensures authenticity. Consumers trust and initiate contact more readily.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rcs-compare-card">
+                                    <div class="rcs-compare-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                                    <div class="rcs-compare-content">
+                                        <span>Instantaneous Data</span>
+                                        <p>Real-time delivery, reading status and campaign reach insights for instant optimization.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rcs-compare-card">
+                                    <div class="rcs-compare-icon"><i class="bi bi-infinity"></i></div>
+                                    <div class="rcs-compare-content">
+                                        <span>Unlimited Characters</span>
+                                        <p>No 160-character limit. RCS offers limitless content capacities for your messaging.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rcs-compare-card">
+                                    <div class="rcs-compare-icon"><i class="bi bi-building"></i></div>
+                                    <div class="rcs-compare-content">
+                                        <span>Brand Identity</span>
+                                        <p>Configure your brand name, logo and description to boost recognition and trust.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- end RCS vs SMS comparison -->
+
+            <!-- start what RCS adds -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-7 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-orange fw-600 mb-15px text-uppercase d-block">Features</span>
+                            <h2 class="fw-700 text-dark-gray ls-minus-2px">What Can RCS Add to Your Business?</h2>
+                        </div>
+                    </div>
+                    <div class="swiper rcs-features-slider mb-6" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 24, "loop": true, "speed": 700, "autoplay": { "delay": 3500, "disableOnInteraction": false, "pauseOnMouseEnter": true }, "pagination": { "el": ".swiper-pagination", "clickable": true }, "breakpoints": { "576": { "slidesPerView": 2 }, "992": { "slidesPerView": 3 } }, "effect": "slide" }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="rcs-feature-card">
+                                    <div class="rcs-feature-card-icon"><i class="bi bi-images"></i></div>
+                                    <h5>Rich Cards</h5>
+                                    <p>Send high-resolution photos, button cards, videos, GIFs, emojis, audio and image carousels effortlessly.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rcs-feature-card">
+                                    <div class="rcs-feature-card-icon"><i class="bi bi-chat-right-dots-fill"></i></div>
+                                    <h5>Suggested Answers</h5>
+                                    <p>Receivers interact by replying with pre-set answer buttons. Easy to load into database with higher precision.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="rcs-feature-card">
+                                    <div class="rcs-feature-card-icon"><i class="bi bi-hand-index-thumb-fill"></i></div>
+                                    <h5>Suggested Actions</h5>
+                                    <p>Integrate app downloads, calls, calendar events and location sharing for a rich Android-like experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="row align-items-center" data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="col-lg-6 md-mb-40px">
+                            <img src="images/kolimg/whyrcs.png" class="w-100 border-radius-8px box-shadow-large" alt="RCS Features">
+                        </div>
+                        <div class="col-lg-6 ps-8 lg-ps-15px">
+                            <h3 class="fw-600 text-dark-gray mb-20px">Transform Customer Communication</h3>
+                            <p class="mb-20px">RCS provides an interactive messaging experience that goes beyond traditional SMS, enabling businesses to engage customers with rich, branded content.</p>
+                            <ul class="list-style-02 ps-0">
+                                <li class="pb-10px"><i class="bi bi-check-circle-fill text-orange me-10px"></i>Interactive buttons and quick replies</li>
+                                <li class="pb-10px"><i class="bi bi-check-circle-fill text-orange me-10px"></i>High-resolution images and videos</li>
+                                <li class="pb-10px"><i class="bi bi-check-circle-fill text-orange me-10px"></i>Location sharing and calendar integration</li>
+                                <li class="pb-10px"><i class="bi bi-check-circle-fill text-orange me-10px"></i>Verified business branding</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end what RCS adds -->
+
+            <!-- start automation section -->
+            <section class="bg-very-light-gray">
+                <div class="container">
+                    <div class="row justify-content-center mb-6">
+                        <div class="col-lg-8 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <div class="d-inline-block fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px fs-14 text-uppercase">Automation</div>
+                            <h2 class="fw-700 text-dark-gray ls-minus-1px mb-20px">What is the 'Automation' Feature?</h2>
+                            <p class="mb-0">Create automated flows for standard processes to save valuable time and enhance efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="row row-cols-1 row-cols-md-2 g-3" data-anime='{ "el": "childs", "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay": 50, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                                <div class="col">
+                                    <div class="automation-item">
+                                        <i class="bi bi-check-circle-fill text-orange me-10px"></i>
+                                        <span class="fw-500">Schedule interactive conversations</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="automation-item">
+                                        <i class="bi bi-check-circle-fill text-orange me-10px"></i>
+                                        <span class="fw-500">Purchase notices</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="automation-item">
+                                        <i class="bi bi-check-circle-fill text-orange me-10px"></i>
+                                        <span class="fw-500">Delivery tracking & updates</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="automation-item">
+                                        <i class="bi bi-check-circle-fill text-orange me-10px"></i>
+                                        <span class="fw-500">Deliver invoices</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="automation-item">
+                                        <i class="bi bi-check-circle-fill text-orange me-10px"></i>
+                                        <span class="fw-500">Confirm appointments</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="automation-item">
+                                        <i class="bi bi-check-circle-fill text-orange me-10px"></i>
+                                        <span class="fw-500">Password resets</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="automation-item">
+                                        <i class="bi bi-check-circle-fill text-orange me-10px"></i>
+                                        <span class="fw-500">Two-factor authentication</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="automation-item">
+                                        <i class="bi bi-check-circle-fill text-orange me-10px"></i>
+                                        <span class="fw-500">Suspicious activity alerts</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="automation-item">
+                                        <i class="bi bi-check-circle-fill text-orange me-10px"></i>
+                                        <span class="fw-500">Send coupons with purchase buttons</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="automation-item">
+                                        <i class="bi bi-check-circle-fill text-orange me-10px"></i>
+                                        <span class="fw-500">Cart abandonment alerts</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="automation-item">
+                                        <i class="bi bi-check-circle-fill text-orange me-10px"></i>
+                                        <span class="fw-500">New offers & promotions</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="automation-item">
+                                        <i class="bi bi-check-circle-fill text-orange me-10px"></i>
+                                        <span class="fw-500">NPS collection & evaluation</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end automation section -->
+
+            <!-- start long-term benefits -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center mb-6">
+                        <div class="col-lg-8 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <div class="d-inline-block fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px fs-14 text-uppercase">Long-term Benefits</div>
+                            <h2 class="fw-700 text-dark-gray ls-minus-1px mb-0">How Can RCS Benefit You in the Long Run?</h2>
+                        </div>
+                    </div>
+                    <div class="row g-4 mb-6" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <div class="col-lg-6">
+                            <div class="benefit-card">
+                                <div class="d-flex align-items-start">
+                                    <i class="bi bi-people-fill text-orange fs-40 me-20px mt-5px"></i>
+                                    <div>
+                                        <h5 class="fw-600 text-dark-gray mb-15px">Build Lasting Relationships</h5>
+                                        <p class="mb-0">Customers are inspired to build long-lasting relationships owing to your efficient use of RCS in establishing communication and marking authenticity.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="benefit-card">
+                                <div class="d-flex align-items-start">
+                                    <i class="bi bi-shield-fill-check text-orange fs-40 me-20px mt-5px"></i>
+                                    <div>
+                                        <h5 class="fw-600 text-dark-gray mb-15px">Inspire Confidence</h5>
+                                        <p class="mb-0">Google's brand verification and various screening measures ensure customers verify sender legitimacy and know it's not just another phishing scam.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="benefit-card">
+                                <div class="d-flex align-items-start">
+                                    <i class="bi bi-bar-chart-fill text-orange fs-40 me-20px mt-5px"></i>
+                                    <div>
+                                        <h5 class="fw-600 text-dark-gray mb-15px">More Accurate Metrics</h5>
+                                        <p class="mb-0">Understand user interactions and communication effectiveness. Apply learnings to improve future communications with data-driven insights.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="benefit-card">
+                                <div class="d-flex align-items-start">
+                                    <i class="bi bi-phone-fill text-orange fs-40 me-20px mt-5px"></i>
+                                    <div>
+                                        <h5 class="fw-600 text-dark-gray mb-15px">App-Like Experience</h5>
+                                        <p class="mb-0">Rich features provide an experience similar to a native app but without the need to develop or maintain an expensive application.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="col-lg-6 order-2 order-lg-1 ps-8 lg-ps-15px md-mt-40px">
+                            <h3 class="fw-600 text-dark-gray mb-20px">Future-Proof Your Business Communication</h3>
+                            <p class="mb-30px">RCS is rapidly becoming the new standard for business messaging, offering a secure, branded, and interactive communication channel that meets modern customer expectations.</p>
+                            <a href="contact-us.html" class="btn btn-large btn-orange btn-rounded btn-box-shadow">Start Your RCS Journey<i class="feather icon-feather-arrow-right ms-10px"></i></a>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2">
+                            <img src="https://via.placeholder.com/600x500" class="w-100 border-radius-8px box-shadow-large" alt="RCS Benefits">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end long-term benefits -->
+
+            <!-- start CTA section -->
+            <section>
+                <div class="container">
+                    <div class="border-radius-10px p-8 md-p-6" style="background: linear-gradient(135deg, #FFE8DC 0%, #FFF5F0 100%);">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                                <h2 class="fw-700 text-dark-gray ls-minus-1px mb-30px">Ready to Elevate Your Messaging?</h2>
+                                <p class="text-dark-gray fs-19 mb-60px md-mb-40px">Experience the power of Rich Communication Services and transform how you connect with your customers.</p>
+                                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                    <a href="contact-us.html" class="btn btn-extra-large btn-orange btn-rounded btn-box-shadow">Get Started Today<i class="feather icon-feather-arrow-right ms-10px"></i></a>
+                                    <a href="download.html" class="btn btn-extra-large btn-dark-gray border-2 btn-rounded">Download Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end CTA section -->
+
+            <!-- start footer -->
+            <footer class="half-footer pb-45px border-top border-color-light-gray background-repeat" style="background-image:url('images/kolimg/footer\ bg.png');">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin z-index-1 text-center text-sm-start xs-mb-20px">
+                            <span class="fs-20 fw-500 text-dark-gray d-block mb-5px">location</span>
+                            <p class="w-100">KOL Telecom Services LLC, <br>251 Little Falls Drive<br>
+                                Wilmington, DE 19808<br>
+                                United States of America.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-4 col-sm-12 text-center z-index-1 mb-20px mb-md-0">
+                            <img src="images/kolimg/2.png" alt="KOL Logo" data-no-retina="" style="max-width: 280px; width: 100%; height: auto;">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin text-center text-sm-end z-index-1">
+                            <span class="fs-20 fw-700 text-dark-gray d-block mb-5px">How can we help?</span>
+                            <a href="mailto:info@koltelecom.com" class="text-dark-gray fw-600 d-block mb-0" style="font-size: 16px;">info@koltelecom.com</a>
+                            <a href="tel:+13022952746" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">+1 302 295 2746</a>
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-center mt-20px mb-10px md-mb-20px">
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-7 text-center elements-social social-icon-style-04">
+                            <ul class="large-icon dark mb-0">
+                                <li><a class="facebook" href="https://www.facebook.com/koltelecomservices/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                                <li><a class="twitter" href="https://twitter.com/KOLTELECOM" target="_blank"><i class="fa-brands fa-x-twitter"></i><span></span></a></li>
+                                <li><a class="instagram" href="https://www.instagram.com/koltelecom/" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                                <li><a class="linkedin" href="https://www.linkedin.com/company/kol-telecom-services-llc" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-12 last-paragraph-no-margin text-center sm-mb-10px">
+                            <p>© 2026 <a href="index.html" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">KOL Telecom.</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+        </div>
+        <!-- end box-layout -->
+        <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+            <a href="#" class="scroll-top" aria-label="scroll">
+                <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- WhatsApp floating button -->
+        </div>
+
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/vendors.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!-- Chatbot JS -->
+    <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+</body>
+</html>

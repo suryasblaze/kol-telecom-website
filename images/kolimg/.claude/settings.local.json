@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(echo:*)",
+      "Bash(ls:*)",
+      "Bash(npm install:*)",
+      "Bash(npx gulp sass:*)",
+      "Bash(npx gulp:*)",
+      "Bash(grep:*)",
+      "Bash(sort:*)"
+    ]
+  }
+}

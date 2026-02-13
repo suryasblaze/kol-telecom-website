@@ -1,0 +1,347 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>Analytics Dashboard - KOL Telecom</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="images/kolimg/kol-logo.png">
+    <link rel="apple-touch-icon" href="images/kolimg/kol-logo.png">
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons -->
+    <link rel="stylesheet" href="css/vendors.min.css"/>
+    <link rel="stylesheet" href="css/icon.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="stylesheet" href="css/responsive.min.css"/>
+    <link rel="stylesheet" href="css/font-size-fix.css"/>
+    <link rel="stylesheet" href="demos/corporate/corporate.css"/>
+    <style>
+        /* Fix button hover colors */
+        .btn-gradient-fast-yellow-orange:hover {
+            color: #fff !important;
+            background: linear-gradient(to right, #ff8c42, #ff6b35) !important;
+        }
+        .btn-dark-gray:hover {
+            color: #fff !important;
+            background: #232323 !important;
+        }
+    </style>
+</head>
+<body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+    <div class="box-layout">
+        <!-- start header -->
+        <header>
+            <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                <div class="container-fluid">
+                    <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/kolimg/KOLLOGO.png" alt="KOL Logo" class="default-logo" width="142" height="28">
+                        </a>
+                    </div>
+                    <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav">
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href="blog.html" class="nav-link">View Blog</a></li>
+                                <li class="nav-item"><a href="blog-admin.html" class="nav-link">Blog Admin</a></li>
+                                <li class="nav-item"><a href="analytics.html" class="nav-link">Analytics</a></li>
+                                <li class="nav-item"><a href="index.html" class="nav-link">Main Site</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto col-xl-3 col-lg-2 text-end">
+                        <div class="header-icon">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- end header -->
+
+        <!-- start page title -->
+        <section class="page-title-big-typography cover-background" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="container">
+                <div class="row align-items-center justify-content-center extra-very-small-screen">
+                    <div class="col-xxl-6 col-xl-7 col-lg-8 col-md-10 text-center position-relative page-title-extra-small" data-anime='{ "el": "childs", "translateY": [-15, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <h1 class="mb-20px text-white" style="font-size: 19px;">📊 Analytics Dashboard</h1>
+                        <h2 class="text-white text-uppercase fw-700 ls-1px mb-0" style="font-size: 16px;">Blog Performance & Engagement Metrics</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end page title -->
+
+        <!-- start analytics content -->
+        <section class="pt-0">
+            <div class="container">
+                <!-- Summary Statistics Cards -->
+                <div class="row g-4 mb-45px">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="bg-white border-radius-6px p-35px text-center" style="box-shadow: 0 0 30px rgba(0,0,0,0.08);">
+                            <div class="fs-50 fw-700 mb-10px" style="color: #667eea;" id="totalViews">0</div>
+                            <div class="text-dark-gray fw-600">Total Views</div>
+                            <div class="text-muted fs-14 mt-5px">All time</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="bg-white border-radius-6px p-35px text-center" style="box-shadow: 0 0 30px rgba(0,0,0,0.08);">
+                            <div class="fs-50 fw-700 mb-10px" style="color: #FF6B35;" id="totalPosts">0</div>
+                            <div class="text-dark-gray fw-600">Published Posts</div>
+                            <div class="text-muted fs-14 mt-5px">Total blogs</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="bg-white border-radius-6px p-35px text-center" style="box-shadow: 0 0 30px rgba(0,0,0,0.08);">
+                            <div class="fs-50 fw-700 mb-10px" style="color: #25D366;" id="totalShares">0</div>
+                            <div class="text-dark-gray fw-600">Social Shares</div>
+                            <div class="text-muted fs-14 mt-5px">All platforms</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="bg-white border-radius-6px p-35px text-center" style="box-shadow: 0 0 30px rgba(0,0,0,0.08);">
+                            <div class="fs-50 fw-700 mb-10px" style="color: #764ba2;" id="totalComments">0</div>
+                            <div class="text-dark-gray fw-600">Total Comments</div>
+                            <div class="text-muted fs-14 mt-5px">User engagement</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Most Viewed Posts -->
+                <div class="bg-white border-radius-6px p-45px mb-45px" style="box-shadow: 0 0 30px rgba(0,0,0,0.08);">
+                    <h3 class="text-dark-gray fw-700 mb-30px ls-minus-1px"><i class="bi bi-graph-up me-10px" style="color: #667eea;"></i>Most Viewed Posts</h3>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="fw-700 text-dark-gray">Title</th>
+                                    <th class="fw-700 text-dark-gray">Category</th>
+                                    <th class="fw-700 text-dark-gray text-center">Views</th>
+                                    <th class="fw-700 text-dark-gray text-center">Comments</th>
+                                    <th class="fw-700 text-dark-gray text-center">Shares</th>
+                                    <th class="fw-700 text-dark-gray">Published</th>
+                                </tr>
+                            </thead>
+                            <tbody id="mostViewedTable">
+                                <tr>
+                                    <td colspan="6" class="text-center text-muted py-4">No blog data available</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Category Performance -->
+                    <div class="col-lg-6">
+                        <div class="bg-white border-radius-6px p-45px" style="box-shadow: 0 0 30px rgba(0,0,0,0.08);">
+                            <h3 class="text-dark-gray fw-700 mb-30px ls-minus-1px"><i class="bi bi-pie-chart me-10px" style="color: #FF6B35;"></i>Category Performance</h3>
+                            <div id="categoryStats">
+                                <p class="text-muted text-center py-4">No category data available</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Social Shares -->
+                    <div class="col-lg-6">
+                        <div class="bg-white border-radius-6px p-45px" style="box-shadow: 0 0 30px rgba(0,0,0,0.08);">
+                            <h3 class="text-dark-gray fw-700 mb-30px ls-minus-1px"><i class="bi bi-share me-10px" style="color: #25D366;"></i>Social Share Breakdown</h3>
+                            <div id="socialShareStats">
+                                <p class="text-muted text-center py-4">No share data available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end analytics content -->
+
+        <!-- Simple Footer -->
+        <div class="py-20px bg-white border-top">
+            <div class="container">
+                <div class="text-center">
+                    <p class="mb-0">© 2026 <a href="index.html" class="text-dark-gray fw-500">KOL Telecom</a>. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- javascript libraries -->
+    <script src="js/jquery.js"></script>
+    <script src="js/vendors.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Analytics Dashboard Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAnalytics();
+        });
+
+        function loadAnalytics() {
+            const blogs = JSON.parse(localStorage.getItem('blog_posts') || '[]');
+            const shares = JSON.parse(localStorage.getItem('blog_shares') || '[]');
+
+            // Calculate summary statistics
+            const totalViews = blogs.reduce((sum, blog) => sum + (parseInt(blog.views) || 0), 0);
+            const totalPosts = blogs.length;
+            const totalShares = shares.length;
+            const totalComments = blogs.reduce((sum, blog) => sum + (blog.comments?.length || 0), 0);
+
+            // Update summary cards
+            document.getElementById('totalViews').textContent = totalViews.toLocaleString();
+            document.getElementById('totalPosts').textContent = totalPosts;
+            document.getElementById('totalShares').textContent = totalShares;
+            document.getElementById('totalComments').textContent = totalComments;
+
+            // Load most viewed posts table
+            loadMostViewedPosts(blogs);
+
+            // Load category performance
+            loadCategoryStats(blogs);
+
+            // Load social share breakdown
+            loadSocialShareStats(shares);
+        }
+
+        function loadMostViewedPosts(blogs) {
+            const tbody = document.getElementById('mostViewedTable');
+
+            if (blogs.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="text-center text-muted py-4">No blog data available</td></tr>';
+                return;
+            }
+
+            // Sort by views (descending) and take top 10
+            const sortedBlogs = [...blogs].sort((a, b) => (b.views || 0) - (a.views || 0)).slice(0, 10);
+
+            tbody.innerHTML = sortedBlogs.map(blog => {
+                const shares = JSON.parse(localStorage.getItem('blog_shares') || '[]')
+                    .filter(s => s.blogId === blog.id).length;
+
+                return `
+                    <tr>
+                        <td class="fw-600">${blog.title}</td>
+                        <td><span class="badge bg-gradient-fast-yellow-orange">${blog.category}</span></td>
+                        <td class="text-center fw-700" style="color: #667eea;">${blog.views || 0}</td>
+                        <td class="text-center fw-700" style="color: #764ba2;">${blog.comments?.length || 0}</td>
+                        <td class="text-center fw-700" style="color: #25D366;">${shares}</td>
+                        <td class="text-muted">${formatDate(blog.date)}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        function loadCategoryStats(blogs) {
+            const container = document.getElementById('categoryStats');
+
+            if (blogs.length === 0) {
+                container.innerHTML = '<p class="text-muted text-center py-4">No category data available</p>';
+                return;
+            }
+
+            // Count posts per category
+            const categoryCount = {};
+            blogs.forEach(blog => {
+                categoryCount[blog.category] = (categoryCount[blog.category] || 0) + 1;
+            });
+
+            // Generate category bars
+            const total = blogs.length;
+            const categoryColors = {
+                'CPaaS': '#FF6B35',
+                'WhatsApp': '#25D366',
+                'SMS': '#667eea',
+                'Voice': '#764ba2',
+                'RCS': '#F093FB',
+                'Technology': '#4CAF50',
+                'Business': '#2196F3',
+                'Tutorial': '#FF9800'
+            };
+
+            container.innerHTML = Object.entries(categoryCount)
+                .sort((a, b) => b[1] - a[1])
+                .map(([category, count]) => {
+                    const percentage = ((count / total) * 100).toFixed(1);
+                    const color = categoryColors[category] || '#667eea';
+
+                    return `
+                        <div class="mb-25px">
+                            <div class="d-flex justify-content-between mb-10px">
+                                <span class="fw-600 text-dark-gray">${category}</span>
+                                <span class="text-muted">${count} posts (${percentage}%)</span>
+                            </div>
+                            <div class="progress" style="height: 12px; background: #f5f5f5;">
+                                <div class="progress-bar" role="progressbar" style="width: ${percentage}%; background: ${color};"
+                                     aria-valuenow="${percentage}" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+        }
+
+        function loadSocialShareStats(shares) {
+            const container = document.getElementById('socialShareStats');
+
+            if (shares.length === 0) {
+                container.innerHTML = '<p class="text-muted text-center py-4">No share data available</p>';
+                return;
+            }
+
+            // Count shares per platform
+            const platformCount = {};
+            shares.forEach(share => {
+                platformCount[share.platform] = (platformCount[share.platform] || 0) + 1;
+            });
+
+            // Platform icons and colors
+            const platformInfo = {
+                'facebook': { icon: 'bi-facebook', color: '#1877F2', name: 'Facebook' },
+                'twitter': { icon: 'bi-twitter-x', color: '#1DA1F2', name: 'Twitter' },
+                'linkedin': { icon: 'bi-linkedin', color: '#0A66C2', name: 'LinkedIn' },
+                'whatsapp': { icon: 'bi-whatsapp', color: '#25D366', name: 'WhatsApp' },
+                'copy': { icon: 'bi-link-45deg', color: '#667eea', name: 'Copy Link' }
+            };
+
+            const total = shares.length;
+
+            container.innerHTML = Object.entries(platformCount)
+                .sort((a, b) => b[1] - a[1])
+                .map(([platform, count]) => {
+                    const info = platformInfo[platform] || { icon: 'bi-share', color: '#999', name: platform };
+                    const percentage = ((count / total) * 100).toFixed(1);
+
+                    return `
+                        <div class="d-flex align-items-center justify-content-between mb-20px pb-20px border-bottom">
+                            <div class="d-flex align-items-center">
+                                <div class="me-15px" style="width: 40px; height: 40px; background: ${info.color}15; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi ${info.icon} fs-20" style="color: ${info.color};"></i>
+                                </div>
+                                <div>
+                                    <div class="fw-600 text-dark-gray">${info.name}</div>
+                                    <div class="text-muted fs-14">${percentage}% of total shares</div>
+                                </div>
+                            </div>
+                            <div class="fs-24 fw-700" style="color: ${info.color};">${count}</div>
+                        </div>
+                    `;
+                }).join('');
+        }
+
+        function formatDate(dateString) {
+            try {
+                const date = new Date(dateString);
+                return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            } catch (e) {
+                return dateString;
+            }
+        }
+    </script>
+</body>
+</html>

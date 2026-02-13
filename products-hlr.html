@@ -1,0 +1,799 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>HLR Lookup - Home Location Register | KOL Telecom</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="KOL Telecom">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="HLR Lookup service for real-time mobile subscriber authentication, validation, and roaming management on GSM networks.">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="css/vendors.min.css"/>
+        <link rel="stylesheet" href="css/icon.min.css"/>
+        <link rel="stylesheet" href="css/style.min.css"/>
+        <link rel="stylesheet" href="css/responsive.min.css"/>
+        <link rel="stylesheet" href="css/font-size-fix.css"/>
+        <link rel="stylesheet" href="demos/corporate/corporate.css" />
+        <style>
+            .text-orange {
+                color: #FF6B35 !important;
+            }
+            .bg-orange {
+                background-color: #FF6B35 !important;
+            }
+            .btn-orange {
+                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+                color: white !important;
+                border: none;
+            }
+            .btn-orange:hover {
+                background: linear-gradient(135deg, #F7931E 0%, #FF6B35 100%);
+                transform: translateY(-3px);
+                box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+            }
+            /* Winding Roadway Design */
+            .roadway-section {
+                position: relative;
+                overflow: hidden;
+            }
+            .roadway-svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                pointer-events: none;
+            }
+            .road-path {
+                fill: none;
+                stroke: #eee;
+                stroke-width: 8;
+                stroke-linecap: round;
+            }
+            .road-center-line {
+                fill: none;
+                stroke: #FF6B35;
+                stroke-width: 3;
+                stroke-dasharray: 14 10;
+                stroke-linecap: round;
+                animation: road-drive 2s linear infinite;
+            }
+            @keyframes road-drive {
+                0% { stroke-dashoffset: 0; }
+                100% { stroke-dashoffset: -48; }
+            }
+            .roadway-row {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 0;
+            }
+            .roadway-row:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+            .roadway-stop {
+                text-align: center;
+                position: relative;
+                flex: 1;
+            }
+            .roadway-pin {
+                width: 52px;
+                height: 52px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+                color: #fff;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 12px;
+                box-shadow: 0 6px 20px rgba(255,107,53,0.3);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative;
+                z-index: 3;
+            }
+            .roadway-pin::after {
+                content: '';
+                position: absolute;
+                bottom: -7px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 0;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 7px solid #F7931E;
+            }
+            .roadway-stop:hover .roadway-pin {
+                transform: scale(1.15) translateY(-4px);
+                box-shadow: 0 10px 30px rgba(255,107,53,0.4);
+            }
+            /* Pulse ring */
+            .roadway-pin::before {
+                content: '';
+                position: absolute;
+                inset: -5px;
+                border-radius: 50%;
+                border: 2px solid rgba(255,107,53,0.25);
+                animation: rw-pulse 2.5s ease-in-out infinite;
+            }
+            @keyframes rw-pulse {
+                0%, 100% { transform: scale(1); opacity: 0.8; }
+                50% { transform: scale(1.25); opacity: 0; }
+            }
+            .roadway-stop:nth-child(1) .roadway-pin::before { animation-delay: 0s; }
+            .roadway-stop:nth-child(2) .roadway-pin::before { animation-delay: 0.6s; }
+            .roadway-stop:nth-child(3) .roadway-pin::before { animation-delay: 1.2s; }
+            .roadway-stop:nth-child(4) .roadway-pin::before { animation-delay: 1.8s; }
+            .roadway-card {
+                background: #fff;
+                border-radius: 14px;
+                padding: 20px 16px;
+                box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+                border: 1.5px solid #eee;
+                transition: all 0.3s ease;
+                max-width: 220px;
+                margin: 0 auto;
+            }
+            .roadway-stop:hover .roadway-card {
+                border-color: rgba(255,107,53,0.3);
+                box-shadow: 0 10px 30px rgba(255,107,53,0.12);
+                transform: translateY(-3px);
+            }
+            .roadway-card h6 {
+                font-weight: 700;
+                color: #232323;
+                margin-bottom: 3px;
+                font-size: 15px;
+            }
+            .roadway-card .road-label {
+                color: #FF6B35;
+                font-size: 12px;
+                font-weight: 600;
+                display: block;
+                margin-bottom: 6px;
+            }
+            .roadway-card p {
+                margin-bottom: 0;
+                font-size: 13px;
+                color: #666;
+                line-height: 1.4;
+            }
+            /* Moving car dot */
+            .road-car {
+                fill: #FF6B35;
+                filter: drop-shadow(0 2px 4px rgba(255,107,53,0.4));
+            }
+            @media (max-width: 767px) {
+                .roadway-svg { display: none; }
+                .roadway-row {
+                    flex-direction: column !important;
+                    gap: 20px;
+                }
+                .roadway-card {
+                    max-width: 100%;
+                }
+            }
+
+
+            /* Feature Horizontal Cards */
+            .hlr-feat-card {
+                display: flex;
+                align-items: flex-start;
+                gap: 18px;
+                background: #fff;
+                border-radius: 14px;
+                padding: 24px;
+                border: 1.5px solid #eee;
+                height: 100%;
+                position: relative;
+                transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+            }
+            .hlr-feat-card:hover {
+                transform: translateX(6px);
+                box-shadow: 0 12px 32px rgba(255,107,53,0.10);
+                border-color: rgba(255,107,53,0.3);
+            }
+            .hlr-feat-num {
+                position: absolute;
+                top: 10px;
+                right: 14px;
+                font-size: 40px;
+                font-weight: 800;
+                color: rgba(255,107,53,0.07);
+                line-height: 1;
+                pointer-events: none;
+                transition: color 0.3s ease;
+            }
+            .hlr-feat-card:hover .hlr-feat-num {
+                color: rgba(255,107,53,0.15);
+            }
+            .hlr-feat-icon {
+                width: 52px;
+                height: 52px;
+                min-width: 52px;
+                border-radius: 14px;
+                background: rgba(255,107,53,0.08);
+                color: #FF6B35;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 22px;
+                transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            }
+            .hlr-feat-card:hover .hlr-feat-icon {
+                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+                color: #fff;
+                transform: scale(1.08);
+            }
+            .hlr-feat-body h6 {
+                font-weight: 700;
+                color: #232323;
+                margin-bottom: 5px;
+                font-size: 16px;
+            }
+            .hlr-feat-body p {
+                margin-bottom: 0;
+                font-size: 13.5px;
+                color: #666;
+                line-height: 1.5;
+            }
+
+            /* Compact Benefit Items */
+            .hlr-benefit-item {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                background: #fff;
+                border-radius: 12px;
+                padding: 16px 20px;
+                border: 1.5px solid #eee;
+                transition: all 0.3s ease;
+            }
+            .hlr-benefit-item:hover {
+                border-color: rgba(255,107,53,0.25);
+                transform: translateY(-3px);
+                box-shadow: 0 8px 24px rgba(255,107,53,0.10);
+            }
+            .hlr-benefit-item i {
+                font-size: 22px;
+                color: #FF6B35;
+                flex-shrink: 0;
+            }
+            .hlr-benefit-item .benefit-text h6 {
+                font-weight: 600;
+                margin-bottom: 2px;
+                color: #232323;
+                font-size: 15px;
+            }
+            .hlr-benefit-item .benefit-text p {
+                margin-bottom: 0;
+                font-size: 13px;
+                color: #666;
+            }
+
+            /* Floating Animation */
+            @keyframes hlr-float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-14px); }
+            }
+            .hlr-hero-float {
+                animation: hlr-float 3.5s ease-in-out infinite;
+            }
+        </style>
+        <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+</head>
+    <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+        <div class="box-layout">
+            <!-- start header -->
+            <header>
+                <!-- start navigation -->
+                <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                    <div class="container-fluid">
+                        <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="default-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="alt-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="mobile-logo" width="142" height="28">
+                            </a>
+                        </div>
+                        <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                            <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-item dropdown submenu">
+                                        <a href="#" class="nav-link">Products</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
+                                            <div class="d-lg-flex mega-menu m-auto flex-column">
+                                                <div class="row row-cols-1 row-cols-lg-5 mb-60px md-mb-30px sm-mb-20px">
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">cPaaS</li>
+                                                            <li><a href="products-mblastr.html">mBlastr</a></li>
+                                                            <li><a href="products-vkolu.html">VKOLU</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Whole Sale</li>
+                                                            <li><a href="products-voice.html">Voice</a></li>
+                                                            <li><a href="products-sms.html">SMS(A2P)</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Retail</li>
+                                                            <li><a href="products-rcs.html">RCS</a></li>
+                                                            <li><a href="products-did.html">DID</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Instant Messaging</li>
+                                                            <li><a href="products-whatsapp.html">Whatsapp for Business</a></li>
+                                                            <li><a href="products-instagram.html">Instagram</a></li>
+                                                            <li><a href="products-viber.html">Viber</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Number Lookup</li>
+                                                            <li><a href="products-number-lookup.html">Number Lookup</a></li>
+                                                            <li><a href="products-hlr.html">HLR</a></li>
+                                                            <li><a href="products-mnp.html">MNP</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Services</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a href="services-mail-hosting.html">Mail Hosting</a></li>
+                                            <li><a href="services-it-managed.html">IT Managed Services</a></li>
+                                            <li><a href="services-ip-pbx.html">IP PBX</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Solutions</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                            <li><a href="solutions-echt.html">ECHT</a></li>
+                                            <li><a href="solutions-textr.html">Textr</a></li>
+                                            <li><a href="solutions-cedar.html">Cedar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Partners</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                           <li><a href="partners-key.html">Our Key Partners</a></li>
+                                            <li><a href="partners-become.html">Become Our Partner</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Connect With Us</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                            <li><a href="ethics-conduct.html">Ethics and conduct</a></li>
+                                            <li><a href="terms-conditions.html">Terms and conditions</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="download.html">Download</a></li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">
+                            <div class="header-icon">
+                                <div class="header-search-icon icon">
+                                    <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>
+                                    <!-- start search input -->
+                                    <div class="search-form-wrapper">
+                                        <button title="Close" type="button" class="search-close">×</button>
+                                        <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                            <div class="search-form-box">
+                                                <h2 class="text-black text-center fw-600 mb-4 ls-minus-1px">What are you looking for?</h2>
+                                                <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="q" value="" type="text" autocomplete="off">
+                                                <button type="submit" class="search-button">
+                                                    <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- end search input -->
+                                </div>
+                                <div class="header-button ms-20px d-none d-xl-inline-block">
+                                    <a href="contact-us.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">
+                                        <span>
+                                            <span class="btn-double-text fw-600" data-text="Free consultation">Free consultation</span>
+                                            <span><i class="fa-regular fa-envelope"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- end navigation -->
+            </header>
+            <!-- end header -->
+
+            <!-- start hero section -->
+            <section class="top-space-margin pb-0" style="background: linear-gradient(135deg, #FFE8DC 0%, #FFF5F0 100%);">
+                <div class="container">
+                    <div class="row align-items-center pt-100px pb-50px">
+                        <div class="col-lg-7" data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="d-inline-block fw-700 text-white bg-orange ps-25px pe-25px lh-40 border-radius-30px mb-30px fs-14 text-uppercase ls-1px">
+                                <i class="bi bi-hdd-network-fill me-5px"></i> HLR Lookup
+                            </div>
+                            <h1 class="text-dark-gray fw-700 ls-minus-3px mb-30px" style="font-size: 46px; line-height: 1.1;">Home Location Register Database</h1>
+                            <p class="text-dark-gray fs-19 mb-0 w-95 lg-w-100">Home Location Register (HLR) is a database that contains data regarding authorized subscribers using a global system for mobile communication (GSM) core network. Get real-time validation, authentication, and roaming management for mobile subscribers.</p>
+                            <div class="d-flex gap-3 flex-wrap mt-30px">
+                                <a href="contact-us.html" class="btn btn-extra-large btn-orange btn-rounded btn-box-shadow">Get Started<i class="feather icon-feather-arrow-right ms-10px"></i></a>
+                                <a href="products-number-lookup.html" class="btn btn-extra-large btn-dark-gray border-2 btn-rounded">Number Lookup</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 md-mt-50px text-center" data-anime='{ "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="hlr-hero-float d-inline-block">
+                                <img src="images/kolimg/hlr.png" alt="HLR Lookup" loading="lazy" style="max-width: 380px; max-height: 350px; width: 100%; height: auto; object-fit: contain; border-radius: 20px; box-shadow: 0 12px 40px rgba(255,107,53,0.12), 0 4px 12px rgba(0,0,0,0.04);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end hero section -->
+
+            <!-- start what hlr stores -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-8 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <div class="d-inline-block fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px fs-14 text-uppercase">Database Content</div>
+                            <h2 class="fw-700 text-dark-gray ls-minus-1px mb-0">What Does HLR Store?</h2>
+                        </div>
+                    </div>
+                    <div class="roadway-section" style="min-height: 340px;" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 700, "delay": 100, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                        <!-- SVG Winding Road with bends -->
+                        <svg class="roadway-svg" viewBox="0 0 1200 340" preserveAspectRatio="none">
+                            <!-- Road background (wide gray) -->
+                            <path class="road-path" d="M 50,170 C 200,170 200,60 350,60 C 500,60 500,280 650,280 C 800,280 800,100 950,100 C 1050,100 1100,170 1150,170" />
+                            <!-- Center dashed line (animated orange) -->
+                            <path class="road-center-line" d="M 50,170 C 200,170 200,60 350,60 C 500,60 500,280 650,280 C 800,280 800,100 950,100 C 1050,100 1100,170 1150,170" />
+                            <!-- Moving car dot -->
+                            <circle class="road-car" r="6">
+                                <animateMotion dur="6s" repeatCount="indefinite" path="M 50,170 C 200,170 200,60 350,60 C 500,60 500,280 650,280 C 800,280 800,100 950,100 C 1050,100 1100,170 1150,170" />
+                            </circle>
+                        </svg>
+
+                        <div class="row g-4 position-relative" style="z-index: 2;">
+                            <div class="col-6 col-md-3">
+                                <div class="roadway-stop" style="margin-top: 80px;">
+                                    <div class="roadway-pin"><i class="bi bi-person-badge"></i></div>
+                                    <div class="roadway-card">
+                                        <h6>IMSI</h6>
+                                        <span class="road-label">Mobile Subscriber Identity</span>
+                                        <p>Unique 15-digit identifier for the subscriber on GSM network.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="roadway-stop" style="margin-top: 0;">
+                                    <div class="roadway-pin"><i class="bi bi-telephone-fill"></i></div>
+                                    <div class="roadway-card">
+                                        <h6>MSISDN</h6>
+                                        <span class="road-label">Phone Number</span>
+                                        <p>The actual phone number associated with the subscriber.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="roadway-stop" style="margin-top: 140px;">
+                                    <div class="roadway-pin"><i class="bi bi-check-circle-fill"></i></div>
+                                    <div class="roadway-card">
+                                        <h6>Account Status</h6>
+                                        <span class="road-label">Subscription State</span>
+                                        <p>Current status: active, inactive, or suspended.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="roadway-stop" style="margin-top: 30px;">
+                                    <div class="roadway-pin"><i class="bi bi-geo-alt-fill"></i></div>
+                                    <div class="roadway-card">
+                                        <h6>Last Known Location</h6>
+                                        <span class="road-label">Network Position</span>
+                                        <p>Most recent location for routing and services.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end what hlr stores -->
+
+            <!-- start features -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-8 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <div class="d-inline-block fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px fs-14 text-uppercase">Capabilities</div>
+                            <h2 class="fw-700 text-dark-gray ls-minus-1px mb-0">Key Features of HLR</h2>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 g-3" data-anime='{ "el": "childs", "translateY": [20, 0], "opacity": [0,1], "duration": 500, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <div class="col">
+                            <div class="hlr-feat-card">
+                                <span class="hlr-feat-num">01</span>
+                                <div class="hlr-feat-icon"><i class="bi bi-shield-check"></i></div>
+                                <div class="hlr-feat-body">
+                                    <h6>User Authentication</h6>
+                                    <p>Identify and authenticate users in real-time across the GSM network with secure subscriber verification.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="hlr-feat-card">
+                                <span class="hlr-feat-num">02</span>
+                                <div class="hlr-feat-icon"><i class="bi bi-globe2"></i></div>
+                                <div class="hlr-feat-body">
+                                    <h6>Roaming Management</h6>
+                                    <p>Manage roaming situations involving other networks in real-time with live subscriber tracking.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="hlr-feat-card">
+                                <span class="hlr-feat-num">03</span>
+                                <div class="hlr-feat-icon"><i class="bi bi-telephone-outbound"></i></div>
+                                <div class="hlr-feat-body">
+                                    <h6>Call Control</h6>
+                                    <p>Control what kinds of calls each user is allowed to make with flexible voice service policies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="hlr-feat-card">
+                                <span class="hlr-feat-num">04</span>
+                                <div class="hlr-feat-icon"><i class="bi bi-wifi"></i></div>
+                                <div class="hlr-feat-body">
+                                    <h6>Service Access Control</h6>
+                                    <p>Manage access to data, messaging, and value-added services based on subscription plans.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="hlr-feat-card">
+                                <span class="hlr-feat-num">05</span>
+                                <div class="hlr-feat-icon"><i class="bi bi-slash-circle"></i></div>
+                                <div class="hlr-feat-body">
+                                    <h6>Device Tracking</h6>
+                                    <p>Track individual devices and blacklist stolen phones to prevent unauthorized network usage.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="hlr-feat-card">
+                                <span class="hlr-feat-num">06</span>
+                                <div class="hlr-feat-icon"><i class="bi bi-activity"></i></div>
+                                <div class="hlr-feat-body">
+                                    <h6>Real-Time Information</h6>
+                                    <p>All subscriber context and status obtained live for accurate, up-to-the-minute decision making.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end features -->
+
+            <!-- start hlr advantages -->
+            <section class="bg-very-light-gray">
+                <div class="container">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-lg-8 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <div class="d-inline-block fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px fs-14 text-uppercase">Advantages</div>
+                            <h2 class="fw-700 text-dark-gray ls-minus-1px mb-20px">Why Choose HLR Lookup?</h2>
+                            <p class="fs-18 mb-0">The HLR is key to any wireless carrier's network. Larger carriers often have multiple HLRs, in which case each subscriber "belongs" to only one HLR.</p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="row g-3" data-anime='{ "el": "childs", "translateY": [20, 0], "opacity": [0,1], "duration": 500, "delay": 0, "staggervalue": 80, "easing": "easeOutQuad" }'>
+                                <div class="col-md-6">
+                                    <div class="hlr-benefit-item">
+                                        <i class="bi bi-clock-history"></i>
+                                        <div class="benefit-text">
+                                            <h6>Live Information</h6>
+                                            <p>Edge over static MNP lookups with real-time data</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="hlr-benefit-item">
+                                        <i class="bi bi-check-circle"></i>
+                                        <div class="benefit-text">
+                                            <h6>Validity Check</h6>
+                                            <p>Verify if mobile numbers are valid and active</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="hlr-benefit-item">
+                                        <i class="bi bi-toggle-on"></i>
+                                        <div class="benefit-text">
+                                            <h6>Activation Status</h6>
+                                            <p>Check current activation and account status</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="hlr-benefit-item">
+                                        <i class="bi bi-arrow-left-right"></i>
+                                        <div class="benefit-text">
+                                            <h6>Portability Information</h6>
+                                            <p>Determine if number has been ported with MCCMNC data</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="hlr-benefit-item">
+                                        <i class="bi bi-person-vcard"></i>
+                                        <div class="benefit-text">
+                                            <h6>IMSI Details</h6>
+                                            <p>Access subscriber identity for complete profiles</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="hlr-benefit-item">
+                                        <i class="bi bi-hdd-network"></i>
+                                        <div class="benefit-text">
+                                            <h6>MSC Information</h6>
+                                            <p>Identify the appropriate Mobile Switching Center</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="hlr-benefit-item">
+                                        <i class="bi bi-globe-americas"></i>
+                                        <div class="benefit-text">
+                                            <h6>MCCMNC Data</h6>
+                                            <p>Get Mobile Country Code and Mobile Network Code</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="hlr-benefit-item">
+                                        <i class="bi bi-lightning-charge"></i>
+                                        <div class="benefit-text">
+                                            <h6>Real-Time Intelligence</h6>
+                                            <p>Live subscriber data for accurate decision-making</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end hlr advantages -->
+
+            <!-- start merged CTA section -->
+            <section class="pb-100px">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <!-- Solution Banner (top) -->
+                            <div class="pt-40px pb-40px ps-40px pe-40px md-p-30px text-center" style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); border-radius: 16px 16px 0 0;">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-lg-8">
+                                        <h4 class="fw-700 text-white mb-10px">Complete Number Intelligence Suite</h4>
+                                        <p class="text-white opacity-85 mb-0 fs-16">Combine HLR Lookup with our Number Lookup and MNP services for full subscriber insights.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- CTA Card (bottom) -->
+                            <div class="pt-40px pb-40px ps-40px pe-40px md-p-30px text-center" style="background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
+                                <h2 class="fw-700 text-dark-gray ls-minus-1px mb-15px">Ready to Access Real-Time HLR Data?</h2>
+                                <p class="text-dark-gray fs-18 mb-25px">Start validating mobile numbers with live HLR lookup queries today.</p>
+                                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                    <a href="contact-us.html" class="btn btn-large btn-orange btn-rounded btn-box-shadow">Request a Demo<i class="feather icon-feather-arrow-right ms-10px"></i></a>
+                                    <a href="products-number-lookup.html" class="btn btn-large btn-dark-gray border-2 btn-rounded">View All Services</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end merged CTA section -->
+
+            <!-- start footer -->
+            <footer class="half-footer pb-45px border-top border-color-light-gray background-repeat" style="background-image:url('images/kolimg/footer\ bg.png');">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin z-index-1 text-center text-sm-start xs-mb-20px">
+                            <span class="fs-20 fw-500 text-dark-gray d-block mb-5px">location</span>
+                            <p class="w-100">KOL Telecom Services LLC, <br>251 Little Falls Drive<br>
+                                Wilmington, DE 19808<br>
+                                United States of America.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-4 col-sm-12 text-center z-index-1 mb-20px mb-md-0">
+                            <img src="images/kolimg/2.png" alt="KOL Logo" data-no-retina="" style="max-width: 280px; width: 100%; height: auto;">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin text-center text-sm-end z-index-1">
+                            <span class="fs-20 fw-700 text-dark-gray d-block mb-5px">How can we help?</span>
+                            <a href="mailto:info@koltelecom.com" class="text-dark-gray fw-600 d-block mb-0" style="font-size: 16px;">info@koltelecom.com</a>
+                            <a href="tel:+13022952746" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">+1 302 295 2746</a>
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-center mt-20px mb-10px md-mb-20px">
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-7 text-center elements-social social-icon-style-04">
+                            <ul class="large-icon dark mb-0">
+                                <li><a class="facebook" href="https://www.facebook.com/koltelecomservices/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                                <li><a class="twitter" href="https://twitter.com/KOLTELECOM" target="_blank"><i class="fa-brands fa-x-twitter"></i><span></span></a></li>
+                                <li><a class="instagram" href="https://www.instagram.com/koltelecom/" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                                <li><a class="linkedin" href="https://www.linkedin.com/company/kol-telecom-services-llc" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-12 last-paragraph-no-margin text-center sm-mb-10px">
+                            <p>© 2026 <a href="index.html" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">KOL Telecom.</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+        </div>
+        <!-- end box-layout -->
+        <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+            <a href="#" class="scroll-top" aria-label="scroll">
+                <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- WhatsApp floating button -->
+        </div>
+
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/vendors.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!-- Chatbot JS -->
+    <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+</body>
+</html>

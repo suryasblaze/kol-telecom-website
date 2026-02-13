@@ -1,0 +1,1919 @@
+﻿
+<!doctype html>
+<html class="no-js" lang="en">
+
+    <head>
+        <title>KOL Telecom - IT & Telecom Solutions Provider</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="KOL Telecom - IT & Telecom Solutions Provider and Cloud Communications Platform. Quality cPaaS, wholesale voice, SMS, RCS, DID, and instant messaging services since 2006.">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="images/kolimg/kol-logo.png">
+        <link rel="apple-touch-icon" href="images/kolimg/kol-logo.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/kolimg/kol-logo.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/kolimg/kol-logo.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- slider revolution CSS files -->
+        <link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+        <link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
+        <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="css/vendors.min.css" />
+        <link rel="stylesheet" href="css/icon.min.css" />
+        <link rel="stylesheet" href="css/style.min.css"/>
+        <link rel="stylesheet" href="css/responsive.min.css"/>
+        <link rel="stylesheet" href="css/font-size-fix.css"/>
+        <link rel="stylesheet" href="demos/corporate/corporate.css" />
+        <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+    <style>
+        html, body { overflow-x: clip; }
+        .tp-bannertimer, .tp-loader { display: none !important; visibility: hidden !important; }
+        /* Hero sticky + content overlap */
+        #slider {
+            position: sticky;
+            top: 0;
+            z-index: 0;
+            will-change: opacity, transform;
+            min-height: 100vh;
+        }
+        .page-content-wrapper {
+            position: relative;
+            z-index: 2;
+            background: #fff;
+            border-radius: 32px 32px 0 0;
+            margin-top: -50px;
+            box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.12);
+        }
+        .page-content-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+        }
+        /* Stack card overlap enhancement */
+        .stack-box .stack-item-01 {
+            border-radius: 0;
+        }
+        .stack-box .stack-item-02,
+        .stack-box .stack-item-03 {
+            border-radius: 28px 28px 0 0;
+            box-shadow: 0 -15px 60px rgba(0, 0, 0, 0.12), 0 -2px 10px rgba(0, 0, 0, 0.04);
+        }
+        .stack-box .stack-item .stack-item-wrapper {
+            z-index: 1;
+        }
+        .stack-box .stack-item.active .stack-item-wrapper {
+            opacity: 0.3;
+            transform: scale(0.96) translateY(10px);
+            filter: blur(3px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .stack-box .stack-item .stack-item-wrapper .container {
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
+        }
+        .stack-box .stack-item-02::before,
+        .stack-box .stack-item-03::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            margin-top: 12px;
+        }
+        /* Partners grid */
+        .partners-section {
+            padding: 80px 0 80px;
+            background: #fafafa;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 22px;
+        }
+        .partners-grid-item {
+            height: 90px;
+            background: #fff;
+            border: 1.5px solid #eee;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 24px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+            animation: partner-float 3s ease-in-out infinite;
+        }
+        .partners-grid-item:nth-child(2) { animation-delay: 0.3s; }
+        .partners-grid-item:nth-child(3) { animation-delay: 0.6s; }
+        .partners-grid-item:nth-child(4) { animation-delay: 0.9s; }
+        .partners-grid-item:nth-child(5) { animation-delay: 1.2s; }
+        .partners-grid-item:nth-child(6) { animation-delay: 1.5s; }
+        .partners-grid-item:nth-child(7) { animation-delay: 1.8s; }
+        .partners-grid-item:nth-child(8) { animation-delay: 2.1s; }
+        .partners-grid-item:nth-child(9) { animation-delay: 2.4s; }
+        .partners-grid-item:nth-child(10) { animation-delay: 2.7s; }
+        @keyframes partner-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        .partners-grid-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            border-color: #f97233;
+            animation-play-state: paused;
+        }
+        .partners-grid-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        @media (max-width: 991px) {
+            .partners-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 575px) {
+            .partners-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        /* Quote & Testimonials */
+        #quote-testimonials {
+            padding: 80px 0;
+            background: #fff;
+        }
+        .quote-form-card {
+            background: #fff;
+            border: 1.5px solid #eee;
+            border-radius: 20px;
+            padding: 45px 40px;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+        }
+        .quote-form-input {
+            background: #f8f9fa !important;
+            border: 1.5px solid #eee !important;
+            border-radius: 10px !important;
+            padding: 14px 18px !important;
+            font-size: 15px !important;
+            color: #333 !important;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .quote-form-input:focus {
+            border-color: #f97233 !important;
+            box-shadow: 0 0 0 3px rgba(249, 114, 51, 0.1) !important;
+            background: #fff !important;
+        }
+        select.quote-form-input {
+            appearance: auto;
+            -webkit-appearance: auto;
+            cursor: pointer;
+            color: #999 !important;
+        }
+        select.quote-form-input:valid:not([value=""]) {
+            color: #333 !important;
+        }
+        .captcha-box {
+            background: #f8f9fa;
+            border: 1.5px solid #eee;
+            border-radius: 10px;
+            padding: 12px 18px;
+        }
+        .captcha-num {
+            background: #fff;
+            border: 1.5px solid #ddd;
+            border-radius: 8px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: #333;
+        }
+        .captcha-op {
+            font-weight: 700;
+            font-size: 18px;
+            color: #999;
+        }
+        .captcha-box .quote-form-input {
+            margin: 0 !important;
+        }
+        .testimonial-card {
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 16px;
+            border: 1.5px solid #eee;
+        }
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: #f97233;
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .review-swiper .swiper-button-prev,
+        .review-swiper .swiper-button-next {
+            display: none;
+        }
+        .review-nav-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        .review-prev-btn {
+            background: #fff;
+            border: 1.5px solid #eee;
+            color: #333;
+        }
+        .review-prev-btn:hover {
+            border-color: #f97233;
+            color: #f97233;
+        }
+        .review-next-btn {
+            background: #f97233;
+            border: none;
+            color: #fff;
+        }
+        .review-next-btn:hover {
+            background: #e0631e;
+        }
+        /* USP cards */
+        .usp-card {
+            background: #fff;
+            border: 1.5px solid #eee;
+            border-radius: 16px;
+            padding: 35px 25px;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+        .usp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+            border-color: #f97233;
+        }
+        .usp-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            background: rgba(249, 114, 51, 0.1);
+            color: #f97233;
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .usp-card:hover .usp-icon {
+            background: #f97233;
+            color: #fff;
+        }
+        /* Footer mascot 3D */
+        .footer-mascot-3d {
+            perspective: 800px;
+            display: inline-block;
+            animation: mascot-float 4s ease-in-out infinite;
+        }
+        .footer-mascot-3d img {
+            transition: transform 0.3s ease;
+            filter: drop-shadow(0 20px 40px rgba(249, 114, 51, 0.2));
+        }
+        @keyframes mascot-float {
+            0%, 100% { transform: translateY(0) rotateY(0deg); }
+            25% { transform: translateY(-12px) rotateY(5deg); }
+            50% { transform: translateY(-6px) rotateY(0deg); }
+            75% { transform: translateY(-12px) rotateY(-5deg); }
+        }
+        /* Products coverflow slider */
+        #features {
+            overflow: visible;
+        }
+        .products-services-slider {
+            padding: 30px 0 20px;
+            overflow: visible;
+            perspective: 1200px;
+        }
+        .products-services-slider .swiper-slide {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            opacity: 0.5;
+        }
+        .products-services-slider .swiper-slide-active {
+            opacity: 1;
+        }
+        .products-services-slider .swiper-slide-prev,
+        .products-services-slider .swiper-slide-next {
+            opacity: 0.7;
+        }
+        .products-services-slider .swiper-slide .feature-box {
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .products-services-slider .swiper-slide-active .feature-box {
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+
+    <!-- Google reCAPTCHA v3 -->
+    <!-- TODO: Replace PASTE_YOUR_SITE_KEY_HERE with your actual Site Key from Google reCAPTCHA -->
+    <script>
+        window.RECAPTCHA_SITE_KEY = 'PASTE_YOUR_SITE_KEY_HERE';
+    </script>
+    <script async defer src="https://www.google.com/recaptcha/api.js?render=PASTE_YOUR_SITE_KEY_HERE"></script>
+</head>
+
+    <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+        <div class="box-layout">
+            <!-- start header -->
+            <header>
+               <!-- start navigation -->
+<nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                    <div class="container-fluid">
+                        <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="default-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="alt-logo" width="0" height="0">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="mobile-logo" width="0" height="0">
+                            </a>
+                        </div>
+                        <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                            <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav-clone" aria-label="Toggle navigation" data-target="#navbarNav-clone">
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-item dropdown submenu">
+                                        <a href="#" class="nav-link">Products</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1"> 
+                                            <div class="d-lg-flex mega-menu m-auto flex-column">
+                                                <div class="row row-cols-1 row-cols-lg-5">
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">cPaaS</li>
+                                                            <li><a href="products-mblastr.html">mBlastr</a></li>
+                                                            <li><a href="products-vkolu.html">VKOLU</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Whole Sale </li>
+                                                            <li><a href="products-voice.html">Voice</a></li>
+                                                            <li><a href="products-sms.html">SMS(A2P)</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Retail </li>
+                                                            <li><a href="products-rcs.html">RCS</a></li>
+                                                            <li><a href="products-did.html">DID</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Instant Messaging</li>
+                                                            <li><a href="products-whatsapp.html">Whatsapp for Business</a></li>
+                                                            <li><a href="products-instagram.html">Instagram</a></li>
+                                                            <li><a href="products-viber.html"> Viber</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Number Lookup</li>
+                                                            <li><a href="products-number-lookup.html">Number Lookup</a></li>
+                                                            <li><a href="products-hlr.html">HLR</a></li>
+                                                            <li><a href="products-mnp.html">MNP</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Services</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a href="services-mail-hosting.html"></i>Mail Hosting</a></li>
+                                            <li><a href="services-it-managed.html"></i>IT Managed Services</a></li>
+                                            <li><a href="services-ip-pbx.html"></i>IP PBX</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Solutions</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a href="solutions-echt.html"></i>ECHT</a></li>
+                                            <li><a href="solutions-textr.html"></i>Textr</a></li>
+                                            <li><a href="solutions-cedar.html"></i>Cedar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Partners</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                           <li><a href="partners-key.html"></i>Our Key Partners</a></li>
+                                            <li><a href="partners-become.html"></i>Become Our Partner</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Connect With Us</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a href="about-us.html"></i>About Us</a></li>
+                                            <li><a href="careers.html"></i>Careers</a></li>
+                                            <li><a href="ethics-conduct.html"></i>Ethics and conduct</a></li>
+                                            <li><a href="terms-conditions.html"></i>Terms and conditions</a></li>
+                                            <li><a href="blog.html"></i>Blog</a></li>
+                                            <li><a href="download.html"></i>Download</a></li>
+                                            <li><a href="contact-us.html"></i>Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">
+                            <div class="header-icon">
+                                <div class="header-search-icon icon">
+                                    <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>
+                                    <!-- start search input -->
+                                    <div class="search-form-wrapper">
+                                        <button title="Close" type="button" class="search-close">×</button>
+                                        <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                            <div class="search-form-box">
+                                                <h2 class="text-black text-center fw-600 mb-4 ls-minus-1px">What are you looking for?</h2>
+                                                <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="q" value="" type="text" autocomplete="off">
+                                                <button type="submit" class="search-button">
+                                                    <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- end search input -->
+                                </div>
+                                <div class="header-button ms-20px d-none d-xl-inline-block">
+                                    <a href="demo-corporate-contact.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">
+                                        <span>
+                                            <span class="btn-double-text fw-600" data-text="Free consultation">Free consultation</span>
+                                            <span><i class="fa-regular fa-envelope"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+<!-- end navigation -->
+            </header>
+            <!-- end header -->
+            <!-- start slider -->
+            <section id="slider" class="p-0 top-space-margin">
+                <div class="demo-corporate-slider_wrapper fullscreen-container" data-alias="portfolio-viewer" data-source="gallery" style="background-color:#0b1236;padding:0px;">
+                    <div id="demo-corporate-slider" class="rev_slider fullscreenbanner" style="background-color:#0b1236;" data-version="5.3.1.6">
+                        <!-- begin slides list -->
+                        <ul>
+                            <!-- minimum slide structure -->
+                            <li data-index="rs-01" data-transition="fade" data-slotamount="default"
+                                data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power2.easeInOut"
+                                data-easeout="Power2.easeInOut" data-masterspeed="1200" data-rotate="0" data-saveperformance="off"
+                                data-title="Crossfit" data-param1="" data-param2="" data-param3="" data-param4=""
+                                data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
+                                data-description="">
+                                <!-- slide's main background image -->
+                                <img src="images/kolimg/kolbackground.webp" alt="Image"
+                                     data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                                     class="rev-slidebg" data-no-retina>
+                                <!-- start overlay layer -->
+                                <div class="tp-caption tp-shape tp-shapewrapper " id="slide-1-layer-01"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                                     data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
+                                     data-basealign="slide" data-responsive_offset="off" data-responsive="off"
+                                     data-frames='[{"delay":0,"speed":1000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},
+                                     {"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power4.easeInOut"}]' style="background:rgba(18, 18, 19, 0.34); z-index: 0;">
+                                </div>
+                                <!-- end overlay layer -->
+                                <!-- start shape layer -->
+                                <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme bg-regal-blue border-radius-50"
+                                     id="slide-1-layer-02" data-x="['center','center','center','center']"
+                                     data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                                     data-voffset="['0','0','0','0']" data-width="['900','700','700','600']"
+                                     data-height="['900','700','700','600']" data-whitespace="nowrap" data-type="shape"
+                                     data-responsive_offset="on"
+                                     data-frames='[{"delay":100,"speed":800,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:0.5;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]" style="z-index: 0;">
+                                </div>
+                                <!-- end shape layer -->
+                                <!-- start shape layer -->
+                                <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme bg-regal-blue border-radius-50"
+                                     id="slide-1-layer-03" data-x="['center','center','center','center']"
+                                     data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                                     data-voffset="['0','0','0','0']" data-width="['1200','1000','900','800']"
+                                     data-height="['1200','1000','900','800']" data-whitespace="nowrap" data-type="shape"
+                                     data-responsive_offset="on"
+                                     data-frames='[{"delay":200,"speed":800,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:0.3;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]" style="z-index: 0;">
+                                </div>
+                                <!-- end shape layer -->
+                                <!-- start row zone layer -->
+                                <div id="rrzm_638" class="rev_row_zone rev_row_zone_middle">
+                                    <!-- start row layer -->
+                                    <div class="tp-caption  " id="slide-1-layer-04" data-x="['left','left','left','left']"
+                                         data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                                         data-voffset="['-426','-426','-426','-426']" data-width="none" data-height="none"
+                                         data-whitespace="nowrap" data-type="row" data-columnbreak="3"
+                                         data-responsive_offset="on" data-responsive="off"
+                                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                                         data-paddingtop="[0,0,0,0]" data-paddingright="[100,75,50,30]"
+                                         data-paddingbottom="[0,0,0,0]" data-paddingleft="[100,75,50,30]">
+                                        <!-- start column layer -->
+                                        <div class="tp-caption" id="slide-1-layer-05" data-x="['left','left','left','left']"
+                                             data-hoffset="['100','100','100','100']" data-y="['top','top','top','top']"
+                                             data-voffset="['100','100','100','100']" data-width="none" data-height="none"
+                                             data-whitespace="nowrap" data-type="column" data-responsive_offset="on"
+                                             data-responsive="off"
+                                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                             data-columnwidth="100%" data-verticalalign="top"
+                                             data-textAlign="['center','center','center','center']">
+                                            <!-- start subtitle layer -->
+                                            <div class="tp-caption mx-auto text-uppercase" id="slide-1-layer-06"
+                                                 data-x="['center','center','center','center']"
+                                                 data-hoffset="['0','0','0','0']"
+                                                 data-y="['middle','middle','middle','middle']"
+                                                 data-voffset="['0','0','0','0']" data-fontsize="['13','13','13','13']"
+                                                 data-lineheight="['20','20','20','20']"
+                                                 data-fontweight="['500','500','500','500']"
+                                                 data-letterspacing="['1','1','1','1']"
+                                                 data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                                                 data-width="['800','auto','auto','auto']" data-height="auto"
+                                                 data-whitespace="normal" data-basealign="grid" data-type="text"
+                                                 data-responsive_offset="off" data-verticalalign="middle"
+                                                 data-responsive="off"
+                                                 data-frames='[{"delay":400,"speed":600,"frame":"0","from":"y:-30px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+                                                 data-textAlign="['center','center','center','center']"
+                                                 data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                 data-paddingbottom="[25,25,10,10]" data-paddingleft="[0,0,0,0]"
+                                                 style="word-break: initial;">
+                                                <i class="bi bi-award pe-5px icon-small"></i>On demand live support
+                                            </div>
+                                            <!-- end subtitle layer -->
+                                            <!-- start title layer -->
+                                            <div class="tp-caption mx-auto" id="slide-1-layer-07"
+                                                 data-x="['center','center','center','center']"
+                                                 data-hoffset="['0','0','0','0']"
+                                                 data-y="['middle','middle','middle','middle']"
+                                                 data-voffset="['0','0','0','0']" data-fontsize="['75','60','70','50']"
+                                                 data-lineheight="['70','65','75','55']"
+                                                 data-fontweight="['700','700','700','700']"
+                                                 data-letterspacing="['-2','-2','-2','0']"
+                                                 data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                                                 data-width="['700','600','600','auto']" data-height="auto"
+                                                 data-whitespace="normal" data-basealign="grid" data-type="text"
+                                                 data-responsive_offset="off" data-verticalalign="middle"
+                                                 data-responsive="on"
+                                                 data-frames='[{"delay":"200","split":"chars","splitdelay":0.02,"speed":600,"split_direction":"middletoedge","frame":"0","from":"x:30px;opacity:0;fb:5px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":100,"frame":"999","to":"opacity:0;fb:0;","ease":"Power4.easeOut"}]'
+                                                 data-textAlign="['center','center','center','center']"
+                                                 data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                 data-paddingbottom="[33,28,35,25]" data-paddingleft="[0,0,0,0]"
+                                                 style="word-break: initial; text-shadow: #0b1236 3px 3px 15px;">
+                                                 Connect Beyond Limits
+                                            </div>
+                                            <!-- end title layer -->
+                                            <!-- start text layer -->
+                                            <div class="tp-caption mx-auto" id="slide-1-layer-08"
+                                                 data-x="['center','center','center','center']"
+                                                 data-hoffset="['0','0','0','0']"
+                                                 data-y="['middle','middle','middle','middle']"
+                                                 data-voffset="['0','0','0','0']" data-fontsize="['20','20','24','20']"
+                                                 data-lineheight="['36','36','40','30']"
+                                                 data-fontweight="['300','300','300','300']"
+                                                 data-letterspacing="['0','0','0','0']"
+                                                 data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                                                 data-width="['500','500','auto','auto']" data-height="auto"
+                                                 data-whitespace="normal" data-basealign="grid" data-type="text"
+                                                 data-responsive_offset="off" data-verticalalign="middle"
+                                                 data-responsive="on"
+                                                 data-frames='[{"delay":500,"speed":600,"frame":"0","from":"y:30px;opacity:0;fb:10px;","to":"o:100;fb:0;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+                                                 data-textAlign="['center','center','center','center']"
+                                                 data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                 data-paddingbottom="[36,36,60,40]" data-paddingleft="[0,0,0,0]">
+                                                We're a fully dedicated corporate service agency collaborating with brands
+                                                all over the world.
+                                            </div>
+                                            <!-- end text layer -->
+                                            <!-- start button layer -->
+                                            <div class="tp-caption tp-resizeme" id="slide-1-layer-09"
+                                                 data-x="['center','center','center','center']"
+                                                 data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']"
+                                                 data-voffset="['0','0','0','0']" data-width="auto" data-height="none"
+                                                 data-whitespace="nowrap" data-fontsize="['18','16','16','16']"
+                                                 data-lineheight="['70','55','55','55']" data-type="text"
+                                                 data-responsive_offset="off" data-responsive="off"
+                                                 data-frames='[{"delay":700,"speed":800,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                                 data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                 data-paddingtop="[0,0,0,0]" data-paddingright="[75,70,65,60]"
+                                                 data-paddingbottom="[0,0,0,0]" data-paddingleft="[45,35,30,30]">
+                                                <a href="#"
+                                                   class="btn btn-extra-large get-started-btn btn-rounded with-rounded btn-gradient-flamingo-amethyst-green btn-box-shadow">Get
+                                                    started now<span class="bg-white text-base-color"><i
+                                                            class="fa-solid fa-arrow-right"></i></span></a>
+                                            </div>
+                                            <!-- end button layer -->
+                                        </div>
+                                        <!-- end column layer -->
+                                    </div>
+                                    <!-- end row layer -->
+                                </div>
+                                <!-- end row zone layer -->
+                                <!-- start beige background layer -->
+                                <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme bg-base-color border-radius-50"
+                                     id="slide-1-layer-10" data-x="['center','center','center','center']"
+                                     data-hoffset="['510','410','310','0']" data-y="['middle','middle','middle','middle']"
+                                     data-voffset="['-320','-250','-250','0']" data-width="['122','122','120','120']"
+                                     data-height="['122','122','120','120']" data-visibility="['on','on','off','off']"
+                                     data-whitespace="nowrap" data-basealign="grid" data-type="shape"
+                                     data-responsive_offset="on"
+                                     data-frames='[{"delay":900,"speed":800,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:1;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]" style="z-index: 0;">
+                                </div>
+                                <!-- end beige background layer -->
+                                <!-- start beige text layer -->
+                                <div class="tp-caption d-inline-block" id="slide-1-layer-11"
+                                     data-x="['center','center','center','center']" data-hoffset="['510','410','310','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['-305','-250','-250','0']"
+                                     data-visibility="['on','on','off','off']" data-fontsize="['13','13','13','13']"
+                                     data-lineheight="['16','16','16','16']" data-fontweight="['500','600','600','600']"
+                                     data-letterspacing="['0','0','0','0']"
+                                     data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                                     data-width="['100','100','100','100']" data-height="auto" data-whitespace="normal"
+                                     data-basealign="grid" data-type="text" data-responsive_offset="on"
+                                     data-verticalalign="middle" data-responsive="on"
+                                     data-frames='[{"delay":1000,"speed":800,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:1;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[33,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]" style="word-break: initial;">
+                                    <i class="bi bi-patch-check-fill icon-extra-medium d-block pb-10px"></i> <span
+                                        class="d-block text-uppercase">Decided quality</span>
+                                </div>
+                                <!-- end beige text layer -->
+                            </li>
+                            <li data-index="rs-02" data-transition="fade" data-slotamount="default"
+                                data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power2.easeInOut"
+                                data-easeout="Power2.easeInOut" data-masterspeed="1200" data-rotate="0" data-saveperformance="off"
+                                data-title="Crossfit" data-param1="" data-param2="" data-param3="" data-param4=""
+                                data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
+                                data-description="">
+                                <!-- slide's main background image -->
+                                <img src="images/kolimg/Kolbackgroud2.webp" alt="Image"
+                                     data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                                     class="rev-slidebg" data-no-retina>
+                                <!-- start overlay layer -->
+                                <div class="tp-caption tp-shape tp-shapewrapper " id="slide-2-layer-01"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                                     data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
+                                     data-basealign="slide" data-responsive_offset="off" data-responsive="off"
+                                     data-frames='[{"delay":0,"speed":1000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},
+                                     {"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power4.easeInOut"}]' style="background:rgba(18, 18, 19, 0.34); z-index: 0;">
+                                </div>
+                                <!-- end overlay layer -->
+                                <!-- start shape layer -->
+                                <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme bg-regal-blue border-radius-50"
+                                     id="slide-2-layer-02" data-x="['center','center','center','center']"
+                                     data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                                     data-voffset="['0','0','0','0']" data-width="['900','700','700','600']"
+                                     data-height="['900','700','700','600']" data-whitespace="nowrap" data-type="shape"
+                                     data-responsive_offset="on"
+                                     data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:0.5;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]" style="z-index: 0;">
+                                </div>
+                                <!-- end shape layer -->
+                                <!-- start shape layer -->
+                                <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme bg-regal-blue border-radius-50"
+                                     id="slide-2-layer-03" data-x="['center','center','center','center']"
+                                     data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                                     data-voffset="['0','0','0','0']" data-width="['1200','1000','900','800']"
+                                     data-height="['1200','1000','900','800']" data-whitespace="nowrap" data-type="shape"
+                                     data-responsive_offset="on"
+                                     data-frames='[{"delay":1300,"speed":1000,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:0.3;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]" style="z-index: 0;">
+                                </div>
+                                <!-- end shape layer -->
+                                <!-- start row zone layer -->
+                                <div id="rrzm_639" class="rev_row_zone rev_row_zone_middle">
+                                    <!-- start row layer -->
+                                    <div class="tp-caption  " id="slide-2-layer-04" data-x="['left','left','left','left']"
+                                         data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                                         data-voffset="['-426','-426','-426','-426']" data-width="none" data-height="none"
+                                         data-whitespace="nowrap" data-type="row" data-columnbreak="3"
+                                         data-responsive_offset="on" data-responsive="off"
+                                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                                         data-paddingtop="[0,0,0,0]" data-paddingright="[100,75,50,30]"
+                                         data-paddingbottom="[0,0,0,0]" data-paddingleft="[100,75,50,30]">
+                                        <!-- start column layer -->
+                                        <div class="tp-caption" id="slide-2-layer-05" data-x="['left','left','left','left']"
+                                             data-hoffset="['100','100','100','100']" data-y="['top','top','top','top']"
+                                             data-voffset="['100','100','100','100']" data-width="none" data-height="none"
+                                             data-whitespace="nowrap" data-type="column" data-responsive_offset="on"
+                                             data-responsive="off"
+                                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                             data-columnwidth="100%" data-verticalalign="top"
+                                             data-textAlign="['center','center','center','center']">
+                                            <!-- start subtitle layer -->
+                                            <div class="tp-caption mx-auto text-uppercase" id="slide-2-layer-06"
+                                                 data-x="['center','center','center','center']"
+                                                 data-hoffset="['0','0','0','0']"
+                                                 data-y="['middle','middle','middle','middle']"
+                                                 data-voffset="['0','0','0','0']" data-fontsize="['13','13','13','13']"
+                                                 data-lineheight="['20','20','20','20']"
+                                                 data-fontweight="['500','500','500','500']"
+                                                 data-letterspacing="['1','1','1','1']"
+                                                 data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                                                 data-width="['800','auto','auto','auto']" data-height="auto"
+                                                 data-whitespace="normal" data-basealign="grid" data-type="text"
+                                                 data-responsive_offset="off" data-verticalalign="middle"
+                                                 data-responsive="off"
+                                                 data-frames='[{"delay":2500,"speed":800,"frame":"0","from":"y:-50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+                                                 data-textAlign="['center','center','center','center']"
+                                                 data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                 data-paddingbottom="[25,25,10,10]" data-paddingleft="[0,0,0,0]"
+                                                 style="word-break: initial;">
+                                                <i class="bi bi-award pe-5px icon-small"></i>On demand live support
+                                            </div>
+                                            <!-- end subtitle layer -->
+                                            <!-- start title layer -->
+                                            <div class="tp-caption mx-auto" id="slide-2-layer-07"
+                                                 data-x="['center','center','center','center']"
+                                                 data-hoffset="['0','0','0','0']"
+                                                 data-y="['middle','middle','middle','middle']"
+                                                 data-voffset="['0','0','0','0']" data-fontsize="['75','60','70','50']"
+                                                 data-lineheight="['70','65','75','55']"
+                                                 data-fontweight="['700','700','700','700']"
+                                                 data-letterspacing="['-2','-2','-2','0']"
+                                                 data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                                                 data-width="['700','600','600','auto']" data-height="auto"
+                                                 data-whitespace="normal" data-basealign="grid" data-type="text"
+                                                 data-responsive_offset="off" data-verticalalign="middle"
+                                                 data-responsive="on"
+                                                 data-frames='[{"delay":"1500","split":"chars","splitdelay":0.03,"speed":800,"split_direction":"middletoedge","frame":"0","from":"x:50px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":100,"frame":"999","to":"opacity:0;fb:0;","ease":"Power4.easeOut"}]'
+                                                 data-textAlign="['center','center','center','center']"
+                                                 data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                 data-paddingbottom="[33,28,35,25]" data-paddingleft="[0,0,0,0]"
+                                                 style="word-break: initial; text-shadow: #0b1236 3px 3px 15px;">
+                                                 Your Global IT & Telecom Solutions Partner
+                                            </div>
+                                            <!-- end title layer -->
+                                            <!-- start text layer -->
+                                            <div class="tp-caption mx-auto" id="slide-2-layer-08"
+                                                 data-x="['center','center','center','center']"
+                                                 data-hoffset="['0','0','0','0']"
+                                                 data-y="['middle','middle','middle','middle']"
+                                                 data-voffset="['0','0','0','0']" data-fontsize="['20','20','24','20']"
+                                                 data-lineheight="['36','36','40','30']"
+                                                 data-fontweight="['300','300','300','300']"
+                                                 data-letterspacing="['0','0','0','0']"
+                                                 data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                                                 data-width="['500','500','auto','auto']" data-height="auto"
+                                                 data-whitespace="normal" data-basealign="grid" data-type="text"
+                                                 data-responsive_offset="off" data-verticalalign="middle"
+                                                 data-responsive="on"
+                                                 data-frames='[{"delay":2500,"speed":800,"frame":"0","from":"y:50px;opacity:0;fb:20px;","to":"o:100;fb:0;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+                                                 data-textAlign="['center','center','center','center']"
+                                                 data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                 data-paddingbottom="[36,36,60,40]" data-paddingleft="[0,0,0,0]">
+                                                 Unlock unmatched voice and SMS connectivity worldwide
+                                            </div>
+                                            <!-- end text layer -->
+                                            <!-- start button layer -->
+                                            <div class="tp-caption tp-resizeme" id="slide-2-layer-09"
+                                                 data-x="['center','center','center','center']"
+                                                 data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']"
+                                                 data-voffset="['0','0','0','0']" data-width="auto" data-height="none"
+                                                 data-whitespace="nowrap" data-fontsize="['18','16','16','16']"
+                                                 data-lineheight="['70','55','55','55']" data-type="text"
+                                                 data-responsive_offset="off" data-responsive="off"
+                                                 data-frames='[{"delay":3000,"speed":1000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                                 data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                 data-paddingtop="[0,0,0,0]" data-paddingright="[75,70,65,60]"
+                                                 data-paddingbottom="[0,0,0,0]" data-paddingleft="[45,35,30,30]">
+                                                <a href="#"
+                                                   class="btn btn-extra-large get-started-btn btn-rounded with-rounded btn-gradient-flamingo-amethyst-green btn-box-shadow">Get
+                                                    started now<span class="bg-white text-base-color"><i
+                                                            class="fa-solid fa-arrow-right"></i></span></a>
+                                            </div>
+                                            <!-- end button layer -->
+                                        </div>
+                                        <!-- end column layer -->
+                                    </div>
+                                    <!-- end row layer -->
+                                </div>
+                                <!-- end row zone layer -->
+                                <!-- start beige background layer -->
+                                <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme bg-base-color border-radius-50"
+                                     id="slide-2-layer-10" data-x="['center','center','center','center']"
+                                     data-hoffset="['510','410','310','0']" data-y="['middle','middle','middle','middle']"
+                                     data-voffset="['-320','-250','-250','0']" data-width="['122','122','120','120']"
+                                     data-height="['122','122','120','120']" data-visibility="['on','on','off','off']"
+                                     data-whitespace="nowrap" data-basealign="grid" data-type="shape"
+                                     data-responsive_offset="on"
+                                     data-frames='[{"delay":3500,"speed":1000,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:1;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]" style="z-index: 0;">
+                                </div>
+                                <!-- end beige background layer -->
+                                <!-- start beige text layer -->
+                                <div class="tp-caption d-inline-block" id="slide-2-layer-11"
+                                     data-x="['center','center','center','center']" data-hoffset="['510','410','310','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['-305','-250','-250','0']"
+                                     data-visibility="['on','on','off','off']" data-fontsize="['13','13','13','13']"
+                                     data-lineheight="['16','16','16','16']" data-fontweight="['500','600','600','600']"
+                                     data-letterspacing="['0','0','0','0']"
+                                     data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                                     data-width="['100','100','100','100']" data-height="auto" data-whitespace="normal"
+                                     data-basealign="grid" data-type="text" data-responsive_offset="on"
+                                     data-verticalalign="middle" data-responsive="on"
+                                     data-frames='[{"delay":3700,"speed":1000,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:1;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[33,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]" style="word-break: initial;">
+                                    <i class="bi bi-patch-check-fill icon-extra-medium d-block pb-10px"></i> <span
+                                        class="d-block text-uppercase">Decided quality</span>
+                                </div>
+                                <!-- end beige text layer -->
+                            </li>
+                            <li data-index="rs-03" data-transition="fade" data-slotamount="default"
+                                data-hideafterloop="0" data-hideslideonmobile="off" data-easein="Power2.easeInOut"
+                                data-easeout="Power2.easeInOut" data-masterspeed="1200" data-rotate="0" data-saveperformance="off"
+                                data-title="Crossfit" data-param1="" data-param2="" data-param3="" data-param4=""
+                                data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10=""
+                                data-description="">
+                                <!-- slide's main background image -->
+                                <img src="images/kolimg/Kolbackground3.webp" alt="Image"
+                                     data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                                     class="rev-slidebg" data-no-retina>
+                                <!-- start overlay layer -->
+                                <div class="tp-caption tp-shape tp-shapewrapper " id="slide-3-layer-01"
+                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                                     data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
+                                     data-basealign="slide" data-responsive_offset="off" data-responsive="off"
+                                     data-frames='[{"delay":0,"speed":1000,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},
+                                     {"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power4.easeInOut"}]' style="background:rgba(18, 18, 19, 0.34); z-index: 0;">
+                                </div>
+                                <!-- end overlay layer -->
+                                <!-- start shape layer -->
+                                <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme bg-regal-blue border-radius-50"
+                                     id="slide-3-layer-02" data-x="['center','center','center','center']"
+                                     data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                                     data-voffset="['0','0','0','0']" data-width="['900','700','700','600']"
+                                     data-height="['900','700','700','600']" data-whitespace="nowrap" data-type="shape"
+                                     data-responsive_offset="on"
+                                     data-frames='[{"delay":1000,"speed":1000,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:0.5;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]" style="z-index: 0;">
+                                </div>
+                                <!-- end shape layer -->
+                                <!-- start shape layer -->
+                                <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme bg-regal-blue border-radius-50"
+                                     id="slide-3-layer-03" data-x="['center','center','center','center']"
+                                     data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                                     data-voffset="['0','0','0','0']" data-width="['1200','1000','900','800']"
+                                     data-height="['1200','1000','900','800']" data-whitespace="nowrap" data-type="shape"
+                                     data-responsive_offset="on"
+                                     data-frames='[{"delay":1300,"speed":1000,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:0.3;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]" style="z-index: 0;">
+                                </div>
+                                <!-- end shape layer -->
+                                <!-- start row zone layer -->
+                                <div id="rrzm_640" class="rev_row_zone rev_row_zone_middle">
+                                    <!-- start row layer -->
+                                    <div class="tp-caption  " id="slide-3-layer-04" data-x="['left','left','left','left']"
+                                         data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']"
+                                         data-voffset="['-426','-426','-426','-426']" data-width="none" data-height="none"
+                                         data-whitespace="nowrap" data-type="row" data-columnbreak="3"
+                                         data-responsive_offset="on" data-responsive="off"
+                                         data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                         data-textAlign="['inherit','inherit','inherit','inherit']"
+                                         data-paddingtop="[0,0,0,0]" data-paddingright="[100,75,50,30]"
+                                         data-paddingbottom="[0,0,0,0]" data-paddingleft="[100,75,50,30]">
+                                        <!-- start column layer -->
+                                        <div class="tp-caption" id="slide-3-layer-05" data-x="['left','left','left','left']"
+                                             data-hoffset="['100','100','100','100']" data-y="['top','top','top','top']"
+                                             data-voffset="['100','100','100','100']" data-width="none" data-height="none"
+                                             data-whitespace="nowrap" data-type="column" data-responsive_offset="on"
+                                             data-responsive="off"
+                                             data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                             data-columnwidth="100%" data-verticalalign="top"
+                                             data-textAlign="['center','center','center','center']">
+                                            <!-- start subtitle layer -->
+                                            <div class="tp-caption mx-auto text-uppercase" id="slide-3-layer-06"
+                                                 data-x="['center','center','center','center']"
+                                                 data-hoffset="['0','0','0','0']"
+                                                 data-y="['middle','middle','middle','middle']"
+                                                 data-voffset="['0','0','0','0']" data-fontsize="['13','13','13','13']"
+                                                 data-lineheight="['20','20','20','20']"
+                                                 data-fontweight="['500','500','500','500']"
+                                                 data-letterspacing="['1','1','1','1']"
+                                                 data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                                                 data-width="['800','auto','auto','auto']" data-height="auto"
+                                                 data-whitespace="normal" data-basealign="grid" data-type="text"
+                                                 data-responsive_offset="off" data-verticalalign="middle"
+                                                 data-responsive="off"
+                                                 data-frames='[{"delay":2500,"speed":800,"frame":"0","from":"y:-50px;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+                                                 data-textAlign="['center','center','center','center']"
+                                                 data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                 data-paddingbottom="[25,25,10,10]" data-paddingleft="[0,0,0,0]"
+                                                 style="word-break: initial;">
+                                                <i class="bi bi-award pe-5px icon-small"></i>On demand live support
+                                            </div>
+                                            <!-- end subtitle layer -->
+                                            <!-- start title layer -->
+                                            <div class="tp-caption mx-auto" id="slide-3-layer-07"
+                                                 data-x="['center','center','center','center']"
+                                                 data-hoffset="['0','0','0','0']"
+                                                 data-y="['middle','middle','middle','middle']"
+                                                 data-voffset="['0','0','0','0']" data-fontsize="['75','60','70','50']"
+                                                 data-lineheight="['70','65','75','55']"
+                                                 data-fontweight="['700','700','700','700']"
+                                                 data-letterspacing="['-2','-2','-2','0']"
+                                                 data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                                                 data-width="['700','600','600','auto']" data-height="auto"
+                                                 data-whitespace="normal" data-basealign="grid" data-type="text"
+                                                 data-responsive_offset="off" data-verticalalign="middle"
+                                                 data-responsive="on"
+                                                 data-frames='[{"delay":"1500","split":"chars","splitdelay":0.03,"speed":800,"split_direction":"middletoedge","frame":"0","from":"x:50px;opacity:0;fb:10px;","to":"o:1;fb:0;","ease":"Power4.easeOut"},{"delay":"wait","speed":100,"frame":"999","to":"opacity:0;fb:0;","ease":"Power4.easeOut"}]'
+                                                 data-textAlign="['center','center','center','center']"
+                                                 data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                 data-paddingbottom="[33,28,35,25]" data-paddingleft="[0,0,0,0]"
+                                                 style="word-break: initial; text-shadow: #0b1236 3px 3px 15px;">
+                                                 Your Network, Our Priority
+                                            </div>
+                                            <!-- end title layer -->
+                                            <!-- start text layer -->
+                                            <div class="tp-caption mx-auto" id="slide-3-layer-08"
+                                                 data-x="['center','center','center','center']"
+                                                 data-hoffset="['0','0','0','0']"
+                                                 data-y="['middle','middle','middle','middle']"
+                                                 data-voffset="['0','0','0','0']" data-fontsize="['20','20','24','20']"
+                                                 data-lineheight="['36','36','40','30']"
+                                                 data-fontweight="['300','300','300','300']"
+                                                 data-letterspacing="['0','0','0','0']"
+                                                 data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                                                 data-width="['500','500','auto','auto']" data-height="auto"
+                                                 data-whitespace="normal" data-basealign="grid" data-type="text"
+                                                 data-responsive_offset="off" data-verticalalign="middle"
+                                                 data-responsive="on"
+                                                 data-frames='[{"delay":2500,"speed":800,"frame":"0","from":"y:50px;opacity:0;fb:20px;","to":"o:100;fb:0;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
+                                                 data-textAlign="['center','center','center','center']"
+                                                 data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                                 data-paddingbottom="[36,36,60,40]" data-paddingleft="[0,0,0,0]">
+                                                 Empowering you with reliable, scalable, and innovative telecom solutions.
+
+                                            </div>
+                                            <!-- end text layer -->
+                                            <!-- start button layer -->
+                                            <div class="tp-caption tp-resizeme" id="slide-3-layer-09"
+                                                 data-x="['center','center','center','center']"
+                                                 data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']"
+                                                 data-voffset="['0','0','0','0']" data-width="auto" data-height="none"
+                                                 data-whitespace="nowrap" data-fontsize="['18','16','16','16']"
+                                                 data-lineheight="['70','55','55','55']" data-type="text"
+                                                 data-responsive_offset="off" data-responsive="off"
+                                                 data-frames='[{"delay":3000,"speed":1000,"frame":"0","from":"y:100px;opacity:0;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                                 data-textAlign="['inherit','inherit','inherit','inherit']"
+                                                 data-paddingtop="[0,0,0,0]" data-paddingright="[75,70,65,60]"
+                                                 data-paddingbottom="[0,0,0,0]" data-paddingleft="[45,35,30,30]">
+                                                <a href="#"
+                                                   class="btn btn-extra-large get-started-btn btn-rounded with-rounded btn-gradient-flamingo-amethyst-green btn-box-shadow">Get
+                                                    started now<span class="bg-white text-base-color"><i
+                                                            class="fa-solid fa-arrow-right"></i></span></a>
+                                            </div>
+                                            <!-- end button layer -->
+                                        </div>
+                                        <!-- end column layer -->
+                                    </div>
+                                    <!-- end row layer -->
+                                </div>
+                                <!-- end row zone layer -->
+                                <!-- start beige background layer -->
+                                <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme bg-base-color border-radius-50"
+                                     id="slide-3-layer-10" data-x="['center','center','center','center']"
+                                     data-hoffset="['510','410','310','0']" data-y="['middle','middle','middle','middle']"
+                                     data-voffset="['-320','-250','-250','0']" data-width="['122','122','120','120']"
+                                     data-height="['122','122','120','120']" data-visibility="['on','on','off','off']"
+                                     data-whitespace="nowrap" data-basealign="grid" data-type="shape"
+                                     data-responsive_offset="on"
+                                     data-frames='[{"delay":3500,"speed":1000,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:1;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]" style="z-index: 0;">
+                                </div>
+                                <!-- end beige background layer -->
+                                <!-- start beige text layer -->
+                                <div class="tp-caption d-inline-block" id="slide-3-layer-11"
+                                     data-x="['center','center','center','center']" data-hoffset="['510','410','310','0']"
+                                     data-y="['middle','middle','middle','middle']" data-voffset="['-305','-250','-250','0']"
+                                     data-visibility="['on','on','off','off']" data-fontsize="['13','13','13','13']"
+                                     data-lineheight="['16','16','16','16']" data-fontweight="['500','600','600','600']"
+                                     data-letterspacing="['0','0','0','0']"
+                                     data-color="['#ffffff','#ffffff','#ffffff','#ffffff']"
+                                     data-width="['100','100','100','100']" data-height="auto" data-whitespace="normal"
+                                     data-basealign="grid" data-type="text" data-responsive_offset="on"
+                                     data-verticalalign="middle" data-responsive="on"
+                                     data-frames='[{"delay":3700,"speed":1000,"frame":"0","from":"x:0px;y:50px;rX:0deg;rY:0deg;rZ:0deg;sX:0.5;sY:0.5;opacity:0;","to":"o:1;","ease":"Back.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                     data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
+                                     data-paddingright="[0,0,0,0]" data-paddingbottom="[33,0,0,0]"
+                                     data-paddingleft="[0,0,0,0]" style="word-break: initial;">
+                                    <i class="bi bi-patch-check-fill icon-extra-medium d-block pb-10px"></i> <span
+                                        class="d-block text-uppercase">Decided quality</span>
+                                </div>
+                                <!-- end beige text layer -->
+                            </li>
+                        </ul>
+                        <div class="tp-bannertimer" style="display:none"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- end slider -->
+            <div class="page-content-wrapper">
+              <!-- start section -->
+        <section class="overflow-hidden">
+            <div class="container">
+                <div class="container-fluid">
+                    <div class="row position-relative mt-40px xs-mt-20px">
+                        <div class="col swiper swiper-width-auto feather-shadow text-center" data-slider-options='{ "slidesPerView": "auto", "spaceBetween":80, "centeredSlides": true, "speed": 3000, "loop": true, "pagination": { "el": ".slider-four-slide-pagination-2", "clickable": false }, "allowTouchMove": false, "autoplay": { "delay":1, "disableOnInteraction": false }, "navigation": { "nextEl": ".slider-four-slide-next-2", "prevEl": ".slider-four-slide-prev-2" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }'>
+                            <div class="swiper-wrapper marquee-slide">
+                                <!-- start slider item -->
+                                <div class="swiper-slide">
+                                    <div class="fs-190 ls-minus-10px pt-10px pb-10px alt-font fw-600 opacity-2">WE</div>
+                                </div>
+                                <!-- end slider item -->
+                                <!-- start slider item -->
+                                <div class="swiper-slide">
+                                    <div class="fs-190 ls-minus-10px pt-10px pb-10px alt-font fw-600 opacity-2">ARE</div>
+                                </div>
+                                <!-- end slider item -->
+                                <!-- start slider item -->
+                                <div class="swiper-slide">
+                                    <div class="fs-190 ls-minus-10px pt-10px pb-10px alt-font fw-600 opacity-2">WORLDWILD</div>
+                                </div>
+                                <!-- end slider item -->
+                            </div> 
+                        </div>  
+                        <div class="col-12 position-absolute top-0 h-100 d-flex justify-content-center align-items-center left-0px z-index-1 text-center">
+                            <h4 class="alt-font text-black fs-45 fw-600 ls-minus-2px xs-ls-minus-1px mb-0 mt-40px xs-mt-15px">Welcome to <span style="color:#fe9d0e;"> KOL Telecom</span></h4>
+                        </div>
+                    </div>
+                </div>
+                <span style="color: #0b1236; margin-bottom: 10px; display: inline-block;">IT & Telecom Solutions Provider and Cloud Communications Platform, KOL Telecom has been successfully rendering services since 2006. We aim to provide quality service all across the globe. Our diverse product range, in addition to our skilled team, is fully-equipped to provide you with world-class services.</span>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-xl-7 col-lg-6 text-center md-mb-50px sm-mb-30px" data-anime='{ "el": "childs", "opacity": [0, 1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="position-relative pe-50px lg-pe-0 outside-box-left-10 md-outside-box-left-0 atropos" data-atropos>
+                            <div class="atropos-scale">
+                                <div class="atropos-rotate">
+                                    <div class="atropos-inner text-center w-100 overflow-visible">
+                                        <div data-atropos-offset="-5" class="position-absolute left-0px">
+                                            <img src="images/kolimg/whychoose koltelecom.webp" alt="">
+                                        </div>
+                                        <img data-atropos-offset="5" class="position-relative z-index-9" src="images/kolimg/whychoosekol.webp" alt="">
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6 col-md-11 position-relative" data-anime='{ "el": "childs", "translateX": [30, 0], "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="icon-with-text-style-08 mb-20px">
+                            <div class="feature-box feature-box-left-icon-middle">
+                        </div>
+                        <h2 class="alt-font text-black fw-600 ls-minus-3px mb-40px sm-mb-25px mx-auto">Why choose<br> KOL Telecom ?</h2>
+                        <div class="accordion accordion-style-06 text-start" id="accordion-style-07">
+                            <!-- start accordion item -->
+                            <div class="accordion-item active-accordion">
+                                <div class="accordion-header">
+                                    <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-07-01" aria-expanded="true" data-bs-parent="#accordion-style-07">
+                                        <div class="accordion-title fs-18 position-relative pe-0 xs-lh-28px text-black fw-600 mb-0">Services</div>
+                                    </a>
+                                </div>
+                                <div id="accordion-style-07-01" class="accordion-collapse collapse show" data-bs-parent="#accordion-style-07">
+                                    <div class="accordion-body last-paragraph-no-margin">
+                                        <p>Being pioneers in the field, KOL Telecom offers premium solutions to all its customers. Experience and innovation converge here.</p>
+                                        <i class="line-icon-Address-Book icon-extra-double-large opacity-2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end accordion item -->
+                            <!-- start accordion item -->
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-07-02" aria-expanded="false" data-bs-parent="#accordion-style-07">
+                                        <div class="accordion-title fs-18 position-relative pe-0 text-black fw-600 mb-0">Customer Relations</div>
+                                    </a>
+                                </div>
+                                <div id="accordion-style-07-02" class="accordion-collapse collapse" data-bs-parent="#accordion-style-07">
+                                    <div class="accordion-body last-paragraph-no-margin">
+                                        <p>Our skilled and empathetic team provides tailor-made solutions for every distinct requirement. </p>
+                                        <i class="line-icon-Sand-watch icon-extra-double-large opacity-2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end accordion item -->
+                            <!-- start accordion item -->
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <a href="#" data-bs-toggle="collapse" data-bs-target="#accordion-style-07-03" aria-expanded="false" data-bs-parent="#accordion-style-07">
+                                        <div class="accordion-title fs-18 position-relative pe-0 text-black fw-600 mb-0">Easy and Secure</div>
+                                    </a>
+                                </div>
+                                <div id="accordion-style-07-03" class="accordion-collapse collapse" data-bs-parent="#accordion-style-07">
+                                    <div class="accordion-body last-paragraph-no-margin">
+                                        <p>KOL Telecom’s products are all extremely user-friendly. Also, our team strives really hard to protect all your data in the process.</p>
+                                        <i class="line-icon-Gear-2 icon-extra-double-large opacity-2"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end accordion item -->
+                        </div>
+                        <a href="demo-elearning-courses.html" class="btn btn-extra-large btn-black btn-box-shadow btn-rounded btn-switch-text mt-30px">
+                            <span>
+                                <span class="btn-double-text" data-text="Explore">Explore</span>
+                                <span><i class="fa-solid fa-arrow-right"></i></span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+            <!-- start section -->
+            <!-- start section -->  
+        <section id="overview" class="position-relative">
+            <div id="particles-01" data-particle="true" data-particle-options='{"particles": {"number": {"value": 3,"density": {"enable": true,"value_area": 1000}},"color":{"value":["#ff5b74", "#820f89"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 0.7,"random": false,"anim": {"enable": false,"speed": 2,"sync": false}},"size": {"value": 7,"random": true,"anim": {"enable": false,"sync": true}},"move": {"enable": true,"speed":2,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}' class="position-absolute top-0px left-0px w-100 z-index-minus-1"></div>
+            <div class="container">
+                <div class="row justify-content-center align-items-center mb-5">
+                    <div class="col-12 text-center last-paragraph-no-margin" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 1200, "delay": 50, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <div class="text-center bg-golden-yellow text-white fs-16 lh-36 border-radius-30px d-inline-block ps-20px pe-20px align-middle me-10px"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                        <span class="text-black fs-26 d-inline-block align-middle ls-minus-05px">"Experience telecom with no interruptions, <a  target="_blank" class="fw-700 text-decoration-line-bottom text-black text-black-hover"> just innovations." </a></span>
+                    </div>
+                </div>
+                <div class="row align-items-center mb-6 md-mb-10"> 
+                    <div class="col-md-6 position-relative sm-mb-30px" data-anime='{ "translateX": [-50, 0], "opacity": [0,1], "duration": 1500, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'> 
+                        <div class="outside-box-left-20 lg-outside-box-left-30">
+                            <img src="images/kolimg/market.webp" alt=""> 
+                        </div>
+                    </div>
+                    <div class="col-md-6 ps-5 md-ps-15px" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 1000, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <img src="images/kolimg/promo.gif" alt="Custom Icon" class="custom-icon" style="max-width: 120px; height: auto; margin-bottom: 15px;" />
+                        <h1 class="fw-800 ls-minus-3px text-black mb-30px fancy-text-style-4"> Power up your business with
+                            <span data-fancy-text='{ "effect": "wave", "string": ["fast", "smart", "seamless"], "duration": 4000  }' style="color: #fe9d0e;">
+                            </span> solutions.
+                        </h1>
+                        <p class="w-90 lg-w-100 mb-35px"><strong> With a global network spes, we guaranteanning 200+ countrie high-quality services and unmatched reliability. Our team of experts is dedicated to helping you simplify your communication processes and grow your business.</strong></p>   
+                        <a href="#features" class="btn btn-large btn-black btn-hover-animation-switch btn-box-shadow btn-round-edge section-link">
+                            <span>
+                                <span class="btn-text">Explore features</span>
+                                <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
+                                <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
+                            </span> 
+                        </a>
+                    </div> 
+                </div> 
+                <div class="row row-cols-1 row-cols-lg-3 g-4 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 150, "easing": "easeOutQuart" }'>
+                    <div class="col">
+                        <div class="usp-card text-center">
+                            <div class="usp-icon"><i class="bi bi-shield-check"></i></div>
+                            <h6 class="fw-700 text-black mb-5px">Unmatched Reliability</h6>
+                            <p class="fs-15 mb-0 text-medium-gray">99.9% uptime across 200+ countries</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="usp-card text-center">
+                            <div class="usp-icon"><i class="bi bi-cpu"></i></div>
+                            <h6 class="fw-700 text-black mb-5px">Advanced Technology</h6>
+                            <p class="fs-15 mb-0 text-medium-gray">AI-powered communication tools</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="usp-card text-center">
+                            <div class="usp-icon"><i class="bi bi-headset"></i></div>
+                            <h6 class="fw-700 text-black mb-5px">24/7 Expert Support</h6>
+                            <p class="fs-15 mb-0 text-medium-gray">Dedicated team always available</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        <!-- end section -->
+        <!-- start section -->  
+        <section id="features" class="bg-gradient-very-light-gray position-relative pb-2">
+            <div class="container position-relative"> 
+                <div class="row justify-content-center mb-2">
+                    <div class="col-auto col-xxl-5 col-lg-7 col-sm-9 d-flex align-items-center justify-content-center">
+                        <span class="fs-180 text-gradient-dark-purple-watermelon flex-shrink-0 fw-800 me-35px ls-minus-10px sm-ls-minus-5px" data-bottom-top="transform:scale(1.4, 1.4);" data-top-bottom="transform:scale(1, 1);"></span>
+                        <h2 class="text-black fw-800 ls-minus-2px m-0">Our Products <span style="color: #f97233;">&</span> Services</h2>
+                    </div>
+                </div>
+                <div class="swiper products-services-slider mb-4" data-slider-options='{ "slidesPerView": 1.2, "spaceBetween": 30, "centeredSlides": true, "loop": true, "speed": 600, "grabCursor": true, "autoplay": { "delay": 2000, "disableOnInteraction": false, "pauseOnMouseEnter": false, "waitForTransition": false }, "breakpoints": { "576": { "slidesPerView": 1.8 }, "768": { "slidesPerView": 2.5 }, "992": { "slidesPerView": 3 }, "1200": { "slidesPerView": 3.5 } }, "effect": "coverflow", "coverflowEffect": { "rotate": 0, "stretch": 0, "depth": 120, "modifier": 1.2, "slideShadows": false } }'>
+                    <div class="swiper-wrapper">
+                        <!-- slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
+                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
+                                    <img src="images/kolimg/file-transfer_16313608.gif" alt="cPaaS" class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="feature-box-content last-paragraph-no-margin">
+                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">cPaaS</span>
+                                    <p class="fs-15">mBlastr<br>VKOLU</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
+                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
+                                    <img src="images/kolimg/microphone_11019432.gif" alt="Wholesale" class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="feature-box-content last-paragraph-no-margin">
+                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">Wholesale Services</span>
+                                    <p class="fs-15">Voice<br>SMS (A2P)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
+                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
+                                    <img src="images/kolimg/chatbot_12205168.gif" alt="Retail" class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="feature-box-content last-paragraph-no-margin">
+                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">Retail Services</span>
+                                    <p class="fs-15">ChatBot<br>DID<br>RCS</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
+                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
+                                    <img src="images/kolimg/phone-call_17569493.gif" alt="Messaging" class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="feature-box-content last-paragraph-no-margin">
+                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">Instant Messaging</span>
+                                    <p class="fs-15">Viber<br>Instagram<br>WhatsApp for Business</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 5 -->
+                        <div class="swiper-slide">
+                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
+                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
+                                    <img src="images/kolimg/binary-code_17465893.gif" alt="Number Lookup" class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="feature-box-content last-paragraph-no-margin">
+                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">Number Lookup</span>
+                                    <p class="fs-15">HLR<br>MNP</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 6 -->
+                        <div class="swiper-slide">
+                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
+                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
+                                    <img src="images/kolimg/search-engine_18559554.gif" alt="IT Services" class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="feature-box-content last-paragraph-no-margin">
+                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">IT Services</span>
+                                    <p class="fs-15">Mail Hosting<br>IP PBX<br>IT Managed Services</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 7 -->
+                        <div class="swiper-slide">
+                            <div class="feature-box bg-white box-shadow-quadruple-large box-shadow-quadruple-large-hover p-35px border-radius-8px text-center">
+                                <div class="feature-box-icon feature-box-icon-rounded w-80px h-80px rounded-circle mb-15px mx-auto">
+                                    <img src="images/kolimg/artificial-intelligence_11184192.gif" alt="Automation" class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="feature-box-content last-paragraph-no-margin">
+                                    <span class="d-inline-block fw-700 text-black mb-5px fs-17">Automation</span>
+                                    <p class="fs-15">ECHT<br>Textr<br>Cedar<br>AI Automation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center" data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <div class="col-12 text-center">
+                        <div class="d-inline-block align-middle fs-12 ls-05px fw-600 text-white text-uppercase bg-green border-radius-50px ps-20px pe-20px me-10px sm-m-5px">impressive</div> 
+                        <div class="d-inline-block align-middle text-black fw-500 fs-20 ls-minus-05px">We collaborate with industry leaders to bring you the  <span class="text-decoration-line-bottom fw-700">best in communication solutions.</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
+         <!-- start section -->
+         <section class="stack-box py-0">
+            <div class="stack-box-contain">
+                <!-- start stack item -->
+                <div class="stack-item stack-item-01 bg-white lg-pt-8 lg-pb-8 xs-pt-50px xs-pb-50px">
+                    <div class="stack-item-wrapper">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-xl-4 col-lg-5 col-md-6 sm-mb-40px text-center text-md-start" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [-60, 0], "translateY": [30, 0], "staggervalue": 200, "duration": 800, "easing": "easeOutQuart" }'>
+                                    <h3 class="fw-700 text-black ls-minus-1px">AI-Powered Chatbot</h3>
+                                    <p class="lg-w-85 md-w-95 sm-w-100"><span style="color: #000000;">Supercharge your customer service with Kol Telecom's Chatbot solution. Powered by AI, our chatbots provide immediate, consistent, and accurate responses to customer inquiries, anytime, anywhere, ensuring your business stays connected even when your team isn't online.</span>
+                                    </p>
+                                    <a href="contact-us.html" class="btn btn-large btn-black btn-switch-text btn-box-shadow fw-400">
+                                        <span> 
+                                            <span class="btn-double-text" data-text="Explore project">Explore project</span> 
+                                            <span><i class="feather icon-feather-arrow-right"></i></span>
+                                        </span>
+                                    </a>  
+                                </div> 
+                                <div class="col-xl-8 col-lg-7 col-md-6 position-relative atropos" data-atropos>  
+                                    <div class="atropos-scale">
+                                        <div class="atropos-rotate">
+                                            <div class="atropos-inner text-center">
+                                                <div data-atropos-offset="-5" class="position-absolute left-0px right-0px">
+                                                    <img src="images/kolimg/chatbot bg.webp" alt="">
+                                                </div>
+                                                <img data-atropos-offset="5" class="position-relative z-index-9" src="images/kolimg/AI chatbot.webp" alt="">
+                                            </div> 
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end stack item -->
+                <!-- start stack item -->
+                <div class="stack-item stack-item-02 bg-linen lg-pt-8 lg-pb-8 xs-pt-50px xs-pb-50px">
+                    <div class="stack-item-wrapper">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-xl-4 col-lg-5 col-md-6 sm-mb-40px text-center text-md-start" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [-60, 0], "translateY": [30, 0], "staggervalue": 200, "duration": 800, "easing": "easeOutQuart" }'>
+                                    <h3 class="fw-700 text-black ls-minus-1px">AI Automation</h3>
+                                    <p class="lg-w-85 md-w-95 sm-w-100"><span style="color: #000000;">Experience the power of Artificial Intelligence with Kol Telecom's AI Automation solutions. Enhance operational efficiency, reduce response times, and deliver personalized experiences with cutting-edge AI tools designed for your business needs.</span></p>
+                                    <a href="contact-us.html" class="btn btn-large btn-black btn-switch-text btn-box-shadow fw-400">
+                                        <span> 
+                                            <span class="btn-double-text" data-text="Explore project">Explore project</span> 
+                                            <span><i class="feather icon-feather-arrow-right"></i></span>
+                                        </span>
+                                    </a>  
+                                </div> 
+                                <div class="col-xl-8 col-lg-7 col-md-6 position-relative atropos transform-3d" data-atropos>  
+                                    <div class="atropos-scale">
+                                        <div class="atropos-rotate">
+
+
+
+                                            <div class="atropos-inner text-center">
+                                                <div data-atropos-offset="-5" class="position-absolute left-0px right-0px">
+                                                    <img src="images/kolimg/chatbot bg.webp" alt="">
+                                                </div>
+                                                <img data-atropos-offset="5" class="position-relative z-index-9" src="images/kolimg/Ai automated.webp" alt="">
+                                            </div> 
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end stack item -->
+                <!-- start stack item -->
+                <div class="stack-item stack-item-03 bg-white lg-pt-8 xs-pt-50px xs-pb-20px">
+                    <div class="stack-item-wrapper">
+                        <div class="container">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-xl-4 col-lg-5 col-md-6 sm-mb-40px text-center text-md-start" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [-60, 0], "translateY": [30, 0], "staggervalue": 200, "duration": 800, "easing": "easeOutQuart" }'>
+                                    <h3 class="fw-700 text-black ls-minus-1px">WhatsApp Business API</h3>
+                                    <p class="lg-w-85 md-w-95 sm-w-100"><span style="color: #000000;"> Enhance customer engagement and streamline your communication channels with Kol Telecom's WhatsApp Business API. Deliver fast, efficient, and personalized messaging directly through WhatsApp—one of the world's most widely used platforms.</span></p>
+                                    <a href="products-whatsapp.html" class="btn btn-large btn-black btn-switch-text btn-box-shadow fw-400">
+                                        <span> 
+                                            <span class="btn-double-text" data-text="Explore project">Explore project</span> 
+                                            <span><i class="feather icon-feather-arrow-right"></i></span>
+                                        </span>
+                                    </a>  
+                                </div> 
+                                <div class="col-xl-8 col-lg-7 col-md-6 position-relative atropos transform-3d" data-atropos>  
+                                    <div class="atropos-scale">
+                                        <div class="atropos-rotate">
+                                            <div class="atropos-inner text-center">
+                                                <div data-atropos-offset="-5" class="position-absolute left-0px right-0px">
+                                                    <img src="images/kolimg/chatbot bg.webp" alt="">
+                                                </div>
+                                                <img data-atropos-offset="5" class="position-relative z-index-9" src="images/kolimg/echtWhatsApp Broadcasts.webp" alt="">
+                                            </div> 
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <!-- end stack item -->
+            </div>
+        </section>
+        <!-- start partners section -->
+        <section class="partners-section position-relative">
+            <div class="container">
+                <div class="text-center mb-40px" data-anime='{ "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                    <span class="fs-12 fw-700 text-uppercase ls-2px d-inline-block text-white border-radius-50px ps-20px pe-20px pt-5px pb-5px mb-15px" style="background: #f97233;">Trusted Worldwide</span>
+                    <h5 class="fw-800 text-black ls-minus-1px mb-0">Our Key Partners</h5>
+                </div>
+                <div class="partners-grid" data-anime='{ "el": "childs", "opacity": [0, 1], "translateY": [25, 0], "scale": [0.95, 1], "staggervalue": 80, "duration": 600, "easing": "easeOutQuart" }'>
+                    <div class="partners-grid-item"><img src="images/kolimg/clints/1.png" alt="Partner"></div>
+                    <div class="partners-grid-item"><img src="images/kolimg/clints/2.png" alt="Partner"></div>
+                    <div class="partners-grid-item"><img src="images/kolimg/clints/3.png" alt="Partner"></div>
+                    <div class="partners-grid-item"><img src="images/kolimg/clints/4.png" alt="Partner"></div>
+                    <div class="partners-grid-item"><img src="images/kolimg/clints/5.png" alt="Partner"></div>
+                    <div class="partners-grid-item"><img src="images/kolimg/clints/6.png" alt="Partner"></div>
+                    <div class="partners-grid-item"><img src="images/kolimg/clints/7.png" alt="Partner"></div>
+                    <div class="partners-grid-item"><img src="images/kolimg/clints/8.png" alt="Partner"></div>
+                    <div class="partners-grid-item"><img src="images/kolimg/clints/9.png" alt="Partner"></div>
+                    <div class="partners-grid-item"><img src="images/kolimg/clints/10.png" alt="Partner"></div>
+                </div>
+            </div>
+        </section>
+        <!-- end partners section -->
+           <!-- start quote & testimonials section -->
+        <section id="quote-testimonials" class="position-relative">
+            <div class="container">
+                <div class="row align-items-stretch justify-content-center g-lg-5">
+                    <!-- Contact form -->
+                    <div class="col-lg-5 col-md-10 md-mb-50px sm-mb-30px" data-anime='{ "el": "childs", "translateX": [-40, 0], "opacity": [0,1], "duration": 700, "delay": 0, "staggervalue": 100, "easing": "easeOutQuart" }'>
+                        <div class="quote-form-card h-100">
+                            <span class="fs-12 fw-700 text-uppercase ls-2px d-inline-block border-radius-50px ps-20px pe-20px pt-5px pb-5px mb-20px" style="background: #f97233; color: #fff;">Get Started</span>
+                            <h3 class="fw-700 text-black mb-30px ls-minus-1px">Get a free quote</h3>
+                            <form action="email-templates/contact-form.php" method="post" id="quoteForm">
+                                <!-- CSRF Token -->
+                                <input type="hidden" name="csrf_token" value="">
+
+                                <div class="position-relative form-group mb-20px">
+                                    <input class="quote-form-input form-control" type="text" name="name" placeholder="Your name *" required>
+                                </div>
+                                <div class="position-relative form-group mb-20px">
+                                    <input class="quote-form-input form-control" type="email" name="email" placeholder="Email address *" required>
+                                </div>
+                                <div class="position-relative form-group mb-20px">
+                                    <select class="quote-form-input form-control" name="service" required>
+                                        <option value="" disabled selected>Select a service *</option>
+                                        <option value="cPaaS">cPaaS</option>
+                                        <option value="VOIP">VOIP</option>
+                                        <option value="Messaging">Messaging</option>
+                                        <option value="Instant Messaging">Instant Messaging</option>
+                                        <option value="Data Services">Data Services</option>
+                                        <option value="IT Services">IT Services</option>
+                                    </select>
+                                </div>
+                                <div class="position-relative form-group mb-20px">
+                                    <input class="quote-form-input form-control" type="text" name="country" placeholder="Country">
+                                </div>
+                                <div class="position-relative form-group mb-25px">
+                                    <textarea class="quote-form-input form-control" name="message" placeholder="Your message" rows="3"></textarea>
+                                </div>
+                                <!-- Math captcha (optional - for display only) -->
+                                <div class="captcha-box mb-25px" style="display:none;">
+                                    <div class="d-flex align-items-center gap-3">
+                                        <span class="captcha-num" id="captchaNum1"></span>
+                                        <span class="captcha-op">+</span>
+                                        <span class="captcha-num" id="captchaNum2"></span>
+                                        <span class="captcha-op">=</span>
+                                        <input class="quote-form-input form-control" type="number" id="captchaAnswer" name="captcha" placeholder="?" style="width: 80px; text-align: center;">
+                                    </div>
+                                </div>
+                                <button class="btn btn-large w-100 fw-600 border-radius-10px submit" type="submit" style="background: #f97233; color: #fff; padding: 14px;" id="quoteSubmit">Submit</button>
+                                <div class="form-results mt-15px d-none"></div>
+                                <p class="fs-13 text-medium-gray mt-15px mb-0 lh-22">Your data is secure and will never be shared with third parties.</p>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Testimonials -->
+                    <div class="col-lg-6 offset-lg-1 col-md-10 d-flex align-items-center" data-anime='{ "el": "childs", "translateX": [40, 0], "opacity": [0,1], "duration": 700, "delay": 100, "staggervalue": 100, "easing": "easeOutQuart" }'>
+                        <div class="w-100">
+                            <span class="fs-12 fw-700 text-uppercase ls-2px d-inline-block text-black border-radius-50px ps-20px pe-20px pt-5px pb-5px mb-15px" style="border: 1.5px solid #eee;">Client Reviews</span>
+                            <h3 class="fw-700 text-black ls-minus-1px mb-35px">What our clients have to say.</h3>
+                            <div class="swiper review-swiper position-relative" data-slider-options='{ "slidesPerView": 1, "autoHeight": true, "loop": true, "allowTouchMove": true, "speed": 2000, "autoplay": { "delay": 4000, "disableOnInteraction": false, "pauseOnMouseEnter": true }, "navigation": { "nextEl": ".review-next", "prevEl": ".review-prev" }, "effect": "fade", "fadeEffect": { "crossFade": true } }'>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-card">
+                                            <div class="review-star-icon fs-16 mb-15px" style="color: #f97233;">
+                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <p class="fs-17 lh-30 text-black mb-20px">"Their communication solutions transformed our business operations. The API integration was seamless and their support team was always responsive."</p>
+                                            <div class="d-flex align-items-center">
+                                                <div class="testimonial-avatar me-15px">AH</div>
+                                                <div>
+                                                    <div class="text-black fs-16 fw-700">Alexander Harvard</div>
+                                                    <div class="fs-14 text-medium-gray">Operations Director</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-card">
+                                            <div class="review-star-icon fs-16 mb-15px" style="color: #f97233;">
+                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <p class="fs-17 lh-30 text-black mb-20px">"KOL Telecom's WhatsApp Business API helped us reach customers instantly. Our engagement rates increased significantly within the first month."</p>
+                                            <div class="d-flex align-items-center">
+                                                <div class="testimonial-avatar me-15px">SM</div>
+                                                <div>
+                                                    <div class="text-black fs-16 fw-700">Shoko Mugikura</div>
+                                                    <div class="fs-14 text-medium-gray">Marketing Lead</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="testimonial-card">
+                                            <div class="review-star-icon fs-16 mb-15px" style="color: #f97233;">
+                                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                            </div>
+                                            <p class="fs-17 lh-30 text-black mb-20px">"The AI chatbot solution has been a game-changer for our customer support. Response times dropped dramatically and satisfaction scores soared."</p>
+                                            <div class="d-flex align-items-center">
+                                                <div class="testimonial-avatar me-15px">LM</div>
+                                                <div>
+                                                    <div class="text-black fs-16 fw-700">Leonel Mooney</div>
+                                                    <div class="fs-14 text-medium-gray">CTO, TechVentures</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="review-prev swiper-button-prev"></div>
+                                <div class="review-next swiper-button-next"></div>
+                            </div>
+                            <div class="d-flex justify-content-start gap-3 mt-30px">
+                                <div class="review-nav-btn review-prev-btn"><i class="fa-solid fa-arrow-left"></i></div>
+                                <div class="review-nav-btn review-next-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end quote & testimonials section -->
+        <!-- start footer -->
+        <footer class="half-footer pb-45px border-top border-color-light-gray background-repeat" style="background-image:url('images/kolimg/footer\ bg.png');">
+            <div class="container">
+                <!-- Logo moved to center of footer row -->
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin z-index-1 text-center text-sm-start xs-mb-20px">
+                        <span class="fs-20 fw-500 text-dark-gray d-block mb-5px">location</span>
+                        <p class="w-100">KOL Telecom Services LLC, <br>251 Little Falls Drive<br>
+                            Wilmington, DE 19808<br>
+                            United States of America.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12 text-center z-index-1 mb-20px mb-md-0">
+                        <div class="footer-mascot-3d">
+                            <img src="images/kolimg/2.png" alt="KOL Logo" data-no-retina="" style="max-width: 280px; width: 100%; height: auto;">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin text-center text-sm-end z-index-1">
+                        <span class="fs-20 fw-700 text-dark-gray d-block mb-5px">How can we help?</span>
+                        <a href="mailto:info@koltelecom.com" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">info@koltelecom.com</a>
+                        <a href="tel:+13022952746" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">+1 302 295 2746</a>
+                    </div>
+                </div>
+                <div class="row align-items-center justify-content-center mt-20px mb-10px md-mb-20px"> 
+                    <div class="col d-none d-md-flex">
+                        <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div> 
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-7 text-center elements-social social-icon-style-04">
+                        <ul class="large-icon dark mb-0">
+                            <li><a class="facebook" href="https://www.facebook.com/koltelecomservices/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                            <li><a class="twitter" href="https://twitter.com/KOLTELECOM" target="_blank"><i class="fa-brands fa-x-twitter"></i><span></span></a></li>
+                            <li><a class="instagram" href="https://www.instagram.com/koltelecom/" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                            <li><a class="linkedin" href="https://www.linkedin.com/company/kol-telecom-services-llc" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col d-none d-md-flex">
+                        <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div> 
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-12 last-paragraph-no-margin text-center sm-mb-10px"> 
+                        <p>© 2026 <a href="index.html" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">KOL Telecom.</a> All rights reserved.</p>
+                    </div>   
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+            </div><!-- end page-content-wrapper -->
+            <!-- scroll progress hidden -->
+            <div class="scroll-progress d-none">
+                <a href="#" class="scroll-top" aria-label="scroll">
+                    <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+                </a>
+            </div>
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/vendors.min.js"></script>
+        <!-- slider revolution core javaScript files -->
+        <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+        <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+        <!-- slider revolution extension scripts. ONLY NEEDED FOR LOCAL TESTING -->
+        <!-- <script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script> -->
+
+        <!-- Slider's main "init" script -->
+        <script>
+            var tpj = jQuery;
+            var revapi7;
+            var $ = jQuery.noConflict();
+            tpj(document).ready(function () {
+                if (tpj("#demo-corporate-slider").revolution == undefined) {
+                    revslider_showDoubleJqueryError("#demo-corporate-slider");
+                } else {
+                    revapi7 = tpj("#demo-corporate-slider").show().revolution({
+                        sliderType: "standard",
+                        /* sets the Slider's default timeline */
+                        delay: 9000,
+                        /* options are 'auto', 'fullwidth' or 'fullscreen' */
+                        sliderLayout: 'fullscreen',
+                        /* RESPECT ASPECT RATIO */
+                        autoHeight: 'off',
+                        /* Always start on first slide */
+                        startWithSlide: 0,
+                        /* options that disable autoplay */
+                        stopLoop: "off",
+                        stopAfterLoops: -1,
+                        stopAtSlide: -1,
+                        navigation: {
+                            keyboardNavigation: 'on',
+                            keyboard_direction: 'horizontal',
+                            mouseScrollNavigation: 'off',
+                            mouseScrollReverse: 'reverse',
+                            onHoverStop: 'off',
+                            arrows: {
+                                enable: true,
+                                style: 'hesperiden',
+                                rtl: false,
+                                hide_onleave: false,
+                                hide_onmobile: true,
+                                hide_under: 500,
+                                hide_over: 9999,
+                                hide_delay: 200,
+                                hide_delay_mobile: 1200,
+                                left: {
+                                    container: 'slider',
+                                    h_align: 'left',
+                                    v_align: 'center',
+                                    h_offset: 50,
+                                    v_offset: 0
+                                },
+                                right: {
+                                    container: 'slider',
+                                    h_align: 'right',
+                                    v_align: 'center',
+                                    h_offset: 50,
+                                    v_offset: 0
+                                }
+                            },
+                            bullets: {
+
+                                enable: true,
+                                style: 'hermes',
+                                tmp: '',
+                                direction: 'horizontal',
+                                rtl: false,
+
+                                container: 'layergrid',
+                                h_align: 'center',
+                                v_align: 'bottom',
+                                h_offset: 0,
+                                v_offset: 30,
+                                space: 12,
+
+                                hide_onleave: false,
+                                hide_onmobile: true,
+                                hide_under: 0,
+                                hide_over: 500,
+                                hide_delay: true,
+                                hide_delay_mobile: 500
+
+                            },
+                            touch: {
+                                touchenabled: 'on',
+                                touchOnDesktop: "on",
+                                swipe_threshold: 75,
+                                swipe_min_touches: 1,
+                                swipe_direction: 'horizontal',
+                                drag_block_vertical: true
+                            }
+                        },
+                        responsiveLevels: [1240, 1024, 768, 480],
+                        visibilityLevels: [1240, 1024, 768, 480],
+                        gridwidth: [1240, 1024, 768, 480],
+                        gridheight: [930, 850, 900, 850],
+                        /* Lazy Load options are "all", "smart", "single" and "none" */
+                        lazyType: "smart",
+                        spinner: "off",
+                        parallax: {
+                            type: "scroll",
+                            origo: "slidercenter",
+                            speed: 400,
+                            levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 5],
+                        },
+                        shadow: 0,
+                        shuffle: "off",
+                        fullScreenAutoWidth: "on",
+                        fullScreenAlignForce: "on",
+                        fullScreenOffsetContainer: "nav",
+                        fullScreenOffset: "",
+                        hideThumbsOnMobile: "off",
+                        hideSliderAtLimit: 0,
+                        hideCaptionAtLimit: 0,
+                        hideAllCaptionAtLilmit: 0,
+                        debugMode: false,
+                        fallbacks: {
+                            simplifyAll: "off",
+                            nextSlideOnWindowFocus: "off",
+                            disableFocusListener: false,
+                        }
+                    });
+
+                }
+            }); /*ready*/
+        </script>
+        <script type="text/javascript" src="js/main.js"></script>
+        
+        <!-- Chatbot JS -->
+    <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+    <!-- Form Handler JS -->
+    <script defer src="js/form-handler.js"></script>
+    <!-- Hero scroll fade -->
+    <script>
+    (function() {
+        var slider = document.getElementById('slider');
+        if (!slider) return;
+        var ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    var scrollY = window.pageYOffset;
+                    var sliderH = slider.offsetHeight;
+                    var progress = Math.min(scrollY / (sliderH * 0.6), 1);
+                    slider.style.opacity = 1 - progress;
+                    slider.style.transform = 'scale(' + (1 + progress * 0.05) + ')';
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    })();
+
+    // Math captcha
+    (function() {
+        var a = Math.floor(Math.random() * 9) + 1;
+        var b = Math.floor(Math.random() * 9) + 1;
+        var el1 = document.getElementById('captchaNum1');
+        var el2 = document.getElementById('captchaNum2');
+        if (el1 && el2) {
+            el1.textContent = a;
+            el2.textContent = b;
+        }
+        var form = document.getElementById('quoteForm');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                var answer = parseInt(document.getElementById('captchaAnswer').value, 10);
+                if (answer !== a + b) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var input = document.getElementById('captchaAnswer');
+                    input.style.borderColor = '#e74c3c';
+                    input.style.boxShadow = '0 0 0 3px rgba(231,76,60,0.15)';
+                    input.setAttribute('placeholder', a + b);
+                    // Regenerate
+                    a = Math.floor(Math.random() * 9) + 1;
+                    b = Math.floor(Math.random() * 9) + 1;
+                    el1.textContent = a;
+                    el2.textContent = b;
+                    input.value = '';
+                    return false;
+                }
+            });
+        }
+    })();
+
+    // 3D mascot tilt on mouse move
+    (function() {
+        var mascot = document.querySelector('.footer-mascot-3d');
+        if (!mascot) return;
+        var img = mascot.querySelector('img');
+        mascot.addEventListener('mousemove', function(e) {
+            var rect = mascot.getBoundingClientRect();
+            var x = (e.clientX - rect.left) / rect.width - 0.5;
+            var y = (e.clientY - rect.top) / rect.height - 0.5;
+            img.style.transform = 'rotateY(' + (x * 25) + 'deg) rotateX(' + (-y * 25) + 'deg) scale(1.05)';
+            mascot.style.animationPlayState = 'paused';
+        });
+        mascot.addEventListener('mouseleave', function() {
+            img.style.transform = '';
+            mascot.style.animationPlayState = 'running';
+        });
+    })();
+
+    // Review nav buttons
+    (function() {
+        var prevBtn = document.querySelector('.review-prev-btn');
+        var nextBtn = document.querySelector('.review-next-btn');
+        var swiperEl = document.querySelector('.review-swiper');
+        if (prevBtn && nextBtn && swiperEl) {
+            var checkSwiper = setInterval(function() {
+                if (swiperEl.swiper) {
+                    clearInterval(checkSwiper);
+                    prevBtn.addEventListener('click', function() { swiperEl.swiper.slidePrev(); });
+                    nextBtn.addEventListener('click', function() { swiperEl.swiper.slideNext(); });
+                }
+            }, 200);
+        }
+    })();
+    </script>
+    <!-- Stack-box sticky fallback (JS-based) -->
+    <script>
+    (function() {
+        var stackBox = document.querySelector('.stack-box');
+        var contain = document.querySelector('.stack-box-contain');
+        if (!stackBox || !contain) return;
+        // Remove CSS sticky, use JS instead
+        contain.style.position = 'relative';
+        function onScroll() {
+            var rect = stackBox.getBoundingClientRect();
+            var boxH = stackBox.offsetHeight;
+            var cH = contain.offsetHeight;
+            if (rect.top <= 0 && rect.bottom > cH) {
+                contain.style.position = 'fixed';
+                contain.style.top = '0';
+                contain.style.width = stackBox.offsetWidth + 'px';
+            } else if (rect.bottom <= cH) {
+                contain.style.position = 'absolute';
+                contain.style.top = (boxH - cH) + 'px';
+                contain.style.width = '100%';
+            } else {
+                contain.style.position = 'relative';
+                contain.style.top = '0';
+                contain.style.width = '100%';
+            }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', function() { onScroll(); });
+        onScroll();
+    })();
+    </script>
+</body>
+
+</html>

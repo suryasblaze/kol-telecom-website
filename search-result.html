@@ -1,0 +1,483 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>Search Results - KOL Telecom</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="Search KOL Telecom - Find products, services, solutions, and blog content.">
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="images/kolimg/kol-logo.png">
+    <link rel="apple-touch-icon" href="images/kolimg/kol-logo.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/kolimg/kol-logo.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/kolimg/kol-logo.png">
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="css/vendors.min.css" />
+    <link rel="stylesheet" href="css/icon.min.css" />
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="stylesheet" href="css/responsive.min.css"/>
+    <link rel="stylesheet" href="css/font-size-fix.css"/>
+    <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+    <style>
+        /* Search page custom styles */
+        .search-hero {
+            background: linear-gradient(135deg, #ff7425 0%, #f97233 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .search-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><circle cx="10" cy="10" r="2" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="30" r="2" fill="rgba(255,255,255,0.05)"/><circle cx="90" cy="50" r="2" fill="rgba(255,255,255,0.05)"/><circle cx="30" cy="70" r="2" fill="rgba(255,255,255,0.05)"/><circle cx="70" cy="90" r="2" fill="rgba(255,255,255,0.05)"/></svg>');
+            opacity: 0.5;
+        }
+        .search-box {
+            background: #fff;
+            border-radius: 16px;
+            padding: 8px;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 16px 20px;
+            font-size: 16px;
+            outline: none;
+            background: transparent;
+        }
+        .search-box button {
+            background: linear-gradient(135deg, #ff7425 0%, #f97233 100%);
+            border: none;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+            white-space: nowrap;
+        }
+        .search-box button:hover {
+            transform: scale(1.05);
+        }
+        .category-filters {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 24px;
+        }
+        .category-btn {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .category-btn:hover,
+        .category-btn.active {
+            background: #fff;
+            color: #f97233;
+            border-color: #fff;
+        }
+        .results-section {
+            padding: 60px 0;
+            min-height: 500px;
+        }
+        .results-header {
+            margin-bottom: 40px;
+        }
+        .results-count {
+            color: #666;
+            font-size: 16px;
+        }
+        .no-results {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .no-results i {
+            font-size: 80px;
+            color: #ddd;
+            margin-bottom: 24px;
+        }
+        .no-results h3 {
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .no-results p {
+            color: #666;
+        }
+        .result-card {
+            background: #fff;
+            border: 1.5px solid #eee;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .result-card:hover {
+            border-color: #f97233;
+            box-shadow: 0 8px 30px rgba(249,114,51,0.1);
+            transform: translateY(-3px);
+        }
+        .result-category {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .result-category.product {
+            background: rgba(249,114,51,0.1);
+            color: #f97233;
+        }
+        .result-category.service {
+            background: rgba(52,152,219,0.1);
+            color: #3498db;
+        }
+        .result-category.solution {
+            background: rgba(46,204,113,0.1);
+            color: #2ecc71;
+        }
+        .result-category.blog {
+            background: rgba(155,89,182,0.1);
+            color: #9b59b6;
+        }
+        .result-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .result-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .result-link {
+            color: #f97233;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .result-link:hover {
+            gap: 12px;
+        }
+        .result-link i {
+            transition: transform 0.3s;
+        }
+        .result-link:hover i {
+            transform: translateX(4px);
+        }
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #f97233;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .search-suggestions {
+            margin-top: 40px;
+        }
+        .suggestion-tag {
+            display: inline-block;
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+        .suggestion-tag:hover {
+            background: #f97233;
+            color: #fff;
+            border-color: #f97233;
+        }
+        @media (max-width: 768px) {
+            .search-hero {
+                padding: 80px 0 60px;
+            }
+            .search-box {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .search-box input {
+                width: 100%;
+            }
+            .search-box button {
+                width: 100%;
+            }
+            .category-filters {
+                gap: 8px;
+            }
+            .category-btn {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+            .result-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+    <div class="box-layout">
+        <!-- start header -->
+        <header>
+            <!-- start navigation -->
+            <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                <div class="container-fluid">
+                    <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="default-logo" width="142" height="28">
+                            <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="alt-logo" width="0" height="0">
+                            <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="mobile-logo" width="0" height="0">
+                        </a>
+                    </div>
+                    <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav-clone" aria-label="Toggle navigation" data-target="#navbarNav-clone">
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item dropdown submenu">
+                                    <a href="#" class="nav-link">Products</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
+                                        <div class="d-lg-flex mega-menu m-auto flex-column">
+                                            <div class="row row-cols-1 row-cols-lg-5">
+                                                <div class="col">
+                                                    <ul>
+                                                        <li class="sub-title">cPaaS</li>
+                                                        <li><a href="products-mblastr.html">mBlastr</a></li>
+                                                        <li><a href="products-vkolu.html">VKOLU</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li class="sub-title">Whole Sale</li>
+                                                        <li><a href="products-voice.html">Voice</a></li>
+                                                        <li><a href="products-sms.html">SMS(A2P)</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li class="sub-title">Retail</li>
+                                                        <li><a href="products-rcs.html">RCS</a></li>
+                                                        <li><a href="products-did.html">DID</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li class="sub-title">Instant Messaging</li>
+                                                        <li><a href="products-whatsapp.html">Whatsapp for Business</a></li>
+                                                        <li><a href="products-instagram.html">Instagram</a></li>
+                                                        <li><a href="products-viber.html">Viber</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li class="sub-title">Number Lookup</li>
+                                                        <li><a href="products-number-lookup.html">Number Lookup</a></li>
+                                                        <li><a href="products-hlr.html">HLR</a></li>
+                                                        <li><a href="products-mnp.html">MNP</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown dropdown-with-icon-style02">
+                                    <a href="#" class="nav-link">Services</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                        <li><a href="services-mail-hosting.html">Mail Hosting</a></li>
+                                        <li><a href="services-it-managed.html">IT Managed Services</a></li>
+                                        <li><a href="services-ip-pbx.html">IP PBX</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown dropdown-with-icon-style02">
+                                    <a href="#" class="nav-link">Solutions</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                        <li><a href="solutions-echt.html">ECHT</a></li>
+                                        <li><a href="solutions-textr.html">Textr</a></li>
+                                        <li><a href="solutions-cedar.html">Cedar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown dropdown-with-icon-style02">
+                                    <a href="#" class="nav-link">Partners</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                        <li><a href="partners-key.html">Our Key Partners</a></li>
+                                        <li><a href="partners-become.html">Become Our Partner</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown dropdown-with-icon-style02">
+                                    <a href="#" class="nav-link">Connect With Us</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink5" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink5">
+                                        <li><a href="about-us.html">About us</a></li>
+                                        <li><a href="contact-us.html">Contact us</a></li>
+                                        <li><a href="careers.html">Careers</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto col-xl-3 col-lg-2 text-end xs-pe-0">
+                        <div class="header-icon">
+                            <div class="header-search-icon icon">
+                                <a href="javascript:void(0)" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>
+                                <div class="search-form-wrapper">
+                                    <button title="Close" type="submit" class="search-close alt-font">×</button>
+                                    <form id="search-header" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                        <div class="search-form-box">
+                                            <h2 class="text-dark-gray text-center fw-600 mb-4 ls-minus-1px">What are you looking for?</h2>
+                                            <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="q" value="" type="text" autocomplete="off">
+                                            <button type="submit" class="search-button">
+                                                <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- end navigation -->
+        </header>
+        <!-- end header -->
+
+        <!-- start search hero -->
+        <section class="search-hero">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center mb-5">
+                        <h1 class="text-white fw-700 mb-3 ls-minus-1px" style="font-size: 42px;">Search KOL Telecom</h1>
+                        <p class="text-white opacity-8 fs-18">Find products, services, solutions, and insights</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="search-box">
+                            <i class="feather icon-feather-search" style="color: #999; font-size: 20px; margin-left: 8px;"></i>
+                            <input type="text" id="searchInput" placeholder="Search for products, services, solutions, blog posts...">
+                            <button onclick="performSearch()">
+                                <i class="feather icon-feather-search"></i> Search
+                            </button>
+                        </div>
+                        <div class="category-filters">
+                            <button class="category-btn active" data-category="all">All Results</button>
+                            <button class="category-btn" data-category="product">Products</button>
+                            <button class="category-btn" data-category="service">Services</button>
+                            <button class="category-btn" data-category="solution">Solutions</button>
+                            <button class="category-btn" data-category="blog">Blog</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end search hero -->
+
+        <!-- start results section -->
+        <section class="results-section bg-very-light-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="results-header">
+                            <p class="results-count" id="resultsCount">Enter a search term to get started</p>
+                        </div>
+                        <div id="resultsContainer">
+                            <!-- Search suggestions -->
+                            <div class="search-suggestions">
+                                <h5 class="fw-600 mb-3">Popular Searches:</h5>
+                                <span class="suggestion-tag" onclick="searchSuggestion('WhatsApp')">WhatsApp</span>
+                                <span class="suggestion-tag" onclick="searchSuggestion('SMS')">SMS</span>
+                                <span class="suggestion-tag" onclick="searchSuggestion('Voice')">Voice</span>
+                                <span class="suggestion-tag" onclick="searchSuggestion('RCS')">RCS</span>
+                                <span class="suggestion-tag" onclick="searchSuggestion('Cloud')">Cloud</span>
+                                <span class="suggestion-tag" onclick="searchSuggestion('API')">API</span>
+                                <span class="suggestion-tag" onclick="searchSuggestion('DID')">DID</span>
+                                <span class="suggestion-tag" onclick="searchSuggestion('Number Lookup')">Number Lookup</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end results section -->
+
+        <!-- start footer -->
+        <footer class="pt-0 pb-0 fs-16 border-top border-color-medium-gray">
+            <div class="container">
+                <div class="row align-items-center justify-content-center fs-16 fw-300">
+                    <div class="col-md-12 last-paragraph-no-margin text-center">
+                        <p>© 2026 <a href="index.html" class="text-decoration-line-bottom text-dark-gray fw-500">KOL Telecom</a>. All rights reserved. | <a href="contact-us.html" class="text-decoration-line-bottom text-dark-gray fw-500">Contact</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+
+        <!-- WhatsApp Button -->
+        <div id="whatsapp-button"></div>
+
+        <!-- Chatbot -->
+        <div id="chatbot-container"></div>
+    </div>
+
+    <!-- javascript libraries -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/vendors.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Search functionality -->
+    <script src="js/search-engine.js"></script>
+
+    <!-- Chatbot JS -->
+    <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+</body>
+</html>

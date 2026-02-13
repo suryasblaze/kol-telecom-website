@@ -1,0 +1,252 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>WhatsApp Button Test - KOL Telecom</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- WhatsApp Button CSS -->
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #242E45;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            color: #25D366;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #25D366;
+        }
+
+        .feature h3 {
+            color: #242E45;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: #e8f5e9;
+            border: 2px solid #25D366;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .info-box h2 {
+            color: #25D366;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-box li {
+            padding: 8px 0;
+            color: #333;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .info-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #25D366;
+            font-weight: bold;
+        }
+
+        .button-demo {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .button-demo p {
+            color: #856404;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .arrow {
+            font-size: 2em;
+            color: #25D366;
+            text-align: center;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 WhatsApp Button Test</h1>
+        <p class="subtitle">KOL Telecom - Now with floating WhatsApp contact button!</p>
+
+        <div class="button-demo">
+            <p>👉 Look at the bottom-right corner of your screen! 👈</p>
+        </div>
+
+        <div class="arrow">↘</div>
+
+        <div class="info-box">
+            <h2>✅ WhatsApp Button Features</h2>
+            <ul>
+                <li>Floating button visible on all pages</li>
+                <li>Animated pulse effect to grab attention</li>
+                <li>Hover tooltip: "Chat with us on WhatsApp"</li>
+                <li>Page-specific messages (automatically detected)</li>
+                <li>Mobile responsive design</li>
+                <li>Analytics tracking ready (Google Analytics & Facebook Pixel)</li>
+                <li>Opens WhatsApp in new tab/window</li>
+                <li>Works on desktop and mobile devices</li>
+            </ul>
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>🎯 Smart Detection</h3>
+                <p>Automatically sends page-specific messages based on which page the user is browsing.</p>
+            </div>
+
+            <div class="feature">
+                <h3>🎨 Beautiful Design</h3>
+                <p>Modern, animated design with WhatsApp's official green color (#25D366).</p>
+            </div>
+
+            <div class="feature">
+                <h3>📱 Mobile Ready</h3>
+                <p>Perfectly optimized for mobile devices - opens WhatsApp app directly.</p>
+            </div>
+
+            <div class="feature">
+                <h3>⚡ Auto-Inject</h3>
+                <p>JavaScript automatically adds the button - no manual HTML needed!</p>
+            </div>
+        </div>
+
+        <div class="info-box" style="background: #fff3cd; border-color: #ffc107;">
+            <h2 style="color: #856404;">📞 Contact Information</h2>
+            <ul>
+                <li style="color: #856404;">Phone: +1 (302) 867-5050</li>
+                <li style="color: #856404;">WhatsApp: wa.me/13028675050</li>
+                <li style="color: #856404;">Auto-detects current page for custom messages</li>
+            </ul>
+        </div>
+
+        <h2 style="margin-top: 40px; color: #242E45;">Implementation Details</h2>
+
+        <p style="color: #666; line-height: 1.8; margin: 20px 0;">
+            The WhatsApp button is now active on <strong>all 41 HTML pages</strong> in your KOL Telecom website.
+            It's implemented using pure JavaScript and CSS with no dependencies required.
+        </p>
+
+        <div class="code-block">
+&lt;!-- Add these two lines to any HTML page: --&gt;
+&lt;link rel="stylesheet" href="css/whatsapp-button.css"/&gt;
+&lt;script src="js/whatsapp-button.js"&gt;&lt;/script&gt;
+
+&lt;!-- The button will automatically appear! --&gt;
+        </div>
+
+        <h3 style="margin-top: 30px; color: #242E45;">Page-Specific Messages</h3>
+        <p style="color: #666; line-height: 1.8; margin: 15px 0;">
+            The button automatically detects which page the user is on and sends an appropriate message:
+        </p>
+
+        <div class="code-block">
+products-sms.html → "I'd like to know more about your SMS (A2P) service"
+products-voice.html → "I'm interested in your Voice solutions"
+products-whatsapp.html → "I want to learn about WhatsApp Business API"
+contact-us.html → "I have a question and would like to speak with someone"
+... and many more!
+        </div>
+
+        <div style="margin-top: 40px; padding: 20px; background: #e3f2fd; border-radius: 12px;">
+            <p style="color: #1976d2; font-weight: 500; margin: 0;">
+                🎉 <strong>Success!</strong> The WhatsApp button has been deployed to all pages.
+                Test it by clicking the green floating button in the bottom-right corner!
+            </p>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button JS -->
+    <script defer src="js/whatsapp-button.js"></script>
+</body>
+</html>

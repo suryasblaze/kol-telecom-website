@@ -1,0 +1,777 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Become Our Partner - Partnership Program</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="KOL Telecom">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="Join Our Growing Partner Network">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="css/vendors.min.css"/>
+        <link rel="stylesheet" href="css/icon.min.css"/>
+        <link rel="stylesheet" href="css/style.min.css"/>
+        <link rel="stylesheet" href="css/responsive.min.css"/>
+        <link rel="stylesheet" href="css/font-size-fix.css"/>
+        <link rel="stylesheet" href="demos/corporate/corporate.css" />
+        <!-- Chatbot CSS -->
+        <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+    <style>
+        /* ===== Hero Section ===== */
+        .pbp-hero {
+            background: linear-gradient(160deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 480px;
+        }
+        .pbp-hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .pbp-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(247, 147, 30, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .pbp-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 107, 53, 0.15);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            color: #FF6B35;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+        }
+        .pbp-hero h1 {
+            color: #fff;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+        .pbp-hero h1 span {
+            color: #FF6B35;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .pbp-hero-desc {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 520px;
+        }
+        .pbp-hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.3);
+        }
+        .pbp-hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.4);
+            color: #fff;
+        }
+
+        /* ===== Hero Steps Visual ===== */
+        .pbp-steps-visual {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+        .pbp-step-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .pbp-step-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 107, 53, 0.3);
+            transform: translateX(8px);
+        }
+        .pbp-step-num {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            color: #fff;
+        }
+        .pbp-step-text h6 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 2px;
+        }
+        .pbp-step-text p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 13px;
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+
+        /* ===== Section Badge ===== */
+        .pbp-section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* ===== Benefit Cards ===== */
+        .pbp-benefit-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 36px 28px;
+            text-align: center;
+            border: 1.5px solid #f0f0f0;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        .pbp-benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.03) 0%, rgba(247, 147, 30, 0.02) 100%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .pbp-benefit-card:hover::before {
+            opacity: 1;
+        }
+        .pbp-benefit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            border-color: rgba(255, 107, 53, 0.2);
+        }
+        .pbp-benefit-icon {
+            width: 68px;
+            height: 68px;
+            background: rgba(255, 107, 53, 0.08);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: all 0.35s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .pbp-benefit-icon i {
+            font-size: 26px;
+            color: #FF6B35;
+            transition: all 0.35s ease;
+        }
+        .pbp-benefit-card:hover .pbp-benefit-icon {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            transform: scale(1.08);
+            box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3);
+        }
+        .pbp-benefit-card:hover .pbp-benefit-icon i {
+            color: #fff;
+        }
+        .pbp-benefit-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== Form Section ===== */
+        .pbp-form-section {
+            background: linear-gradient(160deg, #f8f9fa 0%, #fff 100%);
+        }
+        .pbp-form-card {
+            background: #fff;
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f0f0f0;
+        }
+        .pbp-form-card .form-control {
+            padding: 16px 20px;
+            border: 1.5px solid #e8e8e8;
+            border-radius: 12px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+        .pbp-form-card .form-control:focus {
+            border-color: #FF6B35;
+            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+            background: #fff;
+        }
+        .pbp-form-card select.form-control {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23999' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 40px;
+        }
+        .pbp-form-label {
+            font-weight: 600;
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .pbp-submit-btn {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            color: #fff;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 30px rgba(255, 107, 53, 0.25);
+        }
+        .pbp-submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255, 107, 53, 0.35);
+        }
+        .pbp-form-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 24px;
+            background: rgba(255, 107, 53, 0.04);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 107, 53, 0.1);
+        }
+        .pbp-form-info-icon {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pbp-form-info-icon i {
+            font-size: 20px;
+            color: #FF6B35;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 991px) {
+            .pbp-hero h1 { font-size: 36px; }
+            .pbp-hero-desc { font-size: 16px; }
+            .pbp-steps-visual { margin-top: 40px; }
+            .pbp-form-card { padding: 32px 24px; }
+        }
+        @media (max-width: 767px) {
+            .pbp-hero h1 { font-size: 30px; letter-spacing: -1px; }
+            .pbp-form-card { padding: 24px 20px; }
+        }
+    </style>
+
+    <!-- Google reCAPTCHA v3 -->
+    <!-- TODO: Replace PASTE_YOUR_SITE_KEY_HERE with your actual Site Key from Google reCAPTCHA -->
+    <script>
+        window.RECAPTCHA_SITE_KEY = 'PASTE_YOUR_SITE_KEY_HERE';
+    </script>
+    <script async defer src="https://www.google.com/recaptcha/api.js?render=PASTE_YOUR_SITE_KEY_HERE"></script>
+</head>
+    <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+        <div class="box-layout">
+            <!-- start header -->
+            <header>
+                <!-- start navigation -->
+                <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                    <div class="container-fluid">
+                        <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="default-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="alt-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="mobile-logo" width="142" height="28">
+                            </a>
+                        </div>
+                        <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                            <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-item dropdown submenu">
+                                        <a href="#" class="nav-link">Products</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
+                                            <div class="d-lg-flex mega-menu m-auto flex-column">
+                                                <div class="row row-cols-1 row-cols-lg-5 mb-60px md-mb-30px sm-mb-20px">
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">cPaaS</li>
+                                                            <li><a href="products-mblastr.html">mBlastr</a></li>
+                                                            <li><a href="products-vkolu.html">VKOLU</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Whole Sale</li>
+                                                            <li><a href="products-voice.html">Voice</a></li>
+                                                            <li><a href="products-sms.html">SMS(A2P)</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Retail</li>
+                                                            <li><a href="products-rcs.html">RCS</a></li>
+                                                            <li><a href="products-did.html">DID</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Instant Messaging</li>
+                                                            <li><a href="products-whatsapp.html">Whatsapp for Business</a></li>
+                                                            <li><a href="products-instagram.html">Instagram</a></li>
+                                                            <li><a href="products-viber.html">Viber</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Number Lookup</li>
+                                                            <li><a href="products-number-lookup.html">Number Lookup</a></li>
+                                                            <li><a href="products-hlr.html">HLR</a></li>
+                                                            <li><a href="products-mnp.html">MNP</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Services</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a href="services-mail-hosting.html">Mail Hosting</a></li>
+                                            <li><a href="services-it-managed.html">IT Managed Services</a></li>
+                                            <li><a href="services-ip-pbx.html">IP PBX</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Solutions</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                            <li><a href="solutions-echt.html">ECHT</a></li>
+                                            <li><a href="solutions-textr.html">Textr</a></li>
+                                            <li><a href="solutions-cedar.html">Cedar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Partners</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                           <li><a href="partners-key.html">Our Key Partners</a></li>
+                                            <li><a href="partners-become.html">Become Our Partner</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Connect With Us</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                            <li><a href="ethics-conduct.html">Ethics and conduct</a></li>
+                                            <li><a href="terms-conditions.html">Terms and conditions</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="download.html">Download</a></li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">
+                            <div class="header-icon">
+                                <div class="header-search-icon icon">
+                                    <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>
+                                    <!-- start search input -->
+                                    <div class="search-form-wrapper">
+                                        <button title="Close" type="button" class="search-close">&times;</button>
+                                        <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                            <div class="search-form-box">
+                                                <h2 class="text-black text-center fw-600 mb-4 ls-minus-1px">What are you looking for?</h2>
+                                                <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="q" value="" type="text" autocomplete="off">
+                                                <button type="submit" class="search-button">
+                                                    <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- end search input -->
+                                </div>
+                                <div class="header-button ms-20px d-none d-xl-inline-block">
+                                    <a href="contact-us.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">
+                                        <span>
+                                            <span class="btn-double-text fw-600" data-text="Free consultation">Free consultation</span>
+                                            <span><i class="fa-regular fa-envelope"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- end navigation -->
+            </header>
+            <!-- end header -->
+
+            <!-- start hero section -->
+            <section class="pbp-hero top-space-margin pb-0">
+                <div class="container position-relative" style="z-index: 2;">
+                    <div class="row align-items-center pt-60px pb-60px lg-pt-40px lg-pb-40px">
+                        <div class="col-lg-6" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <div class="pbp-badge">
+                                <i class="bi bi-handshake-fill"></i> Partner Program
+                            </div>
+                            <h1>Become Our <span>Partner</span></h1>
+                            <p class="pbp-hero-desc">Join KOL Telecom's global partner network and unlock new revenue opportunities. We offer comprehensive partner programs, technical support, and co-marketing resources to help your business grow.</p>
+                            <a href="#partner-form" class="pbp-hero-cta">
+                                <i class="bi bi-arrow-down-circle-fill"></i> Apply Now
+                            </a>
+                        </div>
+                        <div class="col-lg-6" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 120, "easing": "easeOutQuad" }'>
+                            <div class="pbp-steps-visual">
+                                <div class="pbp-step-card">
+                                    <div class="pbp-step-num">1</div>
+                                    <div class="pbp-step-text">
+                                        <h6>Submit Application</h6>
+                                        <p>Fill out the partner form below</p>
+                                    </div>
+                                </div>
+                                <div class="pbp-step-card">
+                                    <div class="pbp-step-num">2</div>
+                                    <div class="pbp-step-text">
+                                        <h6>Review &amp; Approval</h6>
+                                        <p>Our team evaluates your application</p>
+                                    </div>
+                                </div>
+                                <div class="pbp-step-card">
+                                    <div class="pbp-step-num">3</div>
+                                    <div class="pbp-step-text">
+                                        <h6>Onboarding &amp; Training</h6>
+                                        <p>Get access to tools and resources</p>
+                                    </div>
+                                </div>
+                                <div class="pbp-step-card">
+                                    <div class="pbp-step-num">4</div>
+                                    <div class="pbp-step-text">
+                                        <h6>Start Growing Together</h6>
+                                        <p>Launch and earn with KOL Telecom</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end hero section -->
+
+            <!-- start benefits section -->
+            <section class="pb-0">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-11">
+                            <div class="text-center mb-50px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                                <div class="pbp-section-badge">
+                                    <i class="bi bi-star-fill"></i> Why Partner With Us
+                                </div>
+                                <h2 class="text-dark-gray fw-700 alt-font mb-20px ls-minus-2px">Partner Benefits</h2>
+                                <p class="fs-18 lh-32 w-70 lg-w-90 md-w-100 mx-auto" style="color: #6c757d;">Join our ecosystem and access exclusive benefits designed to help you succeed and grow your business.</p>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-30px" data-anime='{ "el": "childs", "translateY": [40, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                                <div class="col">
+                                    <div class="pbp-benefit-card">
+                                        <div class="pbp-benefit-icon"><i class="bi bi-award-fill"></i></div>
+                                        <div class="pbp-benefit-text">
+                                            <h6 class="fw-700 text-dark-gray mb-10px">Competitive Margins</h6>
+                                            <p class="fs-15 lh-26 mb-0" style="color: #6c757d;">Industry-leading partner commissions and flexible pricing structures to maximize your profitability.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="pbp-benefit-card">
+                                        <div class="pbp-benefit-icon"><i class="bi bi-headset"></i></div>
+                                        <div class="pbp-benefit-text">
+                                            <h6 class="fw-700 text-dark-gray mb-10px">Technical Support</h6>
+                                            <p class="fs-15 lh-26 mb-0" style="color: #6c757d;">Dedicated partner success team and 24/7 technical assistance for seamless integration.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="pbp-benefit-card">
+                                        <div class="pbp-benefit-icon"><i class="bi bi-megaphone-fill"></i></div>
+                                        <div class="pbp-benefit-text">
+                                            <h6 class="fw-700 text-dark-gray mb-10px">Marketing Resources</h6>
+                                            <p class="fs-15 lh-26 mb-0" style="color: #6c757d;">Co-branded materials, sales collateral, and joint marketing campaigns to drive growth.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="pbp-benefit-card">
+                                        <div class="pbp-benefit-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                                        <div class="pbp-benefit-text">
+                                            <h6 class="fw-700 text-dark-gray mb-10px">Training &amp; Certification</h6>
+                                            <p class="fs-15 lh-26 mb-0" style="color: #6c757d;">Comprehensive training programs and certification to enhance your team's expertise.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end benefits section -->
+
+            <!-- start form section -->
+            <section id="partner-form" class="pbp-form-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="row g-4 align-items-start">
+                                <!-- Form -->
+                                <div class="col-lg-7" data-anime='{ "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "easing": "easeOutQuad" }'>
+                                    <div class="pbp-form-card">
+                                        <div class="mb-30px">
+                                            <h3 class="fw-700 text-dark-gray mb-10px">Partner Application</h3>
+                                            <p class="fs-15 mb-0" style="color: #6c757d;">Fill out the form and our team will contact you within 24 hours.</p>
+                                        </div>
+                                        <form action="email-templates/partner-form.php" method="post" id="partnerForm">
+                                            <!-- CSRF Token -->
+                                            <input type="hidden" name="csrf_token" value="">
+
+                                            <!-- Honeypot field for bot protection -->
+                                            <div style="position: absolute; left: -9999px;" aria-hidden="true">
+                                                <input type="text" name="website_url" tabindex="-1" autocomplete="off">
+                                            </div>
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label class="pbp-form-label" for="partner-first-name">First Name <span style="color: #FF6B35;">*</span></label>
+                                                    <input type="text" id="partner-first-name" name="first_name" class="form-control" placeholder="John" required maxlength="100" autocomplete="given-name">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="pbp-form-label" for="partner-last-name">Last Name <span style="color: #FF6B35;">*</span></label>
+                                                    <input type="text" id="partner-last-name" name="last_name" class="form-control" placeholder="Doe" required maxlength="100" autocomplete="family-name">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="pbp-form-label" for="partner-email">Email Address <span style="color: #FF6B35;">*</span></label>
+                                                    <input type="email" id="partner-email" name="email" class="form-control" placeholder="john@company.com" required maxlength="200" autocomplete="email">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="pbp-form-label" for="partner-phone">Phone Number</label>
+                                                    <input type="tel" id="partner-phone" name="phone" class="form-control" placeholder="+1 (555) 000-0000" maxlength="30" autocomplete="tel">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="pbp-form-label" for="partner-company">Company Name <span style="color: #FF6B35;">*</span></label>
+                                                    <input type="text" id="partner-company" name="company" class="form-control" placeholder="Company Inc." required maxlength="200" autocomplete="organization">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="pbp-form-label" for="partner-country">Country <span style="color: #FF6B35;">*</span></label>
+                                                    <input type="text" id="partner-country" name="country" class="form-control" placeholder="United States" required maxlength="100" autocomplete="country-name">
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="pbp-form-label" for="partner-type">Partnership Type</label>
+                                                    <select id="partner-type" name="partnership_type" class="form-control">
+                                                        <option value="" disabled selected>Select partnership type</option>
+                                                        <option value="reseller">Reseller Partner</option>
+                                                        <option value="technology">Technology Partner</option>
+                                                        <option value="referral">Referral Partner</option>
+                                                        <option value="integration">Integration Partner</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label class="pbp-form-label" for="partner-message">Message</label>
+                                                    <textarea id="partner-message" name="message" class="form-control" rows="4" placeholder="Tell us about your business and partnership goals..." maxlength="2000"></textarea>
+                                                </div>
+                                                <div class="col-12 mt-4">
+                                                    <button type="submit" class="pbp-submit-btn">
+                                                        Submit Partner Request <i class="bi bi-arrow-right ms-2"></i>
+                                                    </button>
+                                                    <div class="form-results mt-20px d-none"></div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- Sidebar Info -->
+                                <div class="col-lg-5" data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                                    <div class="pbp-form-info mb-20px">
+                                        <div class="pbp-form-info-icon">
+                                            <i class="bi bi-clock-fill"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-700 text-dark-gray mb-4px fs-15">Quick Response</h6>
+                                            <p class="fs-14 mb-0" style="color: #6c757d;">Our partnership team responds within 24 business hours.</p>
+                                        </div>
+                                    </div>
+                                    <div class="pbp-form-info mb-20px">
+                                        <div class="pbp-form-info-icon">
+                                            <i class="bi bi-globe2"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-700 text-dark-gray mb-4px fs-15">Global Network</h6>
+                                            <p class="fs-14 mb-0" style="color: #6c757d;">Join 36+ partners across 50+ countries worldwide.</p>
+                                        </div>
+                                    </div>
+                                    <div class="pbp-form-info mb-20px">
+                                        <div class="pbp-form-info-icon">
+                                            <i class="bi bi-shield-check"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-700 text-dark-gray mb-4px fs-15">Secure &amp; Reliable</h6>
+                                            <p class="fs-14 mb-0" style="color: #6c757d;">99.9% uptime SLA with enterprise-grade security.</p>
+                                        </div>
+                                    </div>
+                                    <div class="pbp-form-info">
+                                        <div class="pbp-form-info-icon">
+                                            <i class="bi bi-envelope-fill"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="fw-700 text-dark-gray mb-4px fs-15">Direct Contact</h6>
+                                            <p class="fs-14 mb-0" style="color: #6c757d;">Email us at <a href="mailto:info@koltelecom.com" style="color: #FF6B35; font-weight: 600;">info@koltelecom.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end form section -->
+
+            <!-- start footer -->
+            <footer class="half-footer pb-45px border-top border-color-light-gray background-repeat" style="background-image:url('images/kolimg/footer\ bg.png');">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin z-index-1 text-center text-sm-start xs-mb-20px">
+                            <span class="fs-20 fw-500 text-dark-gray d-block mb-5px">location</span>
+                            <p class="w-100">KOL Telecom Services LLC, <br>251 Little Falls Drive<br>
+                                Wilmington, DE 19808<br>
+                                United States of America.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-4 col-sm-12 text-center z-index-1 mb-20px mb-md-0">
+                            <img src="images/kolimg/2.png" alt="KOL Logo" data-no-retina="" style="max-width: 280px; width: 100%; height: auto;">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin text-center text-sm-end z-index-1">
+                            <span class="fs-20 fw-700 text-dark-gray d-block mb-5px">How can we help?</span>
+                            <a href="mailto:info@koltelecom.com" class="text-dark-gray fw-600 d-block mb-0" style="font-size: 16px;">info@koltelecom.com</a>
+                            <a href="tel:+13022952746" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">+1 302 295 2746</a>
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-center mt-20px mb-10px md-mb-20px">
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-7 text-center elements-social social-icon-style-04">
+                            <ul class="large-icon dark mb-0">
+                                <li><a class="facebook" href="https://www.facebook.com/koltelecomservices/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                                <li><a class="twitter" href="https://twitter.com/KOLTELECOM" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i><span></span></a></li>
+                                <li><a class="instagram" href="https://www.instagram.com/koltelecom/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                                <li><a class="linkedin" href="https://www.linkedin.com/company/kol-telecom-services-llc" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-12 last-paragraph-no-margin text-center sm-mb-10px">
+                            <p>&copy; 2026 <a href="index.html" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">KOL Telecom.</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+        </div>
+        <!-- end box-layout -->
+        <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+            <a href="#" class="scroll-top" aria-label="scroll">
+                <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- WhatsApp floating button -->
+        </div>
+
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/vendors.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!-- Chatbot JS -->
+        <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+    <!-- Form Handler JS -->
+    <script defer src="js/form-handler.js"></script>
+</body>
+</html>

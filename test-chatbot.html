@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Test - KOL</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #fe9d0e;
+            margin-top: 0;
+        }
+        .info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #fe9d0e;
+        }
+        .success {
+            background: #d4edda;
+            border-left-color: #28a745;
+            color: #155724;
+        }
+    </style>
+
+    <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Chatbot Test Page</h1>
+
+        <div class="info success">
+            <strong>✓ Chatbot Integration Active</strong><br>
+            The chatbot should appear in the bottom-right corner with wave animation.
+        </div>
+
+        <div class="info">
+            <h3>What to Look For:</h3>
+            <ul>
+                <li>🟠 Orange button with wave effect in bottom-right</li>
+                <li>💬 Popup message after 3 seconds</li>
+                <li>🤖 Robot emoji on button</li>
+                <li>🌊 Pulsing wave animation</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h3>Test Steps:</h3>
+            <ol>
+                <li>Wait 3 seconds for popup to appear</li>
+                <li>Click the orange button with robot emoji</li>
+                <li>See the glassy chat interface</li>
+                <li>Notice the light orange header</li>
+                <li>Try typing a message</li>
+            </ol>
+        </div>
+
+        <div class="info">
+            <h3>Try These Questions:</h3>
+            <ul>
+                <li>"What products do you offer?"</li>
+                <li>"Tell me about SMS"</li>
+                <li>"How much does it cost?"</li>
+                <li>"I need a demo"</li>
+            </ul>
+        </div>
+
+        <div style="height: 400px; background: #f8f9fa; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-top: 30px;">
+            <div style="text-align: center; color: #666;">
+                <div style="font-size: 48px; margin-bottom: 20px;">👇</div>
+                <div style="font-size: 18px;">Look for the chatbot button<br>in the bottom-right corner!</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot JS -->
+    <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+
+    <script>
+        console.log('%c🤖 Chatbot Loading...', 'font-size: 20px; color: #fe9d0e; font-weight: bold;');
+
+        // Check if chatbot loaded
+        setTimeout(() => {
+            if (window.kolChatbot) {
+                console.log('%c✓ Chatbot Loaded Successfully!', 'font-size: 16px; color: #28a745; font-weight: bold;');
+                console.log('Chatbot instance:', window.kolChatbot);
+            } else {
+                console.error('%c✗ Chatbot Failed to Load!', 'font-size: 16px; color: #dc3545; font-weight: bold;');
+            }
+        }, 1000);
+
+        // Debug button visibility
+        setTimeout(() => {
+            const button = document.getElementById('chatbot-button');
+            if (button) {
+                console.log('%c✓ Chatbot Button Found!', 'font-size: 14px; color: #28a745;');
+                console.log('Button position:', window.getComputedStyle(button).position);
+                console.log('Button z-index:', window.getComputedStyle(button).zIndex);
+                console.log('Button visibility:', window.getComputedStyle(button).visibility);
+            } else {
+                console.error('%c✗ Chatbot Button NOT Found!', 'font-size: 14px; color: #dc3545;');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>

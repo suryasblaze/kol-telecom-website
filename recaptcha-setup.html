@@ -1,0 +1,103 @@
+<!--
+    reCAPTCHA v3 Setup Instructions
+
+    STEP 1: Get Your reCAPTCHA Keys
+    ================================
+    1. Go to: https://www.google.com/recaptcha/admin/create
+    2. Fill in the form:
+       - Label: KOL Telecom Website
+       - reCAPTCHA type: reCAPTCHA v3
+       - Domains:
+         * localhost (for testing)
+         * koltelecom.com (your production domain)
+    3. Accept terms and click "Submit"
+    4. Copy your keys:
+       - Site Key (public key)
+       - Secret Key (private key)
+
+    STEP 2: Add Keys to config.php
+    ===============================
+    Open: email-templates/config.php
+
+    Find these lines and update:
+
+    define('RECAPTCHA_ENABLED', true);  // Change from false to true
+    define('RECAPTCHA_SITE_KEY', 'YOUR_SITE_KEY_HERE');  // Paste your Site Key
+    define('RECAPTCHA_SECRET_KEY', 'YOUR_SECRET_KEY_HERE');  // Paste your Secret Key
+
+    STEP 3: Add Script to Your HTML Files
+    ======================================
+    Copy the code below and paste it in the <head> section of each HTML file
+    BEFORE the closing </head> tag.
+
+    Replace YOUR_SITE_KEY_HERE with your actual Site Key from Step 1.
+-->
+
+<!-- reCAPTCHA v3 Script -->
+<script>
+    // Set your reCAPTCHA Site Key here
+    window.RECAPTCHA_SITE_KEY = 'YOUR_SITE_KEY_HERE'; // Replace with your Site Key
+</script>
+<script async defer src="https://www.google.com/recaptcha/api.js?render=YOUR_SITE_KEY_HERE"></script>
+
+<!--
+    STEP 4: Add to ALL These HTML Files
+    ====================================
+    Add the above script to these files (before </head>):
+
+    ✓ index.html
+    ✓ contact-us.html
+    ✓ careers.html
+    ✓ partners-become.html
+    ✓ coming-soon.html
+    ✓ solutions-cedar.html
+    ✓ solutions-textr.html
+
+    STEP 5: Test reCAPTCHA
+    =======================
+    1. Open any form page
+    2. Fill out the form and submit
+    3. Check browser console for any errors
+    4. Verify email is received
+    5. Check reCAPTCHA dashboard for stats:
+       https://www.google.com/recaptcha/admin
+
+    STEP 6: Monitor & Adjust (Optional)
+    ====================================
+    In config.php, you can adjust the minimum score:
+
+    define('RECAPTCHA_MIN_SCORE', 0.5);  // Range: 0.0 to 1.0
+
+    Scores:
+    - 1.0 = Very likely human
+    - 0.5 = Medium confidence (recommended)
+    - 0.0 = Very likely bot
+
+    Lower score = More lenient (fewer false positives)
+    Higher score = More strict (may block some humans)
+
+    TROUBLESHOOTING
+    ===============
+
+    Problem: "reCAPTCHA verification failed"
+    Solution: Check that RECAPTCHA_ENABLED is true in config.php
+
+    Problem: Script not loading
+    Solution: Check that Site Key is correct in both places:
+              - config.php
+              - HTML <script> tag
+
+    Problem: All submissions blocked
+    Solution: Lower RECAPTCHA_MIN_SCORE in config.php
+
+    Problem: Too many bot submissions
+    Solution: Increase RECAPTCHA_MIN_SCORE in config.php
+
+    SECURITY NOTES
+    ==============
+    - Never commit Secret Key to public repositories
+    - Use different keys for localhost and production
+    - Monitor reCAPTCHA dashboard regularly
+    - Secret Key should only be in config.php (server-side)
+    - Site Key is public and goes in HTML (client-side)
+-->

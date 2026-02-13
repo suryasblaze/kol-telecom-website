@@ -1,0 +1,54 @@
+=== MAIN PAGES ===
+index.html
+about-us.html
+careers.html
+ethics-conduct.html
+terms-conditions.html
+contact-us.html
+services.html
+solutions.html
+partners.html
+connect.html
+
+=== BLOG PAGES ===
+blog.html
+blog-cpaas.html
+blog-whatsapp.html
+blog-sms-rcs.html
+blog-voice-api.html
+blog-security.html
+blog-future.html
+download.html
+
+=== PRODUCT PAGES ===
+products-mblastr.html
+products-vkolu.html
+products-voice.html
+products-sms.html
+products-rcs.html
+products-did.html
+products-whatsapp.html
+products-instagram.html
+products-viber.html
+products-number-lookup.html
+products-hlr.html
+products-mnp.html
+
+=== SERVICE PAGES ===
+services-mail-hosting.html
+services-it-managed.html
+services-ip-pbx.html
+
+=== SOLUTION PAGES ===
+solutions-echt.html
+solutions-textr.html
+solutions-cedar.html
+
+=== PARTNER PAGES ===
+partners-key.html
+partners-become.html
+
+=== UTILITY PAGES ===
+404.html
+coming-soon.html
+search-result.html

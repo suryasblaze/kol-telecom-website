@@ -1,0 +1,562 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>VKOLU - Global cPaaS Platform | KOL Telecom</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="KOL Telecom">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="VKOLU - Global Voice and Messaging cPaaS platform with IVR campaigns, OTP solutions, and international messaging.">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="css/vendors.min.css"/>
+        <link rel="stylesheet" href="css/icon.min.css"/>
+        <link rel="stylesheet" href="css/style.min.css"/>
+        <link rel="stylesheet" href="css/responsive.min.css"/>
+        <link rel="stylesheet" href="css/font-size-fix.css"/>
+        <link rel="stylesheet" href="demos/corporate/corporate.css" />
+        <style>
+            .text-orange {
+                color: #FF6B35 !important;
+            }
+            .bg-orange {
+                background-color: #FF6B35 !important;
+            }
+            .btn-orange {
+                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+                color: white;
+            }
+            .btn-orange:hover {
+                background: linear-gradient(135deg, #F7931E 0%, #FF6B35 100%);
+                color: white;
+            }
+        </style>
+        <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+</head>
+    <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+        <div class="box-layout">
+            <!-- start header -->
+            <header>
+                <!-- start navigation -->
+                <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                    <div class="container-fluid">
+                        <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="default-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="alt-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="mobile-logo" width="142" height="28">
+                            </a>
+                        </div>
+                        <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                            <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-item dropdown submenu">
+                                        <a href="#" class="nav-link">Products</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
+                                            <div class="d-lg-flex mega-menu m-auto flex-column">
+                                                <div class="row row-cols-1 row-cols-lg-5 mb-60px md-mb-30px sm-mb-20px">
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">cPaaS</li>
+                                                            <li><a href="products-mblastr.html">mBlastr</a></li>
+                                                            <li><a href="products-vkolu.html">VKOLU</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Whole Sale</li>
+                                                            <li><a href="products-voice.html">Voice</a></li>
+                                                            <li><a href="products-sms.html">SMS(A2P)</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Retail</li>
+                                                            <li><a href="products-rcs.html">RCS</a></li>
+                                                            <li><a href="products-did.html">DID</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Instant Messaging</li>
+                                                            <li><a href="products-whatsapp.html">Whatsapp for Business</a></li>
+                                                            <li><a href="products-instagram.html">Instagram</a></li>
+                                                            <li><a href="products-viber.html">Viber</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Number Lookup</li>
+                                                            <li><a href="products-number-lookup.html">Number Lookup</a></li>
+                                                            <li><a href="products-hlr.html">HLR</a></li>
+                                                            <li><a href="products-mnp.html">MNP</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Services</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a href="services-mail-hosting.html">Mail Hosting</a></li>
+                                            <li><a href="services-it-managed.html">IT Managed Services</a></li>
+                                            <li><a href="services-ip-pbx.html">IP PBX</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Solutions</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                            <li><a href="solutions-echt.html">ECHT</a></li>
+                                            <li><a href="solutions-textr.html">Textr</a></li>
+                                            <li><a href="solutions-cedar.html">Cedar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Partners</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                           <li><a href="partners-key.html">Our Key Partners</a></li>
+                                            <li><a href="partners-become.html">Become Our Partner</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Connect With Us</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                            <li><a href="ethics-conduct.html">Ethics and conduct</a></li>
+                                            <li><a href="terms-conditions.html">Terms and conditions</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="download.html">Download</a></li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">
+                            <div class="header-icon">
+                                <div class="header-search-icon icon">
+                                    <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>
+                                    <!-- start search input -->
+                                    <div class="search-form-wrapper">
+                                        <button title="Close" type="button" class="search-close">×</button>
+                                        <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                            <div class="search-form-box">
+                                                <h2 class="text-black text-center fw-600 mb-4 ls-minus-1px">What are you looking for?</h2>
+                                                <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="q" value="" type="text" autocomplete="off">
+                                                <button type="submit" class="search-button">
+                                                    <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- end search input -->
+                                </div>
+                                <div class="header-button ms-20px d-none d-xl-inline-block">
+                                    <a href="contact-us.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">
+                                        <span>
+                                            <span class="btn-double-text fw-600" data-text="Get Started">Get Started</span>
+                                            <span><i class="fa-solid fa-arrow-right"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- end navigation -->
+            </header>
+            <!-- end header -->
+
+            <!-- start hero section -->
+            <section class="top-space-margin bg-very-light-gray">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-6 text-center text-lg-start md-mb-50px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="ps-25px pe-25px mb-20px text-uppercase text-orange fs-14 lh-42px fw-700 border-radius-100px bg-white d-inline-block box-shadow-large">Global cPaaS Platform</span>
+                            <h1 class="fw-700 text-dark-gray ls-minus-3px mb-30px">What is <span class="text-highlight fw-800">VKOLU<span class="h-10px bottom-10px opacity-4 separator-animation" style="background: linear-gradient(90deg, rgba(255, 107, 53, 0.6) 0%, rgba(247, 147, 30, 0.6) 100%);"></span></span>?</h1>
+                            <div class="mb-40px">
+                                <ul class="list-style-05 ps-0">
+                                    <li class="border-bottom border-color-extra-medium-gray pb-15px mb-15px">
+                                        <i class="bi bi-check-lg text-orange me-10px"></i>
+                                        <span class="text-dark-gray fs-18">Integrated Voice and Messaging cPaaS solution</span>
+                                    </li>
+                                    <li class="border-bottom border-color-extra-medium-gray pb-15px mb-15px">
+                                        <i class="bi bi-check-lg text-orange me-10px"></i>
+                                        <span class="text-dark-gray fs-18">Functions alongside CRM, website or app</span>
+                                    </li>
+                                    <li class="border-bottom border-color-extra-medium-gray pb-15px mb-15px">
+                                        <i class="bi bi-check-lg text-orange me-10px"></i>
+                                        <span class="text-dark-gray fs-18">Automated customer engagement worldwide</span>
+                                    </li>
+                                    <li class="border-bottom border-color-extra-medium-gray pb-15px mb-15px">
+                                        <i class="bi bi-check-lg text-orange me-10px"></i>
+                                        <span class="text-dark-gray fs-18">Customized menu actions for customer interaction</span>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-check-lg text-orange me-10px"></i>
+                                        <span class="text-dark-gray fs-18">IVR Campaigns & OTPs via 200+ carrier connections</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-sm-flex align-items-center">
+                                <a href="contact-us.html" class="btn btn-large btn-dark-gray btn-rounded btn-box-shadow me-15px xs-mb-15px">Request Demo<i class="fa-solid fa-arrow-right ms-10px"></i></a>
+                                <a href="#capabilities" class="btn btn-link btn-large text-dark-gray">View Capabilities<i class="fa-solid fa-arrow-right ms-10px"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 position-relative" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <img src="/images/kolimg/VKOLU PLATFORM.png" alt="VKOLU Platform" class="w-100 border-radius-6px" data-no-retina>
+                            <div class="position-absolute bottom-minus-50px right-minus-50px w-200px lg-w-180px md-w-150px xs-bottom-minus-30px xs-right-minus-30px" data-anime='{ "translateY": [-15, 0], "scale": [0.8, 1], "opacity": [0,1], "duration": 800, "delay": 600, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                                <!--<img src="#" alt="Global Coverage" class="border-radius-6px box-shadow-quadruple-large" data-no-retina-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end hero section -->
+
+            <!-- start how vkolu contributes section -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-7 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-orange fw-600 mb-15px text-uppercase d-block">Business Solutions</span>
+                            <h2 class="fw-700 text-dark-gray ls-minus-2px">How can VKOLU contribute to your business?</h2>
+                        </div>
+                    </div>
+
+                    <!-- feature 1 - Image Left -->
+                    <div class="row align-items-center mb-6 sm-mb-8">
+                        <div class="col-lg-6 md-mb-50px" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="border-radius-6px overflow-hidden">
+                                <img src="/images/kolimg/IVR CAMPAIGNS.png" alt="IVR Campaigns" class="w-100" data-no-retina>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ps-8 xl-ps-4" data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="mb-20px">
+                                <div class="d-inline-block fs-18 fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px">01</div>
+                            </div>
+                            <h3 class="fw-700 text-dark-gray mb-20px ls-minus-1px">Innovative IVR Campaigns</h3>
+                            <p class="mb-35px w-95 lg-w-100">Our Outbound IVR Campaigns proactively distributes communication to customers. Through automated voice calls customers are automatically able to engage with the company through a pre-set menu of multiple, customized actions.</p>
+                            <div class="row row-cols-2 row-cols-sm-2">
+                                <div class="col mb-15px">
+                                    <i class="bi bi-check-circle text-orange fs-18 me-10px"></i>
+                                    <span class="text-dark-gray">Automated Outreach</span>
+                                </div>
+                                <div class="col mb-15px">
+                                    <i class="bi bi-check-circle text-orange fs-18 me-10px"></i>
+                                    <span class="text-dark-gray">Custom Menus</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- feature 2 - Image Right -->
+                    <div class="row align-items-center mb-6 sm-mb-8">
+                        <div class="col-lg-6 order-2 order-lg-1 ps-8 xl-ps-4 pe-8 xl-pe-4" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="mb-20px">
+                                <div class="d-inline-block fs-18 fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px">02</div>
+                            </div>
+                            <h3 class="fw-700 text-dark-gray mb-20px ls-minus-1px">Two Factor Authentication</h3>
+                            <p class="mb-35px w-95 lg-w-100">Protect your users from account takeovers and data theft. Secure accounts by setting up our OTP solutions via SMS or Voice at crucial points within your platform. The Push OTP solution provides a frictionless user experience around two-factor authentication.</p>
+                            <div class="row row-cols-2 row-cols-sm-2">
+                                <div class="col mb-15px">
+                                    <i class="bi bi-check-circle text-orange fs-18 me-10px"></i>
+                                    <span class="text-dark-gray">SMS & Voice OTP</span>
+                                </div>
+                                <div class="col mb-15px">
+                                    <i class="bi bi-check-circle text-orange fs-18 me-10px"></i>
+                                    <span class="text-dark-gray">Push Notifications</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2 md-mb-50px" data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="border-radius-6px overflow-hidden">
+                                <img src="images/kolimg/Two Factor Authentication.png" alt="Two Factor Authentication" loading="lazy" class="w-100" data-no-retina>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- feature 3 - Image Left -->
+                    <div class="row align-items-center mb-6 sm-mb-8">
+                        <div class="col-lg-6 md-mb-50px" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="border-radius-6px overflow-hidden">
+                                <img src="images/mblastr/NTERNATIONAL MESSAGING.png" alt="International Messaging" class="w-100" data-no-retina>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ps-8 xl-ps-4" data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="mb-20px">
+                                <div class="d-inline-block fs-18 fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px">03</div>
+                            </div>
+                            <h3 class="fw-700 text-dark-gray mb-20px ls-minus-1px">International Messaging Campaigns</h3>
+                            <p class="mb-35px w-95 lg-w-100">VKOLU facilitates the transmission of promotions, notifications and alerts to any customer in any nook or corner of the world. We will guide you in figuring out the country's rules and regulations and in making the most of this service.</p>
+                            <div class="row row-cols-2 row-cols-sm-2">
+                                <div class="col mb-15px">
+                                    <i class="bi bi-check-circle text-orange fs-18 me-10px"></i>
+                                    <span class="text-dark-gray">Global Reach</span>
+                                </div>
+                                <div class="col mb-15px">
+                                    <i class="bi bi-check-circle text-orange fs-18 me-10px"></i>
+                                    <span class="text-dark-gray">Compliance Support</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- feature 4 - Image Right -->
+                    <div class="row align-items-center mb-6 sm-mb-8">
+                        <div class="col-lg-6 order-2 order-lg-1 ps-8 xl-ps-4 pe-8 xl-pe-4" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="mb-20px">
+                                <div class="d-inline-block fs-18 fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px">04</div>
+                            </div>
+                            <h3 class="fw-700 text-dark-gray mb-20px ls-minus-1px">Landing Pages</h3>
+                            <p class="mb-35px w-95 lg-w-100">Create landing pages to engage customers after initial contact. A landing page enables pitching of a trade, special offer, piece of information or a deal. Multiple landing pages can be incorporated - each specialised for just the right audience.</p>
+                            <div class="row row-cols-2 row-cols-sm-2">
+                                <div class="col mb-15px">
+                                    <i class="bi bi-check-circle text-orange fs-18 me-10px"></i>
+                                    <span class="text-dark-gray">Custom Design</span>
+                                </div>
+                                <div class="col mb-15px">
+                                    <i class="bi bi-check-circle text-orange fs-18 me-10px"></i>
+                                    <span class="text-dark-gray">Quick Creation</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2 md-mb-50px" data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="border-radius-6px overflow-hidden">
+                                <img src="images/kolimg/Landing Page.png" alt="Landing Pages" loading="lazy" class="w-100" data-no-retina>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- feature 5 - Image Left -->
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 md-mb-50px" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="border-radius-6px overflow-hidden">
+                                <img src="images/kolimg/inbound ivr.png" alt="Inbound IVR" loading="lazy" class="w-100" data-no-retina>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ps-8 xl-ps-4" data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="mb-20px">
+                                <div class="d-inline-block fs-18 fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px">05</div>
+                            </div>
+                            <h3 class="fw-700 text-dark-gray mb-20px ls-minus-1px">In-bound IVR Campaigns</h3>
+                            <p class="mb-35px w-95 lg-w-100">Inbound IVRs allow incoming voice dialers to navigate a phone menu and receive the right information, perform automatic transactions and lookups, and find the right person to help. This service guides customers to their desired junctures.</p>
+                            <div class="row row-cols-2 row-cols-sm-2">
+                                <div class="col mb-15px">
+                                    <i class="bi bi-check-circle text-orange fs-18 me-10px"></i>
+                                    <span class="text-dark-gray">Smart Routing</span>
+                                </div>
+                                <div class="col mb-15px">
+                                    <i class="bi bi-check-circle text-orange fs-18 me-10px"></i>
+                                    <span class="text-dark-gray">Self-Service Menu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- end how vkolu contributes section -->
+
+            <!-- start capabilities section -->
+            <section id="capabilities" class="bg-very-light-gray">
+                <div class="container">
+                    <div class="row justify-content-center mb-3">
+                        <div class="col-lg-7 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-orange fw-600 mb-15px text-uppercase d-block">Platform Capabilities</span>
+                            <h2 class="fw-700 text-dark-gray ls-minus-2px">What can VKOLU do for you?</h2>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 md-mb-50px" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <img src="images/kolimg/VKOLU Capabilities.png" alt="VKOLU Capabilities" loading="lazy" class="border-radius-6px w-100 box-shadow-quadruple-large" data-no-retina>
+                        </div>
+                        <div class="col-lg-6 ps-8 xl-ps-4" data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <div class="row row-cols-1">
+                                <div class="col mb-25px">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-graph-up-arrow icon-medium text-orange me-15px"></i>
+                                        <span class="text-dark-gray fw-600">Conduct Marketing Campaigns with Feedback</span>
+                                    </div>
+                                </div>
+                                <div class="col mb-25px">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-bell icon-medium text-orange me-15px"></i>
+                                        <span class="text-dark-gray fw-600">Deliver Critical Alerts/Reminders/Notifications</span>
+                                    </div>
+                                </div>
+                                <div class="col mb-25px">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-clipboard-check icon-medium text-orange me-15px"></i>
+                                        <span class="text-dark-gray fw-600">Conduct Surveys & Polls</span>
+                                    </div>
+                                </div>
+                                <div class="col mb-25px">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-search icon-medium text-orange me-15px"></i>
+                                        <span class="text-dark-gray fw-600">Direct Market Research to Decode Purchasing Preferences</span>
+                                    </div>
+                                </div>
+                                <div class="col mb-25px">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-shield-lock icon-medium text-orange me-15px"></i>
+                                        <span class="text-dark-gray fw-600">Forward One Time Passwords (OTPs) for Apps & Websites</span>
+                                    </div>
+                                </div>
+                                <div class="col mb-25px">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-layout-text-window-reverse icon-medium text-orange me-15px"></i>
+                                        <span class="text-dark-gray fw-600">Create Landing Pages alongside Messages</span>
+                                    </div>
+                                </div>
+                                <div class="col mb-25px">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-link-45deg icon-medium text-orange me-15px"></i>
+                                        <span class="text-dark-gray fw-600">Short URLs with Analytics Integration</span>
+                                    </div>
+                                </div>
+                                <div class="col mb-25px">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-telephone-inbound icon-medium text-orange me-15px"></i>
+                                        <span class="text-dark-gray fw-600">Inbound DID Numbers - Fully User-Configurable</span>
+                                    </div>
+                                </div>
+                                <div class="col mb-25px">
+                                    <div class="d-flex align-items-center">
+                                        <i class="bi bi-bar-chart icon-medium text-orange me-15px"></i>
+                                        <span class="text-dark-gray fw-600">Full-Fledged Reporting Tools with Analytics Support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end capabilities section -->
+
+            <!-- start CTA section -->
+            <section class="overflow-hidden">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="cover-background border-radius-6px ps-15 pe-15 pt-8 pb-8 lg-ps-10 lg-pe-10 md-p-7" style="background-image: url('images/kolimg/cta-bg.png'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+                                <div class="position-relative text-center">
+                                    <h3 class="fw-700 text-dark-gray mb-20px ls-minus-1px">Want to know more about our innovative VKOLU solutions?</h3>
+                                    <p class="text-dark-gray mb-40px w-70 lg-w-80 md-w-100 mx-auto">Get a free demo and discover how VKOLU can transform your customer engagement worldwide.</p>
+                                    <a href="contact-us.html" class="btn btn-large btn-dark-gray btn-rounded btn-box-shadow me-15px xs-mb-15px">Looking for a Free Demo?<i class="fa-solid fa-arrow-right ms-10px"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end CTA section -->
+
+            <!-- start india redirect section -->
+            <section class="bg-very-light-gray">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 position-relative md-mb-50px" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <img src="images/kolimg/India Business.png" alt="India Business" loading="lazy" class="border-radius-6px w-100" data-no-retina>
+                        </div>
+                        <div class="col-lg-6 ps-8 xl-ps-4" data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <h3 class="fw-700 text-dark-gray ls-minus-2px mb-30px">Are you a business based out of India?</h3>
+                            <h4 class="fw-600 text-dark-gray mb-25px">Check out our tailor-made solutions</h4>
+                            <p class="mb-40px w-90 lg-w-100">mBlastr is specifically designed for Indian businesses with features tailored to meet local requirements, DLT compliance, and India-specific messaging regulations.</p>
+                            <a href="products-mblastr.html" class="btn btn-large btn-dark-gray btn-rounded btn-box-shadow">
+                                Explore mBlastr
+                                <i class="fa-solid fa-arrow-right ms-10px"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end india redirect section -->
+
+            <!-- start footer -->
+            <footer class="half-footer pb-45px border-top border-color-light-gray background-repeat" style="background-image:url('images/kolimg/footer\ bg.png');">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin z-index-1 text-center text-sm-start xs-mb-20px">
+                            <span class="fs-20 fw-500 text-dark-gray d-block mb-5px">Location</span>
+                            <p class="w-100">KOL Telecom Services LLC,<br>251 Little Falls Drive<br>
+                                Wilmington, DE 19808<br>
+                                United States of America.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-4 col-sm-12 text-center z-index-1 mb-20px mb-md-0">
+                            <img src="images/kolimg/2.png" alt="KOL Logo" data-no-retina="" style="max-width: 280px; width: 100%; height: auto;">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin text-center text-sm-end z-index-1">
+                            <span class="fs-20 fw-700 text-dark-gray d-block mb-5px">How can we help?</span>
+                            <a href="mailto:info@koltelecom.com" class="text-dark-gray fw-600 d-block mb-0" style="font-size: 16px;">info@koltelecom.com</a>
+                            <a href="tel:+13022952746" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">+1 302 295 2746</a>
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-center mt-20px mb-10px md-mb-20px">
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-7 text-center elements-social social-icon-style-04">
+                            <ul class="large-icon dark mb-0">
+                                <li><a class="facebook" href="https://www.facebook.com/koltelecomservices/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                                <li><a class="twitter" href="https://twitter.com/KOLTELECOM" target="_blank"><i class="fa-brands fa-x-twitter"></i><span></span></a></li>
+                                <li><a class="instagram" href="https://www.instagram.com/koltelecom/" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                                <li><a class="linkedin" href="https://www.linkedin.com/company/kol-telecom-services-llc" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-12 last-paragraph-no-margin text-center sm-mb-10px">
+                            <p>© 2026 <a href="index.html" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">KOL Telecom.</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+        </div>
+        <!-- end box-layout -->
+        <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+            <a href="#" class="scroll-top" aria-label="scroll">
+                <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- WhatsApp floating button -->
+        </div>
+
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/vendors.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!-- Chatbot JS -->
+    <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+</body>
+</html>

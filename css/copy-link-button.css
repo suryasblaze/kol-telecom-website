@@ -1,0 +1,36 @@
+/**
+ * Copy Link Button Styling
+ */
+
+.copy-link-btn {
+    background: none;
+    border: 1px solid #e0e0e0;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.copy-link-btn:hover {
+    background: #f5f5f5;
+    border-color: #fe9d0e;
+    color: #fe9d0e !important;
+    transform: translateY(-2px);
+}
+
+.copy-link-btn i {
+    font-size: 14px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .copy-link-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}

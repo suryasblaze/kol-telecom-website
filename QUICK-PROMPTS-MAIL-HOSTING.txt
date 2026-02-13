@@ -1,0 +1,292 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                  MAIL HOSTING - QUICK IMAGE PROMPTS                      ║
+║                         KOL TELECOM                                      ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+Copy-paste ready prompts for AI image generation tools
+Brand Colors: #FF6B35 (Orange), #F7931E (Orange Gradient), #242E45 (Dark)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IMAGE 1: HERO IMAGE (mail-hosting.png)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Size: 380×350px | Location: Hero section | Style: 3D Floating
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ COPY THIS PROMPT:                                                    │
+└──────────────────────────────────────────────────────────────────────┘
+
+Professional 3D illustration of business email hosting: large floating
+white email envelope with orange (#FF6B35) accents as centerpiece,
+envelope appears open revealing email interface inside, surrounded by
+smaller floating email icons, cloud storage symbols, security shield
+with checkmark, calendar icon, mobile phone showing notifications,
+laptop screen with inbox. Soft peach gradient background (#FFE8DC to
+#FFF5F0), modern isometric style, soft shadows, professional studio
+lighting, clean minimalist composition, no text, corporate aesthetic,
+high quality
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ FOR MIDJOURNEY (add these parameters):                               │
+└──────────────────────────────────────────────────────────────────────┘
+
+--ar 1.1:1 --style raw --v 6 --no text --quality 2
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ FOR DALL-E 3 / CHATGPT:                                              │
+└──────────────────────────────────────────────────────────────────────┘
+
+Use the prompt above as-is. Add: "Ensure no text or typography appears
+in the image. High resolution, suitable for professional website."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+IMAGE 2: WHAT IS MAIL HOSTING (mail-about.png)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Size: Full width responsive | Location: Content section | Style: Infographic
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ COPY THIS PROMPT:                                                    │
+└──────────────────────────────────────────────────────────────────────┘
+
+Modern flat infographic illustration of cloud email hosting
+infrastructure: central cloud server icon with email symbols inside,
+connected to laptop computer, smartphone, and tablet via orange
+(#FF6B35) flowing data lines and particles showing push technology,
+server in center with email envelopes, security shield icon, globe
+representing worldwide access, calendar and document icons, light gray
+gradient background (#F7FAFC to white), semi-isometric perspective,
+professional corporate infographic style, clean balanced composition,
+data flow visualization with arrows and dots, modern tech aesthetic,
+no text labels, suitable for business website
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ FOR MIDJOURNEY (add these parameters):                               │
+└──────────────────────────────────────────────────────────────────────┘
+
+--ar 16:9 --style raw --v 6 --no text --quality 2
+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ FOR DALL-E 3 / CHATGPT:                                              │
+└──────────────────────────────────────────────────────────────────────┘
+
+Use the prompt above. Add: "Horizontal landscape orientation,
+professional infographic quality, no text or words in image."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+BRAND GUIDELINES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Colors to Use:
+   Primary Orange:    #FF6B35
+   Gradient Orange:   #F7931E
+   Background Peach:  #FFE8DC
+   Background Cream:  #FFF5F0
+   Dark Gray:         #242E45
+   Light Gray:        #F7FAFC
+   White:            #FFFFFF
+
+Style Keywords:
+   ✓ Professional      ✓ Modern          ✓ Clean
+   ✓ Minimalist        ✓ Corporate       ✓ Trustworthy
+   ✓ 3D/Isometric      ✓ Flat design     ✓ Infographic
+   ✓ Soft shadows      ✓ Gradients       ✓ Floating
+
+Avoid:
+   ✗ Text/typography   ✗ Cluttered       ✗ Dark colors
+   ✗ Realistic photos  ✗ Cartoonish      ✗ Too many details
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+QUICK WORKFLOW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Copy prompt above
+2. Go to your AI tool:
+   • Midjourney: Discord /imagine command
+   • DALL-E 3: ChatGPT Plus image generation
+   • Leonardo.AI: Image generation section
+   • Adobe Firefly: Text to image
+
+3. Paste prompt + add parameters (if Midjourney)
+
+4. Generate 3-4 variations
+
+5. Select best result
+
+6. Upscale to high resolution
+
+7. Download PNG
+
+8. Optimize with TinyPNG.com (compress)
+
+9. Save to: D:\laragon\kol\images\kolimg\
+
+10. Test in browser!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+RECOMMENDED AI TOOLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Best for Hero Image (3D style):
+   1. Midjourney (Discord) - $10/month
+   2. Leonardo.AI - Free tier available
+   3. DALL-E 3 (ChatGPT Plus) - $20/month
+
+Best for Technical Illustration:
+   1. DALL-E 3 (ChatGPT Plus)
+   2. Adobe Firefly - Free tier
+   3. Ideogram - Free tier
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ALTERNATIVE KEYWORDS (if first prompt doesn't work well)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+For Hero Image:
+   • "3D email icon illustration"
+   • "isometric email hosting concept"
+   • "floating mail server design"
+   • "professional email branding illustration"
+
+For Technical Image:
+   • "cloud hosting infrastructure diagram"
+   • "email server network illustration"
+   • "technical infographic email system"
+   • "data flow visualization"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+FILE SPECIFICATIONS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Image 1 - mail-hosting.png:
+   Dimensions:  380×350px (max-width) or 1200×1100px (pre-resize)
+   Format:      PNG with transparency OR JPG
+   File Size:   < 500KB (after optimization)
+   Location:    images/kolimg/mail-hosting.png
+
+Image 2 - mail-about.png:
+   Dimensions:  1920×1200px or 1600×1000px (16:10 ratio)
+   Format:      PNG or JPG
+   File Size:   < 800KB (after optimization)
+   Location:    images/kolimg/mail-about.png
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TESTING CHECKLIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After generating and placing images:
+
+Hero Image:
+   [ ] Looks professional and modern
+   [ ] Orange colors match brand (#FF6B35)
+   [ ] Floats well with animation
+   [ ] Clear on light background
+   [ ] No text visible
+   [ ] File size < 500KB
+   [ ] Loads quickly
+
+Content Image:
+   [ ] Technical but approachable
+   [ ] Shows cloud/server concept clearly
+   [ ] Data flow is visible
+   [ ] Colors match brand
+   [ ] Good on gray background
+   [ ] No text visible
+   [ ] File size < 800KB
+   [ ] Responsive on mobile
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+TIPS FOR BEST RESULTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Generate Multiple Versions
+   Don't settle for first result - create 3-5 variations
+
+2. Mix and Match
+   Take elements from different versions in Photoshop/GIMP
+
+3. Color Adjustment
+   Use Photoshop/GIMP to match exact brand colors
+
+4. Remove Unwanted Text
+   If AI adds text, use content-aware fill to remove
+
+5. Background Optimization
+   Ensure background complements page design
+
+6. Mobile Preview
+   Check how image looks on mobile (resize test)
+
+7. Compression
+   Always compress final images (TinyPNG.com)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+EXAMPLE PROMPTS FOR OTHER AI TOOLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Leonardo.AI:
+   Model: Leonardo Diffusion XL
+   Prompt Strength: 7
+   Style: Illustration
+   Use prompt from above
+
+Adobe Firefly:
+   Style: Graphic
+   Effects: Vibrant colors
+   Aspect ratio: Custom (1.1:1 for hero, 16:9 for content)
+
+Ideogram:
+   Model: V2
+   Aspect ratio: Custom
+   Magic Prompt: ON
+   Use prompt from above
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SUPPORT RESOURCES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Detailed Prompts:     IMAGE-PROMPTS-MAIL-HOSTING.md
+Page Content:         services-mail-hosting.html
+Image Locations:      images/kolimg/
+Compression Tool:     https://tinypng.com
+Photoshop Free Alt:   https://www.photopea.com (online)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Ready to create stunning images for your Mail Hosting page!
+
+1. Copy the prompts above
+2. Choose your AI tool (Midjourney recommended)
+3. Generate and refine
+4. Optimize and deploy
+
+Good luck! 🎨✨
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Created: 2026-02-07
+For: KOL Telecom Mail Hosting Service Page
+By: Claude Code (Sonnet 4.5)

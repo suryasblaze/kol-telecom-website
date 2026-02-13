@@ -1,0 +1,587 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Instagram for Business API | KOL Telecom</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="KOL Telecom">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="Leverage Instagram for Business API to track hashtags, analyze performance, monitor mentions, publish photos, and grow your business with KOL Telecom.">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="css/vendors.min.css"/>
+        <link rel="stylesheet" href="css/icon.min.css"/>
+        <link rel="stylesheet" href="css/style.min.css"/>
+        <link rel="stylesheet" href="css/responsive.min.css"/>
+        <link rel="stylesheet" href="css/font-size-fix.css"/>
+        <link rel="stylesheet" href="demos/corporate/corporate.css" />
+        <style>
+            .text-orange {
+                color: #FF6B35 !important;
+            }
+            .bg-orange {
+                background-color: #FF6B35 !important;
+            }
+            .btn-orange {
+                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+                color: white !important;
+                border: none;
+            }
+            .btn-orange:hover {
+                background: linear-gradient(135deg, #F7931E 0%, #FF6B35 100%);
+                transform: translateY(-3px);
+                box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+            }
+            /* Coverflow slider styles */
+            .ig-coverflow-slider { overflow: hidden; padding: 0; }
+            .ig-coverflow-slider .swiper-wrapper { padding: 20px 0 50px; align-items: stretch; }
+            .ig-coverflow-slider .swiper-slide { height: auto; transition: all 0.5s ease; }
+            .ig-coverflow-slider .swiper-pagination { position: relative; margin-top: 10px; bottom: auto; }
+            .ig-coverflow-slider .swiper-pagination-bullet { width: 10px; height: 10px; background: #ccc; opacity: 1; }
+            .ig-coverflow-slider .swiper-pagination-bullet-active { background: #FF6B35; transform: scale(1.2); }
+
+            .instagram-card {
+                border-radius: 16px;
+                overflow: hidden;
+                transition: all 0.3s ease;
+                background: white;
+                border: 1.5px solid #eee;
+                height: 100%;
+            }
+            .instagram-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 12px 35px rgba(255,107,53,0.12);
+                border-color: #FF6B35;
+            }
+            .instagram-icon-box {
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(135deg, #FF6B35 0%, #F77737 100%);
+                border-radius: 12px;
+                margin-bottom: 16px;
+                flex-shrink: 0;
+            }
+            .instagram-icon-box i {
+                font-size: 22px !important;
+            }
+
+            /* Benefit compact items */
+            .ig-benefit-item {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                background: #fff;
+                border-radius: 12px;
+                padding: 16px 20px;
+                border: 1.5px solid #eee;
+                height: 100%;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            }
+            .ig-benefit-item:hover {
+                border-color: #FF6B35;
+                box-shadow: 0 6px 20px rgba(255,107,53,0.1);
+                transform: translateY(-3px);
+            }
+            .ig-benefit-item i {
+                font-size: 22px;
+                color: #FF6B35;
+                flex-shrink: 0;
+            }
+
+            .solution-banner-instagram {
+                background: linear-gradient(135deg, #833AB4 0%, #FD1D1D 25%, #F77737 50%, #FF6B35 100%);
+                padding: 50px 40px;
+            }
+            .border-left-orange {
+                border-left: 4px solid #FF6B35;
+            }
+            /* Hero floating animation */
+            @keyframes ig-float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-14px); }
+            }
+            .ig-hero-float {
+                animation: ig-float 3.5s ease-in-out infinite;
+            }
+        </style>
+        <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+</head>
+    <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+        <div class="box-layout">
+            <!-- start header -->
+            <header>
+                <!-- start navigation -->
+                <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                    <div class="container-fluid">
+                        <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="default-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="alt-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="mobile-logo" width="142" height="28">
+                            </a>
+                        </div>
+                        <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                            <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-item dropdown submenu">
+                                        <a href="#" class="nav-link">Products</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
+                                            <div class="d-lg-flex mega-menu m-auto flex-column">
+                                                <div class="row row-cols-1 row-cols-lg-5 mb-60px md-mb-30px sm-mb-20px">
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">cPaaS</li>
+                                                            <li><a href="products-mblastr.html">mBlastr</a></li>
+                                                            <li><a href="products-vkolu.html">VKOLU</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Whole Sale</li>
+                                                            <li><a href="products-voice.html">Voice</a></li>
+                                                            <li><a href="products-sms.html">SMS(A2P)</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Retail</li>
+                                                            <li><a href="products-rcs.html">RCS</a></li>
+                                                            <li><a href="products-did.html">DID</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Instant Messaging</li>
+                                                            <li><a href="products-whatsapp.html">Whatsapp for Business</a></li>
+                                                            <li><a href="products-instagram.html">Instagram</a></li>
+                                                            <li><a href="products-viber.html">Viber</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Number Lookup</li>
+                                                            <li><a href="products-number-lookup.html">Number Lookup</a></li>
+                                                            <li><a href="products-hlr.html">HLR</a></li>
+                                                            <li><a href="products-mnp.html">MNP</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Services</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a href="services-mail-hosting.html">Mail Hosting</a></li>
+                                            <li><a href="services-it-managed.html">IT Managed Services</a></li>
+                                            <li><a href="services-ip-pbx.html">IP PBX</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Solutions</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                            <li><a href="solutions-echt.html">ECHT</a></li>
+                                            <li><a href="solutions-textr.html">Textr</a></li>
+                                            <li><a href="solutions-cedar.html">Cedar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Partners</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                           <li><a href="partners-key.html">Our Key Partners</a></li>
+                                            <li><a href="partners-become.html">Become Our Partner</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Connect With Us</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                            <li><a href="ethics-conduct.html">Ethics and conduct</a></li>
+                                            <li><a href="terms-conditions.html">Terms and conditions</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="download.html">Download</a></li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">
+                            <div class="header-icon">
+                                <div class="header-search-icon icon">
+                                    <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>
+                                    <!-- start search input -->
+                                    <div class="search-form-wrapper">
+                                        <button title="Close" type="button" class="search-close">×</button>
+                                        <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                            <div class="search-form-box">
+                                                <h2 class="text-black text-center fw-600 mb-4 ls-minus-1px">What are you looking for?</h2>
+                                                <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="q" value="" type="text" autocomplete="off">
+                                                <button type="submit" class="search-button">
+                                                    <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- end search input -->
+                                </div>
+                                <div class="header-button ms-20px d-none d-xl-inline-block">
+                                    <a href="contact-us.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">
+                                        <span>
+                                            <span class="btn-double-text fw-600" data-text="Free consultation">Free consultation</span>
+                                            <span><i class="fa-regular fa-envelope"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- end navigation -->
+            </header>
+            <!-- end header -->
+
+            <!-- start hero section -->
+            <section class="top-space-margin pb-0" style="background: linear-gradient(135deg, #FFE8DC 0%, #FFF5F0 100%);">
+                <div class="container">
+                    <div class="row align-items-center pt-100px pb-50px">
+                        <div class="col-lg-7" data-anime='{ "el": "childs", "translateX": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="d-inline-block fw-700 text-white bg-orange ps-25px pe-25px lh-40 border-radius-30px mb-30px fs-14 text-uppercase ls-1px">
+                                <i class="bi bi-instagram me-5px"></i> Instagram for Business API
+                            </div>
+                            <h1 class="text-dark-gray fw-700 ls-minus-3px mb-30px" style="font-size: 46px; line-height: 1.1;">Grow Your Business with Instagram API</h1>
+                            <p class="text-dark-gray fs-19 mb-0 w-95 lg-w-100">Started initially as a social media platform to enable photo sharing in real-time, Instagram has seen tremendous growth and has reigned primal importance in the online world. Being the trendiest application in many ways, its high engagement rate has made it, in many ways, the handiest business platform.</p>
+                            <div class="d-flex gap-3 flex-wrap mt-30px">
+                                <a href="contact-us.html" class="btn btn-extra-large btn-orange btn-rounded btn-box-shadow">Get Started<i class="feather icon-feather-arrow-right ms-10px"></i></a>
+                                <a href="https://echt.im/" target="_blank" class="btn btn-extra-large btn-dark-gray border-2 btn-rounded">View Our Solution</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 md-mt-50px text-center" data-anime='{ "translateX": [50, 0], "opacity": [0,1], "duration": 600, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="ig-hero-float">
+                                <img src="images/kolimg/instagram.png" alt="Instagram Business API" loading="lazy" style="max-width: 90%; height: auto;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end hero section -->
+
+            <!-- start what is instagram api -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 md-mb-40px" data-anime='{ "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "easing": "easeOutQuad" }'>
+                            <img src="images/kolimg/instagram-features.png" alt="Instagram Business API Features" loading="lazy" class="w-100 border-radius-10px">
+                        </div>
+                        <div class="col-lg-6" data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <div class="d-inline-block fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px fs-14 text-uppercase">About The API</div>
+                            <h2 class="fw-700 text-dark-gray ls-minus-1px mb-30px">What is Instagram for Business API?</h2>
+                            <p class="fs-19 mb-0">Be it promoting a huge fashion label or improving prospects for the store next-door, Instagram hosts immense potential for any business. Tap into it now and make it your game-changing move. With access to the Instagram API, you can track hashtags, see how your Instagram Business account performs, collect mention data to gauge your audience's attitude toward your brand, publish Instagram photos on your website, and more.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end what is instagram api -->
+
+            <!-- start key features -->
+            <section class="bg-very-light-gray">
+                <div class="container">
+                    <div class="row justify-content-center mb-6">
+                        <div class="col-lg-8 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <div class="d-inline-block fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px fs-14 text-uppercase">Capabilities</div>
+                            <h2 class="fw-700 text-dark-gray ls-minus-1px mb-0">Key Features</h2>
+                        </div>
+                    </div>
+                    <div class="swiper ig-coverflow-slider" data-slider-options='{ "slidesPerView": 1.2, "spaceBetween": 24, "centeredSlides": true, "loop": true, "speed": 500, "grabCursor": true, "autoplay": { "delay": 1800, "disableOnInteraction": false, "pauseOnMouseEnter": false, "waitForTransition": false }, "pagination": { "el": ".swiper-pagination", "clickable": true }, "breakpoints": { "576": { "slidesPerView": 1.8 }, "768": { "slidesPerView": 2.5 }, "992": { "slidesPerView": 3 }, "1200": { "slidesPerView": 3.5 } }, "effect": "coverflow", "coverflowEffect": { "rotate": 0, "stretch": 0, "depth": 120, "modifier": 1.2, "slideShadows": false } }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="instagram-card p-30px">
+                                    <div class="instagram-icon-box">
+                                        <i class="bi bi-graph-up-arrow text-white"></i>
+                                    </div>
+                                    <h6 class="fw-700 text-dark-gray mb-10px">Get Insights</h6>
+                                    <p class="mb-0 fs-15">Pull comprehensive data about your business performance and audience engagement.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="instagram-card p-30px">
+                                    <div class="instagram-icon-box">
+                                        <i class="bi bi-hash text-white"></i>
+                                    </div>
+                                    <h6 class="fw-700 text-dark-gray mb-10px">Track Hashtags</h6>
+                                    <p class="mb-0 fs-15">Pull data from specific hashtags to monitor campaigns and trending content.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="instagram-card p-30px">
+                                    <div class="instagram-icon-box">
+                                        <i class="bi bi-people-fill text-white"></i>
+                                    </div>
+                                    <h6 class="fw-700 text-dark-gray mb-10px">Build Following</h6>
+                                    <p class="mb-0 fs-15">Grow your audience with data-driven strategies and engagement insights.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="instagram-card p-30px">
+                                    <div class="instagram-icon-box">
+                                        <i class="bi bi-globe text-white"></i>
+                                    </div>
+                                    <h6 class="fw-700 text-dark-gray mb-10px">See Trends</h6>
+                                    <p class="mb-0 fs-15">See what's trending globally and in specific locations to stay relevant.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="instagram-card p-30px">
+                                    <div class="instagram-icon-box">
+                                        <i class="bi bi-megaphone text-white"></i>
+                                    </div>
+                                    <h6 class="fw-700 text-dark-gray mb-10px">Create Campaigns</h6>
+                                    <p class="mb-0 fs-15">Build and monitor effective promotional campaigns with detailed analytics.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="instagram-card p-30px">
+                                    <div class="instagram-icon-box">
+                                        <i class="bi bi-images text-white"></i>
+                                    </div>
+                                    <h6 class="fw-700 text-dark-gray mb-10px">Add Photos</h6>
+                                    <p class="mb-0 fs-15">Publish Instagram photos directly to your website seamlessly.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="instagram-card p-30px">
+                                    <div class="instagram-icon-box">
+                                        <i class="bi bi-bar-chart-line text-white"></i>
+                                    </div>
+                                    <h6 class="fw-700 text-dark-gray mb-10px">Monitor Performance</h6>
+                                    <p class="mb-0 fs-15">Track event or campaign performance with real-time metrics and insights.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="instagram-card p-30px">
+                                    <div class="instagram-icon-box">
+                                        <i class="bi bi-broadcast text-white"></i>
+                                    </div>
+                                    <h6 class="fw-700 text-dark-gray mb-10px">Live Feed</h6>
+                                    <p class="mb-0 fs-15">Create a live feed to showcase real-time Instagram content on your platforms.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="instagram-card p-30px">
+                                    <div class="instagram-icon-box">
+                                        <i class="bi bi-printer text-white"></i>
+                                    </div>
+                                    <h6 class="fw-700 text-dark-gray mb-10px">Auto-Print</h6>
+                                    <p class="mb-0 fs-15">Automatically print photos for events, kiosks, or promotional materials.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="instagram-card p-30px">
+                                    <div class="instagram-icon-box">
+                                        <i class="bi bi-gift text-white"></i>
+                                    </div>
+                                    <h6 class="fw-700 text-dark-gray mb-10px">Decorate Items</h6>
+                                    <p class="mb-0 fs-15">Decorate merchandise and items with Instagram photos for custom branding.</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="instagram-card p-30px">
+                                    <div class="instagram-icon-box">
+                                        <i class="bi bi-chat-square-text text-white"></i>
+                                    </div>
+                                    <h6 class="fw-700 text-dark-gray mb-10px">Moderate Comments</h6>
+                                    <p class="mb-0 fs-15">Manage and moderate comments efficiently to maintain brand reputation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- end key features -->
+
+            <!-- start benefits section -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center mb-40px">
+                        <div class="col-lg-8 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <div class="d-inline-block fw-700 text-white bg-orange ps-20px pe-20px lh-30 border-radius-30px mb-20px fs-14 text-uppercase">Why Instagram</div>
+                            <h2 class="fw-700 text-dark-gray ls-minus-1px mb-0">Unlock Your Business Potential</h2>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 g-3" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <div class="col">
+                            <div class="ig-benefit-item">
+                                <i class="bi bi-bar-chart-fill"></i>
+                                <div>
+                                    <h6 class="fw-700 text-dark-gray mb-2px">Business Insights & Analytics</h6>
+                                    <p class="mb-0 fs-14">Access comprehensive performance data and metrics</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="ig-benefit-item">
+                                <i class="bi bi-emoji-smile-fill"></i>
+                                <div>
+                                    <h6 class="fw-700 text-dark-gray mb-2px">Audience Sentiment</h6>
+                                    <p class="mb-0 fs-14">Track mention data to gauge brand perception</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="ig-benefit-item">
+                                <i class="bi bi-hash"></i>
+                                <div>
+                                    <h6 class="fw-700 text-dark-gray mb-2px">Hashtag Performance</h6>
+                                    <p class="mb-0 fs-14">Monitor hashtag reach across campaigns</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="ig-benefit-item">
+                                <i class="bi bi-link-45deg"></i>
+                                <div>
+                                    <h6 class="fw-700 text-dark-gray mb-2px">Website Integration</h6>
+                                    <p class="mb-0 fs-14">Seamlessly embed Instagram content on your site</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="ig-benefit-item">
+                                <i class="bi bi-lightning-fill"></i>
+                                <div>
+                                    <h6 class="fw-700 text-dark-gray mb-2px">Real-Time Trends</h6>
+                                    <p class="mb-0 fs-14">Stay ahead with live trending data and insights</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="ig-benefit-item">
+                                <i class="bi bi-rocket-takeoff-fill"></i>
+                                <div>
+                                    <h6 class="fw-700 text-dark-gray mb-2px">Campaign Management</h6>
+                                    <p class="mb-0 fs-14">Create engaging promotions effortlessly</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end benefits section -->
+
+            <!-- start solution banner + CTA unified -->
+            <section>
+                <div class="container">
+                    <div class="solution-banner-instagram position-relative mb-0" style="border-radius: 16px 16px 0 0;">
+                        <div class="row align-items-center position-relative z-index-1">
+                            <div class="col-lg-8 text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                                <h2 class="fw-700 text-white ls-minus-1px mb-20px">Explore Our Instagram Solution</h2>
+                                <p class="text-white fs-18 mb-30px opacity-9">Discover ECHT.im - our comprehensive Instagram business platform designed to help you leverage the full power of Instagram API for your business growth.</p>
+                                <a href="https://echt.im/" target="_blank" class="btn btn-extra-large btn-white btn-rounded btn-box-shadow">Visit ECHT.im<i class="feather icon-feather-external-link ms-10px"></i></a>
+                            </div>
+                            <div class="col-lg-4 text-center md-mt-30px">
+                                <i class="bi bi-instagram" style="font-size: 150px; color: rgba(255,255,255,0.3);"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-40px pb-40px ps-40px pe-40px md-p-30px text-center" style="background: #fff; border-radius: 0 0 16px 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
+                        <h3 class="fw-700 text-dark-gray ls-minus-1px mb-15px">Ready to Grow with Instagram?</h3>
+                        <p class="text-dark-gray fs-18 mb-30px">Let us help you leverage Instagram's powerful API to transform your business reach and engagement.</p>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="contact-us.html" class="btn btn-large btn-orange btn-rounded btn-box-shadow">Request a Demo<i class="feather icon-feather-arrow-right ms-10px"></i></a>
+                            <a href="contact-us.html" class="btn btn-large btn-dark-gray border-2 btn-rounded">Contact Sales</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end solution banner + CTA unified -->
+
+            <!-- start footer -->
+            <footer class="half-footer pb-45px border-top border-color-light-gray background-repeat" style="background-image:url('images/kolimg/footer\ bg.png');">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin z-index-1 text-center text-sm-start xs-mb-20px">
+                            <span class="fs-20 fw-500 text-dark-gray d-block mb-5px">location</span>
+                            <p class="w-100">KOL Telecom Services LLC, <br>251 Little Falls Drive<br>
+                                Wilmington, DE 19808<br>
+                                United States of America.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-4 col-sm-12 text-center z-index-1 mb-20px mb-md-0">
+                            <img src="images/kolimg/2.png" alt="KOL Logo" data-no-retina="" style="max-width: 280px; width: 100%; height: auto;">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin text-center text-sm-end z-index-1">
+                            <span class="fs-20 fw-700 text-dark-gray d-block mb-5px">How can we help?</span>
+                            <a href="mailto:info@koltelecom.com" class="text-dark-gray fw-600 d-block mb-0" style="font-size: 16px;">info@koltelecom.com</a>
+                            <a href="tel:+13022952746" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">+1 302 295 2746</a>
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-center mt-20px mb-10px md-mb-20px">
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-7 text-center elements-social social-icon-style-04">
+                            <ul class="large-icon dark mb-0">
+                                <li><a class="facebook" href="https://www.facebook.com/koltelecomservices/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                                <li><a class="twitter" href="https://twitter.com/KOLTELECOM" target="_blank"><i class="fa-brands fa-x-twitter"></i><span></span></a></li>
+                                <li><a class="instagram" href="https://www.instagram.com/koltelecom/" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                                <li><a class="linkedin" href="https://www.linkedin.com/company/kol-telecom-services-llc" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-12 last-paragraph-no-margin text-center sm-mb-10px">
+                            <p>© 2026 <a href="index.html" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">KOL Telecom.</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+        </div>
+        <!-- end box-layout -->
+        <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+            <a href="#" class="scroll-top" aria-label="scroll">
+                <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- WhatsApp floating button -->
+        </div>
+
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/vendors.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!-- Chatbot JS -->
+    <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+</body>
+</html>

@@ -1,0 +1,844 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Our Key Partners - Strategic Partnerships</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="KOL Telecom">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="Strategic Technology and Business Partners">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="css/vendors.min.css"/>
+        <link rel="stylesheet" href="css/icon.min.css"/>
+        <link rel="stylesheet" href="css/style.min.css"/>
+        <link rel="stylesheet" href="css/responsive.min.css"/>
+        <link rel="stylesheet" href="css/font-size-fix.css"/>
+        <link rel="stylesheet" href="demos/corporate/corporate.css" />
+        <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+    <style>
+        /* ===== Hero Section ===== */
+        .pkp-hero {
+            background: linear-gradient(160deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 520px;
+        }
+        .pkp-hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .pkp-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(247, 147, 30, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .pkp-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 107, 53, 0.15);
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            color: #FF6B35;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+        }
+        .pkp-hero h1 {
+            color: #fff;
+            font-weight: 800;
+            font-size: 48px;
+            line-height: 1.15;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+        .pkp-hero h1 span {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .pkp-hero-desc {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 540px;
+        }
+        /* ===== Stats Cards ===== */
+        .pkp-stat-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        .pkp-stat-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 107, 53, 0.3);
+            transform: translateY(-4px);
+        }
+        .pkp-stat-num {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+        .pkp-stat-label {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        /* ===== Network Visual ===== */
+        .pkp-network-visual {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pkp-center-node {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 3;
+            box-shadow: 0 0 60px rgba(255, 107, 53, 0.4), 0 0 120px rgba(255, 107, 53, 0.15);
+        }
+        .pkp-center-node img {
+            width: 70px;
+            height: auto;
+            filter: brightness(10);
+        }
+        .pkp-orbit-1 {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border: 1px solid rgba(255, 107, 53, 0.15);
+            border-radius: 50%;
+            animation: pkp-spin-slow 30s linear infinite;
+        }
+        .pkp-orbit-2 {
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            border: 1px dashed rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            animation: pkp-spin-slow 45s linear infinite reverse;
+        }
+        @keyframes pkp-spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes pkp-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.08); opacity: 0.9; }
+        }
+        .pkp-sat-node {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+            animation: pkp-pulse 3s ease-in-out infinite;
+        }
+        .pkp-sat-node i {
+            font-size: 20px;
+            color: #FF6B35;
+        }
+        .pkp-sat-node:nth-child(1) { top: 0; left: 50%; margin-left: -25px; animation-delay: 0s; }
+        .pkp-sat-node:nth-child(2) { top: 50%; right: 0; margin-top: -25px; animation-delay: 0.5s; }
+        .pkp-sat-node:nth-child(3) { bottom: 0; left: 50%; margin-left: -25px; animation-delay: 1s; }
+        .pkp-sat-node:nth-child(4) { top: 50%; left: 0; margin-top: -25px; animation-delay: 1.5s; }
+        .pkp-sat-node:nth-child(5) { top: 14%; right: 14%; animation-delay: 0.7s; }
+        .pkp-sat-node:nth-child(6) { bottom: 14%; right: 14%; animation-delay: 1.2s; }
+        .pkp-sat-node:nth-child(7) { bottom: 14%; left: 14%; animation-delay: 0.3s; }
+        .pkp-sat-node:nth-child(8) { top: 14%; left: 14%; animation-delay: 1.8s; }
+        /* ===== Section Styling ===== */
+        .pkp-section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* ===== Partner Cards ===== */
+        .pkp-partner-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 24px;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1.5px solid #f0f0f0;
+            transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+        }
+        .pkp-partner-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            transform: scaleX(0);
+            transition: transform 0.35s ease;
+        }
+        .pkp-partner-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: rgba(255, 107, 53, 0.2);
+        }
+        .pkp-partner-card:hover::after {
+            transform: scaleX(1);
+        }
+        .pkp-partner-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        .pkp-partner-logo .pkp-logo-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(255, 107, 53, 0.08);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.35s ease;
+        }
+        .pkp-partner-logo .pkp-logo-icon i {
+            font-size: 24px;
+            color: #FF6B35;
+            transition: all 0.35s ease;
+        }
+        .pkp-partner-card:hover .pkp-logo-icon {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+        }
+        .pkp-partner-card:hover .pkp-logo-icon i {
+            color: #fff;
+        }
+        .pkp-partner-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.35s ease;
+        }
+        .pkp-partner-card:hover .pkp-partner-name {
+            color: #333;
+        }
+
+        /* ===== Category Cards ===== */
+        .pkp-cat-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 36px 28px;
+            text-align: center;
+            border: 1.5px solid #f0f0f0;
+            transition: all 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .pkp-cat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.03) 0%, rgba(247, 147, 30, 0.02) 100%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .pkp-cat-card:hover::before {
+            opacity: 1;
+        }
+        .pkp-cat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            border-color: rgba(255, 107, 53, 0.2);
+        }
+        .pkp-cat-icon {
+            width: 68px;
+            height: 68px;
+            background: rgba(255, 107, 53, 0.08);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: all 0.35s ease;
+            position: relative;
+            z-index: 1;
+        }
+        .pkp-cat-icon i {
+            font-size: 26px;
+            color: #FF6B35;
+            transition: all 0.35s ease;
+        }
+        .pkp-cat-card:hover .pkp-cat-icon {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            transform: scale(1.08);
+            box-shadow: 0 8px 24px rgba(255, 107, 53, 0.3);
+        }
+        .pkp-cat-card:hover .pkp-cat-icon i {
+            color: #fff;
+        }
+        .pkp-cat-text {
+            position: relative;
+            z-index: 1;
+        }
+        .pkp-cat-count {
+            display: inline-block;
+            background: rgba(255, 107, 53, 0.08);
+            color: #FF6B35;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 12px;
+        }
+
+        /* ===== CTA Section ===== */
+        .pkp-cta {
+            background: linear-gradient(160deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+            border-radius: 24px;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .pkp-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .pkp-cta::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(247, 147, 30, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* ===== Reduced Motion ===== */
+        @media (prefers-reduced-motion: reduce) {
+            .pkp-orbit-1,
+            .pkp-orbit-2 { animation: none; }
+            .pkp-sat-node { animation: none; }
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 991px) {
+            .pkp-hero h1 { font-size: 36px; }
+            .pkp-hero-desc { font-size: 16px; }
+            .pkp-network-visual { height: 300px; margin-top: 40px; }
+            .pkp-center-node { width: 90px; height: 90px; }
+            .pkp-center-node img { width: 50px; }
+            .pkp-orbit-1 { width: 200px; height: 200px; }
+            .pkp-orbit-2 { width: 280px; height: 280px; }
+            .pkp-sat-node { width: 40px; height: 40px; }
+            .pkp-sat-node i { font-size: 16px; }
+            .pkp-cta { padding: 40px 24px; border-radius: 16px; }
+        }
+        @media (max-width: 767px) {
+            .pkp-hero h1 { font-size: 30px; letter-spacing: -1px; }
+            .pkp-stat-card { padding: 16px 12px; }
+            .pkp-stat-num { font-size: 28px; }
+            .pkp-network-visual { height: 250px; }
+            .pkp-orbit-2 { display: none; }
+        }
+    </style>
+</head>
+    <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+        <div class="box-layout">
+            <!-- start header -->
+            <header>
+                <!-- start navigation -->
+                <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                    <div class="container-fluid">
+                        <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="default-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="alt-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="KOL Telecom" class="mobile-logo" width="142" height="28">
+                            </a>
+                        </div>
+                        <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                            <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-item dropdown submenu">
+                                        <a href="#" class="nav-link">Products</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
+                                            <div class="d-lg-flex mega-menu m-auto flex-column">
+                                                <div class="row row-cols-1 row-cols-lg-5 mb-60px md-mb-30px sm-mb-20px">
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">cPaaS</li>
+                                                            <li><a href="products-mblastr.html">mBlastr</a></li>
+                                                            <li><a href="products-vkolu.html">VKOLU</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Whole Sale</li>
+                                                            <li><a href="products-voice.html">Voice</a></li>
+                                                            <li><a href="products-sms.html">SMS(A2P)</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Retail</li>
+                                                            <li><a href="products-rcs.html">RCS</a></li>
+                                                            <li><a href="products-did.html">DID</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Instant Messaging</li>
+                                                            <li><a href="products-whatsapp.html">Whatsapp for Business</a></li>
+                                                            <li><a href="products-instagram.html">Instagram</a></li>
+                                                            <li><a href="products-viber.html">Viber</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Number Lookup</li>
+                                                            <li><a href="products-number-lookup.html">Number Lookup</a></li>
+                                                            <li><a href="products-hlr.html">HLR</a></li>
+                                                            <li><a href="products-mnp.html">MNP</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Services</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a href="services-mail-hosting.html">Mail Hosting</a></li>
+                                            <li><a href="services-it-managed.html">IT Managed Services</a></li>
+                                            <li><a href="services-ip-pbx.html">IP PBX</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Solutions</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                            <li><a href="solutions-echt.html">ECHT</a></li>
+                                            <li><a href="solutions-textr.html">Textr</a></li>
+                                            <li><a href="solutions-cedar.html">Cedar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Partners</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                           <li><a href="partners-key.html">Our Key Partners</a></li>
+                                            <li><a href="partners-become.html">Become Our Partner</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Connect With Us</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                            <li><a href="ethics-conduct.html">Ethics and conduct</a></li>
+                                            <li><a href="terms-conditions.html">Terms and conditions</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="download.html">Download</a></li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">
+                            <div class="header-icon">
+                                <div class="header-search-icon icon">
+                                    <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>
+                                    <!-- start search input -->
+                                    <div class="search-form-wrapper">
+                                        <button title="Close" type="button" class="search-close">&times;</button>
+                                        <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                            <div class="search-form-box">
+                                                <h2 class="text-black text-center fw-600 mb-4 ls-minus-1px">What are you looking for?</h2>
+                                                <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="q" value="" type="text" autocomplete="off">
+                                                <button type="submit" class="search-button">
+                                                    <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- end search input -->
+                                </div>
+                                <div class="header-button ms-20px d-none d-xl-inline-block">
+                                    <a href="contact-us.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">
+                                        <span>
+                                            <span class="btn-double-text fw-600" data-text="Free consultation">Free consultation</span>
+                                            <span><i class="fa-regular fa-envelope"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- end navigation -->
+            </header>
+            <!-- end header -->
+
+            <!-- start hero section -->
+            <section class="pkp-hero top-space-margin pb-0">
+                <div class="container position-relative" style="z-index: 2;">
+                    <div class="row align-items-center pt-60px pb-60px lg-pt-40px lg-pb-40px">
+                        <div class="col-lg-6" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                            <div class="pkp-badge">
+                                <i class="bi bi-people-fill"></i> Our Key Partners
+                            </div>
+                            <h1>Strategic <span>Technology</span> Partnerships</h1>
+                            <p class="pkp-hero-desc">Collaborating with industry-leading technology providers and telecommunications carriers to deliver world-class communication solutions with global reach and unmatched reliability.</p>
+                            <!-- Stats Row -->
+                            <div class="row g-3 mb-20px">
+                                <div class="col-4">
+                                    <div class="pkp-stat-card">
+                                        <div class="pkp-stat-num">36+</div>
+                                        <div class="pkp-stat-label">Partners</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="pkp-stat-card">
+                                        <div class="pkp-stat-num">50+</div>
+                                        <div class="pkp-stat-label">Countries</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="pkp-stat-card">
+                                        <div class="pkp-stat-num">99.9%</div>
+                                        <div class="pkp-stat-label">Uptime SLA</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 text-center" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay": 200, "easing": "easeOutQuad" }'>
+                            <div class="pkp-network-visual" aria-hidden="true">
+                                <!-- Orbit rings -->
+                                <div class="pkp-orbit-1"></div>
+                                <div class="pkp-orbit-2">
+                                    <div class="pkp-sat-node"><i class="bi bi-broadcast"></i></div>
+                                    <div class="pkp-sat-node"><i class="bi bi-cloud-check"></i></div>
+                                    <div class="pkp-sat-node"><i class="bi bi-shield-check"></i></div>
+                                    <div class="pkp-sat-node"><i class="bi bi-cpu"></i></div>
+                                    <div class="pkp-sat-node"><i class="bi bi-globe2"></i></div>
+                                    <div class="pkp-sat-node"><i class="bi bi-diagram-3"></i></div>
+                                    <div class="pkp-sat-node"><i class="bi bi-lightning-charge"></i></div>
+                                    <div class="pkp-sat-node"><i class="bi bi-graph-up-arrow"></i></div>
+                                </div>
+                                <!-- Center node with KOL logo -->
+                                <div class="pkp-center-node">
+                                    <img src="images/kolimg/kol-logo.png" alt="KOL Telecom">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end hero section -->
+
+            <!-- start partner logos section -->
+            <section id="down-section" class="pb-0">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-11">
+                            <div class="text-center mb-50px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                                <div class="pkp-section-badge">
+                                    <i class="bi bi-grid-3x3-gap"></i> Partner Network
+                                </div>
+                                <h2 class="text-dark-gray fw-700 alt-font mb-20px ls-minus-2px">Trusted by Industry Leaders</h2>
+                                <p class="fs-18 lh-32 w-70 lg-w-90 md-w-100 mx-auto" style="color: #6c757d;">We collaborate with global telecommunications carriers, technology platforms, and enterprise solutions providers to deliver exceptional communication services.</p>
+                            </div>
+
+                            <!-- Telecom Carriers & Operators -->
+                            <div class="mb-20px">
+                                <h6 class="fw-700 text-uppercase ls-1px fs-13 mb-20px" style="color: #999;"><i class="bi bi-broadcast me-2" style="color: #FF6B35;"></i>Telecom Carriers &amp; Operators</h6>
+                                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 mb-30px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 500, "delay":0, "staggervalue": 60, "easing": "easeOutQuad" }'>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/client-1.png" alt="Airtel" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Airtel</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/client-2.png" alt="Vodafone" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Vodafone</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/telefonica.png" alt="Telefónica" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Telefónica</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/chinamobileltd.png" alt="China Mobile" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">China Mobile</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/hkbn.png" alt="HKBN" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">HKBN</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/telein.png" alt="Telin" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Telin</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/idt.png" alt="IDT" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">IDT</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/voxcarrier.png" alt="Vox Carrier" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Vox Carrier</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/jtglobal.png" alt="JT Global" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">JT Global</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/sigmatelecom.png" alt="Sigma Telecom" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Sigma Telecom</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/samatelecom.png" alt="Sama Telecom" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Sama Telecom</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/swiss-link-carrier.png" alt="Swiss Link Carrier" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Swiss Link Carrier</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/lexico-telecom.png" alt="Lexico Telecom" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Lexico Telecom</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/dialtel.png" alt="Dialtel" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Dialtel</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/quickcomtel.png" alt="QuickComTel" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">QuickComTel</span></div></div></div>
+                                </div>
+                            </div>
+
+                            <!-- CPaaS & Messaging Platforms -->
+                            <div class="mb-20px">
+                                <h6 class="fw-700 text-uppercase ls-1px fs-13 mb-20px" style="color: #999;"><i class="bi bi-chat-dots me-2" style="color: #FF6B35;"></i>CPaaS &amp; Messaging Platforms</h6>
+                                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 mb-30px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 500, "delay":0, "staggervalue": 60, "easing": "easeOutQuad" }'>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/sinch.png" alt="Sinch" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Sinch</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/twilio.png" alt="Twilio" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Twilio</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/gupshup.png" alt="Gupshup" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Gupshup</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/tanla.png" alt="Tanla" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Tanla</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/linkmobility.png" alt="Link Mobility" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Link Mobility</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/cequens.png" alt="Cequens" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Cequens</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/montymobile.png" alt="Monty Mobile" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Monty Mobile</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/paasoo.png" alt="Paasoo" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Paasoo</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/intis.png" alt="Intis Telecom" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Intis Telecom</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/uni.png" alt="Uni" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Uni</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/btraccl.png" alt="Bangla Trac" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Bangla Trac</span></div></div></div>
+                                </div>
+                            </div>
+
+                            <!-- Technology & Infrastructure -->
+                            <div class="mb-20px">
+                                <h6 class="fw-700 text-uppercase ls-1px fs-13 mb-20px" style="color: #999;"><i class="bi bi-cpu me-2" style="color: #FF6B35;"></i>Technology &amp; Infrastructure</h6>
+                                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 mb-30px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 500, "delay":0, "staggervalue": 60, "easing": "easeOutQuad" }'>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/client-10.png" alt="CITIC" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">CITIC</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/client-4.png" alt="Alaris Labs" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Alaris Labs</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/ribbon.png" alt="Ribbon" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Ribbon</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/sifytechnologies.png" alt="Sify Technologies" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Sify Technologies</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/videoconindustriesltd.png" alt="Videocon Industries" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Videocon Industries</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/mainberg.png" alt="Mainberg" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Mainberg</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/identidadtech.png" alt="Identidad Tech" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Identidad Tech</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/nicos-ag.png" alt="Nicos AG" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Nicos AG</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/bistalk.png" alt="Bistalk" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">Bistalk</span></div></div></div>
+                                    <div class="col"><div class="pkp-partner-card"><div class="pkp-partner-logo"><img src="images/partners/thinkq.png" alt="ThinkQ" style="max-height: 40px; width: auto; object-fit: contain;"><span class="pkp-partner-name">ThinkQ</span></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end partner logos section -->
+
+            <!-- start partnership categories section -->
+            <section class="pb-0">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-11">
+                            <div class="text-center mb-50px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                                <div class="pkp-section-badge">
+                                    <i class="bi bi-diagram-3"></i> Categories
+                                </div>
+                                <h2 class="text-dark-gray fw-700 alt-font mb-20px ls-minus-2px">Partnership Ecosystem</h2>
+                                <p class="fs-18 lh-32 w-70 lg-w-90 md-w-100 mx-auto" style="color: #6c757d;">Our diverse partner network spans multiple technology domains to provide comprehensive telecom solutions.</p>
+                            </div>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mb-30px justify-content-center" data-anime='{ "el": "childs", "translateY": [40, 0], "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                                <div class="col">
+                                    <div class="pkp-cat-card">
+                                        <div class="pkp-cat-icon"><i class="bi bi-broadcast"></i></div>
+                                        <div class="pkp-cat-text">
+                                            <h6 class="fw-700 text-dark-gray mb-10px">Telecom Carriers &amp; Operators</h6>
+                                            <p class="fs-15 lh-26 mb-0" style="color: #6c757d;">Global voice and SMS carriers providing worldwide connectivity and routing.</p>
+                                            <span class="pkp-cat-count">15 Partners</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="pkp-cat-card">
+                                        <div class="pkp-cat-icon"><i class="bi bi-chat-dots"></i></div>
+                                        <div class="pkp-cat-text">
+                                            <h6 class="fw-700 text-dark-gray mb-10px">CPaaS &amp; Messaging</h6>
+                                            <p class="fs-15 lh-26 mb-0" style="color: #6c757d;">Cloud communication platforms powering messaging, voice and engagement APIs.</p>
+                                            <span class="pkp-cat-count">11 Partners</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="pkp-cat-card">
+                                        <div class="pkp-cat-icon"><i class="bi bi-cpu"></i></div>
+                                        <div class="pkp-cat-text">
+                                            <h6 class="fw-700 text-dark-gray mb-10px">Technology &amp; Infrastructure</h6>
+                                            <p class="fs-15 lh-26 mb-0" style="color: #6c757d;">Technology and infrastructure partners enabling enterprise-grade communication solutions.</p>
+                                            <span class="pkp-cat-count">10 Partners</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end partnership categories section -->
+
+            <!-- start CTA section -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="pkp-cta" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "easing": "easeOutQuad" }'>
+                                <div class="position-relative" style="z-index: 2;">
+                                    <div class="pkp-badge mx-auto mb-20px" style="border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff;">
+                                        <i class="bi bi-rocket-takeoff"></i> Partner Program
+                                    </div>
+                                    <h3 class="fw-700 text-white mb-15px">Become a Partner</h3>
+                                    <p class="fs-18 lh-30 mb-35px mx-auto" style="color: rgba(255,255,255,0.7); max-width: 560px;">Join our ecosystem and grow your business with KOL Telecom. We offer competitive partner programs, technical support, and co-marketing opportunities.</p>
+                                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                                        <a href="partners-become.html" class="btn btn-large btn-rounded btn-box-shadow text-white text-transform-none fw-600" style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);">
+                                            <i class="bi bi-people-fill me-2"></i>Partner Program
+                                        </a>
+                                        <a href="contact-us.html" class="btn btn-large btn-rounded btn-box-shadow text-transform-none fw-600" style="background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);">
+                                            <i class="bi bi-envelope-fill me-2"></i>Contact Sales
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end CTA section -->
+
+            <!-- start footer -->
+            <footer class="half-footer pb-45px border-top border-color-light-gray background-repeat" style="background-image:url('images/kolimg/footer\ bg.png');">
+                <div class="container">
+                    <!-- Logo moved to center of footer row -->
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin z-index-1 text-center text-sm-start xs-mb-20px">
+                            <span class="fs-20 fw-500 text-dark-gray d-block mb-5px">location</span>
+                            <p class="w-100">KOL Telecom Services LLC, <br>251 Little Falls Drive<br>
+                                Wilmington, DE 19808<br>
+                                United States of America.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-4 col-sm-12 text-center z-index-1 mb-20px mb-md-0">
+                            <img src="images/kolimg/2.png" alt="KOL Logo" data-no-retina="" style="max-width: 280px; width: 100%; height: auto;">
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin text-center text-sm-end z-index-1">
+                            <span class="fs-20 fw-700 text-dark-gray d-block mb-5px">How can we help?</span>
+                            <a href="mailto:info@koltelecom.com" class="text-dark-gray fw-600 d-block mb-0" style="font-size: 16px;">info@koltelecom.com</a>
+                            <a href="tel:+13022952746" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">+1 302 295 2746</a>
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-center mt-20px mb-10px md-mb-20px">
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-7 text-center elements-social social-icon-style-04">
+                            <ul class="large-icon dark mb-0">
+                                <li><a class="facebook" href="https://www.facebook.com/koltelecomservices/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                                <li><a class="twitter" href="https://twitter.com/KOLTELECOM" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter"></i><span></span></a></li>
+                                <li><a class="instagram" href="https://www.instagram.com/koltelecom/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                                <li><a class="linkedin" href="https://www.linkedin.com/company/kol-telecom-services-llc" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-12 last-paragraph-no-margin text-center sm-mb-10px">
+                            <p>&copy; 2026 <a href="index.html" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">KOL Telecom.</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+        </div>
+        <!-- end box-layout -->
+        <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+            <a href="#" class="scroll-top" aria-label="scroll">
+                <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- WhatsApp floating button -->
+        </div>
+
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/vendors.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!-- Chatbot JS -->
+    <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+</body>
+</html>

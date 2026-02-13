@@ -1,0 +1,52 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment Files (if you add any later)
+.env
+.env.local
+.env.*.local
+
+# Build outputs (if any)
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cache
+.cache/
+
+# Node modules (if you add npm later)
+node_modules/
+
+# Backup files
+*.bak
+*.backup
+
+# Large unnecessary nested directories
+images/kolimg/ourwebsites/
+**/laragon/
+
+# Large unnecessary files (optional - uncomment if present)
+# demos/
+# *.psd
+# *.ai
+
+# Keep localStorage data local
+# (No files to ignore for localStorage since it's browser-based)

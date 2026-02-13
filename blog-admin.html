@@ -1,0 +1,660 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <title>Blog Admin - KOL Telecom</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="images/kolimg/kol-logo.png">
+    <link rel="apple-touch-icon" href="images/kolimg/kol-logo.png">
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons -->
+    <link rel="stylesheet" href="css/vendors.min.css"/>
+    <link rel="stylesheet" href="css/icon.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="stylesheet" href="css/responsive.min.css"/>
+    <link rel="stylesheet" href="css/font-size-fix.css"/>
+    <link rel="stylesheet" href="demos/corporate/corporate.css"/>
+    <style>
+        /* Fix button hover colors */
+        .btn-gradient-fast-yellow-orange:hover {
+            color: #fff !important;
+            background: linear-gradient(to right, #ff8c42, #ff6b35) !important;
+        }
+        .btn-dark-gray:hover {
+            color: #fff !important;
+            background: #232323 !important;
+        }
+    </style>
+</head>
+<body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+    <div class="box-layout">
+        <!-- start header -->
+        <header>
+            <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                <div class="container-fluid">
+                    <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/kolimg/KOLLOGO.png" alt="KOL Logo" class="default-logo" width="142" height="28">
+                        </a>
+                    </div>
+                    <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav">
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href="blog.html" class="nav-link">View Blog</a></li>
+                                <li class="nav-item"><a href="blog-admin.html" class="nav-link">Blog Admin</a></li>
+                                <li class="nav-item"><a href="analytics.html" class="nav-link">Analytics</a></li>
+                                <li class="nav-item"><a href="index.html" class="nav-link">Main Site</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto col-xl-3 col-lg-2 text-end">
+                        <div class="header-icon">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- end header -->
+
+        <!-- start page title -->
+        <section class="page-title-big-typography cover-background" style="background: linear-gradient(135deg, #ff7425 0%, #f97233 100%);">
+            <div class="container">
+                <div class="row align-items-center justify-content-center extra-very-small-screen">
+                    <div class="col-xxl-6 col-xl-7 col-lg-8 col-md-10 text-center position-relative page-title-extra-small" data-anime='{ "el": "childs", "translateY": [-15, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 100, "easing": "easeOutQuad" }'>
+                        <h1 class="mb-20px text-white" style="font-size: 19px;">📝 Blog Admin Panel</h1>
+                        <h2 class="text-white text-uppercase fw-700 ls-1px mb-0" style="font-size: 16px;">Manage Your Blog Content</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end page title -->
+
+        <!-- start admin content -->
+        <section class="pt-0">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <!-- Success/Error Messages -->
+                        <div id="successMessage" class="alert alert-success mb-4" style="display:none;"></div>
+                        <div id="errorMessage" class="alert alert-danger mb-4" style="display:none;"></div>
+
+                        <!-- Add/Edit Blog Form -->
+                        <div class="bg-white border-radius-6px p-45px mb-45px" style="box-shadow: 0 0 30px rgba(0,0,0,0.08);">
+                            <h3 class="text-dark-gray fw-700 mb-30px ls-minus-1px">Add New Blog Post</h3>
+
+                            <form id="blogForm">
+                                <input type="hidden" id="blogId">
+
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="mb-25px">
+                                            <label class="form-label fs-16 text-dark-gray fw-600 mb-10px">Blog Title *</label>
+                                            <input type="text" class="form-control border-radius-4px" id="blogTitle" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-25px">
+                                            <label class="form-label fs-16 text-dark-gray fw-600 mb-10px">Category *</label>
+                                            <select class="form-control border-radius-4px" id="blogCategory" required>
+                                                <option value="">Select Category</option>
+                                                <option value="CPaaS">CPaaS</option>
+                                                <option value="WhatsApp">WhatsApp</option>
+                                                <option value="SMS">SMS</option>
+                                                <option value="Voice">Voice</option>
+                                                <option value="RCS">RCS</option>
+                                                <option value="Technology">Technology</option>
+                                                <option value="Business">Business</option>
+                                                <option value="Tutorial">Tutorial</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-25px">
+                                            <label class="form-label fs-16 text-dark-gray fw-600 mb-10px">Author</label>
+                                            <input type="text" class="form-control border-radius-4px" id="blogAuthor" value="KOL Telecom Team">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-25px">
+                                            <label class="form-label fs-16 text-dark-gray fw-600 mb-10px">Read Time (mins)</label>
+                                            <input type="number" class="form-control border-radius-4px" id="blogReadTime" value="5" min="1">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mb-25px">
+                                            <label class="form-label fs-16 text-dark-gray fw-600 mb-10px">Date</label>
+                                            <input type="date" class="form-control border-radius-4px" id="blogDate" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-25px">
+                                    <label class="form-label fs-16 text-dark-gray fw-600 mb-10px">Featured Image URL or Upload</label>
+                                    <input type="text" class="form-control border-radius-4px mb-15px" id="blogImageUrl" placeholder="https://example.com/image.jpg or paste image">
+                                    <input type="file" class="form-control border-radius-4px" id="blogImageFile" accept="image/*">
+                                    <img id="imagePreview" class="w-100 border-radius-6px mt-20px" style="display:none; max-width:400px;">
+                                </div>
+
+                                <div class="mb-25px">
+                                    <label class="form-label fs-16 text-dark-gray fw-600 mb-10px">Short Description (for preview) *</label>
+                                    <textarea class="form-control border-radius-4px" id="blogDescription" rows="3" required></textarea>
+                                </div>
+
+                                <div class="mb-25px">
+                                    <label class="form-label fs-16 text-dark-gray fw-600 mb-10px">Full Content (HTML supported) *</label>
+                                    <textarea class="form-control border-radius-4px" id="blogContent" rows="12" required></textarea>
+                                    <small class="text-muted">You can use HTML tags like &lt;h2&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;strong&gt;, etc.</small>
+
+                                    <!-- HTML Template Examples -->
+                                    <div class="accordion mt-20px" id="templateAccordion">
+                                        <div class="accordion-item border-radius-6px">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed bg-light-gray" type="button" data-bs-toggle="collapse" data-bs-target="#templateExamples">
+                                                    📝 HTML Template Examples (Click to expand)
+                                                </button>
+                                            </h2>
+                                            <div id="templateExamples" class="accordion-collapse collapse" data-bs-parent="#templateAccordion">
+                                                <div class="accordion-body bg-very-light-gray">
+                                                    <div class="row g-3">
+                                                        <!-- Headings -->
+                                                        <div class="col-md-6">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Headings</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;h2&gt;Main Heading&lt;/h2&gt;
+&lt;h3&gt;Sub Heading&lt;/h3&gt;
+&lt;h4&gt;Section Title&lt;/h4&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Paragraphs -->
+                                                        <div class="col-md-6">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Paragraphs</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;p class="mb-25px"&gt;Your paragraph text here.&lt;/p&gt;
+&lt;p class="mb-25px"&gt;Another paragraph.&lt;/p&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Lists -->
+                                                        <div class="col-md-6">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Lists</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;ul class="mb-40px"&gt;
+    &lt;li class="mb-15px"&gt;&lt;strong&gt;Item 1&lt;/strong&gt; - Description&lt;/li&gt;
+    &lt;li class="mb-15px"&gt;&lt;strong&gt;Item 2&lt;/strong&gt; - Description&lt;/li&gt;
+    &lt;li class="mb-15px"&gt;&lt;strong&gt;Item 3&lt;/strong&gt; - Description&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Text Formatting -->
+                                                        <div class="col-md-6">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Text Formatting</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;strong&gt;Bold text&lt;/strong&gt;
+&lt;em&gt;Italic text&lt;/em&gt;
+&lt;u&gt;Underlined text&lt;/u&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Highlight Box -->
+                                                        <div class="col-md-12">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Highlight Box (Light Green)</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;div class="border-radius-15px p-40px mb-40px" style="background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 100%); border: 1px solid #C8E6C9;"&gt;
+    &lt;h3 class="fw-700 text-dark-gray mb-30px"&gt;&lt;i class="bi bi-star-fill me-15px" style="color: #4CAF50;"&gt;&lt;/i&gt;Key Highlights&lt;/h3&gt;
+    &lt;div class="row g-4"&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;div class="text-center"&gt;
+                &lt;h2 class="fw-700 mb-10px" style="color: #4CAF50; font-size: 19px;"&gt;100%&lt;/h2&gt;
+                &lt;p class="mb-0 fw-600"&gt;Success Rate&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;div class="text-center"&gt;
+                &lt;h2 class="fw-700 mb-10px" style="color: #4CAF50; font-size: 19px;"&gt;24/7&lt;/h2&gt;
+                &lt;p class="mb-0 fw-600"&gt;Support Available&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;div class="text-center"&gt;
+                &lt;h2 class="fw-700 mb-10px" style="color: #4CAF50; font-size: 19px;"&gt;50ms&lt;/h2&gt;
+                &lt;p class="mb-0 fw-600"&gt;Response Time&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Feature Cards -->
+                                                        <div class="col-md-12">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Feature Cards</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;div class="row g-4 mb-40px"&gt;
+    &lt;div class="col-md-6"&gt;
+        &lt;div class="border border-color-extra-medium-gray border-radius-10px p-30px h-100"&gt;
+            &lt;h4 class="fw-700 text-dark-gray mb-20px"&gt;📱 Feature Title&lt;/h4&gt;
+            &lt;p class="mb-20px"&gt;Feature description goes here. Explain the benefits and use cases.&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Benefit point 1&lt;/li&gt;
+                &lt;li&gt;Benefit point 2&lt;/li&gt;
+                &lt;li&gt;Benefit point 3&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6"&gt;
+        &lt;div class="border border-color-extra-medium-gray border-radius-10px p-30px h-100"&gt;
+            &lt;h4 class="fw-700 text-dark-gray mb-20px"&gt;🚀 Another Feature&lt;/h4&gt;
+            &lt;p class="mb-20px"&gt;Another feature description.&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Benefit point 1&lt;/li&gt;
+                &lt;li&gt;Benefit point 2&lt;/li&gt;
+                &lt;li&gt;Benefit point 3&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Blockquote -->
+                                                        <div class="col-md-12">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Blockquote</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;blockquote class="border-start border-5 border-color-fast-yellow ps-30px mb-40px"&gt;
+    &lt;p class="fs-20 fw-500 text-dark-gray mb-15px" style="line-height: 1.8;"&gt;"Your important quote or highlight text goes here."&lt;/p&gt;
+    &lt;footer class="text-muted"&gt;— Source Name or Author&lt;/footer&gt;
+&lt;/blockquote&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Links -->
+                                                        <div class="col-md-6">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Links</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;a href="https://example.com" target="_blank" class="text-decoration-underline"&gt;External Link&lt;/a&gt;
+
+&lt;a href="contact-us.html"&gt;Internal Link&lt;/a&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Images -->
+                                                        <div class="col-md-6">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Images</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;img src="images/your-image.jpg" alt="Description" class="w-100 border-radius-10px mb-40px"&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Featured Image with Shadow -->
+                                                        <div class="col-md-12">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Featured Image with Shadow</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;img src="images/kolimg/your-image.jpg" alt="Feature Image" class="w-100 border-radius-10px mb-50px" style="box-shadow: 0 20px 60px rgba(0,0,0,0.1);"&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Statistics Highlight Box -->
+                                                        <div class="col-md-12">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Statistics Highlight Box</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;div class="border-radius-15px p-40px mb-40px" style="background: linear-gradient(135deg, #FFE8DC 0%, #FFF5F0 100%);"&gt;
+    &lt;h3 class="fw-700 text-dark-gray mb-30px"&gt;&lt;i class="bi bi-bar-chart-fill me-15px" style="color: #FF6B35;"&gt;&lt;/i&gt;Key Statistics 2026&lt;/h3&gt;
+    &lt;div class="row g-4"&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;div class="text-center"&gt;
+                &lt;h2 class="fw-700 mb-10px" style="color: #FF6B35; font-size: 19px;"&gt;$45.3B&lt;/h2&gt;
+                &lt;p class="mb-0 fw-600"&gt;Market Size&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;div class="text-center"&gt;
+                &lt;h2 class="fw-700 mb-10px" style="color: #FF6B35; font-size: 19px;"&gt;73%&lt;/h2&gt;
+                &lt;p class="mb-0 fw-600"&gt;Adoption Rate&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-md-4"&gt;
+            &lt;div class="text-center"&gt;
+                &lt;h2 class="fw-700 mb-10px" style="color: #FF6B35; font-size: 19px;"&gt;39%&lt;/h2&gt;
+                &lt;p class="mb-0 fw-600"&gt;Growth Rate&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Use Case Grid Cards -->
+                                                        <div class="col-md-12">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Use Case Grid Cards</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;div class="row g-4 mb-40px"&gt;
+    &lt;div class="col-md-6"&gt;
+        &lt;div class="border border-color-extra-medium-gray border-radius-10px p-30px h-100"&gt;
+            &lt;h5 class="fw-700 text-dark-gray mb-15px"&gt;&lt;i class="bi bi-bank2 me-10px" style="color: #FF6B35;"&gt;&lt;/i&gt;Financial Services&lt;/h5&gt;
+            &lt;ul class="mb-0"&gt;
+                &lt;li&gt;Transaction alerts via SMS&lt;/li&gt;
+                &lt;li&gt;Two-factor authentication&lt;/li&gt;
+                &lt;li&gt;Fraud detection notifications&lt;/li&gt;
+                &lt;li&gt;Video KYC verification&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-md-6"&gt;
+        &lt;div class="border border-color-extra-medium-gray border-radius-10px p-30px h-100"&gt;
+            &lt;h5 class="fw-700 text-dark-gray mb-15px"&gt;&lt;i class="bi bi-cart3 me-10px" style="color: #FF6B35;"&gt;&lt;/i&gt;E-Commerce&lt;/h5&gt;
+            &lt;ul class="mb-0"&gt;
+                &lt;li&gt;Order confirmation messages&lt;/li&gt;
+                &lt;li&gt;Delivery status updates&lt;/li&gt;
+                &lt;li&gt;WhatsApp customer support&lt;/li&gt;
+                &lt;li&gt;Abandoned cart recovery&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Code Block (Dark Background) -->
+                                                        <div class="col-md-12">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Code Block (Dark Background)</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;h3 class="fw-700 text-dark-gray mb-20px"&gt;API Endpoint Example&lt;/h3&gt;
+&lt;div class="bg-dark-gray border-radius-10px p-25px mb-40px"&gt;
+    &lt;code class="text-white" style="font-size: 13px;"&gt;
+POST https://api.example.com/v1/messages&lt;br&gt;
+Authorization: Bearer YOUR_ACCESS_TOKEN&lt;br&gt;
+Content-Type: application/json
+    &lt;/code&gt;
+&lt;/div&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Best Practices with Green Border -->
+                                                        <div class="col-md-12">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Best Practices (Green Border Style)</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;h2 class="text-dark-gray fw-700 mb-30px mt-50px"&gt;Best Practices for Success&lt;/h2&gt;
+
+&lt;div class="row g-4 mb-40px"&gt;
+    &lt;div class="col-12"&gt;
+        &lt;div class="border-start border-4 ps-25px" style="border-color: #25D366 !important;"&gt;
+            &lt;h5 class="fw-700 mb-15px" style="color: #25D366;"&gt;1. Response Time Matters&lt;/h5&gt;
+            &lt;p class="mb-0"&gt;Respond within 24 hours to maintain free user-initiated conversation pricing.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-12"&gt;
+        &lt;div class="border-start border-4 ps-25px" style="border-color: #25D366 !important;"&gt;
+            &lt;h5 class="fw-700 mb-15px" style="color: #25D366;"&gt;2. Use Rich Media Wisely&lt;/h5&gt;
+            &lt;p class="mb-0"&gt;Images increase engagement by 38%, but keep file sizes under 5MB.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Example Box (Light Blue) -->
+                                                        <div class="col-md-12">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Example Box (Light Blue Background)</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;div class="bg-solitude-blue border-radius-10px p-30px mb-40px"&gt;
+    &lt;h5 class="fw-700 text-dark-gray mb-20px"&gt;Example Template: Order Notification&lt;/h5&gt;
+    &lt;div class="bg-white border-radius-8px p-25px"&gt;
+        &lt;p class="mb-15px"&gt;&lt;strong&gt;Template Name:&lt;/strong&gt; order_notification&lt;/p&gt;
+        &lt;p class="mb-15px"&gt;&lt;strong&gt;Category:&lt;/strong&gt; Transactional&lt;/p&gt;
+        &lt;p class="mb-20px"&gt;&lt;strong&gt;Message:&lt;/strong&gt;&lt;/p&gt;
+        &lt;div class="bg-light p-20px border-radius-6px"&gt;
+            &lt;p class="mb-10px"&gt;Hi {{1}},&lt;/p&gt;
+            &lt;p class="mb-10px"&gt;Your order #{{2}} has been confirmed!&lt;/p&gt;
+            &lt;p class="mb-0"&gt;Thank you for your business.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Image + Text Side by Side -->
+                                                        <div class="col-md-12">
+                                                            <div class="bg-white p-20px border-radius-4px">
+                                                                <h6 class="fw-700 mb-15px">Image + Text Side by Side</h6>
+                                                                <pre class="bg-light-gray p-10px border-radius-4px mb-0" style="font-size:12px;"><code>&lt;div class="row align-items-center mb-50px"&gt;
+    &lt;div class="col-lg-6 mb-30px mb-lg-0"&gt;
+        &lt;img src="images/kolimg/your-image.jpg" alt="Feature" class="w-100 border-radius-10px" style="box-shadow: 0 10px 30px rgba(0,0,0,0.1);"&gt;
+    &lt;/div&gt;
+    &lt;div class="col-lg-6"&gt;
+        &lt;h3 class="fw-700 text-dark-gray mb-20px"&gt;Feature Title&lt;/h3&gt;
+        &lt;p class="mb-20px"&gt;Describe your feature or product benefit here. Explain why it matters to your customers.&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li class="mb-15px"&gt;Key benefit point 1&lt;/li&gt;
+            &lt;li class="mb-15px"&gt;Key benefit point 2&lt;/li&gt;
+            &lt;li class="mb-15px"&gt;Key benefit point 3&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="alert alert-info mt-20px mb-0">
+                                                        <i class="bi bi-info-circle me-10px"></i>
+                                                        <strong>Tip:</strong> Copy any template and paste it into the "Full Content" field above, then customize the text!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-35px">
+                                    <label class="form-label fs-16 text-dark-gray fw-600 mb-10px">Tags (comma separated)</label>
+                                    <input type="text" class="form-control border-radius-4px" id="blogTags" placeholder="cpaas, api, messaging">
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-large btn-rounded btn-gradient-fast-yellow-orange me-15px">
+                                            <i class="fa fa-save me-10px"></i> Publish Blog Post
+                                        </button>
+                                        <button type="button" class="btn btn-large btn-rounded btn-dark-gray" onclick="resetForm()">
+                                            <i class="fa fa-times me-10px"></i> Cancel
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Published Blogs List -->
+                        <div class="bg-white border-radius-6px p-45px" style="box-shadow: 0 0 30px rgba(0,0,0,0.08);">
+                            <h3 class="text-dark-gray fw-700 mb-30px ls-minus-1px">Published Blogs</h3>
+                            <div id="blogsList" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                                <!-- Blogs will be loaded here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end admin content -->
+
+        <!-- Simple Footer -->
+        <div class="py-20px bg-white border-top">
+            <div class="container">
+                <div class="text-center">
+                    <p class="mb-0">© 2026 <a href="index.html" class="text-dark-gray fw-500">KOL Telecom</a>. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- javascript libraries -->
+    <script src="js/jquery.js"></script>
+    <script src="js/vendors.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Blog Admin Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadBlogs();
+            setupFormHandlers();
+            setDefaultDate();
+        });
+
+        function setDefaultDate() {
+            document.getElementById('blogDate').value = new Date().toISOString().split('T')[0];
+        }
+
+        function setupFormHandlers() {
+            document.getElementById('blogImageFile').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('imagePreview').src = e.target.result;
+                        document.getElementById('imagePreview').style.display = 'block';
+                        document.getElementById('blogImageUrl').value = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('blogImageUrl').addEventListener('blur', function() {
+                if (this.value) {
+                    document.getElementById('imagePreview').src = this.value;
+                    document.getElementById('imagePreview').style.display = 'block';
+                }
+            });
+
+            document.getElementById('blogForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                saveBlog();
+            });
+        }
+
+        function saveBlog() {
+            const blogData = {
+                id: document.getElementById('blogId').value || 'blog-' + Date.now(),
+                title: document.getElementById('blogTitle').value,
+                category: document.getElementById('blogCategory').value,
+                author: document.getElementById('blogAuthor').value,
+                readTime: document.getElementById('blogReadTime').value,
+                date: document.getElementById('blogDate').value,
+                image: document.getElementById('blogImageUrl').value,
+                description: document.getElementById('blogDescription').value,
+                content: document.getElementById('blogContent').value,
+                tags: document.getElementById('blogTags').value.split(',').map(t => t.trim()),
+                created: new Date().toISOString(),
+                views: 0,
+                comments: []
+            };
+
+            try {
+                const blogs = JSON.parse(localStorage.getItem('blog_posts') || '[]');
+                const existingIndex = blogs.findIndex(b => b.id === blogData.id);
+                if (existingIndex >= 0) {
+                    blogs[existingIndex] = { ...blogs[existingIndex], ...blogData };
+                    showMessage('success', '✓ Blog updated successfully!');
+                } else {
+                    blogs.unshift(blogData);
+                    showMessage('success', '✓ Blog published successfully!');
+                }
+                localStorage.setItem('blog_posts', JSON.stringify(blogs));
+                resetForm();
+                loadBlogs();
+            } catch (e) {
+                showMessage('error', '✗ Failed to save blog: ' + e.message);
+            }
+        }
+
+        function loadBlogs() {
+            const blogs = JSON.parse(localStorage.getItem('blog_posts') || '[]');
+            const blogsList = document.getElementById('blogsList');
+
+            if (blogs.length === 0) {
+                blogsList.innerHTML = '<div class="col-12 text-center text-muted py-5">No blogs published yet</div>';
+                return;
+            }
+
+            blogsList.innerHTML = blogs.map(blog => `
+                <div class="col">
+                    <div class="card border-0 border-radius-6px" style="box-shadow: 0 0 15px rgba(0,0,0,0.08);">
+                        ${blog.image ? `<img src="${blog.image}" class="card-img-top" alt="${blog.title}" style="height:200px; object-fit:cover;">` : ''}
+                        <div class="card-body">
+                            <span class="badge bg-gradient-fast-yellow-orange mb-10px">${blog.category}</span>
+                            <h5 class="card-title fw-700 lh-30">${blog.title}</h5>
+                            <p class="card-text text-muted fs-14 lh-26">${blog.date} • ${blog.views || 0} views</p>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-small btn-rounded btn-dark-gray" onclick="editBlog('${blog.id}')">
+                                    <i class="fa fa-edit"></i> Edit
+                                </button>
+                                <button class="btn btn-small btn-rounded btn-outline-dark" onclick="deleteBlog('${blog.id}')">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function editBlog(id) {
+            const blogs = JSON.parse(localStorage.getItem('blog_posts') || '[]');
+            const blog = blogs.find(b => b.id === id);
+            if (blog) {
+                document.getElementById('blogId').value = blog.id;
+                document.getElementById('blogTitle').value = blog.title;
+                document.getElementById('blogCategory').value = blog.category;
+                document.getElementById('blogAuthor').value = blog.author;
+                document.getElementById('blogReadTime').value = blog.readTime;
+                document.getElementById('blogDate').value = blog.date;
+                document.getElementById('blogImageUrl').value = blog.image;
+                document.getElementById('blogDescription').value = blog.description;
+                document.getElementById('blogContent').value = blog.content;
+                document.getElementById('blogTags').value = blog.tags.join(', ');
+                if (blog.image) {
+                    document.getElementById('imagePreview').src = blog.image;
+                    document.getElementById('imagePreview').style.display = 'block';
+                }
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function deleteBlog(id) {
+            if (confirm('Are you sure you want to delete this blog post?')) {
+                const blogs = JSON.parse(localStorage.getItem('blog_posts') || '[]');
+                const filtered = blogs.filter(b => b.id !== id);
+                localStorage.setItem('blog_posts', JSON.stringify(filtered));
+                showMessage('success', '✓ Blog deleted successfully!');
+                loadBlogs();
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('blogForm').reset();
+            document.getElementById('blogId').value = '';
+            document.getElementById('imagePreview').style.display = 'none';
+            setDefaultDate();
+        }
+
+        function showMessage(type, message) {
+            const element = document.getElementById(type === 'success' ? 'successMessage' : 'errorMessage');
+            element.textContent = message;
+            element.style.display = 'block';
+            setTimeout(() => { element.style.display = 'none'; }, 5000);
+        }
+    </script>
+</body>
+</html>

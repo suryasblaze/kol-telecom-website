@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Chatbot Test Page - KOL Communications</title>
+
+    <!-- Existing CSS files -->
+    <link rel="stylesheet" href="css/vendors.min.css" />
+    <link rel="stylesheet" href="css/icon.min.css" />
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="stylesheet" href="css/responsive.min.css"/>
+
+    <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+
+    <style>
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #242E45 0%, #0066FF 100%);
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 60px;
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            color: #242E45;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .feature-card p {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        .test-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+        }
+
+        .test-section h2 {
+            color: #242E45;
+            margin-bottom: 20px;
+        }
+
+        .test-queries {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .query-btn {
+            padding: 15px 20px;
+            background: white;
+            border: 2px solid #0066FF;
+            color: #0066FF;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-align: left;
+        }
+
+        .query-btn:hover {
+            background: #0066FF;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,102,255,0.3);
+        }
+
+        .instructions {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .instructions h2 {
+            color: #242E45;
+            margin-bottom: 20px;
+        }
+
+        .instructions ol {
+            line-height: 2;
+            color: #495057;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #0066FF, #00C9A7);
+            color: white;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .alert {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        .alert-info {
+            background: #cfe2ff;
+            border-left-color: #0d6efd;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 32px;
+            }
+
+            .hero-section p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test-container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1>🤖 AI Chatbot Test Page</h1>
+            <p>Welcome to KOL Communications! Test our intelligent chatbot below.</p>
+            <p><span class="badge">✨ NEW</span> <span class="badge">🚀 AI-Powered</span> <span class="badge">💬 Interactive</span></p>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Modern Design</h3>
+                <p>Beautiful, responsive UI with smooth animations and gradient accents that match your brand perfectly.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>Smart AI</h3>
+                <p>Context-aware responses that understand user intent and provide relevant information automatically.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3>Lead Capture</h3>
+                <p>Integrated contact forms that capture leads seamlessly during natural conversations.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Multi-Page</h3>
+                <p>Works across all pages with contextual greetings based on the current product or service.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile Ready</h3>
+                <p>Fully responsive design that works beautifully on all devices and screen sizes.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">💾</div>
+                <h3>Session Memory</h3>
+                <p>Remembers conversations as users navigate between pages for a seamless experience.</p>
+            </div>
+        </div>
+
+        <!-- Test Queries Section -->
+        <div class="test-section">
+            <h2>🧪 Try These Test Queries</h2>
+            <p style="color: #6c757d; margin-bottom: 20px;">Click any question below to test the chatbot's intelligent responses:</p>
+
+            <div class="test-queries">
+                <button class="query-btn" onclick="testQuery('Hello')">👋 Hello</button>
+                <button class="query-btn" onclick="testQuery('What products do you offer?')">📦 What products do you offer?</button>
+                <button class="query-btn" onclick="testQuery('Tell me about SMS')">💬 Tell me about SMS</button>
+                <button class="query-btn" onclick="testQuery('How much does it cost?')">💰 How much does it cost?</button>
+                <button class="query-btn" onclick="testQuery('I need a demo')">🎯 I need a demo</button>
+                <button class="query-btn" onclick="testQuery('Tell me about WhatsApp')">📱 Tell me about WhatsApp</button>
+                <button class="query-btn" onclick="testQuery('What is RCS?')">✨ What is RCS?</button>
+                <button class="query-btn" onclick="testQuery('I want to talk to sales')">💼 Talk to sales</button>
+                <button class="query-btn" onclick="testQuery('Do you have API documentation?')">📚 API documentation</button>
+                <button class="query-btn" onclick="testQuery('What countries do you cover?')">🌍 Global coverage</button>
+                <button class="query-btn" onclick="testQuery('Tell me about security')">🔒 Security & compliance</button>
+                <button class="query-btn" onclick="testQuery('Can I try it for free?')">✨ Free trial</button>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h2>📋 How to Test the Chatbot</h2>
+            <ol>
+                <li>Look for the <strong>floating chat button</strong> in the bottom-right corner (blue gradient circle)</li>
+                <li>Click the button to open the chatbot window</li>
+                <li>Try the quick reply buttons that appear</li>
+                <li>Type your own questions or use the test queries above</li>
+                <li>Request pricing, demos, or contact sales to see the CTA forms</li>
+                <li>Test on mobile by resizing your browser or opening on your phone</li>
+                <li>Navigate to different product pages to see context-aware greetings</li>
+            </ol>
+
+            <div class="alert alert-info">
+                <strong>💡 Pro Tip:</strong> The chatbot learns from the page you're on! Try opening the chatbot on different product pages (SMS, WhatsApp, Voice, etc.) to see personalized welcome messages.
+            </div>
+
+            <div class="alert">
+                <strong>✅ Integration Complete!</strong> The chatbot is now working on this page. To add it to your other pages, just include the CSS and JS files as shown in the integration guide.
+            </div>
+        </div>
+
+        <!-- Products Section (for testing context) -->
+        <div style="margin-top: 60px;">
+            <h2 style="text-align: center; color: #242E45; margin-bottom: 40px;">Our Communication Solutions</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📱 SMS (A2P)</h3>
+                    <p>Bulk SMS messaging with 99.9% uptime, delivery reports, and global coverage.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>📞 Voice Solutions</h3>
+                    <p>Crystal-clear voice calls, IVR systems, and advanced routing capabilities.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>💚 WhatsApp Business</h3>
+                    <p>Official WhatsApp Business API with rich media and automation support.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>✨ RCS Messaging</h3>
+                    <p>Next-gen messaging with rich cards, carousels, and interactive buttons.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🚀 mBlastr Platform</h3>
+                    <p>Complete CPaaS solution for omnichannel customer engagement.</p>
+                </div>
+
+                <div class="feature-card">
+                    <h3>🤖 VKOLU</h3>
+                    <p>AI-powered communication platform with workflow automation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/jquery.js"></script>
+    <script src="js/vendors.min.js"></script>
+
+    <!-- Chatbot JS -->
+    <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+
+    <script>
+        // Test query function
+        function testQuery(query) {
+            // Open chatbot if not already open
+            if (!window.kolChatbot.isOpen) {
+                window.kolChatbot.openChat();
+            }
+
+            // Wait for animation, then send message
+            setTimeout(() => {
+                // Set the input value
+                document.getElementById('chatbot-input').value = query;
+                // Send the message
+                window.kolChatbot.sendMessage();
+            }, 500);
+        }
+
+        // Log when chatbot is ready
+        console.log('%c🤖 Chatbot Ready!', 'font-size: 20px; color: #0066FF; font-weight: bold;');
+        console.log('%cTry clicking the chat button in the bottom-right corner!', 'font-size: 14px; color: #6c757d;');
+    </script>
+</body>
+</html>

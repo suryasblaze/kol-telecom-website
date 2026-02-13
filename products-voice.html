@@ -1,0 +1,1079 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Wholesale Voice - Enterprise Voice Solutions | KOL Telecom</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="KOL Telecom">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="Wholesale Voice services for enterprises and telcos. Direct routes, competitive rates, 200+ interconnects worldwide.">
+        <!-- favicon icon -->
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+        <!-- google fonts preconnect -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- style sheets and font icons  -->
+        <link rel="stylesheet" href="css/vendors.min.css"/>
+        <link rel="stylesheet" href="css/icon.min.css"/>
+        <link rel="stylesheet" href="css/style.min.css"/>
+        <link rel="stylesheet" href="css/responsive.min.css"/>
+        <link rel="stylesheet" href="css/font-size-fix.css"/>
+        <link rel="stylesheet" href="demos/corporate/corporate.css" />
+        <style>
+            .text-orange {
+                color: #FF6B35 !important;
+            }
+            .bg-orange {
+                background-color: #FF6B35 !important;
+            }
+            .btn-orange {
+                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+                color: white;
+            }
+            .btn-orange:hover {
+                background: linear-gradient(135deg, #F7931E 0%, #FF6B35 100%);
+                color: white;
+            }
+
+            /* Hero stat cards */
+            .voice-stat-card {
+                background: #fff;
+                border-radius: 16px;
+                padding: 30px 20px;
+                text-align: center;
+                border: 1.5px solid transparent;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 130px;
+                transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+            }
+            .voice-stat-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+                border-color: #FF6B35;
+            }
+            .voice-stat-card h2 {
+                font-size: 38px;
+                margin-bottom: 6px;
+                line-height: 1.1;
+            }
+
+            /* Why choose cards */
+            .voice-why-card {
+                background: #fff;
+                border: 1.5px solid #eee;
+                border-radius: 16px;
+                padding: 40px 28px;
+                height: 100%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+            }
+            .voice-why-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+                border-color: #FF6B35;
+            }
+            .voice-why-icon {
+                width: 64px;
+                height: 64px;
+                border-radius: 16px;
+                background: rgba(255, 107, 53, 0.1);
+                color: #FF6B35;
+                font-size: 28px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 22px;
+                transition: background 0.3s ease, color 0.3s ease;
+            }
+            .voice-why-card:hover .voice-why-icon {
+                background: #FF6B35;
+                color: #fff;
+            }
+
+            /* Features slider */
+            .voice-features-slider {
+                overflow: hidden;
+                padding: 0;
+            }
+            .voice-features-slider .swiper-wrapper {
+                padding: 15px 0 40px;
+                align-items: stretch;
+            }
+            .voice-features-slider .swiper-slide {
+                height: auto;
+            }
+            .voice-feature-card {
+                background: #fff;
+                border: 1.5px solid #eee;
+                border-radius: 16px;
+                padding: 32px 24px;
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+                gap: 18px;
+                transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+            }
+            .voice-feature-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+                border-color: #FF6B35;
+            }
+            .voice-feature-card-icon {
+                width: 50px;
+                height: 50px;
+                min-width: 50px;
+                border-radius: 14px;
+                background: rgba(255,107,53,0.1);
+                color: #FF6B35;
+                font-size: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.3s ease, color 0.3s ease;
+            }
+            .voice-feature-card:hover .voice-feature-card-icon {
+                background: #FF6B35;
+                color: #fff;
+            }
+            .voice-feature-card-content span {
+                font-weight: 700;
+                color: #1a1a2e;
+                display: block;
+                margin-bottom: 5px;
+                font-size: 16px;
+            }
+            .voice-feature-card-content p {
+                margin-bottom: 0;
+                font-size: 14px;
+                color: #6c757d;
+                line-height: 1.5;
+            }
+            .voice-features-slider .swiper-pagination {
+                position: relative;
+                margin-top: 10px;
+                bottom: auto;
+            }
+            .voice-features-slider .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                background: #ccc;
+                opacity: 1;
+                transition: background 0.3s ease, transform 0.3s ease;
+            }
+            .voice-features-slider .swiper-pagination-bullet-active {
+                background: #FF6B35;
+                transform: scale(1.2);
+            }
+
+            /* Route cards polish */
+            .voice-route-card {
+                border-radius: 16px;
+                overflow: hidden;
+                border: 1.5px solid #eee;
+                background: #fff;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+            }
+            .voice-route-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            }
+            .voice-route-card.featured {
+                border-color: #FF6B35;
+                box-shadow: 0 8px 30px rgba(255,107,53,0.12);
+            }
+            .voice-route-header {
+                padding: 32px 28px;
+                text-align: center;
+                position: relative;
+            }
+            .voice-route-header .route-badge {
+                display: inline-block;
+                font-size: 11px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                padding: 5px 14px;
+                border-radius: 20px;
+                margin-bottom: 14px;
+            }
+            .voice-route-header h3 {
+                font-size: 26px;
+                font-weight: 700;
+                color: #fff;
+                margin-bottom: 6px;
+            }
+            .voice-route-header p {
+                color: rgba(255,255,255,0.75);
+                font-size: 14px;
+                margin-bottom: 0;
+            }
+            .voice-route-body {
+                padding: 30px 28px 32px;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .voice-route-body ul {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 24px;
+                flex: 1;
+            }
+            .voice-route-body ul li {
+                padding: 12px 0;
+                border-bottom: 1px solid #f0f0f0;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 15px;
+                color: #333;
+            }
+            .voice-route-body ul li:last-child {
+                border-bottom: none;
+            }
+            .voice-route-body ul li i {
+                font-size: 16px;
+                flex-shrink: 0;
+            }
+
+            /* Goal quote box */
+            .voice-goal-box {
+                background: linear-gradient(135deg, rgba(255,107,53,0.06) 0%, rgba(247,147,30,0.06) 100%);
+                border: 1.5px solid rgba(255,107,53,0.15);
+                border-radius: 16px;
+                padding: 35px 40px;
+            }
+
+            /* How it works process */
+            .voice-process-card {
+                background: #fff;
+                border-radius: 16px;
+                padding: 36px 28px;
+                border: 1.5px solid #eee;
+                text-align: center;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+            }
+            .voice-process-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+                border-color: #FF6B35;
+            }
+            .voice-process-num {
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+                color: #fff;
+                font-size: 18px;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 18px;
+            }
+            .voice-process-icon {
+                width: 60px;
+                height: 60px;
+                border-radius: 16px;
+                background: rgba(255,107,53,0.08);
+                color: #FF6B35;
+                font-size: 26px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 18px;
+                transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            }
+            .voice-process-card:hover .voice-process-icon {
+                background: #FF6B35;
+                color: #fff;
+                transform: scale(1.08);
+            }
+            .voice-process-connector {
+                display: none;
+            }
+            @media (min-width: 992px) {
+                .voice-process-connector {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: 50%;
+                    right: -28px;
+                    transform: translateY(-50%);
+                    width: 40px;
+                    z-index: 2;
+                    color: #FF6B35;
+                    font-size: 20px;
+                    opacity: 0.5;
+                }
+            }
+
+            /* Trust bar */
+            .voice-trust-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                padding: 18px 24px;
+                background: #fff;
+                border-radius: 12px;
+                border: 1px solid #eee;
+                transition: box-shadow 0.3s ease, border-color 0.3s ease;
+            }
+            .voice-trust-item:hover {
+                box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+                border-color: #FF6B35;
+            }
+            .voice-trust-item i {
+                font-size: 24px;
+                color: #FF6B35;
+            }
+            .voice-trust-item span {
+                font-weight: 600;
+                color: #1a1a2e;
+                font-size: 14px;
+                line-height: 1.3;
+            }
+
+            /* FAQ section */
+            .voice-faq .accordion-item {
+                border: 1.5px solid #eee !important;
+                border-radius: 14px !important;
+                margin-bottom: 14px;
+                overflow: hidden;
+                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            }
+            .voice-faq .accordion-item:hover,
+            .voice-faq .accordion-item.active-accordion {
+                border-color: rgba(255,107,53,0.3) !important;
+                box-shadow: 0 6px 20px rgba(255,107,53,0.06);
+            }
+            .voice-faq .accordion-header {
+                border-bottom: none !important;
+            }
+            .voice-faq .accordion-title {
+                padding: 20px 24px !important;
+            }
+            .voice-faq .accordion-title i {
+                color: #FF6B35 !important;
+            }
+            .voice-faq .accordion-body {
+                padding: 0 24px 20px !important;
+            }
+
+            /* Footer mascot 3D */
+            .footer-mascot-3d {
+                display: inline-block;
+                perspective: 800px;
+                cursor: pointer;
+            }
+            .footer-mascot-3d img {
+                animation: mascot-float 4s ease-in-out infinite;
+                filter: drop-shadow(0 8px 20px rgba(255, 107, 53, 0.25));
+                transition: transform 0.15s ease-out;
+            }
+            @keyframes mascot-float {
+                0%, 100% { transform: translateY(0) rotateY(0deg); }
+                25% { transform: translateY(-10px) rotateY(5deg); }
+                75% { transform: translateY(-10px) rotateY(-5deg); }
+            }
+        </style>
+        <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+</head>
+    <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+        <div class="box-layout">
+            <!-- start header -->
+            <header>
+                <!-- start navigation -->
+                <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                    <div class="container-fluid">
+                        <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="default-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="alt-logo" width="142" height="28">
+                                <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt="" class="mobile-logo" width="142" height="28">
+                            </a>
+                        </div>
+                        <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                            <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                                <span class="navbar-toggler-line"></span>
+                            </button>
+                            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-item dropdown submenu">
+                                        <a href="#" class="nav-link">Products</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
+                                            <div class="d-lg-flex mega-menu m-auto flex-column">
+                                                <div class="row row-cols-1 row-cols-lg-5 mb-60px md-mb-30px sm-mb-20px">
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">cPaaS</li>
+                                                            <li><a href="products-mblastr.html">mBlastr</a></li>
+                                                            <li><a href="products-vkolu.html">VKOLU</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Whole Sale</li>
+                                                            <li><a href="products-voice.html">Voice</a></li>
+                                                            <li><a href="products-sms.html">SMS(A2P)</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Retail</li>
+                                                            <li><a href="products-rcs.html">RCS</a></li>
+                                                            <li><a href="products-did.html">DID</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Instant Messaging</li>
+                                                            <li><a href="products-whatsapp.html">Whatsapp for Business</a></li>
+                                                            <li><a href="products-instagram.html">Instagram</a></li>
+                                                            <li><a href="products-viber.html">Viber</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col">
+                                                        <ul>
+                                                            <li class="sub-title">Number Lookup</li>
+                                                            <li><a href="products-number-lookup.html">Number Lookup</a></li>
+                                                            <li><a href="products-hlr.html">HLR</a></li>
+                                                            <li><a href="products-mnp.html">MNP</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Services</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a href="services-mail-hosting.html">Mail Hosting</a></li>
+                                            <li><a href="services-it-managed.html">IT Managed Services</a></li>
+                                            <li><a href="services-ip-pbx.html">IP PBX</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Solutions</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                            <li><a href="solutions-echt.html">ECHT</a></li>
+                                            <li><a href="solutions-textr.html">Textr</a></li>
+                                            <li><a href="solutions-cedar.html">Cedar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Partners</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                           <li><a href="partners-key.html">Our Key Partners</a></li>
+                                            <li><a href="partners-become.html">Become Our Partner</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown dropdown-with-icon-style02">
+                                        <a href="#" class="nav-link">Connect With Us</a>
+                                        <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink4" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                            <li><a href="ethics-conduct.html">Ethics and conduct</a></li>
+                                            <li><a href="terms-conditions.html">Terms and conditions</a></li>
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="download.html">Download</a></li>
+                                            <li><a href="contact-us.html">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">
+                            <div class="header-icon">
+                                <div class="header-search-icon icon">
+                                    <a href="#" class="search-form-icon header-search-form"><i class="feather icon-feather-search"></i></a>
+                                    <div class="search-form-wrapper">
+                                        <button title="Close" type="button" class="search-close">×</button>
+                                        <form id="search-form" role="search" method="get" class="search-form text-left" action="search-result.html">
+                                            <div class="search-form-box">
+                                                <h2 class="text-black text-center fw-600 mb-4 ls-minus-1px">What are you looking for?</h2>
+                                                <input class="search-input" id="search-form-input5e219ef164995" placeholder="Enter your keywords..." name="q" value="" type="text" autocomplete="off">
+                                                <button type="submit" class="search-button">
+                                                    <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="header-button ms-20px d-none d-xl-inline-block">
+                                    <a href="contact-us.html" class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">
+                                        <span>
+                                            <span class="btn-double-text fw-600" data-text="Get Started">Get Started</span>
+                                            <span><i class="fa-solid fa-arrow-right"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <!-- end navigation -->
+            </header>
+            <!-- end header -->
+
+            <!-- start hero section with stats -->
+            <section class="top-space-margin position-relative overflow-hidden" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                <div class="container">
+                    <div class="row align-items-center pt-6 pb-6">
+                        <div class="col-lg-7 text-center text-lg-start md-mb-50px" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="ps-25px pe-25px mb-20px text-uppercase text-orange fs-14 lh-42px fw-700 border-radius-100px bg-white d-inline-block">Wholesale Voice Solutions</span>
+                            <h1 class="fw-700 text-white ls-minus-3px mb-25px">Enterprise Voice <br>Termination Services</h1>
+                            <p class="text-white opacity-8 fs-19 mb-40px w-90 lg-w-100">Multi-circuit, high-volume phone service for enterprises, large corporates and telcos. Competitive rates, superior quality, 24/7 support.</p>
+                            <a href="#routes" class="btn btn-large btn-white btn-rounded btn-box-shadow me-15px xs-mb-15px">View Routes<i class="fa-solid fa-arrow-right ms-10px"></i></a>
+                            <a href="contact-us.html" class="btn btn-large btn-transparent-white-light btn-rounded border-2">Contact Sales</a>
+                        </div>
+                        <div class="col-lg-5" data-anime='{ "el": "childs", "translateY": [40, 0], "opacity": [0,1], "duration": 800, "delay": 400, "staggervalue": 250, "easing": "easeOutQuad" }'>
+                            <div class="row row-cols-1 row-cols-sm-2 g-3 align-items-stretch">
+                                <div class="col">
+                                    <div class="voice-stat-card">
+                                        <h2 class="fw-700 text-dark-gray ls-minus-2px">200<sup class="fs-26 text-orange">+</sup></h2>
+                                        <span class="fw-600 text-dark-gray d-block fs-15">Active Interconnects</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="voice-stat-card">
+                                        <h2 class="fw-700 text-dark-gray ls-minus-2px">2008</h2>
+                                        <span class="fw-600 text-dark-gray d-block fs-15">FCC Licensed Since</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="voice-stat-card">
+                                        <h2 class="fw-700 text-dark-gray ls-minus-2px">99.9<sup class="fs-26 text-orange">%</sup></h2>
+                                        <span class="fw-600 text-dark-gray d-block fs-15">Uptime Guarantee</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="voice-stat-card">
+                                        <h2 class="fw-700 text-dark-gray ls-minus-2px">24/7</h2>
+                                        <span class="fw-600 text-dark-gray d-block fs-15">Expert Support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end hero section -->
+
+            <!-- start what is wholesale voice section -->
+            <section>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 md-mb-50px" data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <img src="images/kolimg/voice.png" alt="Wholesale Voice" loading="lazy" class="border-radius-6px w-100" data-no-retina>
+                        </div>
+                        <div class="col-lg-6 ps-6 xl-ps-4" data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-orange fw-600 mb-15px text-uppercase d-block">What is Wholesale Voice?</span>
+                            <h3 class="fw-700 text-dark-gray ls-minus-2px mb-25px">High-Volume Voice Services for Telecommunications Industry</h3>
+                            <p class="mb-25px">Businesses in the telecommunications industry use wholesale voice to provide international, long distance, toll free, DID, along with local voice services, as well as additional applications like dial-up, fax, and video conferencing.</p>
+                            <p class="mb-35px">Often known as wholesale VOIP, wholesale voice is available in a variety of speeds, ranging from ISDN PRI T1 to OCx. Wholesale VoIP is regarded as a vital component of the international communications industry.</p>
+                            <div class="bg-very-light-gray border-radius-6px p-30px">
+                                <p class="fw-600 text-dark-gray mb-10px"><i class="bi bi-patch-check-fill text-orange me-10px"></i>FCC 499, 214 Telecom Carrier Licenses</p>
+                                <p class="fw-600 text-dark-gray mb-0"><i class="bi bi-patch-check-fill text-orange me-10px"></i>Operating in USA since 2008</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end what is wholesale voice section -->
+
+            <!-- start trust bar -->
+            <section class="pt-0 pb-0">
+                <div class="container">
+                    <div class="row row-cols-2 row-cols-md-4 g-3" data-anime='{ "el": "childs", "translateY": [20, 0], "opacity": [0,1], "duration": 500, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                        <div class="col">
+                            <div class="voice-trust-item">
+                                <i class="bi bi-shield-check"></i>
+                                <span>FCC Licensed<br>Carrier</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="voice-trust-item">
+                                <i class="bi bi-globe-americas"></i>
+                                <span>200+ Global<br>Interconnects</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="voice-trust-item">
+                                <i class="bi bi-clock-history"></i>
+                                <span>17+ Years<br>Experience</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="voice-trust-item">
+                                <i class="bi bi-patch-check"></i>
+                                <span>99.9% Uptime<br>SLA Guarantee</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end trust bar -->
+
+            <!-- start why choose section -->
+            <section class="bg-very-light-gray">
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-7 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-orange fw-600 mb-15px text-uppercase d-block">Why Choose Us</span>
+                            <h2 class="fw-700 text-dark-gray ls-minus-2px">Why choose Wholesale Voice?</h2>
+                        </div>
+                    </div>
+                    <div class="row mb-4" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                        <div class="col-12 mb-30px">
+                            <p class="fs-19 text-dark-gray text-center">Supporting a blend of physical and increasingly virtualized infrastructure, as well as the administration of a variety of processes, are all part of delivering wholesale services. Wholesale carriers have expanded their services to include managed data centres, global internet connections, and co-location space.</p>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 mb-5" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 700, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                        <div class="col mb-30px">
+                            <div class="voice-why-card">
+                                <div class="voice-why-icon"><i class="bi bi-cloud-arrow-up"></i></div>
+                                <span class="d-block fw-700 text-dark-gray mb-12px fs-18">Cloud & SDN Ready</span>
+                                <p class="mb-0">Support for cloud, software defined networking, and network function virtualization enhances the potential.</p>
+                            </div>
+                        </div>
+                        <div class="col mb-30px">
+                            <div class="voice-why-card">
+                                <div class="voice-why-icon"><i class="bi bi-cpu"></i></div>
+                                <span class="d-block fw-700 text-dark-gray mb-12px fs-18">cPaaS Evolution</span>
+                                <p class="mb-0">Wholesale carrier services continue to evolve to new service enablement, including cPaaS platforms.</p>
+                            </div>
+                        </div>
+                        <div class="col mb-30px">
+                            <div class="voice-why-card">
+                                <div class="voice-why-icon"><i class="bi bi-globe2"></i></div>
+                                <span class="d-block fw-700 text-dark-gray mb-12px fs-18">Global IP Networks</span>
+                                <p class="mb-0">End-to-end core IP networks around the world with cost-effective and efficient service delivery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end why choose section -->
+
+            <!-- start how it works section -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-7 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-orange fw-600 mb-15px text-uppercase d-block">Simple Process</span>
+                            <h2 class="fw-700 text-dark-gray ls-minus-2px">How does it work?</h2>
+                            <p class="mb-0">Get started with enterprise-grade voice termination in three simple steps.</p>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-lg-3 g-4 justify-content-center" data-anime='{ "el": "childs", "translateY": [40, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 250, "easing": "easeOutQuad" }'>
+                        <div class="col position-relative">
+                            <div class="voice-process-card">
+                                <div class="voice-process-num">1</div>
+                                <div class="voice-process-icon"><i class="bi bi-person-check"></i></div>
+                                <h6 class="fw-700 text-dark-gray mb-10px">Sign Up & Qualify</h6>
+                                <p class="mb-0 fs-15">Complete a quick application, meet the $500 minimum deposit, and get your account activated within 24 hours.</p>
+                            </div>
+                            <div class="voice-process-connector"><i class="bi bi-chevron-right"></i></div>
+                        </div>
+                        <div class="col position-relative">
+                            <div class="voice-process-card">
+                                <div class="voice-process-num">2</div>
+                                <div class="voice-process-icon"><i class="bi bi-sliders"></i></div>
+                                <h6 class="fw-700 text-dark-gray mb-10px">Configure Routes</h6>
+                                <p class="mb-0 fs-15">Choose Gold or Silver routes for your destinations. Our team helps you optimize routing for quality and cost.</p>
+                            </div>
+                            <div class="voice-process-connector"><i class="bi bi-chevron-right"></i></div>
+                        </div>
+                        <div class="col">
+                            <div class="voice-process-card">
+                                <div class="voice-process-num">3</div>
+                                <div class="voice-process-icon"><i class="bi bi-rocket-takeoff"></i></div>
+                                <h6 class="fw-700 text-dark-gray mb-10px">Go Live</h6>
+                                <p class="mb-0 fs-15">Start terminating voice traffic immediately with real-time monitoring, reseller panel access, and 24/7 expert support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end how it works section -->
+
+            <!-- start features section -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-7 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-orange fw-600 mb-15px text-uppercase d-block">Essential Features</span>
+                            <h2 class="fw-700 text-dark-gray ls-minus-2px">What are the essential features of our Wholesale Voice?</h2>
+                        </div>
+                    </div>
+                    <div class="swiper voice-features-slider mb-5" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 24, "loop": true, "speed": 700, "autoplay": { "delay": 3000, "disableOnInteraction": false, "pauseOnMouseEnter": true }, "pagination": { "el": ".swiper-pagination", "clickable": true }, "breakpoints": { "576": { "slidesPerView": 2 }, "992": { "slidesPerView": 3 } }, "effect": "slide" }'>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="voice-feature-card">
+                                    <div class="voice-feature-card-icon"><i class="bi bi-hdd-network"></i></div>
+                                    <div class="voice-feature-card-content">
+                                        <span>Multiple Protocols</span>
+                                        <p>SIP/H323 protocol support for maximum compatibility</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="voice-feature-card">
+                                    <div class="voice-feature-card-icon"><i class="bi bi-soundwave"></i></div>
+                                    <div class="voice-feature-card-content">
+                                        <span>All Major Codecs</span>
+                                        <p>Compatible with G729/G723/G711/GSM codecs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="voice-feature-card">
+                                    <div class="voice-feature-card-icon"><i class="bi bi-globe2"></i></div>
+                                    <div class="voice-feature-card-content">
+                                        <span>Worldwide Connections</span>
+                                        <p>Reliable Tier 1, Tier 2 partners across the globe</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="voice-feature-card">
+                                    <div class="voice-feature-card-icon"><i class="bi bi-bar-chart-line"></i></div>
+                                    <div class="voice-feature-card-content">
+                                        <span>Network Stability</span>
+                                        <p>High ACD, ASR and low PDD for superior performance</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="voice-feature-card">
+                                    <div class="voice-feature-card-icon"><i class="bi bi-headset"></i></div>
+                                    <div class="voice-feature-card-content">
+                                        <span>24/7 Technical Support</span>
+                                        <p>Round-the-clock surveillance and support by expert team</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="voice-feature-card">
+                                    <div class="voice-feature-card-icon"><i class="bi bi-coin"></i></div>
+                                    <div class="voice-feature-card-content">
+                                        <span>Competitive Rates</span>
+                                        <p>Highly competitive rates for worldwide A-Z destinations</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="voice-feature-card">
+                                    <div class="voice-feature-card-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                                    <div class="voice-feature-card-content">
+                                        <span>Reseller Panel</span>
+                                        <p>Monitor call flow, track minutes, instant renewal capabilities</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10 text-center" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="voice-goal-box">
+                                <p class="fs-19 fw-600 text-dark-gray mb-0">Our goal is to offer our clients the most flexible and reliable communication services that lower your termination costs and increase profit margins by delivering quality and consistent voice worldwide at competitive prices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end features section -->
+
+            <!-- start routes comparison section -->
+            <section id="routes" class="bg-very-light-gray">
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-7 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-orange fw-600 mb-15px text-uppercase d-block">Route Options</span>
+                            <h2 class="fw-700 text-dark-gray ls-minus-2px">What are the routes we offer for Wholesale Voice?</h2>
+                            <p class="mb-0">Direct connections assure a great degree of reliability with very high ASR and ACD and equally high network efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 justify-content-center g-4" data-anime='{ "el": "childs", "translateY": [40, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <!-- Gold Route -->
+                        <div class="col">
+                            <div class="voice-route-card featured">
+                                <div class="voice-route-header" style="background: linear-gradient(135deg, #F7931E 0%, #FF6B35 100%);">
+                                    <span class="route-badge" style="background: rgba(255,255,255,0.2); color: #fff;">Recommended</span>
+                                    <h3>Gold Routes</h3>
+                                    <p>Direct connections for highest reliability</p>
+                                </div>
+                                <div class="voice-route-body">
+                                    <ul>
+                                        <li><i class="bi bi-check-circle-fill text-orange"></i> Direct to Tier 1 carriers worldwide</li>
+                                        <li><i class="bi bi-check-circle-fill text-orange"></i> Intelligent network routing</li>
+                                        <li><i class="bi bi-check-circle-fill text-orange"></i> Competitive rates & superior quality</li>
+                                        <li><i class="bi bi-check-circle-fill text-orange"></i> 100+ carrier connections</li>
+                                        <li><i class="bi bi-check-circle-fill text-orange"></i> Open RTP for select destinations</li>
+                                    </ul>
+                                    <a href="contact-us.html" class="btn btn-large btn-rounded w-100 fw-600" style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: #fff;">Get Gold Route <i class="fa-solid fa-arrow-right ms-8px"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Silver Route -->
+                        <div class="col">
+                            <div class="voice-route-card">
+                                <div class="voice-route-header" style="background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);">
+                                    <span class="route-badge" style="background: rgba(255,255,255,0.15); color: #fff;">Cost-Effective</span>
+                                    <h3>Silver Routes</h3>
+                                    <p>Affordable rates for all business sizes</p>
+                                </div>
+                                <div class="voice-route-body">
+                                    <ul>
+                                        <li><i class="bi bi-check-circle-fill text-orange"></i> Local, national & international calls</li>
+                                        <li><i class="bi bi-check-circle-fill text-orange"></i> Reasonable, competitive rates</li>
+                                        <li><i class="bi bi-check-circle-fill text-orange"></i> Hassle-free communication</li>
+                                        <li><i class="bi bi-check-circle-fill text-orange"></i> Consistent traffic monitoring</li>
+                                        <li><i class="bi bi-check-circle-fill text-orange"></i> CC routes available additionally</li>
+                                    </ul>
+                                    <a href="contact-us.html" class="btn btn-large btn-dark-gray btn-rounded w-100 fw-600">Get Silver Route <i class="fa-solid fa-arrow-right ms-8px"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end routes comparison section -->
+
+            <!-- start FAQ section -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-lg-7 text-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <span class="text-orange fw-600 mb-15px text-uppercase d-block">FAQ</span>
+                            <h2 class="fw-700 text-dark-gray ls-minus-2px">Frequently Asked Questions</h2>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 700, "delay": 200, "easing": "easeOutQuad" }'>
+                            <div class="accordion accordion-style-02 voice-faq" id="voice-faq" data-active-icon="icon-feather-minus" data-inactive-icon="icon-feather-plus">
+
+                                <div class="accordion-item active-accordion">
+                                    <div class="accordion-header">
+                                        <a href="#" data-bs-toggle="collapse" data-bs-target="#voice-faq-01" aria-expanded="true" data-bs-parent="#voice-faq">
+                                            <div class="accordion-title position-relative text-dark-gray pe-30px">
+                                                <i class="feather icon-feather-minus"></i><span class="fw-700 fs-17">What protocols and codecs do you support?</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="voice-faq-01" class="accordion-collapse collapse show" data-bs-parent="#voice-faq">
+                                        <div class="accordion-body last-paragraph-no-margin">
+                                            <p>We support SIP and H.323 protocols along with all major codecs including G.729, G.723, G.711, and GSM. This ensures maximum compatibility with your existing infrastructure and equipment.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <a href="#" data-bs-toggle="collapse" data-bs-target="#voice-faq-02" aria-expanded="false" data-bs-parent="#voice-faq">
+                                            <div class="accordion-title collapsed position-relative text-dark-gray pe-30px">
+                                                <i class="feather icon-feather-plus"></i><span class="fw-700 fs-17">What is the minimum payment to get started?</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="voice-faq-02" class="accordion-collapse collapse" data-bs-parent="#voice-faq">
+                                        <div class="accordion-body last-paragraph-no-margin">
+                                            <p>Our wholesale voice termination services require a minimum payment of $500. This gives you immediate access to our full route portfolio, reseller panel, and 24/7 technical support.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <a href="#" data-bs-toggle="collapse" data-bs-target="#voice-faq-03" aria-expanded="false" data-bs-parent="#voice-faq">
+                                            <div class="accordion-title collapsed position-relative text-dark-gray pe-30px">
+                                                <i class="feather icon-feather-plus"></i><span class="fw-700 fs-17">What is the difference between Gold and Silver routes?</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="voice-faq-03" class="accordion-collapse collapse" data-bs-parent="#voice-faq">
+                                        <div class="accordion-body last-paragraph-no-margin">
+                                            <p>Gold Routes provide direct connections to Tier 1 carriers with the highest ASR/ACD and intelligent routing - ideal for premium traffic. Silver Routes offer cost-effective rates for local, national, and international calls, perfect for high-volume, budget-conscious operations.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <a href="#" data-bs-toggle="collapse" data-bs-target="#voice-faq-04" aria-expanded="false" data-bs-parent="#voice-faq">
+                                            <div class="accordion-title collapsed position-relative text-dark-gray pe-30px">
+                                                <i class="feather icon-feather-plus"></i><span class="fw-700 fs-17">How quickly can I get started?</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="voice-faq-04" class="accordion-collapse collapse" data-bs-parent="#voice-faq">
+                                        <div class="accordion-body last-paragraph-no-margin">
+                                            <p>Once your application is approved and minimum deposit received, your account can be activated within 24 hours. Our team will assist with route configuration and testing to ensure a smooth launch.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <div class="accordion-header">
+                                        <a href="#" data-bs-toggle="collapse" data-bs-target="#voice-faq-05" aria-expanded="false" data-bs-parent="#voice-faq">
+                                            <div class="accordion-title collapsed position-relative text-dark-gray pe-30px">
+                                                <i class="feather icon-feather-plus"></i><span class="fw-700 fs-17">Do you provide a reseller panel?</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div id="voice-faq-05" class="accordion-collapse collapse" data-bs-parent="#voice-faq">
+                                        <div class="accordion-body last-paragraph-no-margin">
+                                            <p>Yes, all wholesale voice clients get access to our full-featured reseller panel. You can monitor real-time call flow, track minutes, view detailed CDRs, manage sub-accounts, and handle instant balance renewals.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end FAQ section -->
+
+            <!-- start minimum requirements CTA -->
+            <section>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                            <div class="border-radius-16px overflow-hidden" style="background: linear-gradient(135deg, #1a1a2e 0%, #2C3E50 100%);">
+                                <div class="p-8 lg-p-6 text-center">
+                                    <span class="d-inline-block fs-13 fw-700 text-orange text-uppercase letter-spacing-2px mb-15px">Get Started</span>
+                                    <h3 class="fw-700 text-white mb-20px ls-minus-1px">What are the minimum requirements to qualify?</h3>
+                                    <p class="text-white opacity-7 fs-18 mb-35px w-70 lg-w-80 md-w-100 mx-auto">Our premium Wholesale Voice Termination services are all available at a minimum payment of</p>
+                                    <div class="mb-40px">
+                                        <span class="d-inline-block fs-80 fw-700 ls-minus-4px text-orange">$500</span>
+                                        <span class="d-block text-white opacity-6 fs-16 mt-minus-5px">Minimum Payment</span>
+                                    </div>
+                                    <a href="contact-us.html" class="btn btn-large btn-rounded btn-box-shadow me-15px xs-mb-15px" style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: #fff;">Contact Us to Inquire<i class="fa-solid fa-arrow-right ms-10px"></i></a>
+                                    <a href="download.html" class="btn btn-large btn-transparent-white-light btn-rounded border-2">Download Brochure</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end minimum requirements CTA -->
+
+            <!-- start footer -->
+            <footer class="half-footer pb-45px border-top border-color-light-gray background-repeat" style="background-image:url('images/kolimg/footer\ bg.png');">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin z-index-1 text-center text-sm-start xs-mb-20px">
+                            <span class="fs-20 fw-500 text-dark-gray d-block mb-5px">Location</span>
+                            <p class="w-100">KOL Telecom Services LLC,<br>251 Little Falls Drive<br>
+                                Wilmington, DE 19808<br>
+                                United States of America.</p>
+                        </div>
+                        <div class="col-lg-6 col-md-4 col-sm-12 text-center z-index-1 mb-20px mb-md-0">
+                            <div class="footer-mascot-3d" id="footerMascot">
+                                <img src="images/kolimg/2.png" alt="KOL Logo" data-no-retina="" style="max-width: 280px; width: 100%; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin text-center text-sm-end z-index-1">
+                            <span class="fs-20 fw-700 text-dark-gray d-block mb-5px">How can we help?</span>
+                            <a href="mailto:info@koltelecom.com" class="text-dark-gray fw-600 d-block mb-0" style="font-size: 16px;">info@koltelecom.com</a>
+                            <a href="tel:+13022952746" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">+1 302 295 2746</a>
+                        </div>
+                    </div>
+                    <div class="row align-items-center justify-content-center mt-20px mb-10px md-mb-20px">
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-7 text-center elements-social social-icon-style-04">
+                            <ul class="large-icon dark mb-0">
+                                <li><a class="facebook" href="https://www.facebook.com/koltelecomservices/" target="_blank"><i class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                                <li><a class="twitter" href="https://twitter.com/KOLTELECOM" target="_blank"><i class="fa-brands fa-x-twitter"></i><span></span></a></li>
+                                <li><a class="instagram" href="https://www.instagram.com/koltelecom/" target="_blank"><i class="fa-brands fa-instagram"></i><span></span></a></li>
+                                <li><a class="linkedin" href="https://www.linkedin.com/company/kol-telecom-services-llc" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="col d-none d-md-flex">
+                            <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-12 last-paragraph-no-margin text-center sm-mb-10px">
+                            <p>© 2026 <a href="index.html" target="_blank" class="text-decoration-line-bottom text-dark-gray fw-500">KOL Telecom.</a> All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end footer -->
+        </div>
+        <!-- end box-layout -->
+        <!-- start scroll progress -->
+        <div class="scroll-progress d-none d-xxl-block">
+            <a href="#" class="scroll-top" aria-label="scroll">
+                <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+            </a>
+        </div>
+        <!-- end scroll progress -->
+        <!-- WhatsApp floating button -->
+        </div>
+
+        <!-- javascript libraries -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/vendors.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <!-- Chatbot JS -->
+    <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+    <!-- 3D Mascot tilt -->
+    <script>
+    (function(){
+        var el = document.getElementById('footerMascot');
+        if(!el) return;
+        var img = el.querySelector('img');
+        el.addEventListener('mousemove', function(e){
+            var r = el.getBoundingClientRect();
+            var x = (e.clientX - r.left) / r.width - 0.5;
+            var y = (e.clientY - r.top) / r.height - 0.5;
+            img.style.animation = 'none';
+            img.style.transform = 'rotateY('+x*25+'deg) rotateX('+(-y*25)+'deg)';
+        });
+        el.addEventListener('mouseleave', function(){
+            img.style.animation = '';
+            img.style.transform = '';
+        });
+    })();
+    </script>
+</body>
+</html>

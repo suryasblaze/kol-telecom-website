@@ -1,0 +1,785 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <title>mBlastr - Cloud Based cPaaS Solution for India | KOL Telecom</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="KOL Telecom">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description"
+        content="mBlastr - Cloud based cPaaS solution for India. Promote quality interactions with customers through Voice and SMS platforms.">
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <!-- google fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- style sheets and font icons  -->
+    <link rel="stylesheet" href="css/vendors.min.css" />
+    <link rel="stylesheet" href="css/icon.min.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/responsive.min.css" />
+    <link rel="stylesheet" href="css/font-size-fix.css" />
+    <link rel="stylesheet" href="demos/corporate/corporate.css" />
+    <style>
+        .text-orange {
+            color: #FF6B35 !important;
+        }
+
+        .bg-orange {
+            background-color: #FF6B35 !important;
+        }
+
+        .btn-orange {
+            background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+            color: white;
+        }
+
+        .btn-orange:hover {
+            background: linear-gradient(135deg, #F7931E 0%, #FF6B35 100%);
+            color: white;
+        }
+        /* mBlastr features slider */
+        .mblastr-features-slider {
+            overflow: hidden;
+            padding: 0;
+        }
+        .mblastr-features-slider .swiper-wrapper {
+            padding: 15px 0 40px;
+            align-items: stretch;
+        }
+        .mblastr-features-slider .swiper-slide {
+            height: auto;
+        }
+        .mblastr-feature-card {
+            background: #fff;
+            border: 1.5px solid #eee;
+            border-radius: 16px;
+            padding: 38px 26px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+        .mblastr-feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+            border-color: #FF6B35;
+        }
+        .mblastr-feature-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 14px;
+            background: rgba(255, 107, 53, 0.1);
+            color: #FF6B35;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            flex-shrink: 0;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .mblastr-feature-card:hover .mblastr-feature-icon {
+            background: #FF6B35;
+            color: #fff;
+        }
+        /* Swiper pagination dots */
+        .mblastr-features-slider .swiper-pagination {
+            position: relative;
+            margin-top: 10px;
+            bottom: auto;
+        }
+        .mblastr-features-slider .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background: #ccc;
+            opacity: 1;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .mblastr-features-slider .swiper-pagination-bullet-active {
+            background: #FF6B35;
+            transform: scale(1.2);
+        }
+        /* Process step cards */
+        .process-step-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            border: 1.5px solid #eee;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+        }
+        .process-step-card:last-child { margin-bottom: 0; }
+        .process-step-card:hover {
+            transform: translateX(6px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            border-color: #FF6B35;
+        }
+        .process-step-num {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            border-radius: 12px;
+            background: rgba(255, 107, 53, 0.1);
+            color: #FF6B35;
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .process-step-card:hover .process-step-num {
+            background: #FF6B35;
+            color: #fff;
+        }
+        .process-step-icon {
+            width: 52px;
+            height: 52px;
+            min-width: 52px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.08) 0%, rgba(247, 147, 30, 0.08) 100%);
+            color: #FF6B35;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .process-step-content h6 {
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+        .process-step-content p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: #6c757d;
+            line-height: 1.5;
+        }
+    </style>
+    <!-- Chatbot CSS -->
+    <link rel="stylesheet" href="css/chatbot.css"/>
+    <link rel="stylesheet" href="css/whatsapp-button.css"/>
+</head>
+
+<body data-mobile-nav-trigger-alignment="right" data-mobile-nav-style="modern" data-mobile-nav-bg-color="#242E45">
+    <div class="box-layout">
+        <!-- start header -->
+        <header>
+            <!-- start navigation -->
+            <nav class="navbar navbar-expand-lg header-light bg-white disable-fixed">
+                <div class="container-fluid">
+                    <div class="col-auto col-xl-3 col-lg-2 me-lg-0 me-auto">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt=""
+                                class="default-logo" width="142" height="28">
+                            <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt=""
+                                class="alt-logo" width="142" height="28">
+                            <img src="images/kolimg/KOLLOGO.png" data-at2x="images/kolimg/KOLLOGO.png" alt=""
+                                class="mobile-logo" width="142" height="28">
+                        </a>
+                    </div>
+                    <div class="col-auto col-xl-6 col-lg-8 menu-order position-static">
+                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                            <span class="navbar-toggler-line"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item dropdown submenu">
+                                    <a href="#" class="nav-link">Products</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <div class="dropdown-menu submenu-content"
+                                        aria-labelledby="navbarDropdownMenuLink1">
+                                        <div class="d-lg-flex mega-menu m-auto flex-column">
+                                            <div class="row row-cols-1 row-cols-lg-5 mb-60px md-mb-30px sm-mb-20px">
+                                                <div class="col">
+                                                    <ul>
+                                                        <li class="sub-title">cPaaS</li>
+                                                        <li><a href="products-mblastr.html">mBlastr</a></li>
+                                                        <li><a href="products-vkolu.html">VKOLU</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li class="sub-title">Whole Sale</li>
+                                                        <li><a href="products-voice.html">Voice</a></li>
+                                                        <li><a href="products-sms.html">SMS(A2P)</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li class="sub-title">Retail</li>
+                                                        <li><a href="products-rcs.html">RCS</a></li>
+                                                        <li><a href="products-did.html">DID</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li class="sub-title">Instant Messaging</li>
+                                                        <li><a href="products-whatsapp.html">Whatsapp for Business</a>
+                                                        </li>
+                                                        <li><a href="products-instagram.html">Instagram</a></li>
+                                                        <li><a href="products-viber.html">Viber</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col">
+                                                    <ul>
+                                                        <li class="sub-title">Number Lookup</li>
+                                                        <li><a href="products-number-lookup.html">Number Lookup</a></li>
+                                                        <li><a href="products-hlr.html">HLR</a></li>
+                                                        <li><a href="products-mnp.html">MNP</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown dropdown-with-icon-style02">
+                                    <a href="#" class="nav-link">Services</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a href="services-mail-hosting.html">Mail Hosting</a></li>
+                                        <li><a href="services-it-managed.html">IT Managed Services</a></li>
+                                        <li><a href="services-ip-pbx.html">IP PBX</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown dropdown-with-icon-style02">
+                                    <a href="#" class="nav-link">Solutions</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                        <li><a href="solutions-echt.html">ECHT</a></li>
+                                        <li><a href="solutions-textr.html">Textr</a></li>
+                                        <li><a href="solutions-cedar.html">Cedar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown dropdown-with-icon-style02">
+                                    <a href="#" class="nav-link">Partners</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                                        <li><a href="partners-key.html">Our Key Partners</a></li>
+                                        <li><a href="partners-become.html">Become Our Partner</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown dropdown-with-icon-style02">
+                                    <a href="#" class="nav-link">Connect With Us</a>
+                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink4"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink4">
+                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li><a href="careers.html">Careers</a></li>
+                                        <li><a href="ethics-conduct.html">Ethics and conduct</a></li>
+                                        <li><a href="terms-conditions.html">Terms and conditions</a></li>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="download.html">Download</a></li>
+                                        <li><a href="contact-us.html">Contact Us</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto col-xl-3 col-lg-2 text-end md-pe-0">
+                        <div class="header-icon">
+                            <div class="header-search-icon icon">
+                                <a href="#" class="search-form-icon header-search-form"><i
+                                        class="feather icon-feather-search"></i></a>
+                                <!-- start search input -->
+                                <div class="search-form-wrapper">
+                                    <button title="Close" type="button" class="search-close">×</button>
+                                    <form id="search-form" role="search" method="get" class="search-form text-left"
+                                        action="search-result.html">
+                                        <div class="search-form-box">
+                                            <h2 class="text-black text-center fw-600 mb-4 ls-minus-1px">What are you
+                                                looking for?</h2>
+                                            <input class="search-input" id="search-form-input5e219ef164995"
+                                                placeholder="Enter your keywords..." name="q" value="" type="text"
+                                                autocomplete="off">
+                                            <button type="submit" class="search-button">
+                                                <i class="feather icon-feather-search" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- end search input -->
+                            </div>
+                            <div class="header-button ms-20px d-none d-xl-inline-block">
+                                <a href="contact-us.html"
+                                    class="btn btn-rounded btn-transparent-light-gray border-1 btn-medium btn-switch-text text-transform-none">
+                                    <span>
+                                        <span class="btn-double-text fw-600" data-text="Get Started">Get Started</span>
+                                        <span><i class="fa-solid fa-arrow-right"></i></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- end navigation -->
+        </header>
+        <!-- end header -->
+
+        <!-- start hero section -->
+        <section
+            class="top-space-margin pt-0 pb-0 overflow-hidden position-relative border-radius-6px lg-border-radius-0px">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 position-relative md-mb-15 sm-mb-20"
+                        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="ps-13 pe-13 pt-8 pb-8 xl-ps-6 xl-pe-6 lg-ps-4 lg-pe-4 md-ps-0 md-pe-0">
+                            <span
+                                class="ps-25px pe-25px mb-20px text-uppercase text-orange fs-14 lh-42px fw-700 border-radius-100px bg-gradient-very-light-gray-transparent d-inline-block">Cloud
+                                Based cPaaS Solution</span>
+                            <h1 class="fw-700 text-dark-gray ls-minus-3px mb-30px">We Create Something <span
+                                    class="text-highlight fw-800">Fabulous<span
+                                        class="h-10px bottom-10px opacity-4 separator-animation"
+                                        style="background: linear-gradient(90deg, rgba(255, 107, 53, 0.6) 0%, rgba(247, 147, 30, 0.6) 100%);"></span></span>
+                            </h1>
+                            <p class="w-90 md-w-100 mb-40px fs-19 lh-32 text-dark-gray">MBlastr is a cloud
+                                based cPaaS solution for India. It can be used to promote quality interactions with
+                                customers. It enables independent digital promotions, customer service, follow-ups and
+                                also functions as an authentication accessory.</p>
+                            <div class="d-inline-block align-middle me-25px xs-me-15px xs-mb-15px">
+                                <a href="contact-us.html"
+                                    class="btn btn-large btn-dark-gray btn-rounded btn-box-shadow btn-switch-text">
+                                    <span>
+                                        <span class="btn-double-text" data-text="Request Demo">Request Demo</span>
+                                        <span><i class="fa-solid fa-arrow-right"></i></span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="d-inline-block align-middle">
+                                <a href="#features" class="btn btn-link btn-large text-dark-gray">Learn More<i
+                                        class="fa-solid fa-arrow-right ms-10px"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 position-relative"
+                        data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="pe-6 lg-pe-4 md-pe-0">
+                            <img src="/images/kolimg/heroimgmblastr.png" alt="mBlastr Platform"
+                                class="border-radius-6px w-100" data-no-retina>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end hero section -->
+
+        <!-- start why mblastr section -->
+        <section id="features" class="bg-very-light-gray">
+            <div class="container">
+                <div class="row align-items-center mb-6">
+                    <div class="col-lg-6 md-mb-50px"
+                        data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <figure class="position-relative m-0">
+                            <img src="/images/mblastr/Cloud-based cPaaS Platform (API-based SMS & Voice Solution).png" alt="Why mBlastr"
+                                class="border-radius-6px w-100" data-no-retina>
+                            <figcaption
+                                class="position-absolute bottom-100px left-minus-30px w-230px lg-w-200px lg-left-minus-0px sm-bottom-minus-30px">
+                                <div
+                                    class="bg-white border-radius-6px text-center box-shadow-quadruple-large pt-35px pb-35px ps-20px pe-20px">
+                                    <h1 class="fw-700 ls-minus-2px text-dark-gray mb-0">500<sup class="fs-30">+</sup>
+                                    </h1>
+                                    <span class="text-dark-gray fs-18 fw-500 lh-24 d-block">Happy Clients</span>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-6 ps-8 xl-ps-15px"
+                        data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <span class="text-orange fw-600 mb-15px text-uppercase d-block">Why Choose mBlastr</span>
+                        <h2 class="fw-700 text-dark-gray ls-minus-2px mb-30px">Why do you need mBlastr for your
+                            Business?</h2>
+                        <p class="w-95 lg-w-100 mb-35px">Every business entity has a number of customers, but reaching
+                            out to them has always been a challenge. MBlastr can provide you with software and
+                            integrated-communications solutions to effortlessly venture out to your business needs,
+                            rather than spending time learning or researching on how to connect with the target market
+                            via Voice and messaging with the right tools.</p>
+                        <p class="w-95 lg-w-100 mb-40px">It can lift your company's image from a traditional business to
+                            a contemporary enterprise that caters to every customer's unique needs and enables
+                            personalised experience. What's more, it also caters to the specific needs of the Indian
+                            customer, tailor-made exclusively for the country.</p>
+                        <div class="row row-cols-1 row-cols-sm-2 mb-30px">
+                            <div class="col">
+                                <div class="feature-box feature-box-left-icon-middle mb-30px">
+                                    <div class="feature-box-icon me-15px">
+                                        <i class="bi bi-check-circle-fill icon-extra-medium text-orange"></i>
+                                    </div>
+                                    <div class="feature-box-content">
+                                        <span class="text-dark-gray fw-600">Seamless Integration</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="feature-box feature-box-left-icon-middle mb-30px">
+                                    <div class="feature-box-icon me-15px">
+                                        <i class="bi bi-check-circle-fill icon-extra-medium text-orange"></i>
+                                    </div>
+                                    <div class="feature-box-content">
+                                        <span class="text-dark-gray fw-600">India-Specific Solution</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="feature-box feature-box-left-icon-middle">
+                                    <div class="feature-box-icon me-15px">
+                                        <i class="bi bi-check-circle-fill icon-extra-medium text-orange"></i>
+                                    </div>
+                                    <div class="feature-box-content">
+                                        <span class="text-dark-gray fw-600">Voice & SMS Platform</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="feature-box feature-box-left-icon-middle">
+                                    <div class="feature-box-icon me-15px">
+                                        <i class="bi bi-check-circle-fill icon-extra-medium text-orange"></i>
+                                    </div>
+                                    <div class="feature-box-content">
+                                        <span class="text-dark-gray fw-600">Personalized Experience</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end why mblastr section -->
+
+        <!-- start features grid section -->
+        <section>
+            <div class="container">
+                <div class="row justify-content-center mb-3">
+                    <div class="col-lg-7 text-center"
+                        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <span class="text-orange fw-600 mb-5px text-uppercase d-block">Powerful Features</span>
+                        <h2 class="fw-700 text-dark-gray ls-minus-2px">What can mBlastr do for you?</h2>
+                    </div>
+                </div>
+                <div class="swiper mblastr-features-slider" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 28, "loop": true, "speed": 700, "autoplay": { "delay": 3000, "disableOnInteraction": false, "pauseOnMouseEnter": true }, "pagination": { "el": ".swiper-pagination", "clickable": true }, "breakpoints": { "576": { "slidesPerView": 2 }, "992": { "slidesPerView": 3 } }, "effect": "slide" }'>
+                    <div class="swiper-wrapper">
+                        <!-- feature item 1 -->
+                        <div class="swiper-slide">
+                            <div class="mblastr-feature-card text-center">
+                                <div class="mblastr-feature-icon"><i class="bi bi-megaphone"></i></div>
+                                <span class="d-block fw-700 text-dark-gray mb-8px fs-18">Product Announcements</span>
+                                <p class="fs-15 mb-0">Launch product announcements and reach your customers instantly through multiple channels.</p>
+                            </div>
+                        </div>
+                        <!-- feature item 2 -->
+                        <div class="swiper-slide">
+                            <div class="mblastr-feature-card text-center">
+                                <div class="mblastr-feature-icon"><i class="bi bi-clipboard-data"></i></div>
+                                <span class="d-block fw-700 text-dark-gray mb-8px fs-18">Customer Feedback</span>
+                                <p class="fs-15 mb-0">Monitor customer feedbacks or surveys to understand your audience better.</p>
+                            </div>
+                        </div>
+                        <!-- feature item 3 -->
+                        <div class="swiper-slide">
+                            <div class="mblastr-feature-card text-center">
+                                <div class="mblastr-feature-icon"><i class="bi bi-calendar-check"></i></div>
+                                <span class="d-block fw-700 text-dark-gray mb-8px fs-18">Smart Scheduling</span>
+                                <p class="fs-15 mb-0">Schedule appointments, payment confirmations and send automated reminders.</p>
+                            </div>
+                        </div>
+                        <!-- feature item 4 -->
+                        <div class="swiper-slide">
+                            <div class="mblastr-feature-card text-center">
+                                <div class="mblastr-feature-icon"><i class="bi bi-gift"></i></div>
+                                <span class="d-block fw-700 text-dark-gray mb-8px fs-18">Seasonal Greetings</span>
+                                <p class="fs-15 mb-0">Send gratitude messages and seasonal greetings to maintain customer relationships.</p>
+                            </div>
+                        </div>
+                        <!-- feature item 5 -->
+                        <div class="swiper-slide">
+                            <div class="mblastr-feature-card text-center">
+                                <div class="mblastr-feature-icon"><i class="bi bi-shield-check"></i></div>
+                                <span class="d-block fw-700 text-dark-gray mb-8px fs-18">2-Way Authentication</span>
+                                <p class="fs-15 mb-0">Verify client mobile number using secure 2-way authentication system.</p>
+                            </div>
+                        </div>
+                        <!-- feature item 6 -->
+                        <div class="swiper-slide">
+                            <div class="mblastr-feature-card text-center">
+                                <div class="mblastr-feature-icon"><i class="bi bi-lightning-charge"></i></div>
+                                <span class="d-block fw-700 text-dark-gray mb-8px fs-18">Landing Pages</span>
+                                <p class="fs-15 mb-0">Create innovative landing pages in no time to boost your marketing campaigns.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <!-- end features grid section -->
+
+        <!-- start how it works section -->
+        <section class="bg-very-light-gray overflow-hidden position-relative border-radius-6px lg-border-radius-0px">
+            <div class="container">
+                <div class="row align-items-center mb-6">
+                    <div class="col-lg-6 pe-6 xl-pe-3 md-mb-50px"
+                        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <span class="text-orange fw-600 mb-15px text-uppercase d-block">Integration Process</span>
+                        <h2 class="fw-700 text-dark-gray ls-minus-2px mb-30px">How does mBlastr work?</h2>
+                        <p class="w-90 lg-w-100 mb-35px">MBlastr is a practical software that can be integrated
+                            seamlessly into any legacy system using API's. Once our team completes the setups internally
+                            and shares the API parameters, the clients can function independently, with no need to login
+                            to our system.</p>
+                        <p class="w-90 lg-w-100 mb-40px">Company-customer interactions can now effortlessly take place
+                            through both Voice and SMS platforms. This efficiently functions as a two-way system as the
+                            call-back solutions enable any client to reach out to the business, whenever any assistance
+                            is required.</p>
+                        <a href="contact-us.html" class="btn btn-large btn-dark-gray btn-rounded btn-box-shadow">Start
+                            Integration<i class="fa-solid fa-arrow-right ms-10px"></i></a>
+                    </div>
+                    <div class="col-lg-6"
+                        data-anime='{ "el": "childs", "translateY": [20, 0], "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                        <div class="process-step-card">
+                            <div class="process-step-num">01</div>
+                            <div class="process-step-icon"><i class="bi bi-plug"></i></div>
+                            <div class="process-step-content">
+                                <h6>API Integration</h6>
+                                <p>Seamless API integration into your existing legacy systems</p>
+                            </div>
+                        </div>
+                        <div class="process-step-card">
+                            <div class="process-step-num">02</div>
+                            <div class="process-step-icon"><i class="bi bi-gear"></i></div>
+                            <div class="process-step-content">
+                                <h6>Setup & Configuration</h6>
+                                <p>Our team handles internal setup and shares API parameters</p>
+                            </div>
+                        </div>
+                        <div class="process-step-card">
+                            <div class="process-step-num">03</div>
+                            <div class="process-step-icon"><i class="bi bi-rocket-takeoff"></i></div>
+                            <div class="process-step-content">
+                                <h6>Go Live</h6>
+                                <p>Start engaging with customers via Voice and SMS platforms</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end how it works section -->
+
+        <!-- start delivery section -->
+        <section>
+            <div class="container">
+                <div class="row justify-content-center mb-3">
+                    <div class="col-lg-8 text-center"
+                        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <span class="text-orange fw-600 mb-15px text-uppercase d-block">Support & Training</span>
+                        <h2 class="fw-700 text-dark-gray ls-minus-2px">How do we deliver mBlastr?</h2>
+                    </div>
+                </div>
+                <div class="row align-items-center mb-6">
+                    <div class="col-lg-6 md-mb-50px"
+                        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <img src="/images/mblastr/KOL team training clients on how to use the mBlastr API platform.png" alt="Support Team"
+                            class="border-radius-6px w-100" data-no-retina>
+                    </div>
+                    <div class="col-lg-6 ps-6 xl-ps-3"
+                        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <h4 class="fw-700 text-dark-gray mb-30px">Professional Support & Training</h4>
+                        <p class="mb-30px">Our professional support team will train and equip you to run the software
+                            24/7 and to make the most out of MBlastr. They will also provide assistance in identifying
+                            client needs and formulation of effective solutions, via our software services and also to
+                            adhere to the legislations for messaging.</p>
+                        <p class="mb-30px">Even after the initial set-up is done, our efficient service team will help
+                            you to operate and grow successfully. Our team is always on hand to help with anything you
+                            need regarding our service.</p>
+                        <div class="border-radius-6px p-35px mb-35px"
+                            style="background: linear-gradient(135deg, rgba(255, 107, 53, 0.08) 0%, rgba(247, 147, 30, 0.08) 100%);">
+                            <div class="feature-box feature-box-left-icon-middle">
+                                <div class="feature-box-icon me-20px">
+                                    <i class="bi bi-patch-check-fill icon-extra-large text-orange"></i>
+                                </div>
+                                <div class="feature-box-content">
+                                    <span class="fw-700 text-dark-gray d-block mb-5px">DLT Approval Support in
+                                        India</span>
+                                    <p class="mb-0">We assist businesses to acquire DLT approvals for their campaign,
+                                        enabling them to work effortlessly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.mblastr.com" target="_blank"
+                            class="btn btn-large btn-dark-gray btn-rounded btn-box-shadow">Read More on mblastr.com<i
+                                class="fa-solid fa-arrow-right ms-10px"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end delivery section -->
+
+        <!-- start vkolu section -->
+        <section class="bg-very-light-gray overflow-hidden">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 position-relative md-mb-50px"
+                        data-anime='{ "el": "childs", "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <img src="/images/mblastr/GLOBAL BUSINESS.png" alt="Global Business"
+                            class="border-radius-6px w-100" data-no-retina>
+                    </div>
+                    <div class="col-lg-6 ps-8 xl-ps-4"
+                        data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <h3 class="fw-700 text-dark-gray ls-minus-2px mb-30px">Not an Indian Business? Still looking for
+                            these services?</h3>
+                        <h4 class="fw-600 text-dark-gray mb-25px">Check out our global solution</h4>
+                        <p class="mb-40px w-90 lg-w-100">VKOLU provides the same powerful communication platform
+                            capabilities for businesses worldwide, tailored to meet international requirements and
+                            regulations.</p>
+                        <a href="products-vkolu.html" class="btn btn-large btn-rounded btn-box-shadow"
+                            style="background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); color: white;">
+                            <span class="btn-double-text fw-600">VKOLU</span>
+                            <i class="fa-solid fa-arrow-right ms-10px"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end vkolu section -->
+
+        <!-- start video section -->
+        <section>
+            <div class="container">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-lg-7 text-center"
+                        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <span class="text-orange fw-600 mb-15px text-uppercase d-block">See It In Action</span>
+                        <h2 class="fw-700 text-dark-gray ls-minus-2px">mBlastr SMS and IVR Marketing</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-10"
+                        data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="position-relative border-radius-6px overflow-hidden box-shadow-quadruple-large">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/9TPbRvqiZNw?rel=0&autoplay=1&mute=1&loop=1&playlist=9TPbRvqiZNw"
+                                    title="Mblastr SMS and IVR marketing" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end video section -->
+
+        <!-- start CTA section -->
+        <section class="bg-very-light-gray">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-8 text-center"
+                        data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <span class="text-orange fw-600 mb-15px text-uppercase d-block">Get Started Today</span>
+                        <h3 class="fw-700 text-dark-gray ls-minus-2px mb-30px">Ready to transform your customer
+                            communication?</h3>
+                        <p class="w-85 lg-w-100 mx-auto mb-40px">Experience the power of mBlastr and see how it can
+                            revolutionize your business communications. Request a demo today and discover the
+                            difference.</p>
+                        <a href="contact-us.html"
+                            class="btn btn-large btn-dark-gray btn-rounded btn-box-shadow me-15px xs-mb-15px">Request a
+                            Demo<i class="fa-solid fa-arrow-right ms-10px"></i></a>
+                        <a href="download.html"
+                            class="btn btn-large btn-transparent-dark-gray btn-rounded border-2">Download Brochure<i
+                                class="fa-solid fa-download ms-10px"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end CTA section -->
+
+        <!-- start footer -->
+        <footer class="half-footer pb-45px border-top border-color-light-gray background-repeat"
+            style="background-image:url('images/kolimg/footer\ bg.png');">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div
+                        class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin z-index-1 text-center text-sm-start xs-mb-20px">
+                        <span class="fs-20 fw-500 text-dark-gray d-block mb-5px">Location</span>
+                        <p class="w-100">KOL Telecom Services LLC,<br>251 Little Falls Drive<br>
+                            Wilmington, DE 19808<br>
+                            United States of America.</p>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12 text-center z-index-1 mb-20px mb-md-0">
+                        <img src="images/kolimg/2.png" alt="KOL Logo" data-no-retina=""
+                            style="max-width: 280px; width: 100%; height: auto;">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin text-center text-sm-end z-index-1">
+                        <span class="fs-20 fw-700 text-dark-gray d-block mb-5px">How can we help?</span>
+                        <a href="mailto:info@koltelecom.com" class="text-dark-gray fw-600 d-block mb-0" style="font-size: 16px;">info@koltelecom.com</a>
+                        <a href="tel:+13022952746" class="text-dark-gray fw-600 d-block" style="font-size: 16px; line-height: 1.5;">+1 302 295 2746</a>
+                    </div>
+                </div>
+                <div class="row align-items-center justify-content-center mt-20px mb-10px md-mb-20px">
+                    <div class="col d-none d-md-flex">
+                        <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 col-md-7 text-center elements-social social-icon-style-04">
+                        <ul class="large-icon dark mb-0">
+                            <li><a class="facebook" href="https://www.facebook.com/koltelecomservices/" target="_blank"><i
+                                        class="fa-brands fa-facebook-f"></i><span></span></a></li>
+                            <li><a class="twitter" href="https://twitter.com/KOLTELECOM" target="_blank"><i
+                                        class="fa-brands fa-x-twitter"></i><span></span></a></li>
+                            <li><a class="instagram" href="https://www.instagram.com/koltelecom/" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i><span></span></a></li>
+                            <li><a class="linkedin" href="https://www.linkedin.com/company/kol-telecom-services-llc" target="_blank"><i
+                                        class="fa-brands fa-linkedin-in"></i><span></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col d-none d-md-flex">
+                        <div class="divider-style-03 divider-style-03-01 border-color-light-gray"></div>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-12 last-paragraph-no-margin text-center sm-mb-10px">
+                        <p>© 2026 <a href="index.html" target="_blank"
+                                class="text-decoration-line-bottom text-dark-gray fw-500">KOL Telecom.</a> All rights
+                            reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+    </div>
+    <!-- end box-layout -->
+    <!-- start scroll progress -->
+    <div class="scroll-progress d-none d-xxl-block">
+        <a href="#" class="scroll-top" aria-label="scroll">
+            <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+        </a>
+    </div>
+    <!-- end scroll progress -->
+        <!-- WhatsApp floating button -->
+        </div>
+
+    <!-- javascript libraries -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/vendors.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Chatbot JS -->
+    <script defer src="js/chatbot.js"></script>
+    <script defer src="js/whatsapp-button.js"></script>
+</body>
+
+</html>
