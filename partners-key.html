@@ -133,8 +133,8 @@
             justify-content: center;
         }
         .pkp-center-node {
-            width: 120px;
-            height: 120px;
+            width: 200px;
+            height: 200px;
             background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
             border-radius: 50%;
             display: flex;
@@ -144,10 +144,20 @@
             z-index: 3;
             box-shadow: 0 0 60px rgba(255, 107, 53, 0.4), 0 0 120px rgba(255, 107, 53, 0.15);
         }
+        .pkp-center-node::before {
+            content: '';
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            background: #ffffff;
+            border-radius: 50%;
+            z-index: 1;
+        }
         .pkp-center-node img {
-            width: 70px;
+            width: 100px;
             height: auto;
-            filter: brightness(10);
+            position: relative;
+            z-index: 2;
         }
         .pkp-orbit-1 {
             position: absolute;
